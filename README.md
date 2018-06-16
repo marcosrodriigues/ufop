@@ -1,4 +1,4 @@
-# Material de apoio para o curso de Ciência da Computação da Universidade Federal de Ouro Preto
+# Repositório de código estudantil - UFOP
 
 Este projeto foi criado com o intuito de colaborar com os novos alunos do 
 curso para darem seus primeiros passos na programação.
