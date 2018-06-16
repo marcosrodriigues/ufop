@@ -1,0 +1,37 @@
+#ifndef __INCLUDE_DEFINEH__
+#define __INCLUDE_DEFINEH__
+/*
+#define MIN_TAM_TEXTO_PEQUENO 	5000
+#define MAX_TAM_TEXTO_PEQUENO 	8000
+#define MIN_TAM_PADRAO_PEQUENO 	3
+#define MAX_TAM_PADRAO_PEQUENO 	5
+*/
+#define MIN_TAM_TEXTO_MEDIO 	200000
+#define MAX_TAM_TEXTO_MEDIO 	250000
+#define MIN_TAM_PADRAO_MEDIO 	10
+#define MAX_TAM_PADRAO_MEDIO 	15
+/*
+#define MIN_TAM_TEXTO_GRANDE 	1500000
+#define MAX_TAM_TEXTO_GRANDE 	2000000
+#define MIN_TAM_PADRAO_GRANDE 	25
+#define MAX_TAM_PADRAO_GRANDE 	30
+
+#define CAMINHO_PEQUENO "PEQUENO/"
+#define CAMINHO_MEDIO 	"MEDIO/"
+#define CAMINHO_GRANDE	"GRANDE/"
+*/
+#define TEXTO_PEQUENO 	"TEXTO_PEQUENO.txt"
+#define TEXTO_MEDIO 	"TEXTO_MEDIO.txt"
+#define TEXTO_MAXIMO 	"TEXTO_MAXIMO.txt"
+
+#define MAX_CHAR 256
+
+#define FORCA_BRUTA			1
+#define BM					2
+#define BMHS			   	3
+#define SHIFT_AND_EXATO	   	4
+
+typedef char TipoTexto[MAX_TAM_TEXTO_MEDIO];
+typedef char TipoPadrao[MAX_TAM_PADRAO_MEDIO];	
+
+#endif

@@ -1,0 +1,217 @@
+{
+  "network": {
+    "hosts": [
+      {
+        "name": "server1",
+        "address": "0.8",
+        "port": 6690,
+        "type": "server"
+      },
+      {
+        "name": "server2",
+        "address": "1.10",
+        "port": 6691,
+        "type": "server"
+      },
+      {
+        "name": "host1",
+        "address": "0.0",
+        "port": 6667,
+        "server": "0.8",
+        "script": [
+          {
+            "action": "send",
+            "target": "0.1",
+            "msg": "Olá"
+          },
+          {
+            "action": "recv"
+          },
+          {
+            "action": "send",
+            "target": "0.1",
+            "msg": "Vou bem e você?"
+          },
+          {
+            "action": "recv"
+          }
+        ]
+      },
+      {
+        "name": "host2",
+        "address": "0.1",
+        "port": 6668,
+        "server": "0.8",
+        "script": [
+          {
+            "action": "recv"
+          },
+          {
+            "action": "send",
+            "target": "0.0",
+            "msg": "Olá, como vai?"
+          },
+          {
+            "action": "recv"
+          },
+          {
+            "action": "send",
+            "target": "0.0",
+            "msg": "Bem também"
+          }
+        ]
+      },
+      {
+        "name": "host9",
+        "address": "0.20",
+        "port": 6867,
+        "server": "0.8",
+        "script": [
+          {
+            "action": "send",
+            "target": "0.21",
+            "msg": "Olá"
+          },
+          {
+            "action": "recv"
+          },
+          {
+            "action": "send",
+            "target": "0.21",
+            "msg": "Vou bem e você?"
+          },
+          {
+            "action": "recv"
+          }
+        ]
+      },
+      {
+        "name": "host10",
+        "address": "0.21",
+        "port": 6868,
+        "server": "0.8",
+        "script": [
+          {
+            "action": "recv"
+          },
+          {
+            "action": "send",
+            "target": "0.20",
+            "msg": "Olá, como vai?"
+          },
+          {
+            "action": "recv"
+          },
+          {
+            "action": "send",
+            "target": "0.20",
+            "msg": "Bem também"
+          }
+        ]
+      },
+
+      {
+        "name": "host3",
+        "address": "1.0",
+        "port": 6669,
+        "server": "1.10",
+        "script": [
+          {
+            "action": "send",
+            "target": "1.1",
+            "msg": "Olá"
+          },
+          {
+            "action": "recv"
+          },
+          {
+            "action": "send",
+            "target": "1.1",
+            "msg": "Vou bem e você?"
+          },
+          {
+            "action": "recv"
+          }
+        ]
+      },
+      {
+        "name": "host4",
+        "address": "1.1",
+        "port": 6670,
+        "server": "1.10",
+        "script": [
+          {
+            "action": "recv"
+          },
+          {
+            "action": "send",
+            "target": "1.0",
+            "msg": "Olá, como vai?"
+          },
+          {
+            "action": "recv"
+          },
+          {
+            "action": "send",
+            "target": "1.0",
+            "msg": "Bem também"
+          }
+        ]
+      },
+      {
+        "name": "host5",
+        "address": "1.3",
+        "port": 6675,
+        "server": "0.8",
+        "script": [
+          {
+            "action": "recv"
+          }
+        ]
+      },
+      {
+        "name": "host6",
+        "address": "0.3",
+        "port": 6676,
+        "server": "0.8",
+        "script": [
+          {
+            "action": "send",
+            "target": "1.3",
+            "msg": "Hello stranger"
+          }
+        ]
+      }
+    ],
+    "routers": [
+      {
+        "name": "router1",
+        "port": 6569,
+        "connections": [
+          "server1",
+          "host1",
+          "host2",
+          "host6",
+          "host9",
+          "host10"
+        ],
+        "routers": {
+          "1": 6570
+        }
+      },
+      {
+        "name": "router2",
+        "port": 6570,
+        "connections": [
+          "server2",
+          "host3",
+          "host4",
+          "host5"
+        ],
+        "routers": {
+          "0": 6569
+        }
+      }
+    ]
+  }
+}
