@@ -1,0 +1,11 @@
+To run this example you must download jcl pacu version, read how
+to run server and hosts jcl
+
+after jcl starts you run appl1, appl2 and appl4ExecutionJars
+
+more complex and useful applications (sorting, routing, genetic
+algorithms and many more) in jcl at hpc lab site
+
+
+configure jclUser jar file in your Eclipse project jcl_example1
+configure book jar file in your Eclipse project jcl_example1 (folder bookJAR)

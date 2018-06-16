@@ -1,0 +1,5 @@
+Letra B:
+	Qual a complexidade de tempo do seu algoritmo de ordenação? Justifique sua resposta.
+
+	Resposta:
+		A complexidade do algoritmo é N², devido ao fato de percorrer todos os valores da iteração por N² vezes, onde N é o tamanho do vetor a ser ordenado. Como o algoritmo percorre o vetor independentemente dele estar ordenado ou não, pois precisa verificar todos valores, o algoritmo sempre terá a complexidade de N².
