@@ -47,6 +47,14 @@
                 cursor: pointer;
             }
 
+            .matriz .cell-empty {
+                width: 130px;
+                height: 130px;
+                float: left;
+                margin: 6px;
+                padding: 10px;
+            }
+
             .matriz .linha {
                 overflow: auto;
             }
@@ -94,258 +102,300 @@
                     </div>
                 </div>
             </div>
-
+    
             <div class="matriz">
                 <div class="linha">
-                    <div class="cell available" id="1x1">
+                    <div class="cell available" id="MTM_122">
                         <p>MTM 122 - Cálculo Diferencial e Integral I</p>
                         <p>Carga horária: 90h</p>
-                        <input type="hidden" value=90>
+                        <input type="hidden" name="carga" value=90>
                     </div>
-                    <div class="cell blocked" id="1x2">
+                    <div class="cell blocked" id="MTM_123">
                         <p>MTM 123 - Cálculo Diferencial e Integral II</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
+                        <input type='hidden' name="required" value='["MTM_122"]' />
                     </div>
-                    <div class="cell blocked" id="1x3">
-                        <p>MTM 131 - Introdução à Algebra Linear</p>
+                    <div class="cell blocked" id="MTM_112">
+                        <p>MTM 112 - Introdução à Algebra Linear</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
+                        <input type='hidden' name="required" value='["MTM_131"]' />
                     </div>
-                    <div class="cell blocked" id="1x4">
+                    <div class="cell blocked" id="EST_202">
                         <p>EST 202 - Estatística e Probabilidade</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
+                        <input type='hidden' name="required" value='["MTM_122"]' />
                     </div>
-                    <div class="cell blocked" id="1x5">
+                    <div class="cell blocked" id="BCC_244">
                         <p>BCC 244 - Teoria da Computação</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
+                        <input type='hidden' name="required" value='["BCC_102", "BCC_202"]' />
                     </div>
-                    <div class="cell blocked" id="1x6">
+                    <div class="cell blocked" id="BCC_328">
                         <p>BCC 328 - Construção de Compiladores I</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
+                        <input type='hidden' name="required" value='["BCC_221", "BCC_244"]' />
                     </div>
-                    <div class="cell blocked" id="1x7">
+                    <div class="cell blocked" id="BCC_390">
                         <p>BCC 390 - Monografia I</p>
                         <p>Carga horária: 120h</p>
-                        <input type="hidden" value=120>
+                        <input type="hidden" name="carga" value=120>
+                        <input type='hidden' name="required" value='["BCC_502", "__1500__"]' />
                     </div>
-                    <div class="cell blocked" id="1x8">
+                    <div class="cell blocked" id="BCC_391">
                         <p>BCC 391 - Monografia II</p>
                         <p>Carga horária: 120h</p>
-                        <input type="hidden" value=120>
+                        <input type="hidden" name="carga" value=120>
+                        <input type='hidden' name="required" value='["BCC_390"]' />
                     </div>
                 </div>
                 <div class="linha">
-                    <div class="cell available" id="2x1">
+                    <div class="cell available" id="MTM_131">
                         <p>MTM 131 - Geometria Analítica e Cálculo Vetorial</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
                     </div>
-                    <div class="cell blocked" id="2x2">
+                    <div class="cell available" id="BCC_101">
                         <p>BCC 101 - Matemática Discreta I</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
                     </div>
-                    <div class="cell blocked" id="2x3">
-                        <p>BCB 102 - Matemática Discreta II</p>
+                    <div class="cell blocked" id="BCC_102">
+                        <p>BCC 102 - Matemática Discreta II</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
+                        <input type='hidden' name="required" value='["BCC_101"]' />
                     </div>
-                    <div class="cell blocked" id="2x4">
+                    <div class="cell blocked" id="BCC_760">
                         <p>BCC 760 - Cálculo Numérico</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
+                        <input type='hidden' name="required" value='["BCC_201", "MTM_123"]' />
                     </div>
-                    <div class="cell blocked" id="2x5">
+                    <div class="cell blocked" id="BCC_321">
                         <p>BCC 321 - Banco de Dados I</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
+                        <input type='hidden' name="required" value='["BCC_102", "BCC_203"]' />
                     </div>
-                    <div class="cell blocked" id="2x6">
+                    <div class="cell blocked" id="BCC_325">
                         <p>BCC 325 - Inteligência Artificial</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
+                        <input type='hidden' name="required" value='["BCC_101", "BCC_204"]' />
                     </div>
-                    <div class="cell blocked" id="2x7">
+                    <div class="cell blocked" id="BCC_503">
                         <p>BCC 503 - Informática e Sociedade</p>
                         <p>Carga horária: 30h</p>
-                        <input type="hidden" value=30>
+                        <input type="hidden" name="carga" value=30>
+                        <input type='hidden' name="required" value='["__1500__"]' />
                     </div>
-                    <div class="cell blocked" id="2x8">
+                    <div class="cell blocked" id="PRO_302">
                         <p>PRO 302 - Ações Empreendedoras</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
+                        <input type='hidden' name="required" value='["__1500__"]' />
                     </div>
                 </div>
                 <div class="linha">
-                    <div class="cell available" id="3x1">
+                    <div class="cell available" id="BCC_501">
                         <p>BCC 501 - Introdução à Ciência da Computação</p>
                         <p>Carga horária: 30h</p>
-                        <input type="hidden" value=30>
+                        <input type="hidden" name="carga" value=30>
                     </div>
-                    <div class="cell blocked" id="3x2">
+                    <div class="cell blocked" id="BCC_324">
                         <p>BCC 324 - Interação Humano-Computador</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
+                        <input type='hidden' name="required" value='["BCC_201"]' />
                     </div>
-                    <div class="cell blocked" id="3x3">
-                        <p>BCB 201 - Programação Funcional</p>
+                    <div class="cell blocked" id="BCC_222">
+                        <p>BCC 222 - Programação Funcional</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
+                        <input type='hidden' name="required" value='["BCC_201"]' />
                     </div>
-                    <div class="cell blocked" id="3x4">
+                    <div class="cell blocked" id="BCC_204">
                         <p>BCC 204 - Teoria dos Grafos</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
+                        <input type='hidden' name="required" value='["BCC_202"]' />
                     </div>
-                    <div class="cell blocked" id="3x5">
+                    <div class="cell blocked" id="BCC_241">
                         <p>BCC 241 - Projeto e Análise de Algoritmos</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
+                        <input type='hidden' name="required" value='["BCC_204"]' />
                     </div>
-                    <div class="cell blocked" id="3x6">
+                    <div class="cell blocked" id="BCC_342">
                         <p>BCC 342 - Introdução à Otimização</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
+                        <input type='hidden' name="required" value='["BCC_201"]' />
                     </div>
-                    <div class="cell blocked" id="3x7">
+                    <div class="cell blocked" id="FIL_101">
                         <p>FIL 101 - Introdução à História da Filosofia</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
+                        <input type='hidden' name="required" value='["__1500__"]' />
                     </div>
-                    <div class="cell blocked" id="3x8">
+                    <div class="cell blocked" id="DIR_249">
                         <p>DIR 249 - Direito da Informática</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
+                        <input type='hidden' name="required" value='["__1500__"]' />
                     </div>
                 </div>
                 <div class="linha">
-                    <div class="cell" style="border: 0px;" id="4x1">
+                    <div class="cell-empty" style="border: 0px;" id="4x1">
                     </div>
-                    <div class="cell blocked" id="4x2">
+                    <div class="cell available" id="EAD_700">
                         <p>EAD 700 - Prática de Leitura e Produção de Texto</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
                     </div>
-                    <div class="cell blocked" id="4x3">
-                        <p>BCB 221 - Programação Orientada à Objetos</p>
+                    <div class="cell blocked" id="BCC_221">
+                        <p>BCC 221 - Programação Orientada à Objetos</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
+                        <input type='hidden' name="required" value='["BCC_202"]' />
                     </div>
-                    <div class="cell blocked" id="4x4">
+                    <div class="cell blocked" id="BCC_322">
                         <p>BCC 322 - Engenharia de Software I</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
+                        <input type='hidden' name="required" value='["BCC_221"]' />
                     </div>
-                    <div class="cell blocked" id="4x5">
+                    <div class="cell blocked" id="BCC_323">
                         <p>BCC 323 - Engenharia II</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
+                        <input type='hidden' name="required" value='["BCC_322"]' />
                     </div>
-                    <div class="cell blocked" id="4x6">
+                    <div class="cell blocked" id="BCC_327">
                         <p>BCC 327 - Computação Gráfica</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
+                        <input type='hidden' name="required" value='["BCC_202", "MTM_112"]' />
                     </div>
                     <div class="cell blocked eletiva" id="4x7">
                         <p>Disciplina Eletiva</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
+                        <input type='hidden' name="required" value='["__720__"]' />
                     </div>
                     <div class="cell blocked facultativa" id="4x8">
                         <p>Disciplina Facultativa</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
+                        <input type='hidden' name="required" value='["__720__"]' />
                     </div>
                 </div>
                 <div class="linha">
-                    <div class="cell available" id="5x1">
+                    <div class="cell available" id="BCC_201">
                         <p>BCC 201 - Introdução à Programação</p>
                         <p>Carga horária: 90h</p>
-                        <input type="hidden" value=90>
+                        <input type="hidden" name="carga" value=90>
                     </div>
-                    <div class="cell blocked" id="5x2">
+                    <div class="cell blocked" id="BCC_202">
                         <p>BCC 202 - Estrutura de Dados I</p>
                         <p>Carga horária: 90h</p>
-                        <input type="hidden" value=90>
+                        <input type="hidden" name="carga" value=90>
+                        <input type='hidden' name="required" value='["BCC_201"]' />
                     </div>
-                    <div class="cell blocked" id="5x3">
-                        <p>BCB 203 - Estrutura de Dados II</p>
+                    <div class="cell blocked" id="BCC_203">
+                        <p>BCC 203 - Estrutura de Dados II</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
+                        <input type='hidden' name="required" value='["BCC_202"]' />
                     </div>
-                    <div class="cell blocked" id="5x4">
+                    <div class="cell blocked" id="BCC_361">
                         <p>BCC 361 - Redes de Computadores</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
+                        <input type='hidden' name="required" value='["BCC_202", "BCC_263"]' />
                     </div>
-                    <div class="cell blocked" id="5x5">
+                    <div class="cell blocked" id="BCC_362">
                         <p>BCC 362 - Sistemas Distribuídos</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
+                        <input type='hidden' name="required" value='["BCC_361", "BCC_264"]' />
                     </div>
-                    <div class="cell blocked" id="5x6">
+                    <div class="cell blocked" id="BCC_326">
                         <p>BCC 326 - Processamento de Imagens</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
+                        <input type='hidden' name="required" value='["BCC_202", "MTM_123"]' />
                     </div>
                     <div class="cell blocked eletiva" id="5x7">
                         <p>Disciplina Eletiva</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
+                        <input type='hidden' name="required" value='["__720__"]' />
                     </div>
                     <div class="cell blocked eletiva" id="5x8">
                         <p>Disciplina Eletiva</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
+                        <input type='hidden' name="required" value='["__720__"]' />
                     </div>
                 </div>
                 <div class="linha">
-                    <div class="cell available" id="6x1">
+                    <div class="cell available" id="BCC_265">
                         <p>BCC 265 - Eletronica para Computação</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
                     </div>
-                    <div class="cell blocked" id="6x2">
+                    <div class="cell blocked" id="BCC_266">
                         <p>BCC 266 - Organização de Computadores</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
+                        <input type='hidden' name="required" value='["BCC_265", "BCC_201"]' />
                     </div>
-                    <div class="cell blocked" id="6x3">
-                        <p>BCB 263 - Arquitetura de Computadores</p>
+                    <div class="cell blocked" id="BCC_263">
+                        <p>BCC 263 - Arquitetura de Computadores</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
+                        <input type='hidden' name="required" value='["BCC_266"]' />
                     </div>
-                    <div class="cell blocked" id="6x4">
+                    <div class="cell blocked" id="BCC_264">
                         <p>BCC 264 - Sistemas Operacionais</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
+                        <input type='hidden' name="required" value='["BCC_202", "BCC_263"]' />
                     </div>
-                    <div class="cell blocked" id="6x5">
+                    <div class="cell blocked" id="BCC_502">
                         <p>BCC 502 - Metodologia Científica em Ciência da Computação</p>
-                        <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <p>Carga horária: 30h</p>
+                        <input type="hidden" name="carga" value=30h>
+                        <input type='hidden' name="required" value='["__720__"]' />
                     </div>
                     <div class="cell blocked eletiva" id="6x6">
                         <p>Disciplina Eletiva</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
+                        <input type='hidden' name="required" value='["__720__"]' />
                     </div>
                     <div class="cell blocked eletiva" id="6x7">
                         <p>Disciplina Eletiva</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
+                        <input type='hidden' name="required" value='["__720__"]' />
                     </div>
                     <div class="cell blocked eletiva" id="6x8">
                         <p>Disciplina Eletiva</p>
                         <p>Carga horária: 60h</p>
-                        <input type="hidden" value=60>
+                        <input type="hidden" name="carga" value=60>
+                        <input type='hidden' name="required" value='["__720__"]' />
                     </div>
                 </div>
             </div>
+        
+
         </div>
     </body>
 </html>
@@ -357,11 +407,9 @@
 <script>
     $().ready(function() {
         $('.blocked').attr('disabled=true');
-        $.getJSON('grade.json', function(data) {
-            $.each(data, function(index, value) {
-                console.log(index);
-            })
-        })
+
+        atualizarMatriz();
+        calcularTotalHoras();
     });
 
     var total = 0;
@@ -373,78 +421,77 @@
         if (classe.indexOf('available') >= 0) {
             $(this).removeClass('available');
             $(this).addClass('done');
-        } else if (classe.indexOf('done') >= 0) {
-            $(this).removeClass('done');
-            $(this).addClass('available');
         } else if (classe.indexOf('blocked') >= 0) {
             e.preventDefault();
             return;
+        } else {
+            $(this).removeClass('done');
+            $(this).addClass('available');
         }
 
+        console.log($(this).attr('class'));
+
         atualizarMatriz();
-        calcularTotalHoras();
+        atualizarMatriz();
     })
 
     function calcularTotalHoras() {
         total = 0;
-        for (i = 1; i <= 6; i++) {
-            for (j = 1; j <= 8; j++) {
-                var cell = $('#' + i + 'x' + j);
-                var classCell = $(cell).attr('class');
-                if (classCell.indexOf('done') >= 0) {
-                    total = total + parseInt($(cell).children('input').val());
-                }
+        $.each($('.cell'), function(index, value) {
+            var cell = $(this).attr('class');
+            if (cell.indexOf('done') >= 0) {
+                var cargaHoraria = $(this).children("input[name='carga']").val();
+                total = total + parseInt(cargaHoraria);
             }
-        }
+        });
+
         $('#total').text(total.toString());
     }
 
     function atualizarMatriz() {
         calcularTotalHoras();
 
-        eletivas = $('.eletiva');
-        if (total >= 200) {
-            $(eletivas).each(function() {
-                if ($(this).attr('class').indexOf('blocked') >= 0) {
-                    $(this).removeClass('blocked');
-                    $(this).attr('class', 'cell available eletiva');
-                }
-            })
-        } else {
-            $(eletivas).each(function() {
-                if ($(this).attr('class').indexOf('blocked') < 0) {
-                    $(this).removeAttr('class');
-                    $(this).attr('class', 'cell blocked eletiva');
-                }
-            })
-        }
+        $.each($('.cell'), function(index, value) {
+            var cell = $(this);
+            var child = $(this).children("input[name='required']");
+            if (child.length > 0) {
+                var requireds = JSON.parse(child.val());
+                var available = true;
 
-        for (i = 1; i <= 6; i++) {
-            for (j = 1; j <= 8; j++) {
-                cell = $('#' + i + 'x' + j);
-                classCell = $(cell).attr('class');
-                if (i == 1) {
-                    if (j == 1) {
-                        if (classCell.indexOf('done') >= 0) {
-                            $('#1x2').removeClass('blocked');
-                            $('#1x2').addClass('available');
+                for (var i = 0; i < requireds.length; i++) {
+                    var field = requireds[i];
 
-                            $('#1x4').removeClass('blocked');
-                            $('#1x4').addClass('available');
-                        } else if (classCell.indexOf('available') >= 0 || classCell.indexOf('blocked') >= 0) {
-                            $('#1x2').removeClass('available');
-                            $('#1x2').removeClass('done');
-                            $('#1x2').addClass('blocked');
-                            
-                            $('#1x4').removeClass('available');
-                            $('#1x4').removeClass('done');
-                            $('#1x4').addClass('blocked');
+                    if (field.indexOf("__") < 0) {
+                        //se o pre requisito estiver como "done"
+                        if ($('#' + field).attr('class').indexOf('done') < 0) {
+                            available = false;
                         }
+                    } else {
+                        //pre requisito eh hora
+                        var hours = field.split("__")[1];
+                        
+                        available = false;
+                        if (total >= hours) {
+                            available = true;
+                        }
+
                     }
                 }
+
+                if (!available) {
+                    cell.removeAttr("class");
+                    cell.attr("class", "cell blocked")
+                } else {
+                    cell.removeClass('blocked');
+                    if (cell.attr('class').indexOf('done') < 0 &&
+                        cell.attr('class').indexOf('available') < 0) {
+                            cell.addClass('available');
+                        }
+                    
+                } 
             }
-        }
+        });
+
+        calcularTotalHoras();
     }
-
-
 </script>

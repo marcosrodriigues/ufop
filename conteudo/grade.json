@@ -173,7 +173,7 @@
         "categoria": "Obrigatória",
         "codigo": "EAD 700",
         "carga": 60,
-        "requisito": ["_1500H"]
+        "requisito": []
     },
     {
         "disciplina": "Programação Orientada à Objetos",
