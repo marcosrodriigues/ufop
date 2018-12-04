@@ -1,0 +1,332 @@
+[
+    {
+        "disciplina": "Cálculo Diferencial e Integral I",
+        "categoria": "Obrigatória",
+        "codigo": "MTM 122",
+        "carga": 90,
+        "requisito": []
+    },
+    {
+        "disciplina": "Cálculo Diferencial e Integral II",
+        "categoria": "Obrigatória",
+        "codigo": "MTM 123",
+        "carga": 60,
+        "requisito": ["MTM_122"]
+    },
+    {
+        "disciplina": "Introdução à Algebra Linear",
+        "categoria": "Obrigatória",
+        "codigo": "MTM 112",
+        "carga": 60,
+        "requisito": ["MTM_131"]
+    },
+    {
+        "disciplina": "Estatística e Probabilidade",
+        "categoria": "Obrigatória",
+        "codigo": "EST 202",
+        "carga": 60,
+        "requisito": ["MTM_122"]
+    },
+    {
+        "disciplina": "Teoria da Computação",
+        "categoria": "Obrigatória",
+        "codigo": "BCC 244",
+        "carga": 60,
+        "requisito": ["BCC_102", "BCC_202"]
+    },
+    {
+        "disciplina": "Construção de Compiladores I",
+        "categoria": "Obrigatória",
+        "codigo": "BCC 328",
+        "carga": 60,
+        "requisito": ["BCC_221", "BCC_244"]
+    },
+    {
+        "disciplina": "Monografia I",
+        "categoria": "Obrigatória",
+        "codigo": "BCC 390",
+        "carga": 120,
+        "requisito": ["BCC_502", "_1500H"]
+    },
+    {
+        "disciplina": "Monografia II",
+        "categoria": "Obrigatória",
+        "codigo": "BCC 391",
+        "carga": 120,
+        "requisito": ["BCC_390"]
+    },
+    {
+        "disciplina": "Geometria Analítica e Cálculo Vetorial",
+        "categoria": "Obrigatória",
+        "codigo": "MTM 131",
+        "carga": 60,
+        "requisito": []
+    },
+    {
+        "disciplina": "Matemática Discreta I",
+        "categoria": "Obrigatória",
+        "codigo": "BCC 101",
+        "carga": 60,
+        "requisito": []
+    },
+    {
+        "disciplina": "Matemática Discreta II",
+        "categoria": "Obrigatória",
+        "codigo": "BCC 102",
+        "carga": 60,
+        "requisito": ["BCC_101"]
+    },
+    {
+        "disciplina": "Cálculo Numérico",
+        "categoria": "Obrigatória",
+        "codigo": "BCC 760",
+        "carga": 60,
+        "requisito": ["BCC_201", "MTM_123"]
+    },
+    {
+        "disciplina": "Banco de Dados I",
+        "categoria": "Obrigatória",
+        "codigo": "BCC 321",
+        "carga": 60,
+        "requisito": ["BCC_102", "BCC_203"]
+    },
+    {
+        "disciplina": "Inteligência Artificial",
+        "categoria": "Obrigatória",
+        "codigo": "BCC 325",
+        "carga": 60,
+        "requisito": ["BCC_101", "BCC_204"]
+    },
+    {
+        "disciplina": "Informática e Sociedade",
+        "categoria": "Obrigatória",
+        "codigo": "BCC 503",
+        "carga": 30,
+        "requisito": ["_1500H"]
+    },
+    {
+        "disciplina": "Ações Empreendedoras",
+        "categoria": "Obrigatória",
+        "codigo": "PRO 302",
+        "carga": 60,
+        "requisito": ["_1500H"]
+    },
+    {
+        "disciplina": "Introdução à Ciência da Computação",
+        "categoria": "Obrigatória",
+        "codigo": "BCC 501",
+        "carga": 60,
+        "requisito": []
+    },
+    {
+        "disciplina": "Interação Humano-Computador",
+        "categoria": "Obrigatória",
+        "codigo": "BCC 324",
+        "carga": 60,
+        "requisito": ["BCC_201"]
+    },
+    {
+        "disciplina": "Programação Funcional",
+        "categoria": "Obrigatória",
+        "codigo": "BCC 222",
+        "carga": 60,
+        "requisito": ["BCC_201"]
+    },
+    {
+        "disciplina": "Teoria dos Grafos",
+        "categoria": "Obrigatória",
+        "codigo": "BCC 204",
+        "carga": 60,
+        "requisito": ["BCC_202"]
+    },
+    {
+        "disciplina": "Projeto e Análise de Algoritmos",
+        "categoria": "Obrigatória",
+        "codigo": "BCC 241",
+        "carga": 60,
+        "requisito": ["BCC_204"]
+    },
+    {
+        "disciplina": "Introdução à Otimização",
+        "categoria": "Obrigatória",
+        "codigo": "BCC 342",
+        "carga": 60,
+        "requisito": ["BCC_201"]
+    },
+    {
+        "disciplina": "Introdução à História da Filosofia",
+        "categoria": "Obrigatória",
+        "codigo": "FIL 101",
+        "carga": 60,
+        "requisito": ["_1500H"]
+    },
+    {
+        "disciplina": "Direito na Informática",
+        "categoria": "Obrigatória",
+        "codigo": "DIR 249",
+        "carga": 60,
+        "requisito": ["_1500H"]
+    },
+    {},
+    {
+        "disciplina": "Prática de Leitura e Produção de Texto",
+        "categoria": "Obrigatória",
+        "codigo": "EAD 700",
+        "carga": 60,
+        "requisito": ["_1500H"]
+    },
+    {
+        "disciplina": "Programação Orientada à Objetos",
+        "categoria": "Obrigatória",
+        "codigo": "BCC 221",
+        "carga": 60,
+        "requisito": ["BCC_202"]
+    },
+    {
+        "disciplina": "Engenharia de Software I",
+        "categoria": "Obrigatória",
+        "codigo": "BCC 322",
+        "carga": 60,
+        "requisito": ["BCC_201"]
+    },
+    {
+        "disciplina": "Engenharia de Software II",
+        "categoria": "Obrigatória",
+        "codigo": "BCC 323",
+        "carga": 60,
+        "requisito": ["BCC_322"]
+    },
+    {
+        "disciplina": "Computação Gráfica",
+        "categoria": "Obrigatória",
+        "codigo": "BCC 327",
+        "carga": 60,
+        "requisito": ["BCC_202", "MTM_112"]
+    },
+    {
+        "disciplina": "Eletiva",
+        "categoria": "Eletiva",
+        "codigo": "",
+        "carga": 60,
+        "requisito": ["_720H"]
+    },
+    {
+        "disciplina": "Facultativa",
+        "categoria": "Facultativa",
+        "codigo": "",
+        "carga": 60,
+        "requisito": ["_720H"]
+    },
+    {
+        "disciplina": "Introdução à Programação",
+        "categoria": "Obrigatória",
+        "codigo": "BCC 201",
+        "carga": 90,
+        "requisito": []
+    },
+    {
+        "disciplina": "Estrutura de Dados I",
+        "categoria": "Obrigatória",
+        "codigo": "BCC 202",
+        "carga": 60,
+        "requisito": ["BCC_201"]
+    },
+    {
+        "disciplina": "Estrutura de Dados II",
+        "categoria": "Obrigatória",
+        "codigo": "BCC 203",
+        "carga": 60,
+        "requisito": ["BCC_202"]
+    },
+    {
+        "disciplina": "Redes de Computadores",
+        "categoria": "Obrigatória",
+        "codigo": "BCC 361",
+        "carga": 60,
+        "requisito": ["BCC_202", "BCC_263"]
+    },
+    {
+        "disciplina": "Sistemas Distribuídos",
+        "categoria": "Obrigatória",
+        "codigo": "BCC 362",
+        "carga": 60,
+        "requisito": ["BCC_361", "BCC_264"]
+    },
+    {
+        "disciplina": "Processamento de Imagens",
+        "categoria": "Obrigatória",
+        "codigo": "BCC 326",
+        "carga": 60,
+        "requisito": ["BCC_202", "MTM_123"]
+    },
+    {
+        "disciplina": "Eletiva",
+        "categoria": "Eletiva",
+        "codigo": "",
+        "carga": 60,
+        "requisito": ["_720H"]
+    },
+    {
+        "disciplina": "Eletiva",
+        "categoria": "Eletiva",
+        "codigo": "",
+        "carga": 60,
+        "requisito": ["_720H"]
+    },
+    {
+        "disciplina": "Eletronica para Computação",
+        "categoria": "Obrigatória",
+        "codigo": "BCC 265",
+        "carga": 60,
+        "requisito": []
+    },
+    {
+        "disciplina": "Organização de Computadores",
+        "categoria": "Obrigatória",
+        "codigo": "BCC 266",
+        "carga": 60,
+        "requisito": ["BCC_201", "BCC_265"]
+    },
+    {
+        "disciplina": "Arquitetura de Computadores",
+        "categoria": "Obrigatória",
+        "codigo": "BCC 263",
+        "carga": 60,
+        "requisito": ["BCC_266"]
+    },
+    {
+        "disciplina": "Sistemas Operacionais",
+        "categoria": "Obrigatória",
+        "codigo": "BCC 264",
+        "carga": 60,
+        "requisito": ["BCC_202", "BCC_263"]
+    },
+    {
+        "disciplina": "Metodologia Científica em Ciência da Computação",
+        "categoria": "Obrigatória",
+        "codigo": "BCC 502",
+        "carga": 30,
+        "requisito": ["_720H"]
+    },
+    {
+        "disciplina": "Eletiva",
+        "categoria": "Eletiva",
+        "codigo": "",
+        "carga": 60,
+        "requisito": ["_720H"]
+    },
+    {
+        "disciplina": "Eletiva",
+        "categoria": "Eletiva",
+        "codigo": "",
+        "carga": 60,
+        "requisito": ["_720H"]
+    },
+    {
+        "disciplina": "Eletiva",
+        "categoria": "Eletiva",
+        "codigo": "",
+        "carga": 60,
+        "requisito": ["_720H"]
+    }
+]

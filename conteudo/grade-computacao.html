@@ -1,0 +1,450 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+        <title>Grade de Computação - UFOP</title>
+
+        <style>
+            .cabecalho {
+                width: 100%;
+                height: 150px !important;
+                text-align: center;
+                position: relative;
+            }
+            .center {
+                text-align: center;
+                height: 150px;
+            }
+            .center h3 {
+                font-size: 26px;
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .left {
+                float: left;
+            }
+            .right {
+                float: right;
+            }
+
+            .matriz {
+                height: 100%;
+                width: 100%;
+            }
+            .matriz .cell {
+                width: 130px;
+                height: 130px;
+                float: left;
+                margin: 6px;
+                border: 1px solid #000000;
+                text-align: center;
+                padding: 10px;
+                cursor: pointer;
+            }
+
+            .matriz .linha {
+                overflow: auto;
+            }
+
+            .matriz .cell p {
+                text-align: center;
+                font-weight: bold;
+                font-size: 12px;
+            }
+
+            .available {
+                background-color: lightblue;
+            }
+            .done {
+                background-color: lightgreen;
+            }
+            .blocked {
+                background-color: lightcoral;
+            }
+        </style>
+    </head>
+
+    <body class="bg-light">
+        <div class="container">
+            <section class="cabecalho">
+                <div class="center">
+                    <a href="http://www.decom.ufop.br/" target="_blank" class="left">
+                        <img src="http://www.decom.ufop.br/sibgrapi2012/images/stories/decom.png" width="150" height="150" />
+                    </a>
+                    <a href="https://ufop.br/" target="_blank" class="right">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/UFOP_logo.gif" width="72" height="150" />
+                    </a>
+                    <h3>Grade de Computação da UFOP - Currículo 4</h3>
+                </div>
+            </section>
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="left">
+                            <h4>Contribuia com o <a href="https://github.com/marcosrodriigues/ufop" target="_blank">repositório de matérias do curso</a>.</h4>
+                    </div>
+                    <div class="right">
+                        <strong>Total de horas cursadas: </strong>
+                        <span id="total">0</span>h
+                    </div>
+                </div>
+            </div>
+
+            <div class="matriz">
+                <div class="linha">
+                    <div class="cell available" id="1x1">
+                        <p>MTM 122 - Cálculo Diferencial e Integral I</p>
+                        <p>Carga horária: 90h</p>
+                        <input type="hidden" value=90>
+                    </div>
+                    <div class="cell blocked" id="1x2">
+                        <p>MTM 123 - Cálculo Diferencial e Integral II</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                    <div class="cell blocked" id="1x3">
+                        <p>MTM 131 - Introdução à Algebra Linear</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                    <div class="cell blocked" id="1x4">
+                        <p>EST 202 - Estatística e Probabilidade</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                    <div class="cell blocked" id="1x5">
+                        <p>BCC 244 - Teoria da Computação</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                    <div class="cell blocked" id="1x6">
+                        <p>BCC 328 - Construção de Compiladores I</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                    <div class="cell blocked" id="1x7">
+                        <p>BCC 390 - Monografia I</p>
+                        <p>Carga horária: 120h</p>
+                        <input type="hidden" value=120>
+                    </div>
+                    <div class="cell blocked" id="1x8">
+                        <p>BCC 391 - Monografia II</p>
+                        <p>Carga horária: 120h</p>
+                        <input type="hidden" value=120>
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="cell available" id="2x1">
+                        <p>MTM 131 - Geometria Analítica e Cálculo Vetorial</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                    <div class="cell blocked" id="2x2">
+                        <p>BCC 101 - Matemática Discreta I</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                    <div class="cell blocked" id="2x3">
+                        <p>BCB 102 - Matemática Discreta II</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                    <div class="cell blocked" id="2x4">
+                        <p>BCC 760 - Cálculo Numérico</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                    <div class="cell blocked" id="2x5">
+                        <p>BCC 321 - Banco de Dados I</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                    <div class="cell blocked" id="2x6">
+                        <p>BCC 325 - Inteligência Artificial</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                    <div class="cell blocked" id="2x7">
+                        <p>BCC 503 - Informática e Sociedade</p>
+                        <p>Carga horária: 30h</p>
+                        <input type="hidden" value=30>
+                    </div>
+                    <div class="cell blocked" id="2x8">
+                        <p>PRO 302 - Ações Empreendedoras</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="cell available" id="3x1">
+                        <p>BCC 501 - Introdução à Ciência da Computação</p>
+                        <p>Carga horária: 30h</p>
+                        <input type="hidden" value=30>
+                    </div>
+                    <div class="cell blocked" id="3x2">
+                        <p>BCC 324 - Interação Humano-Computador</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                    <div class="cell blocked" id="3x3">
+                        <p>BCB 201 - Programação Funcional</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                    <div class="cell blocked" id="3x4">
+                        <p>BCC 204 - Teoria dos Grafos</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                    <div class="cell blocked" id="3x5">
+                        <p>BCC 241 - Projeto e Análise de Algoritmos</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                    <div class="cell blocked" id="3x6">
+                        <p>BCC 342 - Introdução à Otimização</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                    <div class="cell blocked" id="3x7">
+                        <p>FIL 101 - Introdução à História da Filosofia</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                    <div class="cell blocked" id="3x8">
+                        <p>DIR 249 - Direito da Informática</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="cell" style="border: 0px;" id="4x1">
+                    </div>
+                    <div class="cell blocked" id="4x2">
+                        <p>EAD 700 - Prática de Leitura e Produção de Texto</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                    <div class="cell blocked" id="4x3">
+                        <p>BCB 221 - Programação Orientada à Objetos</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                    <div class="cell blocked" id="4x4">
+                        <p>BCC 322 - Engenharia de Software I</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                    <div class="cell blocked" id="4x5">
+                        <p>BCC 323 - Engenharia II</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                    <div class="cell blocked" id="4x6">
+                        <p>BCC 327 - Computação Gráfica</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                    <div class="cell blocked eletiva" id="4x7">
+                        <p>Disciplina Eletiva</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                    <div class="cell blocked facultativa" id="4x8">
+                        <p>Disciplina Facultativa</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="cell available" id="5x1">
+                        <p>BCC 201 - Introdução à Programação</p>
+                        <p>Carga horária: 90h</p>
+                        <input type="hidden" value=90>
+                    </div>
+                    <div class="cell blocked" id="5x2">
+                        <p>BCC 202 - Estrutura de Dados I</p>
+                        <p>Carga horária: 90h</p>
+                        <input type="hidden" value=90>
+                    </div>
+                    <div class="cell blocked" id="5x3">
+                        <p>BCB 203 - Estrutura de Dados II</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                    <div class="cell blocked" id="5x4">
+                        <p>BCC 361 - Redes de Computadores</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                    <div class="cell blocked" id="5x5">
+                        <p>BCC 362 - Sistemas Distribuídos</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                    <div class="cell blocked" id="5x6">
+                        <p>BCC 326 - Processamento de Imagens</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                    <div class="cell blocked eletiva" id="5x7">
+                        <p>Disciplina Eletiva</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                    <div class="cell blocked eletiva" id="5x8">
+                        <p>Disciplina Eletiva</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                </div>
+                <div class="linha">
+                    <div class="cell available" id="6x1">
+                        <p>BCC 265 - Eletronica para Computação</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                    <div class="cell blocked" id="6x2">
+                        <p>BCC 266 - Organização de Computadores</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                    <div class="cell blocked" id="6x3">
+                        <p>BCB 263 - Arquitetura de Computadores</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                    <div class="cell blocked" id="6x4">
+                        <p>BCC 264 - Sistemas Operacionais</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                    <div class="cell blocked" id="6x5">
+                        <p>BCC 502 - Metodologia Científica em Ciência da Computação</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                    <div class="cell blocked eletiva" id="6x6">
+                        <p>Disciplina Eletiva</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                    <div class="cell blocked eletiva" id="6x7">
+                        <p>Disciplina Eletiva</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                    <div class="cell blocked eletiva" id="6x8">
+                        <p>Disciplina Eletiva</p>
+                        <p>Carga horária: 60h</p>
+                        <input type="hidden" value=60>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+<script>
+    $().ready(function() {
+        $('.blocked').attr('disabled=true');
+        $.getJSON('grade.json', function(data) {
+            $.each(data, function(index, value) {
+                console.log(index);
+            })
+        })
+    });
+
+    var total = 0;
+
+    $('.cell').click(function(e) {
+        var hidden = $(this).children('input');
+        var classe = $(this).attr('class');
+        
+        if (classe.indexOf('available') >= 0) {
+            $(this).removeClass('available');
+            $(this).addClass('done');
+        } else if (classe.indexOf('done') >= 0) {
+            $(this).removeClass('done');
+            $(this).addClass('available');
+        } else if (classe.indexOf('blocked') >= 0) {
+            e.preventDefault();
+            return;
+        }
+
+        atualizarMatriz();
+        calcularTotalHoras();
+    })
+
+    function calcularTotalHoras() {
+        total = 0;
+        for (i = 1; i <= 6; i++) {
+            for (j = 1; j <= 8; j++) {
+                var cell = $('#' + i + 'x' + j);
+                var classCell = $(cell).attr('class');
+                if (classCell.indexOf('done') >= 0) {
+                    total = total + parseInt($(cell).children('input').val());
+                }
+            }
+        }
+        $('#total').text(total.toString());
+    }
+
+    function atualizarMatriz() {
+        calcularTotalHoras();
+
+        eletivas = $('.eletiva');
+        if (total >= 200) {
+            $(eletivas).each(function() {
+                if ($(this).attr('class').indexOf('blocked') >= 0) {
+                    $(this).removeClass('blocked');
+                    $(this).attr('class', 'cell available eletiva');
+                }
+            })
+        } else {
+            $(eletivas).each(function() {
+                if ($(this).attr('class').indexOf('blocked') < 0) {
+                    $(this).removeAttr('class');
+                    $(this).attr('class', 'cell blocked eletiva');
+                }
+            })
+        }
+
+        for (i = 1; i <= 6; i++) {
+            for (j = 1; j <= 8; j++) {
+                cell = $('#' + i + 'x' + j);
+                classCell = $(cell).attr('class');
+                if (i == 1) {
+                    if (j == 1) {
+                        if (classCell.indexOf('done') >= 0) {
+                            $('#1x2').removeClass('blocked');
+                            $('#1x2').addClass('available');
+
+                            $('#1x4').removeClass('blocked');
+                            $('#1x4').addClass('available');
+                        } else if (classCell.indexOf('available') >= 0 || classCell.indexOf('blocked') >= 0) {
+                            $('#1x2').removeClass('available');
+                            $('#1x2').removeClass('done');
+                            $('#1x2').addClass('blocked');
+                            
+                            $('#1x4').removeClass('available');
+                            $('#1x4').removeClass('done');
+                            $('#1x4').addClass('blocked');
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+</script>
