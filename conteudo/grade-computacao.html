@@ -404,82 +404,117 @@
 
 <script>
     $().ready(function() {
-        $('.blocked').attr('disabled=true');
-
         atualizarMatriz();
         calcularTotalHoras();
     });
 
     var total = 0;
 
+    //ao clicar em qualquer cedula
     $('.cell').click(function(e) {
+        //pega as classes da cell clicada
         var classe = $(this).attr('class');
         
+        //se ela estiver como "available"
         if (classe.indexOf('available') >= 0) {
+            //troca para "done"
             $(this).removeClass('available');
             $(this).addClass('done');
+        
+        //se ela estiver como "blocked"
         } else if (classe.indexOf('blocked') >= 0) {
+            //ignora
             e.preventDefault();
             return;
         } else {
+            //senao, por default, ela vai estar disponível
             $(this).removeClass('done');
             $(this).addClass('available');
         }
 
+        //atualiza a matriz
         atualizarMatriz();
+        //nao se sabe pq diabos so funciona 100% rodando 2x
         atualizarMatriz();
     })
 
     function calcularTotalHoras() {
+        //inicializa total de horas com 0
         total = 0;
+        //pra cada cell
         $.each($('.cell'), function(index, value) {
             var cell = $(this).attr('class');
+            //se ela estiver marcada como "done"
             if (cell.indexOf('done') >= 0) {
+                //busco o valor da carga horaria dela e somo ao total
                 var cargaHoraria = $(this).children("input[name='carga']").val();
                 total = total + parseInt(cargaHoraria);
             }
         });
-
+        
+        //atribuo o total calculado pro texto
         $('#total').text(total.toString());
     }
 
+    //atualiza 
     function atualizarMatriz() {
+        //primeiro calcula o o total de horas cursadas
+        //esse valor eh usado pra liberar cursos com carga horaria como pre requisito
         calcularTotalHoras();
 
+        //pra cada cell
         $.each($('.cell'), function(index, value) {
             var cell = $(this);
+            //pego o input required, que tem os pre requisitos da materia
             var child = $(this).children("input[name='required']");
             if (child.length > 0) {
+                //transformo em uma lista 
                 var requireds = JSON.parse(child.val());
+                //defino "available" como padrão
                 var available = true;
 
+                //pra cada required
                 for (var i = 0; i < requireds.length; i++) {
                     var field = requireds[i];
+                    
+                    //Padrão de required:
+                    //__1000__  -> 1000 horas de pre requisito
+                    //BCC_101 -> BCC 101 como pre requisito
 
+                    //se nao tiver "__", o pre requisito eh disciplina
                     if (field.indexOf("__") < 0) {
-                        //se o pre requisito estiver como "done"
+                        //se a disciplina nao estiver como "done"
                         if ($('#' + field).attr('class').indexOf('done') < 0) {
+                            //bloqueia a materia
                             available = false;
                         }
                     } else {
-                        //pre requisito eh hora
+                        //se tiver no padrão __NUM__, o pre requisito eh hora de curso 
                         var hours = field.split("__")[1];
                         
+                        //Por default, essas cadeiras são travadas
                         available = false;
+                        //Mas se vc tiver hora suficiente
                         if (total >= hours) {
+                            //pode fazer! :)
                             available = true;
                         }
 
                     }
                 }
 
+                //Se o available virou "false"
                 if (!available) {
                     cell.removeAttr("class");
+                    //entao a cell ta bloqueada
                     cell.attr("class", "cell blocked")
                 } else {
+                    //senao eu tiro o bloqueio dela
                     cell.removeClass('blocked');
+                    //e se por acaso ela nao estiver com "done" e nem com "available"
                     if (cell.attr('class').indexOf('done') < 0 &&
                         cell.attr('class').indexOf('available') < 0) {
+                            //eu seto o available pra ela
                             cell.addClass('available');
                         }
                     
@@ -487,6 +522,7 @@
             }
         });
 
+        //e depois de todo esse role, calculo a quantidade de horas cursadas denovo! :)
         calcularTotalHoras();
     }
 </script>
