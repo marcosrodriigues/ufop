@@ -413,7 +413,6 @@
     var total = 0;
 
     $('.cell').click(function(e) {
-        var hidden = $(this).children('input');
         var classe = $(this).attr('class');
         
         if (classe.indexOf('available') >= 0) {
@@ -426,8 +425,6 @@
             $(this).removeClass('done');
             $(this).addClass('available');
         }
-
-        console.log($(this).attr('class'));
 
         atualizarMatriz();
         atualizarMatriz();
