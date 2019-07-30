@@ -1,0 +1,68 @@
+.form-control:invalid {
+    outline: 1px solid #cc0000;
+}
+
+.ml-auto .dropdown-menu {
+    left: auto !important;
+    right: 0px;
+}
+
+#banner {
+    width: 100%;
+}
+
+#banner img {
+    height: 300px;
+}
+
+.card {
+    float: left;
+    padding-top: 10px;
+    width: 100%;
+}
+
+.no-border {
+    border: 0;
+}
+ 
+.body {
+    margin-top: 15px;
+}
+
+.margin-10 {
+    margin-top: 10px;
+}
+
+.vinho-picture-detail {
+    width: 100%;
+}
+
+
+.vinho-picture-detail img {
+    width: 100%;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+.border-r {
+    border-right: 1px solid #cccccc;
+}
+
+.thumb-wine {
+    height: 230px;
+}
+
+.thumb-wine a img {
+    height: 100%;
+}
+
+.vinho-carrinho div {
+    border-top: 1px solid #cccccc;
+}
+
+.vinho-carrinho img {
+    width: 100px;
+    height: 100px;
+}

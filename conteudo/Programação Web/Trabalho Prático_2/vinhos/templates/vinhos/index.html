@@ -1,0 +1,137 @@
+{% load static %}
+
+<html lang="pt">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Trabalho prático apresentado na máteria de Programação Web na Universidade Federal de Ouro Preto">
+        <meta name="author" content="Marcos Rodrigues e Jordi Alves">
+        <title>Index</title>
+        <link rel="stylesheet" type="text/css" 
+            href="{% static 'vinhos/css/bootstrap/bootstrap.css' %%}" />
+        <link rel="stylesheet" type="text/css" 
+            href="{% static 'vinhos/css/ionic/font/css/open-iconic-bootstrap.css' %}" />
+        <link rel="stylesheet" type="text/css" 
+            href="{% static 'vinhos/css/style.css' %}" />
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <div class="container">
+                    <a class="navbar-brand" href="{% url 'index' %}"><span class="oi oi-star"></span> TWB</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+                        <span class="navbar-toggler-icon" />
+                    </button>
+
+                    <div class="collapse navbar-collapse navbar-text" id="navbarContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'index' %}"><span class="oi oi-home"></span> Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'carrinho' %}"><span class="oi oi-cart"></span> Carrinho</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'admin:index' %}"><span class="oi oi-person"></span> Admin</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        
+        <div id="banner" class="carousel slide" data-ride="carousel"> 
+            <ol class="carousel-indicators">
+                <li data-target="banner" data-slide-to="0" class="active"></li>
+                <li data-target="banner" data-slide-to="1"></li>
+                <li data-target="banner" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="https://scontent.fbsb9-1.fna.fbcdn.net/v/t1.15752-9/64321879_466893937187630_254702027488100352_n.png?_nc_cat=110&_nc_oc=AQmq1GhD3j56t8oC8N8KpzYus-uapD_wmI1q66AEGUDXhgfyBCghnGacG9km0TpdRiA&_nc_ht=scontent.fbsb9-1.fna&oh=7cc69e72ea52d6825335f816c31af0bc&oe=5D98187C" alt="Vinho 1" />
+                </div>
+            </div>
+            <div class="carousel-control-prev" href="#banner" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </div>
+            <div class="carousel-control-prev" href="#banner" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </div>
+        </div>
+
+
+        <div class="container body">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="card card-border">
+                        <div class="card-header">
+                            Seja bem vindo a VS Vinhos
+                        </div>
+                        <div class="card-body">
+                            <form class="form-inline">
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-sm" name="search" placeholder="Search title" {% if search %} value="{{search}}" {% endif %} />
+                                    <button type="submit" class="btn">
+                                        <span class="oi oi-magnifying-glass"></span>
+                                    </button>
+                                </div>
+                            </form>
+
+                            <div class="dropdown-divider"></div>
+                            <div class="categorias">
+                                <h5>Categorias</h5>
+                                
+                                <ul>
+                                {% for cat in categorias %}
+                                    {% if cat.vinhos.count > 0 %}
+                                    <li><a href="{% url 'index_cat' cat.id %}">{{ cat.name }}</a> ({{ cat.vinhos.count }})</li>
+                                    {% endif %}
+                                {% endfor %}
+                                <li><a href="{% url 'index' %}">Ver todos</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            Os melhores vinhos só aqui!
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                
+
+                {% for vinho in vinhos %}
+
+                    <div class="card col-md-4 no-border" style="width: 18rem;">
+                        <div class="card-header thumb-wine">
+                            <a href="{% url 'vinho_detail' vinho.id %}">
+                                <img class="card-img-top" src="{{ vinho.picture.url }}" alt="{{ vinho.title }}" />
+                            </a>
+                        </div>
+                        
+                        <div class="card-body">
+                            <a href="{% url 'vinho_detail' vinho.id %}"><p class="card-text text-center">{{ vinho.title }}</p></a>
+                            <span class="text-justify">{{ vinho.short_description }}</span>
+                        </div>
+                    </div>
+                        
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="col-sm-12 bg-dark text-white">
+                <p><strong>Trabalho desenvolvido por: </strong></p>
+                <p>Marcos Paulo Ferreira Rodrigues</p>
+                <p>Jordi Alves Reinsma</p>
+            </div>
+        </footer>
+    </body>
+</html>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

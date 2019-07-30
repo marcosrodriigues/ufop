@@ -1,0 +1,104 @@
+{% load static %}
+
+<html lang="pt">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Trabalho prático apresentado na máteria de Programação Web na Universidade Federal de Ouro Preto">
+        <meta name="author" content="Marcos Rodrigues e Jordi Alves">
+        <title>Index</title>
+        <link rel="stylesheet" type="text/css" 
+            href="{% static 'vinhos/css/bootstrap/bootstrap.css' %%}" />
+        <link rel="stylesheet" type="text/css" 
+            href="{% static 'vinhos/css/ionic/font/css/open-iconic-bootstrap.css' %}" />
+        <link rel="stylesheet" type="text/css" 
+            href="{% static 'vinhos/css/style.css' %}" />
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <div class="container">
+                    <a class="navbar-brand" href="{% url 'index' %}"><span class="oi oi-star"></span> TWB</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+                        <span class="navbar-toggler-icon" />
+                    </button>
+
+                    <div class="collapse navbar-collapse navbar-text" id="navbarContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'index' %}"><span class="oi oi-home"></span> Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'carrinho' %}"><span class="oi oi-cart"></span> Carrinho</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'admin:index' %}"><span class="oi oi-person"></span> Admin</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container">
+            <div class="row">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h4>{{ vinho }}</h4>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="row">  
+                            <div class="col-sm-4">
+                                <div class="vinho-picture-detail">
+                                    <img src="{{ vinho.picture.url }}" alt="{{vinho}}" />
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <h3>{{ vinho.short_description }}</h3>
+                                <div class="row margin-10">
+                                    <div class="col-md-7 border-r">
+                                        <p>{{ vinho.description }}</p>
+                                    </div>
+                                    <div class="col-md-5">  
+                                        <p><span class="strong">Categoria:</span> {{ vinho.categoria}} </p>
+                                        <p><span class="strong">Quantidade em estoque:</span> {{ vinho.amount }}</p>
+
+                                        <form class="form-inline" action='{% url 'carrinho_add'%}' method='post'>
+                                            {% csrf_token %}
+                                            <label for="cliente">Cliente: </label>
+                                            <select class="form-control" name="cliente" id="cliente" required>
+                                                {% for cliente in clientes %}
+                                                    <option value="{{cliente.id}}">{{cliente}}</option> 
+                                                {% endfor %}
+                                            </select>
+
+                                            <input type="hidden" value="{{vinho.id}}" name="vinho" />
+                                            <button type="submit" class="btn btn-primary margin-10"><span class="oi oi-basket"></span> Adicionar ao carrinho</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer text-center text-muted">
+                        Cadastrado por {{ vinho.owner.username }}
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        
+
+        <footer class="bg-dark">
+            <div class="col-sm-12 bg-dark text-white">
+                <p><strong>Trabalho desenvolvido por: </strong></p>
+                <p>Marcos Paulo Ferreira Rodrigues</p>
+                <p>Jordi Alves Reinsma</p>
+            </div>
+        </footer>
+    </body>
+</html>

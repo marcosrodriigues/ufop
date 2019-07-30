@@ -1,0 +1,80 @@
+{% load static %}
+
+<html lang="pt">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Trabalho prático apresentado na máteria de Programação Web na Universidade Federal de Ouro Preto">
+        <meta name="author" content="Marcos Rodrigues e Jordi Alves">
+        <title>Index</title>
+        <link rel="stylesheet" type="text/css" 
+            href="{% static 'vinhos/css/bootstrap/bootstrap.css' %%}" />
+        <link rel="stylesheet" type="text/css" 
+            href="{% static 'vinhos/css/ionic/font/css/open-iconic-bootstrap.css' %}" />
+        <link rel="stylesheet" type="text/css" 
+            href="{% static 'vinhos/css/style.css' %}" />
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <div class="container">
+                    <a class="navbar-brand" href="{% url 'index' %}"><span class="oi oi-star"></span> TWB</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+                        <span class="navbar-toggler-icon" />
+                    </button>
+
+                    <div class="collapse navbar-collapse navbar-text" id="navbarContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'index' %}"><span class="oi oi-home"></span> Home</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'carrinho' %}"><span class="oi oi-cart"></span> Carrinho</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'admin:index' %}"><span class="oi oi-person"></span> Admin</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container">
+            <div class="row">
+                <div class="card border-primary">
+                    <div class="card-header text-center">
+                        <h4>Cliente {{ cliente }} acabou de finalizar uma compra! </h4>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="col-md-12 text-center text-success">
+                            <h4>Prezado cliente {{cliente}} </h4>
+                            <p> Seu pedido foi concluído.</p>
+                            <p>Seu carrinho de compras foi limpo.</p>
+                            <p>Fique a vontade para continuar navegando em nosso site!</p>
+                        </div>
+                    </div>
+
+                    <div class="card-footer text-center text-muted">
+                        <div class="col-md-12">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        
+
+        <footer class="bg-dark">
+            <div class="col-sm-12 bg-dark text-white">
+                <p><strong>Trabalho desenvolvido por: </strong></p>
+                <p>Marcos Paulo Ferreira Rodrigues</p>
+                <p>Jordi Alves Reinsma</p>
+            </div>
+        </footer>
+    </body>
+</html>
