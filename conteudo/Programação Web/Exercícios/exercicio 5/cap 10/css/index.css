@@ -1,0 +1,99 @@
+.busca,
+ .menu-departamentos {
+   background-color: #dcdcdc;
+   font-weight: bold;
+   text-transform: uppercase;
+   margin-right: 10px;
+   width: 230px;
+   float: left;
+ }
+
+ .menu-departamentos {
+    float: left;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    clear: both;
+ }
+
+ .busca h2,
+ .busca form,
+ .menu-departamentos h2 {
+   margin: 10px;
+ }
+
+ .menu-departamentos li {
+   background-color: white;
+   margin-bottom: 1px;
+   padding: 5px 10px;
+ }
+
+ .menu-departamentos a {
+   color: #333333;
+   text-decoration: none;
+ }
+
+ .busca input[type=search] {
+    width: 170px;
+}
+
+.destaque {
+    margin-top: 10px;
+}
+
+
+.painel {
+    margin: 10px 0;
+    padding: 10px;
+    width: 445px;
+}
+ 
+.novidades {
+    float: left;
+}
+ 
+.mais-vendidos {
+    float: right;
+}
+
+.painel li {
+    display: inline-block;
+    vertical-align: top;
+    width: 140px;
+    margin: 2px;
+    padding-bottom: 10px;
+}
+.painel h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+ 
+.painel a {
+    color: #333;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+}
+ 
+.novidades {
+    background-color: #f5dcdc;
+}
+ 
+.mais-vendidos {
+    background-color: #dcdcf5;
+}
+
+.busca button {
+    /* adicionando imagem */
+    background-image: url(../img/busca.png);
+    background-repeat: no-repeat;
+    border: none;
+   
+    /* tamanho da imagem */
+    width: 20px;
+    height: 20px;
+   
+    /* imagem replacement */
+    text-indent: -9999px;
+   }

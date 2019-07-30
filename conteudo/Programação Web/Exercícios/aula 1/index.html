@@ -1,0 +1,192 @@
+<html>
+    <head>
+        <!-- Titulo, Autor e Palavras chave-->
+        <title>Programação Web</title>
+        <meta name="author" content="Marcos Rodrigues" />
+        <meta name="keywords" content="UFOP,CSS,HTML" />
+        <meta charset="UTF-8" />
+
+        <style>
+        table, th, td {
+            border: 1px solid #000000;
+        }
+        </style>
+    </head>
+
+    <body>
+        <ul>
+            <li><a href="#introducao">Introdução</a></li>
+            <li><a href="#poesia">Poesia</a></li>
+            <li><a href="#lista">Lista</a></li>
+            <li><a href="#table">Tabela</a></li>
+            <li><a href="#form">Formulário</a></li>
+            <li><a href="#endereco">Endereço</a></li>
+        </ul>
+        
+        
+        
+        
+
+        <!--Primeiro parágrafo fala sobre a introdução-->
+        <div id="introducao">
+            <p>
+                <h1>Olá, <strong>mundo</strong>!</h1>
+                <h2>É um prazer fazer negócios com você!</h2>
+            </p>
+        </div>
+        
+        <!-- Sobre o laboratório -->
+        <p>
+            <h3>A sala de aula é composta por 24 computadores, alguns notebooks, um quadro e um datashow.</h3>
+        </p>
+
+        <!-- Sobre o colega do lado -->
+        <p>
+            To com o <i>Jordi <strong>Alves</strong></i>! <br />Menino bonito, com uma blusa xadrez azul e branca e preta e azul marinho, chinelinho do brasil porque é patriota! Bermuda de brim preta, descolado, e mochila ousada!
+        </p>
+        
+        <a href="links.html">Links</a>
+
+        <hr />
+
+        <!-- Provérbio chines da china -->
+        <blockquote id="poesia">
+            Batatinha quando nasce, espalha a rama pelo chão.<br />
+            Menininha quando dorme, põe a mão no coração. <br />
+            Sou pequenininha do tamanho de um botão.<br />
+            Carrego papai no bolso e mamãe no coração <br />
+            O bolso furou e o papai caiu no chão.<br />
+            Mamãe que é mais querida ficou no coração.
+        </blockquote>
+
+        <!-- aquela linha maneira no site -->
+        <hr />
+
+
+        <div id="lista">
+            <!-- lista de pais -->
+            <strong>Pais</strong>
+            <ul class="pais">
+                <li>João Silva</li>
+                <li>Maria Silva</li>
+            </ul>
+
+            <!-- lista de irmaos -->
+            <strong>Irmãos</strong>
+            <ul class="irmaos">
+                <li>João Silva Jr.</li>
+                <li>Maria Aparecida Silva</li>
+                <li>José Silva</li>
+            </ul>
+
+            <!-- lista de primos -->
+            <strong>Primos</strong>
+            <ul class="primos">
+                <li>Nenhum</li>
+            </ul>
+
+            <!-- lista de cores favoritas-->
+            <strong>Cores favoritas</strong>
+            <ol class="cores">
+                <li>Preto</li>
+                <li>Branco</li>
+                <li>Cinza</li>
+            </ul>
+        </div>
+
+        <hr />
+
+        <!-- TABELINHA MAROTA -->
+        <table id="table">
+            <tr>
+                <th>Artigo</th>
+                <th colspan="2">Preço</th>
+            </tr>       
+            <tr>
+                <td rowspan="2">gnats</td>
+                <td>grama</td>
+                <td>13,65</td>
+            </tr>
+            <tr>
+                <td>cada</td>
+                <td>0,01</td>
+            </tr>
+
+            <tr>
+                <td>gnu</td>
+                <td rowspan="2"> preenchido</td>
+                <td>92,50</td>
+            </tr>
+            <tr>
+                <td>emu</td>
+                <td>33,33</td>
+            </tr>
+            <tr>
+                <td>armadillo</td>
+                <td>congelado</td>
+                <td>8,99</td>
+            </tr>
+        </table>
+
+        <hr />
+
+        <form id="form" action="form.html" method="POST">
+            <div class="inputs">
+                <p><label for="nome">Nome:</label> <input type="text" id="nome" name="nome" /></p>
+                <p><label for="pass">Password:</label> <input type="password" id="pass" name="pass" /></p>
+            </div>
+
+            <div class="radioButton">
+                <p>Em qual moeda você prefere receber seu salário?</p>
+                <input type="radio" name="rdb" id="rdbReal" value="Real" /> <label for="rdbReal">Real</label> <br />
+                <input type="radio" name="rdb" id="rdbDolar" value="Dolar" /> <label for="rdbDolar">Dolar</label> <br />
+                <input type="radio" name="rdb" id="rdbEuro" value="Euro" /> <label for="rdbEuro">Euro</label> <br />
+                <input type="radio" name="rdb" id="rdbYen" value="Yen" /> <label for="rdbYen">Yen</label> <br />
+            </div>
+
+            <div class="checkBox">
+                <p>Quais das afirmações seguintes vocẽ considera verdadeira?</p>
+                <input type="checkbox" value="O Boris Yeltsin é abstinente" id="chk1" name="chk" /> <label for="chk1">O Boris Yeltsin é abstinente</label> <br />
+                <input type="checkbox" value="O Bill Clinton é casto" id="chk2" name="chk" /> <label for="chk2">O Bill Clinton é casto</label> <br />
+                <input type="checkbox" value="O Bill Gates é pobre" id="chk3" name="chk" /> <label for="chk3">O Bill Gates é pobre</label> <br />
+                <input type="checkbox" value="A Fernanda Montenegro é péssima atriz" id="chk4" name="chk" /> <label for="chk4">A Fernanda Montenegro é péssima atriz</label> <br />
+                <input type="checkbox" value="A Bibi Ferreira é uma beldade" id="chk5" name="chk" /> <label for="chk5">A Bibi Ferreira é uma beldade</label> <br />
+                <input type="checkbox" value="O Linus Torvalds não entende de programação" id="chk6" name="chk" /> <label for="chk6">O Linus Torvalds não entende de programação</label> <br />
+            </div>
+
+            <div class="file">
+                <p>
+                    Arquivo a enviar: <input type="file" name="file" id="file" />
+                </p>
+            </div>
+            
+            <div class="selects">
+                <select multiple="multiple" name="times">
+                    <option value="Vasco">Vasco</option>
+                    <option value="Flamengo">Flamengo</option>
+                    <option value="Fluminense">Fluminense</option>
+                    <option value="Botafogo">Botafogo</option>
+                </select>
+            </div>
+
+            <div class="textarea">
+                <p>Gostaria de fazer comentários?</p>
+                <textarea name="txa" id="txa" cols="40" rows="5" placeholder="Ponha seu comentário aqui!"></textarea>
+            </div>
+
+            <div class="buttons">
+                <p></p>
+                <input type="submit" value="Manda!" />
+                <input type="reset" value="Limpa" />
+            </div>
+        </form>
+
+        <hr />
+        <!-- Endereço -->
+        <div id="endereco">
+            <p>Rua Xavier da Veiga, 245, Centro - Ouro Preto | MG.</p>
+        </div>
+
+
+    </body>
+</html>

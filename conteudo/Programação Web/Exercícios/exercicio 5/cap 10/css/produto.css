@@ -1,0 +1,212 @@
+.cores label::after {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 6px solid rgba(0,0,0,0);
+    transition: 1s;
+    box-sizing: border-box;
+    position: absolute;
+    top: 30px;
+    cursor: pointer;
+}
+
+.cores label[for=verde]::after {
+    background-color: #33cc66;
+    left: 0;
+}
+
+.cores label[for=rosa]::after {
+    background-color: #ff6666;
+    left: 60;
+}
+
+.cores label[for=azul]::after {
+    background-color: #6666ff;
+    left: 120;
+}
+
+.cores input:checked + label::after {
+    border: 6px solid rgba(0,0,0,0.3);
+}
+
+.cores input[type=radio] {
+    display: none;
+}
+
+.cores input:not(:checked) + label img {
+    display: none;
+}
+
+.cores {
+    position: relative;
+    padding-top: 90px;
+}
+
+.cores label img {
+    display: block;
+    max-width: 100%;
+}
+
+.produto {
+    color: #333;
+    line-height: 1.3;
+    margin-top: 2em;
+}
+
+.produto h2 {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.produto p {
+    font-size: 1.2em;
+    font-style: italic;
+    margin-bottom: 1em;
+}
+
+.produto legend {
+    display: block;
+    font: bold 0.9em/2.5 Arial;
+    text-transform: uppercase;
+}
+
+.comprar {
+    background-color: #91bd3c;
+    border: none;
+    color: #333;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    box-shadow: 0 1px 3px #777;
+    display: block;
+    padding: 0.5em 1em;
+    margin: 1em 0;
+    cursor: pointer;
+}
+
+.cores label:hover::after {
+    border: 6px solid rgba(0,0,0,0.1);
+}
+
+@media (min-width: 630px) {
+    .produto {
+        /* a foto vai se posicionar absolutamente com relação a esse elemento,
+        por isso preciso estar posicionado */
+        position: relative;
+   
+        /* deixar 40% de espaço em branco na esquerda para foto ocupar */
+        padding-left: 40%;
+
+        font-size: 1.2em;
+    }
+   
+    .cores {
+        /* estava relative antes; reinicio para static para evitar que a foto se posicione
+        com relação a mim */
+        position: static;
+   
+        /* zerando o padding-top que tinha antes e não preciso mais */
+        padding: 0;
+    }
+   
+    .cores legend {
+        /* estava absolute antes, para ter o mesmo comportamento no Chrome e no Firefox;
+        agora podemos voltar ao fluxo da página */
+        position: static;
+    }
+   
+    .cores label img {
+        /* imagem se posiciona absolutamente à esquerda com relação ao .produto */
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: 35%;
+        max-height: 100%;
+    }
+   
+    .cores label::after {
+        /* as bolinhas coloridas tinham posição absoluta e não precisamos mais,
+        basta flutuar uma do lado da outra */
+        position: static;
+        float: left;
+        margin-right: 10px;
+    }
+
+    .produto fieldset {
+        display: inline-block;
+        vertical-align: top;
+        margin: 1em 0;
+        min-width: 240px;
+        width: 45%;
+    }
+}
+
+.tamanhos output {
+    display: inline-block;
+    height: 44px;
+    width: 44px;
+    line-height: 44px;
+    text-align: center;
+    border: 3px solid #666;
+    border-radius: 50%;
+    color: #555;
+}
+
+.detalhes {
+    padding: 2em 0;
+}
+
+.detalhes h2 {
+    font-size: 1.5em;
+    line-height: 2;
+}
+
+.detalhes p {
+    margin: 1em 0;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+@media (min-width: 500px) {
+    .detalhes {
+        font-size: 1.2em;
+    }
+}
+
+.detalhes table {
+    border-spacing: 0.2em;
+    border-collapse: separate;
+}
+
+.detalhes thead {
+    background-color: #999;
+}
+
+.detalhes thead th {
+    font-weight: bold;
+    padding: 0.3em 1em;
+    text-align: center;
+}
+
+.detalhes td {
+    padding: 0.3em;
+}
+
+.detalhes tr:nth-child(2n) {
+    background-color: #ccc;
+}
+
+.detalhes td:first-child {
+    font-style: italic;
+}
+
+.produto-back {
+    background-color: #f2f2f2;
+    margin-top: 1em;
+    border-top: 2px solid #ccc;
+}
+
+.cores label img {
+    border: 2px solid #ccc;
+}

@@ -1,0 +1,194 @@
+body {
+    padding-top: 55px;
+    color: #333333;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+header {
+    position: relative;
+}
+
+footer {
+    color: #777;
+    margin: 30px 0;
+    padding: 30px 0;
+}
+
+footer img {
+    margin-right: 30px;
+    vertical-align: middle;
+}
+
+#cabecalho {
+    color: white;
+    text-align: center;
+}
+
+#rodape img {
+    margin-right: 30px;
+    vertical-align: middle;
+    width: 94px;
+}
+
+#centroDistribuicao {
+    margin-left: auto;
+    margin-right: auto;
+    width: 550px;
+}
+
+#familia-pelho {
+    float: right;
+    margin: 0 0 10px 10px;
+}
+
+
+
+.form-control:invalid {
+    outline: 1px solid #cc0000;
+}
+
+.sacola {
+    background-image: url(../img/sacola.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    font-size: 14px;
+    text-align: right;
+    padding-right: 35px;
+    padding-top: 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.menu-opcoes {
+   position: absolute;
+   bottom: 0;
+   right: 0;
+ }
+
+.menu-opcoes ul {
+  font-size: 15px;
+}
+
+.menu-opcoes ul li {
+  display: inline;
+  margin-left: 20px;
+}
+
+
+.menu-opcoes a {
+color: #003366;
+}
+
+
+.menu-opcoes a:hover {
+color: #007dc6;
+}
+
+.menu-opcoes a:active {
+color: #867dc6;
+}
+
+.container {
+margin: 0 auto;
+width: 940px;
+}
+
+
+
+
+footer {
+    background-image: url(../img/fundo-rodape.png);
+    clear: both;
+    padding: 20px 0;
+}
+footer .container {
+    position: relative;
+}
+.social {
+    position: absolute;
+    top: 12px;
+    right: 0;
+}
+
+.social li {
+    float: left;
+    margin-left: 25px;
+}
+ 
+  .social a {
+    height: 32px;
+    width: 32px;
+    display: block;
+    text-indent: -9999px;  
+  }
+ 
+  .social a[href*="facebook.com"] {
+    background-image: url(../img/facebook.png);
+  }
+ 
+  .social a[href*="twitter.com"] {
+    background-image: url(../img/twitter.png);
+  }
+ 
+  .social a[href*="plus.google.com"] {
+    background-image: url(../img/googleplus.png);
+  }
+
+  .painel li:nth-child(n+7) {
+    display: none;
+}
+
+.painel-aberto li:nth-child(n+7) {
+    display: inline-block;
+   }
+
+   .painel button {
+    float: right;
+    margin-right: 10px;
+    padding: 10px;
+    position: relative;
+    margin-bottom: 10px;
+
+    background-color: #333;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 1px 1px 3px rgba(30, 30, 30, 0.5);
+    color: white;
+    font-size: 1em;
+    text-decoration: none;
+    text-shadow: 1px 0 1px black;
+
+    transition: 0.3s;
+}
+
+.painel button:hover {
+    background-color: #393939;
+    box-shadow: 1px 0 20px rgba(200, 200, 120, 0.9);
+}
+
+.painel button::after {
+    /* elemento vazio */
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+
+    /* triângulo */
+    border-top: 10px solid #333;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+
+    /* posicionamento */
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+
+    /* animação */
+    transition: 0.3s;
+}
+
+.painel button:hover::after {
+    border-top-color: #393939;
+}

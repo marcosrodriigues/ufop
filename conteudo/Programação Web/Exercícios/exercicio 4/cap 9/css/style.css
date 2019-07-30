@@ -1,0 +1,96 @@
+body {
+    padding-top: 55px;
+    color: #333333;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+header {
+    position: relative;
+}
+
+footer {
+    color: #777;
+    margin: 30px 0;
+    padding: 30px 0;
+}
+
+footer img {
+    margin-right: 30px;
+    vertical-align: middle;
+    width: 94px;
+}
+
+#cabecalho {
+    color: white;
+    text-align: center;
+}
+
+#rodape img {
+    margin-right: 30px;
+    vertical-align: middle;
+    width: 94px;
+}
+
+#centroDistribuicao {
+    margin-left: auto;
+    margin-right: auto;
+    width: 550px;
+}
+
+#familia-pelho {
+    float: right;
+    margin: 0 0 10px 10px;
+}
+
+
+
+.form-control:invalid {
+    outline: 1px solid #cc0000;
+}
+
+.sacola {
+    background-image: url(../img/sacola.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    font-size: 14px;
+    text-align: right;
+    padding-right: 35px;
+    padding-top: 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.menu-opcoes {
+   position: absolute;
+   bottom: 0;
+   right: 0;
+ }
+
+.menu-opcoes ul {
+  font-size: 15px;
+}
+
+.menu-opcoes ul li {
+  display: inline;
+  margin-left: 20px;
+}
+
+
+.menu-opcoes a {
+color: #003366;
+}
+
+
+.menu-opcoes a:hover {
+color: #007dc6;
+}
+
+.menu-opcoes a:active {
+color: #867dc6;
+}
+
+.container {
+margin: 0 auto;
+width: 940px;
+}

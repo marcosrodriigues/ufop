@@ -1,0 +1,73 @@
+/* {
+    font-family: Arial, Helvetica, sans-serif;
+}*/
+body {
+    color: #333333;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0 auto;
+    width: 940px;
+}
+
+h1 {
+    background-image: url('../img/sobre-background.jpg');
+    padding: 10px;
+}
+
+h2 {
+    border-bottom: 2px solid #333333;
+    margin-top: 30px;
+}
+
+p {
+    padding: 0 45px;
+    text-indent: 15px;
+}
+
+figure {
+    background-color: #F2EDED;
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 15px;
+    margin: 30px;
+}
+
+figcaption {
+    font-style: italic;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.right {
+    float: right;
+}
+
+.buy {
+    text-align: center;
+    color: blue;
+    font-size: 48px;
+    font-weight: bold;
+    background-color: lightblue;
+}
+
+.buy h3 {
+    padding: 20px;
+    
+}
+
+.footer {
+    color: #777;
+    margin: 30px 0;
+    padding: 30px 0;
+}
+
+.footer > img {
+    margin-right: 30px;
+    vertical-align: middle;
+    width: 94px;
+    float: left;
+}
+
+#centroDistribuicao {
+    margin: 0 auto;
+    width: 550px;
+}

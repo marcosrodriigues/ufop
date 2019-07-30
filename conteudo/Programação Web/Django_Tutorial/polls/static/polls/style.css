@@ -1,0 +1,8 @@
+li a {
+    color: green;
+    font-family: Arial, Helvetica, sans-serif;   
+}
+
+body {
+    background: white url("images/background.png") no-repeat;
+}

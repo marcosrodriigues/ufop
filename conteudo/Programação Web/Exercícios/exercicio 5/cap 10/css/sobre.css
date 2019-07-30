@@ -1,0 +1,45 @@
+body {
+    color: #333333;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+h1 {
+    background-image: url(../img/sobre-background.jpg);
+}
+
+h2 {
+    border-bottom: 2px solid #333333;
+}
+
+figure {
+    background-color: #f2eded;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+ 
+figcaption {
+    font-style: italic;
+}
+
+#centro-distribuicao {
+    margin-left: auto;
+    margin-right: auto;
+    width: 550px;
+}
+
+footer {
+    color: #777;
+    margin: 30px 0;
+    padding: 30px 0;
+}
+
+footer img {
+    margin-right: 30px;
+    vertical-align: middle;
+    width: 94px;
+}
+
+#familia-pelho {
+    float: right;
+    margin: 0 0 10px 10px;
+}

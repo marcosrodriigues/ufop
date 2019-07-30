@@ -1,0 +1,118 @@
+<html>
+    <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width">
+          <title>Produto da Mirror Fashion</title>
+          <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+          <link rel="stylesheet" href="css/produto.css">
+          <link rel="stylesheet" href="css/style.css">
+      </head>
+      <body>
+        <header class="container">
+            <h1>
+                <img src="img/logo.png" alt="Logo da Mirror Fashion">
+            </h1>
+
+            <p class="sacola">
+                Nenhum item na sacola de compras
+            </p>
+
+            <nav class="menu-opcoes">
+                <ul>
+                    <li><a href="#">Sua Conta</a></li>
+                    <li><a href="#">Lista de Desejos</a></li>
+                    <li><a href="#">Cartão Fidelidade</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="#">Ajuda</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="produto-back">
+            <div class="content">
+                <section class="produto">
+                    <h2>Camiseta Ecko Caveira Bad to The Bone</h2>
+                    <p>por apenas R$ 48,95</p>
+                    
+                    <form action="checkout.html" method="POST">
+                        <fieldset class="cores">
+                            <legend>Escolha a cor:</legend>
+                        
+                            <input type="radio" name="cor" value="verde" id="verde" checked>
+                            <label for="verde">
+                                <img src="img/produtos/foto2-verde.png" alt="Produto na cor verde">
+                            </label>
+                        
+                            <input type="radio" name="cor" value="rosa" id="rosa">
+                            <label for="rosa">
+                                <img src="img/produtos/foto2-rosa.png" alt="Produto na cor rosa">
+                            </label>
+                        
+                            <input type="radio" name="cor" value="azul" id="azul">
+                            <label for="azul">
+                                <img src="img/produtos/foto2-azul.png" alt="Produto na cor azul">
+                            </label>
+                        </fieldset>
+
+                        <fieldset class="tamanhos">
+                            <legend>Escolha o tamanho:</legend>
+                        
+                            <input type="range" min="36" max="46" value="42" step="2" name="tamanho" id="tamanho">
+                            <output for="tamanho" name="valortamanho">42</output>
+                        </fieldset>
+                    
+                        <button class="comprar">Comprar</button>
+                    </form>
+                </section>
+
+                <section class="detalhes">
+                    <h2>Detalhes do produto</h2>
+
+                    <p>Camiseta confortável ideal para eventos casuais!</p>
+                    <p>Camiseta manga curta, gola redonda. Possui estampa de Caveira e descritivo
+                        frontal e lisa nas costas.</p>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Característica</th>
+                                <th>Detalhe</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Modelo</td>
+                                <td>Camiseta Ecko Caveira</td>
+                            </tr>
+                            <tr>
+                                <td>Material</td>
+                                <td>Algodão e poliester</td>
+                            </tr>
+                            <tr>
+                                <td>Cores</td>
+                                <td>Verde, Rosa e Azul</td>
+                            </tr>
+                            <tr>
+                                <td>Lavagem</td>
+                                <td>Lavar a mão</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </div>
+        
+
+        <footer>
+            <div class="container">
+                <img src="img/logo-rodape.png" alt="Logo da Mirror Fashion">
+
+                <ul class="social">
+                    <li><a href="http://facebook.com/mirrorfashion">Facebook</a></li>
+                    <li><a href="http://twitter.com/mirrorfashion">Twitter</a></li>
+                    <li><a href="http://plus.google.com/mirrorfashion">Google+</a></li>
+                </ul>
+            </div>
+        </footer>
+      </body>
+  </html>

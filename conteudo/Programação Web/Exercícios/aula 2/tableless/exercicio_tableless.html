@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+<title>Exemplo Estrutura de Site Tableless</title>
+
+<style type="text/css">
+
+body {
+	margin:0px;
+	background-color: #cccccc;
+	font-family:"Trebuchet MS", Tahoma, Arial, Verdana;
+	font-size:12px;
+	color:#000;
+}
+
+#todo {
+	position: relative;
+	width: 750px;
+	border: 1px solid black;
+	margin:0px auto;
+	background-color: white;
+}
+
+#topo {
+	position: relative;
+	width: 746px;
+	height: 100px;
+	border: 2px solid red;
+}
+
+#meio {
+	position: relative;
+	width: 750px;
+	min-height: 400px;
+	background-color: #eeeeee;
+}
+
+#rodape {
+	width: 746px;
+	height: 75px;
+	border: 2px solid brown;
+}
+
+#menu_lateral {
+	float: right;
+	width: 150px;
+	min-height: 400px;
+	border: 2px solid green;
+}
+
+#miolo {
+	float: right;
+	width: 438px;
+	min-height: 400px;
+	border: 2px solid blue;
+}
+
+#lateral {
+	float: left;
+	width: 150px;
+	min-height: 400px;
+	border: 2px solid yellow;
+}
+
+#menu_id {
+	width: 150px;
+	height: 400px;
+}
+
+.itemMenu {
+	width: 140px;
+	height: 30px;
+	background-color: lightyellow;
+	padding: 3px 0px 0px 10px;
+	border-bottom: 1px solid black;
+}
+
+#logo {
+	float: right;
+	width: 200px;
+	height: 100px;
+	text-align: center;
+	background-color: #cccccc;
+	margin-right: 0px;
+}
+
+.secao_miolo {
+	width: 428px;
+	height: 250px;
+	text-align: center;
+	background-color: #cccccc;
+	margin: 2px 5px 4px 5px;
+}
+
+.secao_lateral {
+	width: 140px;
+	height: 100px;
+	text-align: center;
+	background-color: #cccccc;
+	margin: 4px 5px 4px 5px;
+}
+
+#rodape_id {
+	float: left;
+	width: 200px;
+	text-align: left;
+	margin: 5px 10px 0px 0px
+}
+
+#rodape_id a{color: #cc6600; text-decoration: none;}
+#rodape_id a:hover{color: #cc6600; text-decoration: underline;}
+</style>
+
+</head>
+
+<body>
+
+<div id="todo">
+	<div id="topo">
+		<div id="logo">Logo</div>
+		Aqui pode ser uma imagem de background e um texto.
+	</div>
+
+	<div id="meio">
+		<div id="menu_lateral">
+			<div id="menu_id">
+				<div class="itemMenu">Principal</div>
+				<div class="itemMenu">Empresa</div>
+				<div class="itemMenu">Produtos</div>
+				<div class="itemMenu">Serviços</div>
+				<div class="itemMenu">Contato</div>
+			</div>
+		</div>
+
+		<div id="miolo">
+			<div class="secao_miolo">Seção 1</div>
+			<div class="secao_miolo">Seção 2</div>
+
+		</div>
+
+		<div id="lateral">
+			<div class="secao_lateral">Seção 1</div>
+			<div class="secao_lateral">Seção 2</div>
+			<div class="secao_lateral">Seção 3</div>
+		</div>
+		<div style="clear: both;"></div>
+	</div>
+
+	<div id="rodape">
+		<div id="rodape_id">
+			Av. xxx yyy zzz, No XYZ<br/>
+			Ouro Preto - MG - CEP: 25400-000<br/>
+			Email: <a href="mailto:proweb@decom.ufop.br">proweb@decom.ufop.br</a>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
