@@ -1,0 +1,42 @@
+<section class="header bg bg-primary">
+    <nav class="navbar navbar-expand-sm bg-secondary">
+        <div class="container-fluid">
+            <div class="col-sm-12" *ngIf="!isLogged">
+                <div class="left">
+                    <a class="nav-link title" routerLink=""><span>FMR</span></a>
+                </div>
+
+                <div class="right">
+                    <ul class="navbar-nav my-nav" >
+                        <li class="navbar-item">
+                            <a class="nav-link link" routerLink="sobre"><span>Sobre</span></a>        
+                        </li>
+                        <li class="navbar-item">
+                            <a class="nav-link link" routerLink=""><span>Login</span></a> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-12" *ngIf="isLogged">
+                <div class="left">
+                    <a class="nav-link title" routerLink=""><span>FMR</span></a>
+                </div>
+
+                <div class="right">
+                    <ul class="navbar-nav my-nav" >
+                        <li class="navbar-item">
+                            <a class="nav-link link" routerLink=""><span>Perfil</span></a>        
+                        </li>
+                        <li class="navbar-item">
+                            <a class="nav-link link" routerLink=""><span>República</span></a> 
+                        </li>
+                        <li class="navbar-item">
+                            <a class="nav-link link" routerLink=""><span>Inventário</span></a> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</section>
+

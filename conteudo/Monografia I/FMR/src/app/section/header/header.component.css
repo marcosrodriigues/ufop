@@ -1,0 +1,32 @@
+.header {
+    width: 100%;
+    color: #ffffff;
+}
+
+.header .title {
+    font-weight: bold;
+    font-size: 36px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    color: white;
+}
+
+.header .link {
+    font-weight: bold;
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    color: #ffffff;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.my-nav {
+    margin-top: 10px;
+}

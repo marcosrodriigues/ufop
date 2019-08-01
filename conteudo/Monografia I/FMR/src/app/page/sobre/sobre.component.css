@@ -1,0 +1,32 @@
+.card-splited .each-card {
+    border-right: 1px solid #c3c3c3;
+}
+
+.card-splited .each-card:last-child {
+    border-right: 0px;
+}
+
+.center {
+    text-align: center;
+}
+
+.container .row {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+.gray {
+    color: #c1c1c1;
+}
+
+.m-10 {
+    margin-top: 10px;
+}
+
+.m-25 {
+    margin-top: 25px;
+}
