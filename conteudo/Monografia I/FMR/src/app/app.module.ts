@@ -7,6 +7,7 @@ import { HeaderComponent } from './section/header/header.component';
 import { IndexComponent } from './page/index/index.component';
 import { FooterComponent } from './section/footer/footer.component';
 import { SobreComponent } from './page/sobre/sobre.component';
+import { LoginComponent } from './page/login/login.component';
 
 
 
@@ -16,7 +17,8 @@ import { SobreComponent } from './page/sobre/sobre.component';
     HeaderComponent,
     IndexComponent,
     FooterComponent,
-    SobreComponent
+    SobreComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

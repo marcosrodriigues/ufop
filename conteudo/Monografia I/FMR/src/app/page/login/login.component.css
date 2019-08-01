@@ -1,0 +1,16 @@
+.strong {
+    font-weight: bold;
+}
+
+.center {
+    text-align: center;
+}
+
+.m10 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.left {
+    text-align: left;
+}
