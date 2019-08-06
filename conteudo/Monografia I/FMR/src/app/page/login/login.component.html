@@ -9,29 +9,27 @@
                             <div class="card">
                                 <div class="card-header"><h5>Login</h5></div>
                                 <div class="card-body">
-                                    <form>
-                                        <div class="form-row align-items-center">
-                                            <div class="input-group mb-2">
-                                                <div class="input-group-prepend">
-                                                    <div class="input-group-text"><label for="username">@</label></div>
-                                                </div>
-                                                <input type="text" class="form-control" id="username" placeholder="usuário ou email">
+                                    <div class="form-row align-items-center">
+                                        <div class="input-group mb-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text"><label for="username">@</label></div>
                                             </div>
-                                            <div class="input-group mb-2">
-                                                <div class="input-group-prepend">
-                                                    <div class="input-group-text"><label for="password"><i class="fa fa-key"></i></label></div>
-                                                </div>
-                                                <input type="password" class="form-control" id="password" placeholder="senha">
-                                            </div>
-                                            <div class="custom-control custom-checkbox mr-sm-2">
-                                                <input type="checkbox" class="custom-control-input" id="remember">
-                                                <label class="custom-control-label" for="remember">Lembrar acesso</label>
-                                            </div>
-                                            <div class="col-sm-12">
-                                                <button type="submit" class="btn btn-primary">Acessar</button>
-                                            </div>
+                                            <input type="text" class="form-control" id="username" placeholder="usuário ou email">
                                         </div>
-                                    </form>
+                                        <div class="input-group mb-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text"><label for="password"><i class="fa fa-key"></i></label></div>
+                                            </div>
+                                            <input type="password" class="form-control" id="password" placeholder="senha">
+                                        </div>
+                                        <div class="custom-control custom-checkbox mr-sm-2">
+                                            <input type="checkbox" class="custom-control-input" id="remember">
+                                            <label class="custom-control-label" for="remember">Lembrar acesso</label>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <button class="btn btn-primary" (click)="signIn()">Acessar</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -39,33 +37,31 @@
                             <div class="card">
                                 <div class="card-header"><h5>Cadastro</h5></div>
                                 <div class="card-body">
-                                    <form>
-                                        <div class="form">
-                                            <div class="input-group mb-2 left">
-                                                <label for="tipo" class="col-sm-4"> Eu sou uma:</label>
-                                                <select class="custom-select col-sm-8" id="tipo">
-                                                    <option disabled>Escolha</option>
-                                                    <option value="1">Pessoa física</option>
-                                                    <option value="2">República</option>
-                                                </select>
-                                            </div>
-                                            <div class="input-group mb-2 left">
-                                                <label for="email" class="col-sm-4">Email:</label>
-                                                <input type="email" class="form-control col-sm-8" name="email" id="email" />
-                                            </div>
-                                            <div class="input-group mb-2 left">
-                                                <label for="senha" class="col-sm-4">Senha:</label>
-                                                <input type="text" class="form-control col-sm-8" name="senha" id="senha" />
-                                            </div>
-                                            <div class="custom-control custom-checkbox mr-sm-2 left">
-                                                <input type="checkbox" class="custom-control-input col-sm-4" id="termo">
-                                                <label class="custom-control-label col-sm-8" for="termo">Li e concordo com os termos de uso.</label>
-                                            </div>
-                                            <div class="col-sm-12">
-                                                <button type="submit" class="btn btn-primary">Cadastrar</button>
-                                            </div>
+                                    <div class="form">
+                                        <div class="input-group mb-2 left">
+                                            <label for="tipo" class="col-sm-4"> Eu sou uma:</label>
+                                            <select class="custom-select col-sm-8" id="tipo">
+                                                <option disabled>Escolha</option>
+                                                <option value="1">Pessoa física</option>
+                                                <option value="2">República</option>
+                                            </select>
                                         </div>
-                                    </form>
+                                        <div class="input-group mb-2 left">
+                                            <label for="email" class="col-sm-4">Email:</label>
+                                            <input type="email" class="form-control col-sm-8" name="email" id="email" />
+                                        </div>
+                                        <div class="input-group mb-2 left">
+                                            <label for="senha" class="col-sm-4">Senha:</label>
+                                            <input type="text" class="form-control col-sm-8" name="senha" id="senha" />
+                                        </div>
+                                        <div class="custom-control custom-checkbox mr-sm-2 left">
+                                            <input type="checkbox" class="custom-control-input col-sm-4" id="termo">
+                                            <label class="custom-control-label col-sm-8" for="termo">Li e concordo com os termos de uso.</label>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <button type="submit" class="btn btn-primary" (click)="signUp()">Cadastrar</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

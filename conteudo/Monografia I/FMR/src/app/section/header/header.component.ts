@@ -12,6 +12,14 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    if (window.localStorage['username'] != '') {
+      this.isLogged = true;
+    }
+  }
+
+  logout() {
+    window.localStorage['username'] = '';
+    window.location.href='';
   }
 
 }

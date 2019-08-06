@@ -12,4 +12,14 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
+  signIn() {
+    console.log("signIn");
+    window.localStorage['username'] = "username";
+    window.location.href='';
+  }
+
+  signUp() {
+    console.log("signUp");
+  }
+
 }

@@ -8,6 +8,8 @@ import { IndexComponent } from './page/index/index.component';
 import { FooterComponent } from './section/footer/footer.component';
 import { SobreComponent } from './page/sobre/sobre.component';
 import { LoginComponent } from './page/login/login.component';
+import { SearchComponent } from './page/search/search.component';
+import { RepublicDetailComponent } from './page/republic-detail/republic-detail.component';
 
 
 
@@ -18,7 +20,9 @@ import { LoginComponent } from './page/login/login.component';
     IndexComponent,
     FooterComponent,
     SobreComponent,
-    LoginComponent
+    LoginComponent,
+    SearchComponent,
+    RepublicDetailComponent
   ],
   imports: [
     BrowserModule,

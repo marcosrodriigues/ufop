@@ -30,3 +30,23 @@
 .my-nav {
     margin-top: 10px;
 }
+
+.my-nav li {
+    position: relative;
+}
+
+.my-nav li:after {
+    content: '';
+    height: 50%;
+    width: 1px;
+
+    position: absolute;
+    right: 0;
+    top: 25%;
+
+    background-color: #ffffff;
+}
+
+.my-nav li:last-child::after {
+    height: 0;
+}
