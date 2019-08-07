@@ -14,3 +14,7 @@
 .left {
     text-align: left;
 }
+
+.input-group-prepend label {
+    margin-bottom: 0px;
+}

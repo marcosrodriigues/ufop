@@ -7,6 +7,7 @@ import { SearchComponent } from './page/search/search.component';
 import { RepublicDetailComponent } from './page/republic-detail/republic-detail.component';
 import { ProfileComponent } from './page/profile/profile.component';
 import { MyRepublicComponent } from './page/my-republic/my-republic.component';
+import { InventoryComponent } from './page/inventory/inventory.component';
 
 
 const routes: Routes = [
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'search', component: SearchComponent },
   { path: 'republica/:id', component: RepublicDetailComponent},
   { path: 'profile', component: ProfileComponent },
-  { path: 'minha-republica', component: MyRepublicComponent }
+  { path: 'minha-republica', component: MyRepublicComponent },
+  { path: 'inventario', component: InventoryComponent }
 
 
 ];

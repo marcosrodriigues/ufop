@@ -12,6 +12,7 @@ import { SearchComponent } from './page/search/search.component';
 import { RepublicDetailComponent } from './page/republic-detail/republic-detail.component';
 import { ProfileComponent } from './page/profile/profile.component';
 import { MyRepublicComponent } from './page/my-republic/my-republic.component';
+import { InventoryComponent } from './page/inventory/inventory.component';
 
 
 
@@ -26,7 +27,8 @@ import { MyRepublicComponent } from './page/my-republic/my-republic.component';
     SearchComponent,
     RepublicDetailComponent,
     ProfileComponent,
-    MyRepublicComponent
+    MyRepublicComponent,
+    InventoryComponent
   ],
   imports: [
     BrowserModule,
