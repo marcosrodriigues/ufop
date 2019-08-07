@@ -11,6 +11,7 @@ import { LoginComponent } from './page/login/login.component';
 import { SearchComponent } from './page/search/search.component';
 import { RepublicDetailComponent } from './page/republic-detail/republic-detail.component';
 import { ProfileComponent } from './page/profile/profile.component';
+import { MyRepublicComponent } from './page/my-republic/my-republic.component';
 
 
 
@@ -24,7 +25,8 @@ import { ProfileComponent } from './page/profile/profile.component';
     LoginComponent,
     SearchComponent,
     RepublicDetailComponent,
-    ProfileComponent
+    ProfileComponent,
+    MyRepublicComponent
   ],
   imports: [
     BrowserModule,
