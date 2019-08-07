@@ -1,7 +1,7 @@
 <section class="header bg bg-primary">
     <nav class="navbar navbar-expand-sm bg-secondary">
         <div class="container-fluid">
-            <div class="col-sm-12" *ngIf="!isLogged">
+            <div class="col-sm-12">
                 <div class="left">
                     <a class="nav-link title" routerLink=""><span>FMR</span></a>
                 </div>
@@ -11,32 +11,19 @@
                         <li class="navbar-item">
                             <a class="nav-link link" routerLink="sobre">Sobre</a>        
                         </li>
-                        <li class="navbar-item">
-                            <a class="nav-link link" routerLink="login">Login</a> 
+                        <li class="navbar-item" *ngIf="isLogged">
+                            <a class="nav-link link" routerLink="profile"><span>Perfil</span></a>        
                         </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-12" *ngIf="isLogged">
-                <div class="left">
-                    <a class="nav-link title" routerLink=""><span>FMR</span></a>
-                </div>
-
-                <div class="right">
-                    <ul class="navbar-nav my-nav" >
-                        <li class="navbar-item">
-                            <a class="nav-link link" routerLink="sobre">Sobre</a>        
-                        </li>
-                        <li class="navbar-item">
-                            <a class="nav-link link" routerLink=""><span>Perfil</span></a>        
-                        </li>
-                        <li class="navbar-item">
+                        <li class="navbar-item" *ngIf="isLogged">
                             <a class="nav-link link" routerLink=""><span>República</span></a> 
                         </li>
-                        <li class="navbar-item">
+                        <li class="navbar-item" *ngIf="isLogged">
                             <a class="nav-link link" routerLink=""><span>Inventário</span></a> 
                         </li>
-                        <li class="navbar-item">
+                        <li class="navbar-item" *ngIf="!isLogged">
+                            <a class="nav-link link" routerLink="login">Login</a> 
+                        </li>
+                        <li class="navbar-item" *ngIf="isLogged">
                             <a class="nav-link link" href="#" (click)="logout()"><span>Sair</span></a> 
                         </li>
                     </ul>

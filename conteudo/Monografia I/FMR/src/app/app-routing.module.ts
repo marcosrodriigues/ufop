@@ -5,6 +5,7 @@ import { SobreComponent } from './page/sobre/sobre.component';
 import { LoginComponent } from './page/login/login.component';
 import { SearchComponent } from './page/search/search.component';
 import { RepublicDetailComponent } from './page/republic-detail/republic-detail.component';
+import { ProfileComponent } from './page/profile/profile.component';
 
 
 const routes: Routes = [
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: 'sobre', component: SobreComponent },
   { path: 'login', component: LoginComponent },
   { path: 'search', component: SearchComponent },
-  { path: 'republica/:id', component: RepublicDetailComponent}
+  { path: 'republica/:id', component: RepublicDetailComponent},
+  { path: 'profile', component: ProfileComponent}
 
 ];
 

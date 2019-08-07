@@ -1,0 +1,77 @@
+<div class="container">
+    <div class="row"> 
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header center"><h4 class="strong">Meu perfil</h4></div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3 center">
+                            <img src="assets/img/default-user.png" class="img-fluid" />
+                            <div class="form-group m10">
+                                <span class="desc">{{ profile.tipo }} </span>
+                                <span class="desc">{{ profile.email }} </span>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form-group row">
+                                <label for="nome" class="col-sm-4 col-form-label">Nome: </label>
+                                <div class="col-sm-8">
+                                    <input type="text" id="nome" class="form-control" placeholder="Nome" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="nascimento" class="col-sm-4 col-form-label">Nascimento: </label>
+                                <div class="col-sm-8">
+                                    <input type="date" id="nascimento" class="form-control" placeholder="dd/MM/yyyy" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="universidade" class="col-sm-4 col-form-label">Universidade: </label>
+                                <div class="col-sm-8">
+                                    <select class="custom-select" id="universidade">
+                                        <option disabled>Escolha</option>
+                                        <option value="UFOP">UFOP</option>
+                                        <option value="UFMG">UFMG</option>
+                                        <option value="UFRJ">UFRJ</option>
+                                        <option value="USP">USP</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="email" class="col-sm-4 col-form-label">Email: </label>
+                                <div class="col-sm-8">
+                                    <input type="email" id="email" class="form-control" placeholder="Email" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="email" class="col-sm-4 col-form-label">UF: </label>
+                                <div class="col-sm-8">
+                                    <select class="custom-select" id="universidade">
+                                        <option disabled>Escolha</option>
+                                        <option value="RJ">RJ</option>
+                                        <option value="MG">MG</option>
+                                        <option value="SP">SP</option>
+                                        <option value="ES">ES</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="cidade" class="col-sm-4 col-form-label">Cidade: </label>
+                                <div class="col-sm-8">
+                                    <input type="text" id="cidade" class="form-control" placeholder="Cidade" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-12 center">
+                                    <button class="btn btn-primary col-sm-6">Atualizar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4"><div id="chart" style="height: 370px; width: 100%; margin-left:auto;margin-right:auto;"></div></div>
+                    </div>    
+                </div>
+                <div class="card-footer"></div>
+            </div>
+        </div>
+    </div>
+</div>

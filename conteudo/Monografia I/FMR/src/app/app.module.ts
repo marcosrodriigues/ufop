@@ -10,6 +10,7 @@ import { SobreComponent } from './page/sobre/sobre.component';
 import { LoginComponent } from './page/login/login.component';
 import { SearchComponent } from './page/search/search.component';
 import { RepublicDetailComponent } from './page/republic-detail/republic-detail.component';
+import { ProfileComponent } from './page/profile/profile.component';
 
 
 
@@ -22,7 +23,8 @@ import { RepublicDetailComponent } from './page/republic-detail/republic-detail.
     SobreComponent,
     LoginComponent,
     SearchComponent,
-    RepublicDetailComponent
+    RepublicDetailComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
