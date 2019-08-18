@@ -10,8 +10,6 @@ import { UserService } from 'src/app/service/user.service';
 export class LoginComponent implements OnInit {
 
   public login = {
-    scope:'read',
-    grant_type:'password',
     username: '',
     password: ''
   }
@@ -20,37 +18,27 @@ export class LoginComponent implements OnInit {
     tipo: '',
     email: '',
     password: '',
-    termo: false
+    termos: false
   }
 
-  constructor(private http: HttpClient,
-              private userService: UserService) { }
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
   }
 
   signIn() {
-    window.localStorage['username'] = 'hello';
     const param = JSON.stringify(this.login);
-    this.userService.login(param).subscribe(data => {
-      console.log(data);
-      console.log(param);
+    this.userService.login(this.login).subscribe(data => {
+      this.userService.saveToken(data);
+    }, err => {
+      alert('Invalid credentials');
     })
   }
 
   signUp() {
     const param = JSON.stringify(this.user);
-    console.log(param);
     this.userService.create(this.user).subscribe(data => {
-      console.log(data);
+      alert('Usuário criado!');
     })
   }
-
-  url = 'http://localhost:8080/login';
-  signUpFacebook() {
-    this.http.post(this.url, {}).subscribe(d => {
-      console.log(d);
-    })
-  }
-
 }

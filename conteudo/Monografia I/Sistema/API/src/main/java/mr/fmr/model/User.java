@@ -7,7 +7,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column
     private String email;
@@ -18,11 +18,25 @@ public class User {
 
     private boolean termos;
 
-    public long getId() {
+    private String tipo;
+
+    public User(String email, String password, String username, boolean termos, String tipo) {
+        this.email = email;
+        this.password = password;
+        this.username = username;
+        this.termos = termos;
+        this.tipo = tipo;
+    }
+
+    public User() {
+
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -58,4 +72,11 @@ public class User {
         this.termos = termos;
     }
 
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
 }

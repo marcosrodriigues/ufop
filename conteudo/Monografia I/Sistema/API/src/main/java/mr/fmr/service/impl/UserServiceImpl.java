@@ -2,9 +2,10 @@ package mr.fmr.service.impl;
 
 import mr.fmr.model.User;
 import mr.fmr.repository.UserRepository;
+import mr.fmr.service.EstudanteService;
+import mr.fmr.service.RepublicaService;
 import mr.fmr.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -24,16 +25,22 @@ public class UserServiceImpl implements UserDetailsService, UserService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+    @Autowired
+    private EstudanteService estudanteService;
+
+    @Autowired
+    private RepublicaService republicaService;
+
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = repository.findByUsername(username);
+        User user = repository.findByUsernameOrEmail(username, username);
         if (user == null) {
             throw new UsernameNotFoundException("Invalid username or password.");
         }
-        return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), getAuthority());
+        return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), getAuthority(user));
     }
 
-    private List<SimpleGrantedAuthority> getAuthority() {
-        return Arrays.asList(new SimpleGrantedAuthority("ROLE_ADMIN"));
+    private List<SimpleGrantedAuthority> getAuthority(User user) {
+        return Arrays.asList(new SimpleGrantedAuthority(user.getTipo()));
     }
 
     @Override
@@ -54,10 +61,25 @@ public class UserServiceImpl implements UserDetailsService, UserService {
 
     @Override
     public User save(User user) {
+        if (repository.findByEmail(user.getEmail()) != null) {
+            return user;
+        }
 
-        if (user.getUsername() == null || user.getUsername().isEmpty()) user.setUsername(user.getEmail().split("@")[0]);
+        if (user.getUsername() == null || user.getUsername().isEmpty()) {
+            String username = user.getEmail().split("@")[0];
+            User userAux = repository.findByUsername(username);
+            if (userAux == null)
+                user.setUsername(username);
+        }
+
         user.setPassword(passwordEncoder.encode(user.getPassword()));
 
-        return repository.save(user);
+
+        if (user.getTipo().equalsIgnoreCase("ESTUDANTE")) {
+            return estudanteService.save(user);
+        } else if (user.getTipo().equalsIgnoreCase("REPUBLICA")) {
+            return republicaService.save(user);
+        }
+        return null;
     }
 }

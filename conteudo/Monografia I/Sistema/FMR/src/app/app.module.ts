@@ -17,6 +17,8 @@ import { InventoryComponent } from './page/inventory/inventory.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
+import { CookieService } from 'ngx-cookie-service';
+
 
 
 @NgModule({
@@ -39,7 +41,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

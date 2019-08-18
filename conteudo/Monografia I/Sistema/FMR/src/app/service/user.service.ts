@@ -1,41 +1,57 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  constructor(private http : HttpClient) { }
+  constructor(private _router : Router,
+              private _http : HttpClient,
+              private _cookie : CookieService ) { }
+
   baseUrl : string =  "http://localhost:8080/user";
 
-  login(loginPayload) {
+  login(loginData) {
+    let params = new HttpParams()
+      .set('username', loginData.username)
+      .set("password", loginData.password)
+      .set("grant_type", "password")
+      .set("scope", "read");
+
     const headers = {
       'Authorization': 'Basic ' + btoa('frm-client:frm-secret'),
       'Content-type': 'application/x-www-form-urlencoded'
     }
-    
-    return this.http.post('http://localhost:8080/' + 'oauth/token', loginPayload, {headers});
+
+    return this._http.post('http://localhost:8080/' + 'oauth/token', params, {headers});
   }
 
-  getUsers() {
-    return this.http.get(
-      this.baseUrl + 'user?access_token=' + JSON.parse(window.sessionStorage.getItem('token')).access_token);
+  saveToken(token) {
+    var expiredDate = new Date().getTime() + (1000 * token.expires_in);
+    this._cookie.set('access_token', token.access_token, expiredDate);
+    window.location.href = "/";
   }
 
-  getUserById(id: number) {
-    return this.http.get(this.baseUrl + 'user/' + id + '?access_token=' + JSON.parse(window.sessionStorage.getItem('token')).access_token);
+  checkCredentials() {
+    if (this._cookie.get('access_token'))
+      this._router.navigate(['/login']);
   }
+
+  getToken() {
+    return this._cookie.get('access_token');
+  }
+
+  logout() {
+    this._cookie.delete('access_token');
+    window.location.href = "/login";
+  }
+
 
   create(user) {
-    return this.http.post(this.baseUrl, user);
+    return this._http.post(this.baseUrl, user);
   }
 
-  updateUser(user) {
-    return this.http.put(this.baseUrl + 'user/' + user.id + '?access_token=' + JSON.parse(window.sessionStorage.getItem('token')).access_token, user);
-  }
-
-  deleteUser(id: number){
-    return this.http.delete(this.baseUrl + 'user/' + id + '?access_token=' + JSON.parse(window.sessionStorage.getItem('token')).access_token);
-  }
 }
