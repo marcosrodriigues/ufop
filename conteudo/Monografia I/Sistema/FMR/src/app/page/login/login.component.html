@@ -14,13 +14,13 @@
                                             <div class="input-group-prepend">
                                                 <div class="input-group-text"><label for="username">@</label></div>
                                             </div>
-                                            <input type="text" class="form-control" id="username" placeholder="usuário ou email">
+                                            <input type="text" class="form-control" [(ngModel)]="login.username" id="username" placeholder="usuário ou email">
                                         </div>
                                         <div class="input-group mb-2">
                                             <div class="input-group-prepend">
                                                 <div class="input-group-text"><label for="password"><i class="fa fa-key"></i></label></div>
                                             </div>
-                                            <input type="password" class="form-control" id="password" placeholder="senha">
+                                            <input type="password" class="form-control" [(ngModel)]="login.password" id="password" placeholder="senha">
                                         </div>
                                         <div class="custom-control custom-checkbox mr-sm-2">
                                             <input type="checkbox" class="custom-control-input" id="remember">
@@ -40,7 +40,7 @@
                                     <div class="form">
                                         <div class="input-group mb-2 left">
                                             <label for="tipo" class="col-sm-4"> Eu sou uma:</label>
-                                            <select class="custom-select col-sm-8" id="tipo">
+                                            <select class="custom-select col-sm-8" [(ngModel)]="user.tipo" id="tipo">
                                                 <option disabled>Escolha</option>
                                                 <option value="1">Pessoa física</option>
                                                 <option value="2">República</option>
@@ -48,18 +48,21 @@
                                         </div>
                                         <div class="input-group mb-2 left">
                                             <label for="email" class="col-sm-4">Email:</label>
-                                            <input type="email" class="form-control col-sm-8" name="email" id="email" />
+                                            <input type="email" class="form-control col-sm-8" [(ngModel)]="user.email" name="email" id="email" />
                                         </div>
                                         <div class="input-group mb-2 left">
                                             <label for="senha" class="col-sm-4">Senha:</label>
-                                            <input type="text" class="form-control col-sm-8" name="senha" id="senha" />
+                                            <input type="password" class="form-control col-sm-8" [(ngModel)]="user.password" name="senha" id="senha" />
                                         </div>
                                         <div class="custom-control custom-checkbox mr-sm-2 left">
-                                            <input type="checkbox" class="custom-control-input col-sm-4" id="termo">
+                                            <input type="checkbox" class="custom-control-input col-sm-4" [(ngModel)]="user.termo" id="termo">
                                             <label class="custom-control-label col-sm-8" for="termo">Li e concordo com os termos de uso.</label>
                                         </div>
                                         <div class="col-sm-12">
                                             <button type="submit" class="btn btn-primary" (click)="signUp()">Cadastrar</button>
+                                        </div>
+                                        <div class="col-sm-12 m10">
+                                            <button type="submit" class="btn btn-primary" (click)="signUpFacebook()">Facebook</button>
                                         </div>
                                     </div>
                                 </div>

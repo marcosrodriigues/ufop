@@ -14,6 +14,9 @@ import { ProfileComponent } from './page/profile/profile.component';
 import { MyRepublicComponent } from './page/my-republic/my-republic.component';
 import { InventoryComponent } from './page/inventory/inventory.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -32,7 +35,9 @@ import { InventoryComponent } from './page/inventory/inventory.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
