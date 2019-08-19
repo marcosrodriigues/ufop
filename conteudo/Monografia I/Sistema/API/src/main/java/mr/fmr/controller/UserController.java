@@ -3,8 +3,10 @@ package mr.fmr.controller;
 import mr.fmr.model.User;
 import mr.fmr.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.List;
 
 @RestController
@@ -29,6 +31,12 @@ public class UserController {
     @GetMapping(value = BASE_URL + "/{id}")
     public User findOne(@PathVariable long id) {
         return userService.findOne(id);
+    }
+
+    @GetMapping(value = BASE_URL + "/me")
+    @ResponseBody
+    public User findMe(Principal principal) {
+        return userService.getUserFromPrincipal(principal);
     }
 
     @PutMapping(value = BASE_URL + "/{id}")

@@ -14,10 +14,11 @@ import { ProfileComponent } from './page/profile/profile.component';
 import { MyRepublicComponent } from './page/my-republic/my-republic.component';
 import { InventoryComponent } from './page/inventory/inventory.component';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { CookieService } from 'ngx-cookie-service';
+import { MyHttpInterceptor } from './http-interceptor';
 
 
 
@@ -41,7 +42,14 @@ import { CookieService } from 'ngx-cookie-service';
     HttpClientModule,
     FormsModule
   ],
-  providers: [CookieService],
+  providers: [
+    CookieService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: MyHttpInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

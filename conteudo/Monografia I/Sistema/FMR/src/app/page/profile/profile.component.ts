@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as CanvasJS from '../../../assets/js/canvasjs.min';
+import { UserService } from 'src/app/service/user.service';
 
 @Component({
   selector: 'app-profile',
@@ -22,9 +23,15 @@ export class ProfileComponent implements OnInit {
     { y: 75, name: "Neuroticismo" },
   ];
 
-  constructor() { }
+  constructor(private _userService : UserService) { }
 
   ngOnInit() {
+    this._userService.checkCredentials();
+    this._userService.me().subscribe(data => {
+      console.log(data);
+    }, err => {
+      console.log(err);
+    })
     this.initializeChart('chart');
   }
 

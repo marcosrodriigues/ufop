@@ -36,7 +36,7 @@ export class UserService {
   }
 
   checkCredentials() {
-    if (this._cookie.get('access_token'))
+    if (!this._cookie.get('access_token'))
       this._router.navigate(['/login']);
   }
 
@@ -49,6 +49,9 @@ export class UserService {
     window.location.href = "/login";
   }
 
+  me() {
+    return this._http.get(`${this.baseUrl}/me`);
+  }
 
   create(user) {
     return this._http.post(this.baseUrl, user);

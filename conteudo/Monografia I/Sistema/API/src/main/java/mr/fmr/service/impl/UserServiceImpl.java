@@ -6,13 +6,18 @@ import mr.fmr.service.EstudanteService;
 import mr.fmr.service.RepublicaService;
 import mr.fmr.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.security.Principal;
 import java.util.Arrays;
 import java.util.List;
 
@@ -82,4 +87,11 @@ public class UserServiceImpl implements UserDetailsService, UserService {
         }
         return null;
     }
+
+    @Override
+    public User getUserFromPrincipal(Principal principal) {
+        User user = repository.findByUsername(principal.getName());
+        return user;
+    }
+
 }
