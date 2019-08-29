@@ -3,7 +3,6 @@ package mr.fmr.controller;
 import mr.fmr.model.User;
 import mr.fmr.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;

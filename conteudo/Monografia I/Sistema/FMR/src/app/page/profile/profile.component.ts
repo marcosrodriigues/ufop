@@ -9,14 +9,14 @@ import { UserService } from 'src/app/service/user.service';
 })
 export class ProfileComponent implements OnInit {
 
-  profile = {
-    email: "marcos.rodriiigues@gmail.com",
-    tipo: "Estudante",
-    universidade: "UFOP - Federal de Ouro Preto"
+  profile: any = {
+    endereco: {
+      
+    }
   }
 
   data = [
-    { y: 52, name: "Abertura para o novo" },
+    { y: 52, name: "Abertura para o Novo" },
     { y: 68, name: "Realização" },
     { y: 40, name: "Extroversão" },
     { y: 35, name: "Socialização" },
@@ -26,13 +26,15 @@ export class ProfileComponent implements OnInit {
   constructor(private _userService : UserService) { }
 
   ngOnInit() {
+    this.initializeChart('chart');
+
     this._userService.checkCredentials();
     this._userService.me().subscribe(data => {
-      console.log(data);
+      this.profile = data;
+      console.log(this.profile);
     }, err => {
       console.log(err);
     })
-    this.initializeChart('chart');
   }
 
   initializeChart(id) {

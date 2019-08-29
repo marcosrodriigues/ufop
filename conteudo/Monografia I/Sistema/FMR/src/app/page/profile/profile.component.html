@@ -8,8 +8,8 @@
                         <div class="col-md-3 center">
                             <img src="assets/img/default-user.png" class="img-fluid" />
                             <div class="form-group m10">
-                                <span class="desc">{{ profile.tipo }} </span>
-                                <span class="desc">{{ profile.email }} </span>
+                                <p class="desc">{{ profile.tipo }} </p>
+                                <p class="desc">{{ profile.email }} </p>
                                 <a class="nav-link link" routerLink="/minha-republica">República Maternidade</a>
                             </div>
                         </div>
@@ -17,19 +17,19 @@
                             <div class="form-group row">
                                 <label for="nome" class="col-sm-4 col-form-label">Nome: </label>
                                 <div class="col-sm-8">
-                                    <input type="text" id="nome" class="form-control" placeholder="Nome" />
+                                    <input type="text" id="nome" [(ngModel)]="profile.nome" class="form-control" placeholder="Nome" />
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="nascimento" class="col-sm-4 col-form-label">Nascimento: </label>
                                 <div class="col-sm-8">
-                                    <input type="date" id="nascimento" class="form-control" placeholder="dd/MM/yyyy" />
+                                    <input type="date" id="nascimento" class="form-control" [(ngModel)]="profile.birthday" placeholder="dd/MM/yyyy" />
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="universidade" class="col-sm-4 col-form-label">Universidade: </label>
                                 <div class="col-sm-8">
-                                    <select class="custom-select" id="universidade">
+                                    <select class="custom-select" [(ngModel)]="profile.universidade" id="universidade">
                                         <option disabled>Escolha</option>
                                         <option value="UFOP">UFOP</option>
                                         <option value="UFMG">UFMG</option>
@@ -41,13 +41,13 @@
                             <div class="form-group row">
                                 <label for="email" class="col-sm-4 col-form-label">Email: </label>
                                 <div class="col-sm-8">
-                                    <input type="email" id="email" class="form-control" placeholder="Email" />
+                                    <input type="email" id="email" class="form-control" [(ngModel)]="profile.email" placeholder="Email" />
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="email" class="col-sm-4 col-form-label">UF: </label>
                                 <div class="col-sm-8">
-                                    <select class="custom-select" id="universidade">
+                                    <select class="custom-select" id="uf" [(ngModel)]="profile.endereco">
                                         <option disabled>Escolha</option>
                                         <option value="RJ">RJ</option>
                                         <option value="MG">MG</option>
@@ -59,7 +59,7 @@
                             <div class="form-group row">
                                 <label for="cidade" class="col-sm-4 col-form-label">Cidade: </label>
                                 <div class="col-sm-8">
-                                    <input type="text" id="cidade" class="form-control" placeholder="Cidade" />
+                                    <input type="text" id="cidade" class="form-control" placeholder="Cidade" [(ngModel)]="profile.endereco" />
                                 </div>
                             </div>
                             <div class="form-group row">

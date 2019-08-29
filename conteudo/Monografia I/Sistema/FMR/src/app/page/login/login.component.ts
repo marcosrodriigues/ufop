@@ -31,14 +31,14 @@ export class LoginComponent implements OnInit {
     this.userService.login(this.login).subscribe(data => {
       this.userService.saveToken(data);
     }, err => {
-      alert('Invalid credentials');
+      alert('Usuário e/ou senha incorretos!');
     })
   }
 
   signUp() {
     const param = JSON.stringify(this.user);
     this.userService.create(this.user).subscribe(data => {
-      alert('Usuário criado!');
+      alert('Usuário criado!\nVocê já pode fazer login!');
     })
   }
 }

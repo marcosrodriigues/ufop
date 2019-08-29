@@ -9,6 +9,7 @@ export class MyHttpInterceptor implements HttpInterceptor {
     constructor(private _user: UserService) {}
 
     intercept(request: HttpRequest<any>, next: HttpHandler) : Observable<HttpEvent<any>> {
+        console.log("Token: " + this._user.getToken());
         if (this._user.getToken() != '') {
             const updateRequest = request.clone({
                 headers: request.headers.set('Authorization', `Bearer ${this._user.getToken()}`)
