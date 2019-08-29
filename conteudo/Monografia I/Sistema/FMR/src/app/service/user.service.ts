@@ -12,7 +12,7 @@ export class UserService {
               private _http : HttpClient,
               private _cookie : CookieService ) { }
 
-  baseUrl : string =  "http://localhost:8080/user";
+  private baseUrl : string =  "http://localhost:8080/user";
 
   login(loginData) {
     let params = new HttpParams()
