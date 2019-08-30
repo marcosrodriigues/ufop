@@ -9,23 +9,23 @@ export class MyHttpInterceptor implements HttpInterceptor {
     constructor(private _user: UserService) {}
 
     intercept(request: HttpRequest<any>, next: HttpHandler) : Observable<HttpEvent<any>> {
-        console.log("Token: " + this._user.getToken());
+        //console.log("Token: " + this._user.getToken());
         if (this._user.getToken() != '') {
             const updateRequest = request.clone({
                 headers: request.headers.set('Authorization', `Bearer ${this._user.getToken()}`)
             });
-            console.log(updateRequest);
+            //console.log(updateRequest);
             return next.handle(updateRequest)
             .pipe(
                 tap(
                     event => {
                         if (event instanceof HttpResponse) {
-                            console.log("okey");
+                            //console.log("okey");
                         }
                     },
                     error => {
                         if (error instanceof HttpResponse) {
-                            console.log("error");
+                            //console.log("error");
                         }
                     }
                 )
@@ -33,11 +33,6 @@ export class MyHttpInterceptor implements HttpInterceptor {
         }
 
         return next.handle(request);
-        
-
-        
-        
-            
     }
 
 }

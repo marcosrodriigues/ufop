@@ -8,7 +8,7 @@ export class QuestionarioService {
 
   constructor(private _http : HttpClient) { }
 
-  private baseUrl: string = "http://localhost:8080/questionario";
+  private baseUrl: string = "http://localhost:8080/pergunta";
 
   getAll() {
     return this._http.get(this.baseUrl);

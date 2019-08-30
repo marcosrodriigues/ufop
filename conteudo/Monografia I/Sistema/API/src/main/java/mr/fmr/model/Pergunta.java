@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Questionario {
+public class Pergunta {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,11 +14,11 @@ public class Questionario {
 
     private String pergunta;
 
-    public Questionario() {
+    public Pergunta() {
 
     }
 
-    public Questionario(String pergunta) {
+    public Pergunta(String pergunta) {
         this.pergunta = pergunta;
     }
 

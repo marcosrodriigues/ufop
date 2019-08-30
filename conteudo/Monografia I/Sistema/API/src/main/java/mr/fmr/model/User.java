@@ -20,6 +20,9 @@ public class User {
 
     private String tipo;
 
+    @OneToOne(mappedBy = "user")
+    private Perfil perfil;
+
     public User(String email, String password, String username, boolean termos, String tipo) {
         this.email = email;
         this.password = password;
@@ -78,5 +81,13 @@ public class User {
 
     public void setTipo(String tipo) {
         this.tipo = tipo;
+    }
+
+    public Perfil getPerfil() {
+        return perfil;
+    }
+
+    public void setPerfil(Perfil perfil) {
+        this.perfil = perfil;
     }
 }

@@ -1,9 +1,9 @@
 package mr.fmr.repository;
 
-import mr.fmr.model.Questionario;
+import mr.fmr.model.Pergunta;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface QuestionarioRepository extends JpaRepository<Questionario, Integer> {
+public interface PerguntaRepository extends JpaRepository<Pergunta, Integer> {
 }

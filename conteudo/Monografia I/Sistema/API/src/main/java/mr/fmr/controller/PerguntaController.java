@@ -1,7 +1,7 @@
 package mr.fmr.controller;
 
-import mr.fmr.model.Questionario;
-import mr.fmr.service.QuestionarioService;
+import mr.fmr.model.Pergunta;
+import mr.fmr.service.PerguntaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,20 +12,20 @@ import java.util.List;
 
 @RestController
 @RequestMapping
-public class QuestionarioController {
+public class PerguntaController {
 
-    final String BASE_URL = "/questionario";
+    final String BASE_URL = "/pergunta";
 
     @Autowired
-    private QuestionarioService service;
+    private PerguntaService service;
 
     @GetMapping(value = BASE_URL)
-    public List<Questionario> findAll() {
+    public List<Pergunta> findAll() {
         return service.findAll();
     }
 
     @GetMapping(value = BASE_URL + "/{id}")
-    public Questionario findOne(@RequestParam("id") Integer id) {
+    public Pergunta findOne(@RequestParam("id") Integer id) {
         return service.findOne(id);
     }
 }
