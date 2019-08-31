@@ -1,6 +1,8 @@
 package mr.fmr.controller;
 
+import mr.fmr.model.Perfil;
 import mr.fmr.model.User;
+import mr.fmr.service.PerfilService;
 import mr.fmr.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -16,6 +18,8 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+    @Autowired
+    private PerfilService perfilService;
 
     @GetMapping(value = BASE_URL)
     public List listUser() {
@@ -24,6 +28,9 @@ public class UserController {
 
     @PostMapping(value = BASE_URL)
     public User create(@RequestBody User user) {
+        if(user.getPerfil() == null)
+            user.setPerfil(new Perfil());
+
         return userService.save(user);
     }
 

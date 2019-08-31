@@ -63,7 +63,7 @@ public class UserServiceImpl implements UserDetailsService, UserService {
     @Override
     public User save(User user) {
         if (repository.findByEmail(user.getEmail()) != null) {
-            return user;
+            return repository.save(user);
         }
 
         if (user.getUsername() == null || user.getUsername().isEmpty()) {

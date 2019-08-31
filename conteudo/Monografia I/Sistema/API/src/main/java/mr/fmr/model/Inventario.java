@@ -1,5 +1,7 @@
 package mr.fmr.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -10,10 +12,10 @@ public class Inventario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne
+    @OneToOne(mappedBy = "inventario", cascade = CascadeType.ALL)
     private Perfil perfil;
 
-    @OneToMany(cascade = CascadeType.PERSIST)
+    @OneToMany(cascade = CascadeType.ALL)
     private List<InventarioPerguntaResposta> perguntasRespostas;
 
     public Long getId() {
@@ -24,6 +26,7 @@ public class Inventario {
         this.id = id;
     }
 
+    @JsonIgnore
     public Perfil getPerfil() {
         return perfil;
     }

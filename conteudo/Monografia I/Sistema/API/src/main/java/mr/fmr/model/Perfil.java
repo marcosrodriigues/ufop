@@ -11,11 +11,15 @@ public class Perfil {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne
+    @OneToOne(mappedBy = "perfil", cascade = CascadeType.ALL)
     private User user;
-    @OneToOne
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "personalidade_id")
     private Personalidade personalidade;
-    @OneToOne
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "inventario_id")
     private Inventario inventario;
 
 

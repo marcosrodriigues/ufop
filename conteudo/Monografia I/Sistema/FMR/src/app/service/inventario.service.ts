@@ -19,4 +19,5 @@ export class InventarioService {
   save(answers) {
     return this._http.post(this.baseUrl, answers);
   }
+
 }

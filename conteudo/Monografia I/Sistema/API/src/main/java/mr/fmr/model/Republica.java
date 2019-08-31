@@ -10,7 +10,7 @@ public class Republica extends User {
     }
 
     public Republica(User user) {
-        super(user.getEmail(), user.getPassword(), user.getUsername(), user.isTermos(), user.getTipo());
+        super(user.getEmail(), user.getPassword(), user.getUsername(), user.isTermos(), user.getTipo(), user.getPerfil());
     }
 
     private String nome;

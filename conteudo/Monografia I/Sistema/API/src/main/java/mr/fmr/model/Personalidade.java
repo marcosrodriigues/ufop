@@ -1,5 +1,7 @@
 package mr.fmr.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -9,7 +11,8 @@ public class Personalidade {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne
+
+    @OneToOne(mappedBy = "personalidade")
     private Perfil perfil;
 
     private int abertura;
@@ -26,6 +29,7 @@ public class Personalidade {
         this.id = id;
     }
 
+    @JsonIgnore
     public Perfil getPerfil() {
         return perfil;
     }

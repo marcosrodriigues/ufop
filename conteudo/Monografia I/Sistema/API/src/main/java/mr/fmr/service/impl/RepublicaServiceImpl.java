@@ -26,8 +26,7 @@ public class RepublicaServiceImpl implements RepublicaService {
             return repository.save(rep);
         }
 
-        Republica rep = findOne(user.getId());
-        return repository.save(rep);
+        return repository.save((Republica) user);
     }
 
     @Override

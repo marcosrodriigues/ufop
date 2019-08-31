@@ -20,15 +20,17 @@ public class User {
 
     private String tipo;
 
-    @OneToOne(mappedBy = "user")
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "perfil_id")
     private Perfil perfil;
 
-    public User(String email, String password, String username, boolean termos, String tipo) {
+    public User(String email, String password, String username, boolean termos, String tipo, Perfil perfil) {
         this.email = email;
         this.password = password;
         this.username = username;
         this.termos = termos;
         this.tipo = tipo;
+        this.perfil = perfil;
     }
 
     public User() {

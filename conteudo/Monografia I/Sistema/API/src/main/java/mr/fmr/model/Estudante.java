@@ -7,7 +7,7 @@ import java.util.Date;
 public class Estudante extends User {
 
     public Estudante(User user) {
-        super(user.getEmail(), user.getPassword(), user.getUsername(), user.isTermos(), user.getTipo());
+        super(user.getEmail(), user.getPassword(), user.getUsername(), user.isTermos(), user.getTipo(), user.getPerfil());
     }
 
     public Estudante() {

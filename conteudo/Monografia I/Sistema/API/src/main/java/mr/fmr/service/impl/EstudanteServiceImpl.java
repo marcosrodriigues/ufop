@@ -23,8 +23,7 @@ public class EstudanteServiceImpl implements EstudanteService {
             return repository.save(estudante);
         }
 
-        Estudante estudante = findOne(user.getId());
-        return repository.save(estudante);
+        return repository.save((Estudante) user);
     }
 
     @Override
