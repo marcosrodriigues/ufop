@@ -32,6 +32,7 @@ public class InventarioPerguntaRespostaServiceImpl implements InventarioPergunta
             pergunta.setPergunta(perguntaService.findOne(pergunta.getPergunta().getId()));
         }
         return perguntaRespostas;
+
     }
 
     @Override

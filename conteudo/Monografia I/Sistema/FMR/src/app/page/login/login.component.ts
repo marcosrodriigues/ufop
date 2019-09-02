@@ -30,6 +30,9 @@ export class LoginComponent implements OnInit {
     const param = JSON.stringify(this.login);
     this.userService.login(this.login).subscribe(data => {
       this.userService.saveToken(data);
+      console.log(data);
+      window.location.href = "/";
+      console.log(this.userService.getToken());
     }, err => {
       alert('Usuário e/ou senha incorretos!');
     })
@@ -37,6 +40,7 @@ export class LoginComponent implements OnInit {
 
   signUp() {
     const param = JSON.stringify(this.user);
+    
     this.userService.create(this.user).subscribe(data => {
       alert('Usuário criado!\nVocê já pode fazer login!');
     })

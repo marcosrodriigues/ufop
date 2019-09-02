@@ -1,3 +1,15 @@
 .desc {
     color: #a0a0a0;
 }
+
+.strong {
+    font-weight: bold;
+}
+
+.input-group-prepend label {
+    margin-bottom: 0px;
+}
+
+.card label {
+    font-weight: bold;
+}

@@ -9,6 +9,8 @@ export class MyHttpInterceptor implements HttpInterceptor {
     constructor(private _user: UserService) {}
 
     intercept(request: HttpRequest<any>, next: HttpHandler) : Observable<HttpEvent<any>> {
+        if (request.url.indexOf('localhost') < 0) return next.handle(request);
+
         //console.log("Token: " + this._user.getToken());
         if (this._user.getToken() != '') {
             const updateRequest = request.clone({

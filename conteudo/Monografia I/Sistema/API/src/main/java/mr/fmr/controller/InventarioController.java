@@ -2,9 +2,10 @@ package mr.fmr.controller;
 
 import mr.fmr.model.Inventario;
 import mr.fmr.model.InventarioPerguntaResposta;
-import mr.fmr.model.Perfil;
 import mr.fmr.model.User;
-import mr.fmr.service.*;
+import mr.fmr.service.InventarioPerguntaRespostaService;
+import mr.fmr.service.PersonalidadeService;
+import mr.fmr.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,8 +23,6 @@ public class InventarioController {
     private InventarioPerguntaRespostaService perguntaRespostaService;
     @Autowired
     private UserService userService;
-    @Autowired
-    private PersonalidadeService personalidadeService;
 
     @PostMapping(value = BASE_URL)
     public List<InventarioPerguntaResposta> saveAll(Principal principal, @RequestBody  List<InventarioPerguntaResposta> perguntaRespostas) {

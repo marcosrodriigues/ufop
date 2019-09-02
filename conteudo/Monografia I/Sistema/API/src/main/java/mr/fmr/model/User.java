@@ -24,6 +24,10 @@ public class User {
     @JoinColumn(name = "perfil_id")
     private Perfil perfil;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "endereco_id")
+    private Endereco endereco;
+
     public User(String email, String password, String username, boolean termos, String tipo, Perfil perfil) {
         this.email = email;
         this.password = password;
@@ -91,5 +95,13 @@ public class User {
 
     public void setPerfil(Perfil perfil) {
         this.perfil = perfil;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
     }
 }

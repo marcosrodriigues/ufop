@@ -45,9 +45,8 @@ public class UserController {
         return userService.getUserFromPrincipal(principal);
     }
 
-    @PutMapping(value = BASE_URL + "/{id}")
-    public User update(@PathVariable long id, @RequestBody User user) {
-        user.setId(id);
+    @PutMapping(value = BASE_URL)
+    public User update(@RequestBody User user) {
         return userService.save(user);
     }
 

@@ -5,6 +5,7 @@ import mr.fmr.model.User;
 import mr.fmr.repository.EstudanteRepository;
 import mr.fmr.service.EstudanteService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,6 +16,8 @@ public class EstudanteServiceImpl implements EstudanteService {
 
     @Autowired
     private EstudanteRepository repository;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @Override
     public Estudante save(User user) {
@@ -22,6 +25,11 @@ public class EstudanteServiceImpl implements EstudanteService {
             Estudante estudante = new Estudante(user);
             return repository.save(estudante);
         }
+
+        Estudante other = repository.findById(user.getId()).get();
+
+        if (!other.getPassword().equals(user.getPassword()))
+            user.setPassword(passwordEncoder.encode(user.getPassword()));
 
         return repository.save((Estudante) user);
     }

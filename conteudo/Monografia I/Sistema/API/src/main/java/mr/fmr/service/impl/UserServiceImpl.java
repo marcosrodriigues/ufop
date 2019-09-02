@@ -1,5 +1,7 @@
 package mr.fmr.service.impl;
 
+import mr.fmr.model.Estudante;
+import mr.fmr.model.Republica;
 import mr.fmr.model.User;
 import mr.fmr.repository.UserRepository;
 import mr.fmr.service.EstudanteService;
@@ -62,7 +64,13 @@ public class UserServiceImpl implements UserDetailsService, UserService {
 
     @Override
     public User save(User user) {
-        if (repository.findByEmail(user.getEmail()) != null) {
+        if (repository.findByEmail(user.getEmail()) != null || repository.findByUsername(user.getUsername()) != null) {
+            if (user.getTipo().equalsIgnoreCase("ESTUDANTE")) {
+                return estudanteService.save(user);
+            } else if (user.getTipo().equalsIgnoreCase("REPUBLICA")) {
+                return republicaService.save(user);
+            }
+
             return repository.save(user);
         }
 

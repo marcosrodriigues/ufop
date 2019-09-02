@@ -15,9 +15,6 @@ public class Republica extends User {
 
     private String nome;
 
-    @OneToOne
-    private Endereco endereco;
-
 
     public String getNome() {
         return nome;
@@ -25,13 +22,5 @@ public class Republica extends User {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public Endereco getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
     }
 }

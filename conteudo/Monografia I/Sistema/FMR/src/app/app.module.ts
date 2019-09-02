@@ -19,7 +19,12 @@ import { FormsModule } from '@angular/forms';
 
 import { CookieService } from 'ngx-cookie-service';
 import { MyHttpInterceptor } from './http-interceptor';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import {
+  MatExpansionModule,
+  MatButtonModule
+} from '@angular/material';
 
 
 @NgModule({
@@ -40,7 +45,10 @@ import { MyHttpInterceptor } from './http-interceptor';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatExpansionModule,
+    MatButtonModule
   ],
   providers: [
     CookieService,
