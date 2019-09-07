@@ -24,8 +24,8 @@ public class Estudante extends User {
     @ManyToOne
     private Universidade universidade;
 
-    @ManyToOne
-    private Republica republica;
+    @OneToOne(mappedBy = "morador", cascade = CascadeType.ALL)
+    private MoradorRepublica moradorRepublica;
 
     public String getNome() {
         return nome;
@@ -51,11 +51,11 @@ public class Estudante extends User {
         this.universidade = universidade;
     }
 
-    public Republica getRepublica() {
-        return republica;
+    public MoradorRepublica getMoradorRepublica() {
+        return moradorRepublica;
     }
 
-    public void setRepublica(Republica republica) {
-        this.republica = republica;
+    public void setMoradorRepublica(MoradorRepublica moradorRepublica) {
+        this.moradorRepublica = moradorRepublica;
     }
 }

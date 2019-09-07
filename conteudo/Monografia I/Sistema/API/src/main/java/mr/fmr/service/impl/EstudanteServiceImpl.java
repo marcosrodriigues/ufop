@@ -1,9 +1,12 @@
 package mr.fmr.service.impl;
 
 import mr.fmr.model.Estudante;
+import mr.fmr.model.MoradorRepublica;
+import mr.fmr.model.Republica;
 import mr.fmr.model.User;
 import mr.fmr.repository.EstudanteRepository;
 import mr.fmr.service.EstudanteService;
+import mr.fmr.service.MoradorRepublicaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

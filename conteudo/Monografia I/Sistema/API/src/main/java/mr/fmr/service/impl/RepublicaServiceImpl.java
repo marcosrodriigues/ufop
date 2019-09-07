@@ -1,5 +1,6 @@
 package mr.fmr.service.impl;
 
+import mr.fmr.model.Estudante;
 import mr.fmr.model.Republica;
 import mr.fmr.model.User;
 import mr.fmr.repository.RepublicaRepository;
@@ -40,9 +41,19 @@ public class RepublicaServiceImpl implements RepublicaService {
         return rep;
     }
 
-
     @Override
     public void delete(long id) {
         repository.deleteById(id);
     }
+
+    @Override
+    public List<Republica> findByUf(String uf) {
+        return repository.findByEndereco_Uf(uf);
+    }
+
+    @Override
+    public List<Republica> findByUfAndCity(String uf, String city) {
+        return repository.findByEndereco_UfAndEndereco_Cidade(uf, city);
+    }
+
 }

@@ -3,10 +3,8 @@ import * as CanvasJS from '../../../assets/js/canvasjs.min';
 import { UserService } from 'src/app/service/user.service';
 import { UtilService } from 'src/app/service/util.service';
 import { UniversidadeService } from 'src/app/service/universidade.service';
+import { RepublicaService } from 'src/app/service/republica.service';
 
-
-
-//import * as $ from 'jquery';
 
 @Component({
   selector: 'app-profile',
@@ -29,6 +27,8 @@ export class ProfileComponent implements OnInit {
   
   profUniversidade: number = 0;
   estados: any = [];
+  
+  _republicas: any = [];
 
   dataChart = [
     { y: 0.1, name: "Abertura para o Novo" },
@@ -44,20 +44,22 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
     this._userService.checkCredentials();
+    this.initMe();
     this.initEstados();
     this.initUniversidades();
-    this.initMe();
-  }
-
-  initEstados() {
-    this.estados = this._utilService.getEstadosBrasileiros();
   }
 
   initMe() {
     this._userService.me().subscribe(data => {
       this.profile = data;
-      
-      if (this.profile.universidade != null) this.profUniversidade = this.profile.universidade.id;
+      this.configureMe();
+      this.initializeChart('chart');
+    }, err => {
+    });
+  }
+
+  configureMe() {
+    if (this.profile.universidade != null) this.profUniversidade = this.profile.universidade.id;
 
       if (this.profile.endereco != null) this.endereco = this.profile.endereco;
       
@@ -69,16 +71,15 @@ export class ProfileComponent implements OnInit {
         this.dataChart[3].y = this.personalidade.extroversao;
         this.dataChart[4].y = this.personalidade.neuroticismo;
       }
-      
-      this.initializeChart('chart');
-    }, err => {
-      //console.log(err);
-    });
   }
+
+  initEstados() {
+    this.estados = this._utilService.getEstadosBrasileiros();
+  }
+
   initUniversidades() {
     this._universidadeService.getAll().subscribe(data => {
       this.universidades = data;
-      console.log(this.universidades);
     });
   }
 
@@ -100,8 +101,6 @@ export class ProfileComponent implements OnInit {
     if (this.endereco != undefined) {
       this.profile.endereco = this.endereco;
     }
-
-
     
     this._userService.update(this.profile).subscribe(data => {
       alert("Usuário atualizado");
@@ -129,16 +128,6 @@ export class ProfileComponent implements OnInit {
     chart.render();
   }
 
-  addUniversidade() {
-    this._universidadeService.save(this.newUniversidade).subscribe((data: any) => {
-      this.profUniversidade = data.id;
-      this.profile.universidade = data;
-      this.universidades.push(data);
-      alert('Universidade salva!');
-      this.newUniversidade = {};
-    });
-  }
-
   changeUniversidade() {
     this.universidades.forEach(uni => {
       if (uni.id == this.profUniversidade) {
@@ -149,9 +138,6 @@ export class ProfileComponent implements OnInit {
   }
 
   compareUniversidade(opt1, opt2)  {
-    console.log("Here i'm ");
-    console.log(opt1);
-    console.log(opt2);
     if (opt1 != undefined && opt2 != undefined) return opt1.id == opt2.id;
     return opt1 == opt2;
   }

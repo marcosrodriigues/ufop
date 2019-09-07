@@ -39,8 +39,10 @@ export class LoginComponent implements OnInit {
   }
 
   signUp() {
-    const param = JSON.stringify(this.user);
-    
+    if (!this.user.termos) {
+      alert('Leia os termos :)');
+      return;
+    }
     this.userService.create(this.user).subscribe(data => {
       alert('Usuário criado!\nVocê já pode fazer login!');
     })

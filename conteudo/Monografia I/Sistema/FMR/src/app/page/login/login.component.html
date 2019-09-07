@@ -55,8 +55,8 @@
                                             <input type="password" class="form-control col-sm-8" [(ngModel)]="user.password" name="senha" id="senha" />
                                         </div>
                                         <div class="custom-control custom-checkbox mr-sm-2 left">
-                                            <input type="checkbox" class="custom-control-input col-sm-4" [(ngModel)]="user.termos" id="termos">
-                                            <label class="custom-control-label col-sm-8" for="termos">Li e concordo com os termos de uso.</label>
+                                            <input type="checkbox" required class="custom-control-input col-sm-4" [(ngModel)]="user.termos" id="termos">
+                                            <label class="custom-control-label col-sm-8" for="termos">Li e concordo com os <a class="" href="#" data-target="#modalTermoDeUso" data-toggle="modal">termos de uso</a>.</label>
                                         </div>
                                         <div class="col-sm-12">
                                             <button type="submit" class="btn btn-primary" (click)="signUp()">Cadastrar</button>
@@ -74,3 +74,5 @@
         </div>
     </div>
 </div>
+
+<app-termo-de-uso></app-termo-de-uso>

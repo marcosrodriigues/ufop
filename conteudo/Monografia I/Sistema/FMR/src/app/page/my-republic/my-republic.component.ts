@@ -35,7 +35,7 @@ export class MyRepublicComponent implements OnInit {
         text: "Personalidade"
       },
       data: [{
-        type: "pie",
+        type: "column",
         showInLegend: true,
         toolTipContent: "<b>{name}</b>: {y} (#percent%)",
         indexLabel: "{name} - #percent%",

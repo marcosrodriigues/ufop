@@ -10,7 +10,15 @@
                             <div class="form-group m10">
                                 <p class="desc">{{ profile.tipo }} </p>
                                 <p class="desc">{{ profile.email }} </p>
-                                <a class="nav-link link" routerLink="/minha-republica">República Maternidade</a>
+                                <div *ngIf="profile.moradorRepublica == null">
+                                    <a class="nav-link link" href="#" data-target="#modalAddRepublica" data-toggle="modal"><i class="fa fa-plus"></i> adicionar republica</a>
+                                </div>
+                                <div *ngIf="profile.moradorRepublica.aprovado == true">
+                                    <span>Aguardando {{profile.moradorRepublica.republica.nome}}</span>
+                                </div>
+                                <div *ngIf="profile.moradorRepublica.aprovado == false">
+                                    <a class="nav-link link" routerLink="/minha-republica">{{profile.moradorRepublica.republica.nome}}</a>
+                                </div>
                             </div>
                         </div>
                         
@@ -18,35 +26,35 @@
 
                             <mat-expansion-panel>
                                 <mat-expansion-panel-header>
-                                    <mat-panel-title><span class="strong">Abertura para o novo</span>: {{ personalidade.abertura }} pontos</mat-panel-title>
+                                    <mat-panel-title><span class="strong">Abertura para o novo</span>: {{ personalidade.abertura }} pontos ... 50 total</mat-panel-title>
                                     <mat-panel-description></mat-panel-description>
                                 </mat-expansion-panel-header>
                                 <p>Apreciação de arte, emoção, aventura, ideias incomuns, curiosidade e variedade de experiência.</p>
                             </mat-expansion-panel>
                             <mat-expansion-panel>
                                 <mat-expansion-panel-header>
-                                    <mat-panel-title><span class="strong">Concordância</span>: {{ personalidade.concordancia }} pontos</mat-panel-title>
+                                    <mat-panel-title><span class="strong">Concordância</span>: {{ personalidade.concordancia }} pontos ... 45 total</mat-panel-title>
                                     <mat-panel-description></mat-panel-description>
                                 </mat-expansion-panel-header>
                                 <p>Tendência para ser mais compassivo e cooperativo do que desconfiado e antagonista em relação aos outros</p>
                             </mat-expansion-panel>
                             <mat-expansion-panel>
                                 <mat-expansion-panel-header>
-                                    <mat-panel-title><span class="strong">Consciência</span>: {{ personalidade.consciencia }} pontos</mat-panel-title>
+                                    <mat-panel-title><span class="strong">Consciência</span>: {{ personalidade.consciencia }} pontos ... 45 total </mat-panel-title>
                                     <mat-panel-description></mat-panel-description>
                                 </mat-expansion-panel-header>
                                 <p>Tendência a mostrar autodisciplina, agir literalmente e realizar objetivos. Rígido em vez de um comportamento espontâneo</p>
                             </mat-expansion-panel>
                             <mat-expansion-panel>
                                 <mat-expansion-panel-header>
-                                    <mat-panel-title><span class="strong">Extroversão</span>: {{ personalidade.extroversao }} pontos</mat-panel-title>
+                                    <mat-panel-title><span class="strong">Extroversão</span>: {{ personalidade.extroversao }} pontos ... 40 total</mat-panel-title>
                                     <mat-panel-description></mat-panel-description>
                                 </mat-expansion-panel-header>
                                 <p>Energia, emoções positivas, urgência e uma tendência a estimular o ambiente na companhia de outras pessoas.</p>
                             </mat-expansion-panel>
                             <mat-expansion-panel>
                                 <mat-expansion-panel-header>
-                                    <mat-panel-title><span class="strong">Neuroticismo</span>: {{ personalidade.neuroticismo }} pontos</mat-panel-title>
+                                    <mat-panel-title><span class="strong">Neuroticismo</span>: {{ personalidade.neuroticismo }} pontos ... 40 total</mat-panel-title>
                                     <mat-panel-description></mat-panel-description>
                                 </mat-expansion-panel-header>
                                 <p>Tendência a ter emoções negativas facilmente, como raiva, ansiedade, depressão e vulnerabilidade</p>
@@ -168,7 +176,14 @@
                             </div>
                             <input type="password" id="password" class="form-control" placeholder="Password" [(ngModel)]="profile.password" />
                         </div>
-                        
+                        <div class="form col-sm-12 m10">
+                            <div class="custom-control custom-checkbox input-group">
+                                <div class="col-sm-2">
+                                    <input type="checkbox" required class="custom-control-input" [(ngModel)]="profile.termos" id="termos">
+                                </div>
+                                <label class="custom-control-label col-sm-8" for="termos">Li e concordo com os <a class="" href="#" data-target="#modalTermoDeUso" data-toggle="modal">termos de uso</a>.</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -180,34 +195,6 @@
     </div>
 </div>
 
-
-<div class="modal fade" id="modalUniversidade" tabindex="-1" aria-labelledby="modalUniversidade" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Nova Universidade</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="form-group row col-sm-12">
-            <label for="sigla" class="col-sm-4 custom-control-label strong">Sigla: </label>
-            <div class="col-sm-8">
-                <input type="text" class="form-control" id="sigla" [(ngModel)]="newUniversidade.sigla" />
-            </div>
-        </div>
-        <div class="form-group row col-sm-12">
-            <label for="nomeUniversidade" class="col-sm-4 custom-control-label strong">Nome: </label>
-            <div class="col-sm-8">
-                <input type="text" class="form-control" id="nomeUniversidade" [(ngModel)]="newUniversidade.nome" />
-            </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-primary" (click)="addUniversidade()">Adicionar</button>
-      </div>
-    </div>
-  </div>
-</div>
+<app-adicionar-universidade></app-adicionar-universidade>
+<app-vincular-republica [user]="profile"></app-vincular-republica>
+<app-termo-de-uso></app-termo-de-uso>

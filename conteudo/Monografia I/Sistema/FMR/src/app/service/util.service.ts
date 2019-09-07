@@ -39,6 +39,8 @@ export class UtilService {
 
   constructor(private _http : HttpClient) { }
 
+  private baseUtil = "http://localhost:8080/util";
+
   getAddressByCep(cep) {
     cep = cep.replace("-", "");
     
@@ -47,5 +49,17 @@ export class UtilService {
 
   getEstadosBrasileiros() {
     return this._estados;
+  }
+
+  getUfWhereHasRepublic() {
+    return this._http.get(this.baseUtil + "/getUfWhereHasRepublic");
+  }
+
+  getCidadesByEstado(uf: string) {
+    return this._http.get(this.baseUtil + "/getCidadeByEstado/" + uf);
+  }
+
+  getCityWhereHasRepublic(uf: string) {
+    return this._http.get(this.baseUtil + "/getCityWhereHasRepublic/" + uf);
   }
 }

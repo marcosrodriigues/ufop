@@ -1,0 +1,45 @@
+<div class="modal fade" id="modalAddRepublica" tabindex="-1" aria-labelledby="modalUniversidade" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Vincular República</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group row">
+            <label for="repUf" class="col-sm-4 custom-control-label strong">UF: </label>
+            <div class="col-sm-8">
+                <select class="form-control" id="repUf" [(ngModel)]="filterEstado" (change)="changeEstado()">   
+                    <option select disabled>SELECIONE</option>
+                    <option *ngFor="let uf of _estados;" value="{{uf.sigla}}">{{uf.sigla}} - {{uf.nome}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="repCidade" class="col-sm-4 custom-control-label strong">Cidade: </label>
+            <div class="col-sm-8">
+                <select class="form-control" id="repCidade" [(ngModel)]="filterCidade" (change)="changeCidade()">   
+                    <option select disabled>SELECIONE</option>
+                    <option *ngFor="let city of _cidades;" value="{{city}}">{{city}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="rep" class="col-sm-4 custom-control-label strong">República: </label>
+            <div class="col-sm-8">
+                <select class="form-control" id="rep" (change)="changeRepublica()" [(ngModel)]="republica">
+                    <option disabled selected>SELECIONE</option>
+                    <option *ngFor="let rep of _republicas;" value="{{rep.id}}">{{rep.id}} - {{rep.nome}}</option>
+                </select>
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="solicitarVinculo()">Solicitar</button>
+      </div>
+    </div>
+  </div>
+</div>

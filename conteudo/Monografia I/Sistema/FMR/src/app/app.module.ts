@@ -25,6 +25,9 @@ import {
   MatExpansionModule,
   MatButtonModule
 } from '@angular/material';
+import { AdicionarUniversidadeComponent } from './modal/adicionar-universidade/adicionar-universidade.component';
+import { VincularRepublicaComponent } from './modal/vincular-republica/vincular-republica.component';
+import { TermoDeUsoComponent } from './modal/termo-de-uso/termo-de-uso.component';
 
 
 @NgModule({
@@ -39,7 +42,10 @@ import {
     RepublicDetailComponent,
     ProfileComponent,
     MyRepublicComponent,
-    InventoryComponent
+    InventoryComponent,
+    AdicionarUniversidadeComponent,
+    VincularRepublicaComponent,
+    TermoDeUsoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,7 @@
 package mr.fmr.service;
 
 import mr.fmr.model.Estudante;
+import mr.fmr.model.Republica;
 import mr.fmr.model.User;
 
 import java.util.List;
