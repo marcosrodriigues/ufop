@@ -1,0 +1,25 @@
+<div class="modal fade" id="modalExcluirConta" tabindex="-1" aria-labelledby="modalUniversidade" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Excluir conta</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+            <div class="col-sm-12">
+                <p class="strong">Exclusão de conta</p>
+                <p>Excluindo a sua conta você irá remover todos os seus dados do sistema.</p>
+                <p>Essa ação não poderá ser desfeita.</p>
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-danger" (click)="delete()" data-dismiss="modal">Excluir conta</button>
+      </div>
+    </div>
+  </div>
+</div>

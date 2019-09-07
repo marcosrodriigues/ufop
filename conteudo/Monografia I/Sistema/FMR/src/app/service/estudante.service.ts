@@ -16,4 +16,8 @@ export class EstudanteService {
       .set("id_republica", id_republica);
     return this._http.post(this.baseUrl + "/vincular", params );
   }
+
+  save(estudante: any) {
+    return this._http.post(this.baseUrl, estudante);
+  }
 }

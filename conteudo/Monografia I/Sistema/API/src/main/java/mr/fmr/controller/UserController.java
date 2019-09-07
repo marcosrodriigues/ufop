@@ -50,8 +50,10 @@ public class UserController {
         return userService.save(user);
     }
 
-    @DeleteMapping(value = BASE_URL + "/{id}")
-    public void delete(@PathVariable long id) {
-        userService.delete(id);
+    @DeleteMapping(value = BASE_URL)
+    public void delete(Principal principal) {
+        User user = userService.getUserFromPrincipal(principal);
+        userService.delete(user.getId());
+
     }
 }

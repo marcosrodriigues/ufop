@@ -1,12 +1,11 @@
 package mr.fmr.service.impl;
 
-import mr.fmr.model.Estudante;
 import mr.fmr.model.Republica;
 import mr.fmr.model.User;
 import mr.fmr.repository.RepublicaRepository;
-import mr.fmr.repository.UserRepository;
 import mr.fmr.service.RepublicaService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,7 +17,7 @@ public class RepublicaServiceImpl implements RepublicaService {
     private RepublicaRepository repository;
 
     @Autowired
-    private UserRepository userRepository;
+    private PasswordEncoder passwordEncoder;
 
     @Override
     public Republica save(User user) {
@@ -26,6 +25,11 @@ public class RepublicaServiceImpl implements RepublicaService {
             Republica rep = new Republica(user);
             return repository.save(rep);
         }
+
+        Republica other = repository.findById(user.getId()).get();
+
+        if (!other.getPassword().equals(user.getPassword()))
+            user.setPassword(passwordEncoder.encode(user.getPassword()));
 
         return repository.save((Republica) user);
     }
@@ -37,7 +41,7 @@ public class RepublicaServiceImpl implements RepublicaService {
 
     @Override
     public Republica findOne(long id) {
-        Republica rep = (Republica) userRepository.findById(id).get();
+        Republica rep = repository.findById(id).get();
         return rep;
     }
 

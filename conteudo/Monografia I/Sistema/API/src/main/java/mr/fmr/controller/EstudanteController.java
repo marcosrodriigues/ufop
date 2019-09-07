@@ -41,4 +41,9 @@ public class EstudanteController {
         return moradorRepublicaService.vincular(estudante, republica);
     }
 
+    @PostMapping(value = BASE_URL)
+    public Estudante save(@RequestBody Estudante estudante) {
+        return estudanteService.save(estudante);
+    }
+
 }

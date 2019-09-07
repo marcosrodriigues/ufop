@@ -31,6 +31,10 @@ export class UserService {
     return this._http.post('http://localhost:8080/' + 'oauth/token', params, {headers});
   }
 
+  delete() {
+    return this._http.delete(this.baseUrl);
+  }
+
   saveToken(token) {
     var expiredDate = new Date().getTime() + (token.expires_in);
     this._cookie.set('access_token', token.access_token, expiredDate);

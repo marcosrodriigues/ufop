@@ -28,6 +28,9 @@ import {
 import { AdicionarUniversidadeComponent } from './modal/adicionar-universidade/adicionar-universidade.component';
 import { VincularRepublicaComponent } from './modal/vincular-republica/vincular-republica.component';
 import { TermoDeUsoComponent } from './modal/termo-de-uso/termo-de-uso.component';
+import { ProfileEstudanteComponent } from './component/profile-estudante/profile-estudante.component';
+import { ProfileRepublicaComponent } from './component/profile-republica/profile-republica.component';
+import { ExcluirContaComponent } from './modal/excluir-conta/excluir-conta.component';
 
 
 @NgModule({
@@ -45,7 +48,10 @@ import { TermoDeUsoComponent } from './modal/termo-de-uso/termo-de-uso.component
     InventoryComponent,
     AdicionarUniversidadeComponent,
     VincularRepublicaComponent,
-    TermoDeUsoComponent
+    TermoDeUsoComponent,
+    ProfileEstudanteComponent,
+    ProfileRepublicaComponent,
+    ExcluirContaComponent
   ],
   imports: [
     BrowserModule,

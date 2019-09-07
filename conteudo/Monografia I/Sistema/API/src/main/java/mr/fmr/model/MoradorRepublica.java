@@ -60,7 +60,6 @@ public class MoradorRepublica {
         this.morador = morador;
     }
 
-    @JsonIgnore
     public Republica getRepublica() {
         return republica;
     }

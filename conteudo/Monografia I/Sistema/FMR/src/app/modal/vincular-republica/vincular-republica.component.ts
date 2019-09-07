@@ -72,13 +72,10 @@ export class VincularRepublicaComponent implements OnInit, OnChanges {
     });
   }
 
-  changeRepublica() {
-    console.log(this.republica);
-  }
-
   solicitarVinculo() {
       this._estudanteService.solicitarVinculo(this.republica).subscribe(data => {
         alert('Sua requisição foi solicitada para a república');
+        window.location.href = window.location.pathname;
       })
   }
 }

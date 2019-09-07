@@ -29,7 +29,7 @@
         <div class="form-group row">
             <label for="rep" class="col-sm-4 custom-control-label strong">República: </label>
             <div class="col-sm-8">
-                <select class="form-control" id="rep" (change)="changeRepublica()" [(ngModel)]="republica">
+                <select class="form-control" id="rep" [(ngModel)]="republica">
                     <option disabled selected>SELECIONE</option>
                     <option *ngFor="let rep of _republicas;" value="{{rep.id}}">{{rep.id}} - {{rep.nome}}</option>
                 </select>

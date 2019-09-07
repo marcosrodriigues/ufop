@@ -1,11 +1,14 @@
 package mr.fmr.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-public class Republica extends User {
+public class Republica extends User implements Serializable {
 
     public Republica() {
 
@@ -20,7 +23,6 @@ public class Republica extends User {
     @OneToMany(mappedBy = "republica", fetch = FetchType.LAZY)
     private List<MoradorRepublica> moradores = new ArrayList<>();
 
-
     public String getNome() {
         return nome;
     }
@@ -29,6 +31,7 @@ public class Republica extends User {
         this.nome = nome;
     }
 
+    @JsonIgnore
     public List<MoradorRepublica> getMoradores() {
         return moradores;
     }
