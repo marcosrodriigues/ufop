@@ -1,0 +1,96 @@
+<div class="modal fade" id="modalMoradores" tabindex="-1" aria-labelledby="modalMoradores" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Aprovados</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Nome</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Opções</th>
+                                </tr>
+                            </thead>
+
+                            <tbody *ngIf="_aprovados.length > 0; else noAprovados">
+                                <tr *ngFor="let morador of _aprovados;" scope="row">
+                                    <td>{{morador.id}}</td>
+                                    <td>{{morador.nome}}</td>
+                                    <td>{{morador.email}}</td>
+                                    <td>
+                                        <button class="btn btn-danger" aria-label="Recusar" (click)="recusar(morador)">
+                                            <i class="fa fa-remove"></i> 
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                    
+                            <ng-template #noAprovados>
+                                <tr scope="row">
+                                    <td colspan="4" class="center">Nenhum morador</td>
+                                </tr>
+                            </ng-template>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                
+            </div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Pendentes</h5>
+            </div>
+
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Nome</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Opções</th>
+                                </tr>
+                            </thead>
+
+                            <tbody *ngIf="_pendentes.length > 0; else noPendentes">
+                                <tr *ngFor="let morador of _pendentes;" scope="row">
+                                    <td>{{morador.id}}</td>
+                                    <td>{{morador.nome}}</td>
+                                    <td>{{morador.email}}</td>
+                                    <td>
+                                        <button class="btn btn-success mr-10" aria-label="Aprovar" (click)="aprovar(morador)">
+                                            <i class="fa fa-check"></i> 
+                                        </button>
+                                        <button class="btn btn-danger" aria-label="Recusar" (click)="recusar(morador)">
+                                            <i class="fa fa-remove"></i> 
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <ng-template #noPendentes>
+                                <tr scope="row">
+                                    <td colspan="4" class="center">Nenhum morador pendente</td>
+                                </tr>
+                            </ng-template>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>

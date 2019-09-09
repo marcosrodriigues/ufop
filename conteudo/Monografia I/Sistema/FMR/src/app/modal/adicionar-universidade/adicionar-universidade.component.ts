@@ -17,6 +17,7 @@ export class AdicionarUniversidadeComponent implements OnInit {
 
   save() {
     return this._servive.save(this.universidade).subscribe(data => {
+      this.universidade = data;
       alert('Universidade salva!');
       window.location.href = window.location.pathname;
     });

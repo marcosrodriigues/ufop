@@ -1,1 +1,195 @@
-<p>profile-republica works!</p>
+<div class="container">
+    <div class="row"> 
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header center"><h4 class="strong">Meu perfil</h4></div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3 center">
+                            <div class="picture-container">
+                                <div class="picture">
+                                    <div *ngIf="profile.fotoUrl != null; else defaultPhoto;">
+                                        <img src="{{ profile.fotoUrl }}" class="img-fluid" />
+                                    </div>
+                                    <ng-template #defaultPhoto>
+                                        <img src="assets/img/default-user.png" class="img-fluid" />
+                                    </ng-template>
+                                    <input type="file" id="wizard-picture" (change)="upload($event)" />
+                                </div>
+                            </div>
+
+                            <div class="form-group m10">
+                                <p class="desc">{{ profile.tipo }} </p>
+                                <p class="desc">{{ profile.email }} </p>
+                                <a class="nav-link link" href="#" data-target="#modalMoradores" data-toggle="modal"><i class="fa fa-user"></i> Moradores</a>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-5">
+
+                            <mat-expansion-panel>
+                                <mat-expansion-panel-header>
+                                    <mat-panel-title><span class="strong">Abertura para o novo</span>: {{ personalidade.abertura }} pontos ... 50 total</mat-panel-title>
+                                    <mat-panel-description></mat-panel-description>
+                                </mat-expansion-panel-header>
+                                <p>Apreciação de arte, emoção, aventura, ideias incomuns, curiosidade e variedade de experiência.</p>
+                            </mat-expansion-panel>
+                            <mat-expansion-panel>
+                                <mat-expansion-panel-header>
+                                    <mat-panel-title><span class="strong">Concordância</span>: {{ personalidade.concordancia }} pontos ... 45 total</mat-panel-title>
+                                    <mat-panel-description></mat-panel-description>
+                                </mat-expansion-panel-header>
+                                <p>Tendência para ser mais compassivo e cooperativo do que desconfiado e antagonista em relação aos outros</p>
+                            </mat-expansion-panel>
+                            <mat-expansion-panel>
+                                <mat-expansion-panel-header>
+                                    <mat-panel-title><span class="strong">Consciência</span>: {{ personalidade.consciencia }} pontos ... 45 total </mat-panel-title>
+                                    <mat-panel-description></mat-panel-description>
+                                </mat-expansion-panel-header>
+                                <p>Tendência a mostrar autodisciplina, agir literalmente e realizar objetivos. Rígido em vez de um comportamento espontâneo</p>
+                            </mat-expansion-panel>
+                            <mat-expansion-panel>
+                                <mat-expansion-panel-header>
+                                    <mat-panel-title><span class="strong">Extroversão</span>: {{ personalidade.extroversao }} pontos ... 40 total</mat-panel-title>
+                                    <mat-panel-description></mat-panel-description>
+                                </mat-expansion-panel-header>
+                                <p>Energia, emoções positivas, urgência e uma tendência a estimular o ambiente na companhia de outras pessoas.</p>
+                            </mat-expansion-panel>
+                            <mat-expansion-panel>
+                                <mat-expansion-panel-header>
+                                    <mat-panel-title><span class="strong">Neuroticismo</span>: {{ personalidade.neuroticismo }} pontos ... 40 total</mat-panel-title>
+                                    <mat-panel-description></mat-panel-description>
+                                </mat-expansion-panel-header>
+                                <p>Tendência a ter emoções negativas facilmente, como raiva, ansiedade, depressão e vulnerabilidade</p>
+                            </mat-expansion-panel>
+
+                        </div>
+                        <div class="col-md-4"><div id="chart" style="height: 370px; width: 100%; margin-left:auto;margin-right:auto;"></div></div>
+                    </div>
+                </div>
+                <div class="card-footer"></div>
+            </div>
+            <div class="card">
+                <div class="card-header strong"><h3>Informações pessoais</h3></div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group row">
+                                <label for="nome" class="col-sm-2 col-form-label">Nome: </label>
+                                <div class="col-sm-4">
+                                    <input type="text" id="nome" [(ngModel)]="profile.nome" class="form-control" placeholder="Nome" />
+                                </div>
+
+                                <label for="email" class="col-sm-2 col-form-label">Email: </label>
+                                <div class="col-sm-4">
+                                    <input type="email" id="email" class="form-control" [(ngModel)]="profile.email" placeholder="Email" />
+                                </div>
+                            </div>
+                                
+                            <div class="form-group row">
+                                
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                <div class="card-footer"></div>
+            </div>
+
+            <div class="card">
+                <div class="card-header strong"><h5>Contato</h5></div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group row">
+                                <label for="cep" class="col-sm-2 col-form-label">CEP: </label>
+                                <div class="col-sm-4">
+                                    <input type="text" id="cep" class="form-control" (change)="changeCep()" placeholder="XXXXX-XXX" [(ngModel)]="endereco.cep" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="logradouro" class="col-sm-2 col-form-label">Logradouro: </label>
+                                <div class="col-sm-6">
+                                    <input type="text" id="logradouro" class="form-control" placeholder="Rua/avenida/praça/travessa" [(ngModel)]="endereco.logradouro" />
+                                </div>
+                                <label for="enderecoNumero" class="col-sm-1 col-form-label">Nº: </label>
+                                <div class="col-sm-3">
+                                    <input type="text" id="enderecoNumero" class="form-control" placeholder="200, 205-B, s/n" [(ngModel)]="endereco.numero" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="bairro" class="col-sm-2 col-form-label">Bairro: </label>
+                                <div class="col-sm-4">
+                                    <input type="text" id="bairro" class="form-control" placeholder="Bairro" [(ngModel)]="endereco.bairro" />
+                                </div>
+                                <label for="complemento" class="col-sm-2 col-form-label">Complemento: </label>
+                                <div class="col-sm-4">
+                                    <input type="text" id="complemento" class="form-control" placeholder="República, Pousada, Apartamento" [(ngModel)]="endereco.complemento" />
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="cidade" class="col-sm-2 col-form-label">Cidade: </label>
+                                <div class="col-sm-4">
+                                    <input type="text" id="cidade" class="form-control" placeholder="Cidade" [(ngModel)]="endereco.cidade" />
+                                </div>
+
+                                <label for="uf" class="col-sm-2 col-form-label">UF: </label>
+                                <div class="col-sm-4">
+                                    <select class="custom-select" id="uf" [(ngModel)]="endereco.uf">
+                                        <option disabled>Escolha</option>
+                                        <option *ngFor="let est of estados;" value="{{est.sigla}}">{{est.sigla}} - {{est.nome}}</option>
+                                        
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer"></div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header strong"><h5>Segurança</h5></div>
+                <div class="card-body">
+                    <div class="form-row align-items-center">
+                        <div class="input-group">
+                            <label for="user" class="col-sm-2 col-form-label">Usuário: </label>
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><label for="user">@</label></div>
+                            </div>
+                            <input type="text" id="user" class="form-control" placeholder="username" [(ngModel)]="profile.username" />
+
+                            <label for="password" class="col-sm-2 col-form-label">Senha: </label>
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><label for="password"><i class="fa fa-key"></i></label></div>
+                            </div>
+                            <input type="password" id="password" class="form-control" placeholder="Password" [(ngModel)]="profile.password" />
+                        </div>
+                        <div class="form col-sm-12 m10">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="custom-control custom-checkbox mr-sm-2 left">
+                                        <input type="checkbox" required class="custom-control-input col-sm-4" [(ngModel)]="profile.termos" id="termos">
+                                        <label class="custom-control-label col-sm-8" for="termos">Li e concordo com os <a class="" href="#" data-target="#modalTermoDeUso" data-toggle="modal">termos de uso</a>.</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 right">
+                                    <button class="btn btn-danger" data-target="#modalExcluirConta" data-toggle="modal"> Excluir conta</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-footer center">
+                    <button class="btn btn-primary" (click)="save()">Atualizar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-moradores></app-moradores>
+<app-termo-de-uso></app-termo-de-uso>
+<app-excluir-conta></app-excluir-conta>

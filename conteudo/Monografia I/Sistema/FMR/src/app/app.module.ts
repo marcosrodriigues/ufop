@@ -31,6 +31,7 @@ import { TermoDeUsoComponent } from './modal/termo-de-uso/termo-de-uso.component
 import { ProfileEstudanteComponent } from './component/profile-estudante/profile-estudante.component';
 import { ProfileRepublicaComponent } from './component/profile-republica/profile-republica.component';
 import { ExcluirContaComponent } from './modal/excluir-conta/excluir-conta.component';
+import { MoradoresComponent } from './modal/moradores/moradores.component';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { ExcluirContaComponent } from './modal/excluir-conta/excluir-conta.compo
     TermoDeUsoComponent,
     ProfileEstudanteComponent,
     ProfileRepublicaComponent,
-    ExcluirContaComponent
+    ExcluirContaComponent,
+    MoradoresComponent
   ],
   imports: [
     BrowserModule,

@@ -3,6 +3,7 @@ import { UniversidadeService } from 'src/app/service/universidade.service';
 import { UtilService } from 'src/app/service/util.service';
 import { UserService } from 'src/app/service/user.service';
 import * as CanvasJS from '../../../assets/js/canvasjs.min';
+import { FileService } from 'src/app/service/file.service';
 
 @Component({
   selector: 'app-profile-estudante',
@@ -26,6 +27,7 @@ export class ProfileEstudanteComponent implements OnInit, OnChanges {
   
   profUniversidade: number = 0;
   estados: any = [];
+  fotoPerfil: File;
   
   _republicas: any = [];
 
@@ -39,7 +41,8 @@ export class ProfileEstudanteComponent implements OnInit, OnChanges {
 
   constructor(private _userService : UserService,
               private _utilService : UtilService,
-              private _universidadeService : UniversidadeService) { }
+              private _universidadeService : UniversidadeService,
+              private _fileService : FileService) { }
 
   ngOnChanges() {
     this.configureMe();
@@ -62,16 +65,16 @@ export class ProfileEstudanteComponent implements OnInit, OnChanges {
   configureMe() {
     if (this.profile.universidade != null) this.profUniversidade = this.profile.universidade.id;
 
-      if (this.profile.endereco != null) this.endereco = this.profile.endereco;
-      
-      if (this.profile.perfil.personalidade != null) {
-        this.personalidade = this.profile.perfil.personalidade;
-        this.dataChart[0].y = this.personalidade.abertura;
-        this.dataChart[1].y = this.personalidade.concordancia;
-        this.dataChart[2].y = this.personalidade.consciencia;
-        this.dataChart[3].y = this.personalidade.extroversao;
-        this.dataChart[4].y = this.personalidade.neuroticismo;
-      }
+    if (this.profile.endereco != null) this.endereco = this.profile.endereco;
+    
+    if (this.profile.perfil.personalidade != null) {
+      this.personalidade = this.profile.perfil.personalidade;
+      this.dataChart[0].y = this.personalidade.abertura;
+      this.dataChart[1].y = this.personalidade.concordancia;
+      this.dataChart[2].y = this.personalidade.consciencia;
+      this.dataChart[3].y = this.personalidade.extroversao;
+      this.dataChart[4].y = this.personalidade.neuroticismo;
+    }
   }
 
   initEstados() {
@@ -143,4 +146,12 @@ export class ProfileEstudanteComponent implements OnInit, OnChanges {
     return opt1 == opt2;
   }
 
+  upload(event) {
+    if (event.target.files.length > 0) {
+      this.fotoPerfil = event.target.files[0];
+      this._fileService.upload(this.fotoPerfil).subscribe((data:any) => {
+        this.profile.fotoUrl = data.fileUri;
+      })
+    }
+  }
 }

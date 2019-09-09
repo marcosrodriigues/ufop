@@ -6,14 +6,24 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-3 center">
-                            <img src="assets/img/default-user.png" class="img-fluid" />
+                            <div class="picture-container">
+                                <div class="picture">
+                                    <div *ngIf="profile.fotoUrl != null; else defaultPhoto;">
+                                        <img src="{{ profile.fotoUrl }}" class="img-fluid" />
+                                    </div>
+                                    <ng-template #defaultPhoto>
+                                        <img src="assets/img/default-user.png" class="img-fluid" />
+                                    </ng-template>
+                                    <input type="file" id="wizard-picture" (change)="upload($event)" />
+                                </div>
+                            </div>
+                            
                             <div class="form-group m10">
                                 <p class="desc">{{ profile.tipo }} </p>
                                 <p class="desc">{{ profile.email }} </p>
                                 <div *ngIf="profile.moradorRepublica == null; else hasRepublic">
                                     <a class="nav-link link" href="#" data-target="#modalAddRepublica" data-toggle="modal"><i class="fa fa-plus"></i> adicionar republica</a>
                                 </div>
-
                                 <ng-template #hasRepublic>
                                     <div *ngIf="profile.moradorRepublica.aprovado == false; else isApproved">
                                         <p>Aguardando aprovação</p>
@@ -22,13 +32,6 @@
                                 <ng-template #isApproved>
                                     <a class="nav-link link" routerLink="/minha-republica">{{profile.moradorRepublica.republica.nome}}</a>
                                 </ng-template>
-                                
-                                <!--<div *ngIf="profile.moradorRepublica.aprovado == true">
-                                    <span>Aguardando {{profile.moradorRepublica.republica.nome}}</span>
-                                </div>
-                                <div *ngIf="profile.moradorRepublica.aprovado == false">
-                                    <a class="nav-link link" routerLink="/minha-republica">{{profile.moradorRepublica.republica.nome}}</a>
-                                </div>-->
                             </div>
                         </div>
                         

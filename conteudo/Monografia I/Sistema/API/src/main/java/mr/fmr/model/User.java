@@ -15,6 +15,8 @@ public class User {
     private String password;
     @Column
     private String username;
+    @Column
+    private String fotoUrl;
 
     private boolean termos;
 
@@ -103,5 +105,13 @@ public class User {
 
     public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
+    }
+
+    public String getFotoUrl() {
+        return fotoUrl;
+    }
+
+    public void setFotoUrl(String fotoUrl) {
+        this.fotoUrl = fotoUrl;
     }
 }

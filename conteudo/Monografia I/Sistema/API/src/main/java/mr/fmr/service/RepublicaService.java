@@ -1,6 +1,7 @@
 package mr.fmr.service;
 
 import mr.fmr.model.Estudante;
+import mr.fmr.model.MoradorRepublica;
 import mr.fmr.model.Republica;
 import mr.fmr.model.User;
 
@@ -15,5 +16,6 @@ public interface RepublicaService {
     void delete(long id);
     List<Republica> findByUf(String uf);
     List<Republica> findByUfAndCity(String uf, String city);
-
+    List<Estudante> findMoradores(Republica republica);
+    List<Estudante> findPendentes(Republica republica);
 }

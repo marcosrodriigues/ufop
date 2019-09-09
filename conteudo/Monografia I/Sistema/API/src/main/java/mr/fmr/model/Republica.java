@@ -20,7 +20,7 @@ public class Republica extends User implements Serializable {
 
     private String nome;
 
-    @OneToMany(mappedBy = "republica", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "republica", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<MoradorRepublica> moradores = new ArrayList<>();
 
     public String getNome() {

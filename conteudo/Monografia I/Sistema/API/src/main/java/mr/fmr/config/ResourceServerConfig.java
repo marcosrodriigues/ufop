@@ -54,6 +54,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
         http.csrf().disable()
                 .authorizeRequests()
                 .antMatchers(HttpMethod.POST, "/user").permitAll()
-                .anyRequest().authenticated();
+                .antMatchers("/upload").permitAll()
+                .anyRequest().permitAll();
     }
 }
