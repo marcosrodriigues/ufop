@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as CanvasJS from '../../../assets/js/canvasjs.min';
+import { UserService } from 'src/app/service/user.service';
 
 @Component({
   selector: 'app-my-republic',
@@ -8,41 +9,16 @@ import * as CanvasJS from '../../../assets/js/canvasjs.min';
 })
 export class MyRepublicComponent implements OnInit {
 
-  rep = "República Maternidade";
-  fullImagePath = '/content/republica/maternidade.png';
+  profile : any = { }
 
-  data = [
-    { y: 52, name: "Abertura para o novo" },
-    { y: 68, name: "Realização" },
-    { y: 40, name: "Extroversão" },
-    { y: 35, name: "Socialização" },
-    { y: 75, name: "Neuroticismo" },
-  ];
-
-  constructor() { 
+  constructor(private _user : UserService) { 
   }
 
   ngOnInit() {
-      this.initializeChart('chart');
-  }
-
-  initializeChart(id) {
-    let chart = new CanvasJS.Chart(id, {
-      theme: "light2",
-      animationEnabled: true,
-      exportEnabled: true,
-      title:{
-        text: "Personalidade"
-      },
-      data: [{
-        type: "column",
-        showInLegend: true,
-        toolTipContent: "<b>{name}</b>: {y} (#percent%)",
-        indexLabel: "{name} - #percent%",
-        dataPoints: this.data,
-      }]
-    });
-    chart.render();
+    this._user.checkCredentials();
+    this._user.me().subscribe( (data: any) => {
+      this.profile = data.moradorRepublica.republica;
+    })
   }
 
 }

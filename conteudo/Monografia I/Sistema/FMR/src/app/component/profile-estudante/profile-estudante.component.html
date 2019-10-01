@@ -26,11 +26,11 @@
                                 </div>
                                 <ng-template #hasRepublic>
                                     <div *ngIf="profile.moradorRepublica.aprovado == false; else isApproved">
-                                        <p>Aguardando aprovação</p>
+                                        <p>aguardando aprovação</p>
                                     </div>
                                 </ng-template>
                                 <ng-template #isApproved>
-                                    <a class="nav-link link" routerLink="/minha-republica">{{profile.moradorRepublica.republica.nome}}</a>
+                                    <a class="nav-link link" routerLink="/profile/republica">{{profile.moradorRepublica.republica.nome}}</a>
                                 </ng-template>
                             </div>
                         </div>

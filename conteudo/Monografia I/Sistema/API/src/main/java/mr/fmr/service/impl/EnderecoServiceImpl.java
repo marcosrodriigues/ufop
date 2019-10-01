@@ -1,6 +1,5 @@
 package mr.fmr.service.impl;
 
-import mr.fmr.model.Endereco;
 import mr.fmr.repository.EnderecoRepository;
 import mr.fmr.service.EnderecoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +17,6 @@ public class EnderecoServiceImpl implements EnderecoService {
     public List<String> getCityWhereHasRepublic(String uf) {
         return repository.findCityWhereHasRepublic(uf);
     }
-
 
     @Override
     public List<String> getUfWhereHasRepublic() {

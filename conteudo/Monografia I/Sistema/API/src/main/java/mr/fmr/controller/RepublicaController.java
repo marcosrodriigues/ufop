@@ -53,6 +53,9 @@ public class RepublicaController {
         if (me instanceof Republica) {
             Republica rep = (Republica) me;
             return service.findMoradores(rep);
+        } else if (me instanceof Estudante) {
+            Estudante est = (Estudante) me;
+            return service.findMoradores(est.getMoradorRepublica().getRepublica());
         }
 
         return null;
@@ -65,6 +68,9 @@ public class RepublicaController {
         if (me instanceof Republica) {
             Republica rep = (Republica) me;
             return service.findPendentes(rep);
+        } else if (me instanceof Estudante) {
+            Estudante est = (Estudante) me;
+            return service.findPendentes(est.getMoradorRepublica().getRepublica());
         }
 
         return null;
@@ -77,6 +83,9 @@ public class RepublicaController {
         if (user instanceof  Republica) {
             Republica me = (Republica) user;
             return moradorService.aprovar(estudante, me);
+        } else if (user instanceof Estudante) {
+            Estudante me = (Estudante) user;
+            return moradorService.aprovar(estudante, me.getMoradorRepublica().getRepublica());
         }
 
         return null;
@@ -89,7 +98,9 @@ public class RepublicaController {
         if (user instanceof  Republica) {
             Republica me = (Republica) user;
             moradorService.recusar(estudante, me);
-            return;
+        } else if (user instanceof Estudante) {
+            Estudante me = (Estudante) user;
+            moradorService.recusar(estudante, me.getMoradorRepublica().getRepublica());
         }
     }
 

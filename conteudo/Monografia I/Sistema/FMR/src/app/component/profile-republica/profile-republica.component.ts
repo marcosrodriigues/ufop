@@ -3,6 +3,7 @@ import { UserService } from 'src/app/service/user.service';
 import { UtilService } from 'src/app/service/util.service';
 import * as CanvasJS from '../../../assets/js/canvasjs.min';
 import { FileService } from 'src/app/service/file.service';
+import { RepublicaService } from 'src/app/service/republica.service';
 
 @Component({
   selector: 'app-profile-republica',
@@ -20,6 +21,7 @@ export class ProfileRepublicaComponent implements OnInit, OnChanges {
     extroversao: 0,
     neuroticismo: 0
    }
+   
    endereco: any = { }
    estados: any = [ ]
    fotoPerfil: File;
@@ -34,7 +36,8 @@ export class ProfileRepublicaComponent implements OnInit, OnChanges {
 
   constructor(private _userService: UserService,
               private _utilService : UtilService,
-              private _fileService : FileService) { }
+              private _fileService : FileService,
+              private _repService : RepublicaService) { }
 
   ngOnInit() {
     this._userService.checkCredentials();
@@ -79,9 +82,7 @@ export class ProfileRepublicaComponent implements OnInit, OnChanges {
   }
 
   save() {
-    if (this.endereco != undefined) {
-      this.profile.endereco = this.endereco;
-    }
+    if (this.endereco != undefined) this.profile.endereco = this.endereco;
     
     this._userService.update(this.profile).subscribe(data => {
       alert("Usuário atualizado");
@@ -94,15 +95,15 @@ export class ProfileRepublicaComponent implements OnInit, OnChanges {
     let chart = new CanvasJS.Chart(id, {
       theme: "light2",
       animationEnabled: true,
-      exportEnabled: true,
+      exportEnabled: false,
       title:{
         text: "Personalidade"
       },
       data: [{
-        type: "pie",
-        showInLegend: true,
-        toolTipContent: "<b>{name}</b>: {y} (#percent%)",
-        indexLabel: "{name} - #percent%",
+        type: "column",
+        showInLegend: false,
+        toolTipContent: "<b>{name}</b>: {y}",
+        indexLabel: "{name}",
         dataPoints: this.dataChart,
       }]
     });
@@ -116,5 +117,11 @@ export class ProfileRepublicaComponent implements OnInit, OnChanges {
         this.profile.fotoUrl = data.fileUri;
       })
     }
+  }
+
+  calcularPersonalidade() {
+    this._repService.calcularPersonalidade(this.profile).subscribe(data => {
+      console.log(data);
+    })
   }
 }

@@ -117,15 +117,15 @@ export class ProfileEstudanteComponent implements OnInit, OnChanges {
     let chart = new CanvasJS.Chart(id, {
       theme: "light2",
       animationEnabled: true,
-      exportEnabled: true,
+      exportEnabled: false,
       title:{
         text: "Personalidade"
       },
       data: [{
-        type: "pie",
-        showInLegend: true,
-        toolTipContent: "<b>{name}</b>: {y} (#percent%)",
-        indexLabel: "{name} - #percent%",
+        type: "column",
+        showInLegend: false,
+        toolTipContent: "<b>{name}</b>: {y} pontos",
+        indexLabel: "{name}",
         dataPoints: this.dataChart,
       }]
     });

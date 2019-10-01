@@ -16,11 +16,9 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'search', component: SearchComponent },
   { path: 'republica/:id', component: RepublicDetailComponent},
-  { path: 'profile', component: ProfileComponent },
-  { path: 'minha-republica', component: MyRepublicComponent },
+  { path: 'profile', component: ProfileComponent},
+  { path: 'profile/republica', component: MyRepublicComponent },
   { path: 'inventario', component: InventoryComponent }
-
-
 ];
 
 @NgModule({

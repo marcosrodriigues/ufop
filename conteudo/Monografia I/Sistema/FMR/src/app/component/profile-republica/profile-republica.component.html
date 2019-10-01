@@ -2,7 +2,7 @@
     <div class="row"> 
         <div class="col-sm-12">
             <div class="card">
-                <div class="card-header center"><h4 class="strong">Meu perfil</h4></div>
+                <div class="card-header center"><h4 class="strong">Perfil - <span> {{ profile.nome }} </span></h4></div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-3 center">
@@ -63,6 +63,11 @@
                                 <p>Tendência a ter emoções negativas facilmente, como raiva, ansiedade, depressão e vulnerabilidade</p>
                             </mat-expansion-panel>
 
+                            <div class="row m25">
+                                <div class="col-sm-12 center">
+                                    <button class="btn btn-primary" (click)="calcularPersonalidade()">Calcular personalidade</button>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md-4"><div id="chart" style="height: 370px; width: 100%; margin-left:auto;margin-right:auto;"></div></div>
                     </div>

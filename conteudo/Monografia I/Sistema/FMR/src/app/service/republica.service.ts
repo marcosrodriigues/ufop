@@ -38,4 +38,7 @@ export class RepublicaService {
     return this._http.post(this.baseUrl + "/recusar", morador);
   }
 
+  calcularPersonalidade(republica : any) {
+    return this._http.post(this.baseUrl + "/personalidade", republica);
+  }
 }
