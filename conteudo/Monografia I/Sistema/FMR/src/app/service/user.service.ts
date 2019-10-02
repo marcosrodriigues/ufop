@@ -55,7 +55,7 @@ export class UserService {
 
   logout() {
     this._cookie.delete('access_token');
-    window.location.href = "/login";
+    window.location.href = "login";
   }
 
   me() {

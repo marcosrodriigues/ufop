@@ -1,5 +1,6 @@
 package mr.fmr.controller;
 
+import mr.fmr.exception.MyUnauthorizedException;
 import mr.fmr.model.Estudante;
 import mr.fmr.model.MoradorRepublica;
 import mr.fmr.model.Republica;
@@ -104,4 +105,20 @@ public class RepublicaController {
         }
     }
 
+    @PostMapping(value = BASE_URL + "/personalidade")
+    public Republica calcularPersonalidade(Principal principal, @RequestBody Republica republica) {
+        User user = userService.getUserFromPrincipal(principal);
+
+        if (user instanceof Estudante) {
+            Estudante me = (Estudante) user;
+            if (!me.getMoradorRepublica().getRepublica().equals(republica))
+                throw new MyUnauthorizedException("Usuário não pode executar esta tarefa!");
+
+            return service.createPersonality(me.getMoradorRepublica().getRepublica());
+        }
+
+        Republica me = (Republica) user;
+
+        return service.createPersonality(me);
+    }
 }

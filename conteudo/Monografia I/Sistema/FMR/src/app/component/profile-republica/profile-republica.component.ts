@@ -27,11 +27,11 @@ export class ProfileRepublicaComponent implements OnInit, OnChanges {
    fotoPerfil: File;
 
    dataChart = [
-    { y: 0.1, name: "Abertura para o Novo" },
-    { y: 0.1, name: "Concordância" },
-    { y: 0.1, name: "Consciência" },
-    { y: 0.1, name: "Extroversão" },
-    { y: 0.1, name: "Neuroticismo" },
+    { y: 0.1, label: "Abertura" },
+    { y: 0.1, label: "Concordância" },
+    { y: 0.1, label: "Consciência" },
+    { y: 0.1, label: "Extroversão" },
+    { y: 0.1, label: "Neuroticismo" },
   ];
 
   constructor(private _userService: UserService,
@@ -95,15 +95,14 @@ export class ProfileRepublicaComponent implements OnInit, OnChanges {
     let chart = new CanvasJS.Chart(id, {
       theme: "light2",
       animationEnabled: true,
-      exportEnabled: false,
       title:{
         text: "Personalidade"
       },
+      axisY : {
+        title: "Pontuação"
+      },
       data: [{
         type: "column",
-        showInLegend: false,
-        toolTipContent: "<b>{name}</b>: {y}",
-        indexLabel: "{name}",
         dataPoints: this.dataChart,
       }]
     });
@@ -121,7 +120,9 @@ export class ProfileRepublicaComponent implements OnInit, OnChanges {
 
   calcularPersonalidade() {
     this._repService.calcularPersonalidade(this.profile).subscribe(data => {
-      console.log(data);
+      this.profile = data;
+      this.configureMe();
+      this.initializeChart('chart');
     })
   }
 }

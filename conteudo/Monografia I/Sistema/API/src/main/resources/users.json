@@ -1,0 +1,66 @@
+[{
+  "reps": [
+    {
+      "user": "rep",
+      "pass": "rep"
+    },
+    {
+      "user": "flor",
+      "pass": "flor"
+    },
+    {
+      "user": "sussego",
+      "pass": "sussego"
+    },
+    {
+      "user": "trem",
+      "pass": "trem"
+    },
+    {
+      "user": "navio",
+      "pass": "navio"
+    },
+    {
+      "user": "alfa27",
+      "pass": "alfa27"
+    }
+  ],
+  "ests": [
+    {
+      "user" : "marcos",
+      "pass": "marcos",
+      "rep": "rep"
+    },
+    {
+      "user": "est",
+      "pass": "est",
+      "rep": "rep"
+    },
+    {
+      "user": "indigente",
+      "pass": "indigente",
+      "rep": "flor"
+    },
+    {
+      "user": "220",
+      "pass": "220",
+      "rep": "sussego"
+    },
+    {
+      "user": "wando",
+      "pass": "wando",
+      "rep": "trem"
+    },
+    {
+      "user": "geps",
+      "pass": "geps",
+      "rep": "navio"
+    },
+    {
+      "user": "lott",
+      "pass": "lott",
+      "rep": "alfa27"
+    }
+
+  ]
+}]

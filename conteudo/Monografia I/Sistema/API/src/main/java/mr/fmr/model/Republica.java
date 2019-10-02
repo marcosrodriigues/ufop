@@ -6,6 +6,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 public class Republica extends User implements Serializable {
@@ -38,5 +39,19 @@ public class Republica extends User implements Serializable {
 
     public void setMoradores(List<MoradorRepublica> moradores) {
         this.moradores = moradores;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Republica)) return false;
+        Republica republica = (Republica) o;
+        return Objects.equals(getId(), republica.getId()) &&
+                Objects.equals(getNome(), republica.getNome());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getNome());
     }
 }

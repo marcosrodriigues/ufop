@@ -1,9 +1,6 @@
 package mr.fmr.service.impl;
 
-import mr.fmr.model.Estudante;
-import mr.fmr.model.MoradorRepublica;
-import mr.fmr.model.Republica;
-import mr.fmr.model.User;
+import mr.fmr.model.*;
 import mr.fmr.repository.RepublicaRepository;
 import mr.fmr.service.EstudanteService;
 import mr.fmr.service.RepublicaService;
@@ -68,12 +65,7 @@ public class RepublicaServiceImpl implements RepublicaService {
 
     @Override
     public List<Estudante> findMoradores(Republica republica) {
-        List<Estudante> moradores = new ArrayList<>();
-
-        for (MoradorRepublica estudante : republica.getMoradores())
-            if (estudante.isAprovado()) moradores.add(estudante.getMorador());
-
-        return moradores;
+        return getApprovedMoradores(republica);
     }
 
     @Override
@@ -84,5 +76,45 @@ public class RepublicaServiceImpl implements RepublicaService {
             if (!estudante.isAprovado()) pendentes.add(estudante.getMorador());
 
         return pendentes;
+    }
+
+    @Override
+    public Republica createPersonality(Republica republica) {
+        List<Estudante> moradores = findMoradores(republica);
+
+        Personalidade personality = new Personalidade();
+
+        moradores.forEach(m -> {
+            personality.setAbertura(personality.getAbertura() + m.getPerfil().getPersonalidade().getAbertura());
+            personality.setNeuroticismo(personality.getNeuroticismo() + m.getPerfil().getPersonalidade().getNeuroticismo());
+            personality.setConsciencia(personality.getNeuroticismo() + m.getPerfil().getPersonalidade().getNeuroticismo());
+            personality.setConcordancia(personality.getConsciencia() + m.getPerfil().getPersonalidade().getConcordancia());
+            personality.setExtroversao(personality.getExtroversao() + m.getPerfil().getPersonalidade().getExtroversao());
+        });
+
+        personality.setAbertura(personality.getAbertura() / moradores.size());
+        personality.setNeuroticismo(personality.getNeuroticismo() / moradores.size());
+        personality.setConsciencia(personality.getConsciencia() / moradores.size());
+        personality.setConcordancia(personality.getConcordancia() / moradores.size());
+        personality.setExtroversao(personality.getExtroversao() / moradores.size());
+
+        Perfil perfil = new Perfil();
+        perfil.setPersonalidade(personality);
+
+        republica.setPerfil(perfil);
+
+        return save(republica);
+    }
+
+    //private methods
+    private List<Estudante> getApprovedMoradores(Republica republica) {
+        if (republica.getMoradores().isEmpty()) return null;
+
+        List<Estudante> moradores = new ArrayList<>();
+
+        for (MoradorRepublica mr : republica.getMoradores())
+            if (mr.isAprovado()) moradores.add(mr.getMorador());
+
+        return moradores;
     }
 }

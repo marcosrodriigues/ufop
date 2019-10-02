@@ -1,0 +1,37 @@
+[{
+  "reps": [
+    {
+      "user": "rep",
+      "pass": "rep"
+    },
+    {
+      "user": "flor",
+      "pass": "flor"
+    },
+    {
+      "user": "sussego",
+      "pass": "sussego"
+    },
+    {
+      "user": "trem",
+      "pass": "trem"
+    }
+  ],
+  "ests": [
+    {
+      "user" : "marcos",
+      "pass": "marcos",
+      "rep": "rep"
+    },
+    {
+      "user": "est",
+      "pass": "est",
+      "rep": "rep"
+    },
+    {
+      "user": "indigente",
+      "pass": "indigente",
+      "rep": "flor"
+    }
+  ]
+}]

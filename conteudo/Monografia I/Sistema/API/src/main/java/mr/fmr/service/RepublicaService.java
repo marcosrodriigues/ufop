@@ -18,4 +18,5 @@ public interface RepublicaService {
     List<Republica> findByUfAndCity(String uf, String city);
     List<Estudante> findMoradores(Republica republica);
     List<Estudante> findPendentes(Republica republica);
+    Republica createPersonality(Republica republica);
 }
