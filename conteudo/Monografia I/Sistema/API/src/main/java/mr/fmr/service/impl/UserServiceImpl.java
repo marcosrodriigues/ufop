@@ -1,7 +1,5 @@
 package mr.fmr.service.impl;
 
-import mr.fmr.model.Estudante;
-import mr.fmr.model.Republica;
 import mr.fmr.model.User;
 import mr.fmr.repository.UserRepository;
 import mr.fmr.service.EstudanteService;

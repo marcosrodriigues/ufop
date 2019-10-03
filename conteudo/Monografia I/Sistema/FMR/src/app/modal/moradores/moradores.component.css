@@ -1,3 +1,11 @@
 .mr-10 {
     margin-right: 10px;
 }
+
+.m-width-80 {
+    max-width: 80%!important;
+}
+
+.center tr th {
+    vertical-align: middle;
+}

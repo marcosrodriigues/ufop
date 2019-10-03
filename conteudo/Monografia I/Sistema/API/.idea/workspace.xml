@@ -2,25 +2,23 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/src/main/java/mr/fmr/model/Estudante.java" line="24" mnemonic="2" />
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/PersonalidadeServiceImpl.java" line="70" mnemonic="9" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/RepublicaServiceImpl.java" line="222" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5255dbb-e4f9-476c-bf1c-89c0804f8f87" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/mr/fmr/exception/MyBadRequestException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mr/fmr/exception/MyUnauthorizedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/users.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mr/fmr/controller/RepublicaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mr/fmr/controller/RepublicaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mr/fmr/model/Republica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mr/fmr/model/Republica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mr/fmr/service/RepublicaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mr/fmr/service/RepublicaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/EstudanteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/EstudanteServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/RepublicaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/RepublicaServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/users.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mr/fmr/controller/RepublicaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mr/fmr/controller/RepublicaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mr/fmr/model/Republica.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mr/fmr/model/Republica.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mr/fmr/service/RepublicaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mr/fmr/service/RepublicaService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mr/fmr/service/impl/RepublicaServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mr/fmr/service/impl/RepublicaServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FMR/src/app/component/profile-republica/profile-republica.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/component/profile-republica/profile-republica.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FMR/src/app/service/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/service/user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mr/fmr/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mr/fmr/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/users.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FMR/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FMR/src/app/component/profile-republica/profile-republica.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/component/profile-republica/profile-republica.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FMR/src/app/page/index/index.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/page/index/index.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FMR/src/app/page/index/index.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/page/index/index.component.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,70 +46,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/controller/RepublicaController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1175">
-              <caret line="119" column="26" lean-forward="true" selection-start-line="119" selection-start-column="26" selection-end-line="119" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/UserServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="87" selection-start-line="87" selection-end-line="87" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/EstudanteServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="22" column="38" lean-forward="true" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/RepublicaServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1970#1971#0" expanded="true" />
-                <element signature="e#2002#2003#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/users.json">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="215">
-              <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/repository/RepublicaRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="58" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
+              <caret line="207" column="68" lean-forward="true" selection-start-line="207" selection-start-column="68" selection-end-line="207" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -120,28 +59,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/exception/MyUnauthorizedException.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/model/Personalidade.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#288#289#0" expanded="true" />
-                <element signature="e#318#319#0" expanded="true" />
-                <element signature="e#389#390#0" expanded="true" />
-                <element signature="e#426#427#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-150">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/exception/MyFileNotFoundException.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/model/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="37" lean-forward="true" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+            <state relative-caret-position="299">
+              <caret line="109" column="32" selection-start-line="109" selection-start-column="32" selection-end-line="109" selection-end-column="32" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#2118#2119#0" expanded="true" />
+                <element signature="e#2164#2165#0" expanded="true" />
+                <element signature="e#2202#2203#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -161,6 +95,10 @@
     <findStrings>
       <find>org.springframework.boot</find>
       <find>org.springframework</find>
+      <find>scoreMorador</find>
+      <find>Moda</find>
+      <find>personalidadePelaModa</find>
+      <find>findMorado</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -184,7 +122,6 @@
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/UniversidadeServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/controller/UniversidadeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/model/Endereco.java" />
-        <option value="$PROJECT_DIR$/src/main/java/mr/fmr/repository/RepublicaRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/repository/EnderecoRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/service/EnderecoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/controller/UtilController.java" />
@@ -215,11 +152,12 @@
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/model/Republica.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/service/RepublicaService.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/exception/MyBadRequestException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/mr/fmr/controller/RepublicaController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/RepublicaServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/EstudanteServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/users.json" />
+        <option value="$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mr/fmr/controller/RepublicaController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mr/fmr/repository/RepublicaRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/RepublicaServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -242,8 +180,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -284,15 +220,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="fmr" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="API" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="fmr" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -309,6 +236,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -318,11 +247,12 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569977009840" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569977319578" />
     <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/spring-boot-oauth2/spring-boot-oauth2" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -393,12 +323,14 @@
       <workItem from="1568060457644" duration="479000" />
       <workItem from="1568080105088" duration="293000" />
       <workItem from="1568660008085" duration="486000" />
-      <workItem from="1569960476986" duration="11991000" />
+      <workItem from="1569960476986" duration="12938000" />
+      <workItem from="1570057986786" duration="17062000" />
+      <workItem from="1570130724383" duration="2869000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="214382000" />
+    <option name="totallyTimeSpent" value="235260000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -413,7 +345,7 @@
     <frame x="0" y="-1" width="1366" height="741" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49760765" visible="true" weight="0.2530303" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49760765" visible="true" weight="0.26060605" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -422,7 +354,6 @@
       <window_info id="Favorites" order="6" sideWeight="0.50239235" side_tool="true" weight="0.23787878" />
       <window_info id="Learn" order="7" />
       <window_info id="Web" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Duplicate detector" weight="0.32901135" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32901135" />
@@ -438,6 +369,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32901135" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.32901135" />
+      <window_info anchor="bottom" id="Duplicate detector" order="15" weight="0.32901135" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -458,41 +390,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/controller/UniversidadeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#705#706#0" expanded="true" />
-            <element signature="e#753#754#0" expanded="true" />
-            <element signature="e#663#664#0" expanded="true" />
-            <element signature="e#684#685#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/model/Universidade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="40" lean-forward="true" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/EnderecoService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/model/Perfil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -506,32 +407,6 @@
             <element signature="e#970#971#0" expanded="true" />
             <element signature="e#1444#1445#0" expanded="true" />
             <element signature="e#1472#1473#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/PersonalidadeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4051#4052#0" expanded="true" />
-            <element signature="e#4106#4107#0" expanded="true" />
-            <element signature="e#4163#4164#0" expanded="true" />
-            <element signature="e#4210#4211#0" expanded="true" />
-            <element signature="e#4261#4262#0" expanded="true" />
-            <element signature="e#4316#4317#0" expanded="true" />
-            <element signature="e#4374#4375#0" expanded="true" />
-            <element signature="e#4425#4426#0" expanded="true" />
-            <element signature="e#4475#4476#0" expanded="true" />
-            <element signature="e#4530#4531#0" expanded="true" />
-            <element signature="e#4587#4588#0" expanded="true" />
-            <element signature="e#4638#4639#0" expanded="true" />
-            <element signature="e#4689#4690#0" expanded="true" />
-            <element signature="e#4744#4745#0" expanded="true" />
-            <element signature="e#4802#4803#0" expanded="true" />
-            <element signature="e#4849#4850#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -711,18 +586,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="109" column="32" selection-start-line="109" selection-start-column="32" selection-end-line="109" selection-end-column="32" />
-          <folding>
-            <element signature="e#2118#2119#0" expanded="true" />
-            <element signature="e#2164#2165#0" expanded="true" />
-            <element signature="e#2202#2203#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/controller/UploadController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
@@ -795,37 +658,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.9.RELEASE/spring-web-5.1.9.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="196" selection-start-line="196" selection-end-line="196" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/exception/MyUnauthorizedException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#288#289#0" expanded="true" />
-            <element signature="e#318#319#0" expanded="true" />
-            <element signature="e#389#390#0" expanded="true" />
-            <element signature="e#426#427#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/exception/MyFileNotFoundException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="37" lean-forward="true" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/exception/MyBadRequestException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -852,13 +684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/RepublicaService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/controller/PersonalidadeController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
@@ -874,16 +699,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1372#1373#0" expanded="true" />
             <element signature="e#1434#1435#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/repository/RepublicaRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="58" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -908,16 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/controller/RepublicaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1175">
-          <caret line="119" column="26" lean-forward="true" selection-start-line="119" selection-start-column="26" selection-end-line="119" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -935,32 +740,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/EstudanteServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/exception/MyUnauthorizedException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="22" column="38" lean-forward="true" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
+        <state relative-caret-position="120">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#288#289#0" expanded="true" />
+            <element signature="e#318#319#0" expanded="true" />
+            <element signature="e#389#390#0" expanded="true" />
+            <element signature="e#426#427#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/RepublicaServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/exception/MyFileNotFoundException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="60">
+          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1970#1971#0" expanded="true" />
-            <element signature="e#2002#2003#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="87" selection-start-line="87" selection-end-line="87" />
+        <state relative-caret-position="150">
+          <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/EstudanteServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -969,8 +783,114 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/users.json">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/RepublicaService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/2.1.10.RELEASE/spring-data-jpa-2.1.10.RELEASE-sources.jar!/org/springframework/data/jpa/repository/JpaRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="97" column="6" selection-start-line="97" selection-start-column="6" selection-end-line="97" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/controller/RepublicaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1175">
+          <caret line="116" selection-start-line="116" selection-end-line="116" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.9.RELEASE/spring-web-5.1.9.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2415">
+          <caret line="193" column="48" selection-start-line="193" selection-start-column="48" selection-end-line="193" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/repository/RepublicaRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/model/Perfil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-165">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="109" column="32" selection-start-line="109" selection-start-column="32" selection-end-line="109" selection-end-column="32" />
+          <folding>
+            <element signature="e#2118#2119#0" expanded="true" />
+            <element signature="e#2164#2165#0" expanded="true" />
+            <element signature="e#2202#2203#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/PersonalidadeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4051#4052#0" expanded="true" />
+            <element signature="e#4106#4107#0" expanded="true" />
+            <element signature="e#4163#4164#0" expanded="true" />
+            <element signature="e#4210#4211#0" expanded="true" />
+            <element signature="e#4261#4262#0" expanded="true" />
+            <element signature="e#4316#4317#0" expanded="true" />
+            <element signature="e#4374#4375#0" expanded="true" />
+            <element signature="e#4425#4426#0" expanded="true" />
+            <element signature="e#4475#4476#0" expanded="true" />
+            <element signature="e#4530#4531#0" expanded="true" />
+            <element signature="e#4587#4588#0" expanded="true" />
+            <element signature="e#4638#4639#0" expanded="true" />
+            <element signature="e#4689#4690#0" expanded="true" />
+            <element signature="e#4744#4745#0" expanded="true" />
+            <element signature="e#4802#4803#0" expanded="true" />
+            <element signature="e#4849#4850#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/model/Personalidade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-150">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/RepublicaServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
-          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+          <caret line="207" column="68" lean-forward="true" selection-start-line="207" selection-start-column="68" selection-end-line="207" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

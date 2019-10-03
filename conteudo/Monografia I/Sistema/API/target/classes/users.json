@@ -7,7 +7,7 @@
     {
       "user": "flor",
       "pass": "flor"
-    },
+    },git heroku heuehueh
     {
       "user": "sussego",
       "pass": "sussego"
@@ -15,6 +15,14 @@
     {
       "user": "trem",
       "pass": "trem"
+    },
+    {
+      "user": "navio",
+      "pass": "navio"
+    },
+    {
+      "user": "alfa27",
+      "pass": "alfa27"
     }
   ],
   "ests": [
@@ -32,6 +40,27 @@
       "user": "indigente",
       "pass": "indigente",
       "rep": "flor"
+    },
+    {
+      "user": "220",
+      "pass": "220",
+      "rep": "sussego"
+    },
+    {
+      "user": "wando",
+      "pass": "wando",
+      "rep": "trem"
+    },
+    {
+      "user": "geps",
+      "pass": "geps",
+      "rep": "navio"
+    },
+    {
+      "user": "lott",
+      "pass": "lott",
+      "rep": "alfa27"
     }
+
   ]
 }]

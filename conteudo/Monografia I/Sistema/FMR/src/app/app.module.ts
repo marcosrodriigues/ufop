@@ -53,7 +53,7 @@ import { MoradoresComponent } from './modal/moradores/moradores.component';
     ProfileEstudanteComponent,
     ProfileRepublicaComponent,
     ExcluirContaComponent,
-    MoradoresComponent
+    MoradoresComponent,
   ],
   imports: [
     BrowserModule,

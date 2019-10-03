@@ -114,7 +114,7 @@ public class RepublicaController {
             if (!me.getMoradorRepublica().getRepublica().equals(republica))
                 throw new MyUnauthorizedException("Usuário não pode executar esta tarefa!");
 
-            return service.createPersonality(me.getMoradorRepublica().getRepublica());
+            return service.createPersonality(republica);
         }
 
         Republica me = (Republica) user;

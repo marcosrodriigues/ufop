@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndexComponent implements OnInit {
 
+  search = "";
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  submit() {
+    window.location.href = '/search?q=' + this.search;
+  }
 }

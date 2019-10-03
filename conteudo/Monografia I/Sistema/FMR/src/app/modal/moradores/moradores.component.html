@@ -1,5 +1,5 @@
 <div class="modal fade" id="modalMoradores" tabindex="-1" aria-labelledby="modalMoradores" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-dialog m-width-80" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Aprovados</h5>
@@ -11,22 +11,35 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <table class="table table-striped">
-                            <thead>
+                            <thead class="center">
                                 <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Nome</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Opções</th>
+                                    <th rowspan="2" scope="row">#</th>
+                                    <th rowspan="2" scope="row">Nome</th>
+                                    <th rowspan="2" scope="row">Email</th>
+                                    <th colspan="5" scope="row">Personalidade</th>
+                                    <th rowspan="2" scope="row">Opções</th>
+                                </tr>
+                                <tr>
+                                    <th>Abertura</th>
+                                    <th>Concordância</th>
+                                    <th>Consciência</th>
+                                    <th>Extroversão</th>
+                                    <th>Neuroticismo</th>
                                 </tr>
                             </thead>
 
                             <tbody *ngIf="_aprovados.length > 0; else noAprovados">
-                                <tr *ngFor="let morador of _aprovados;" scope="row">
-                                    <td>{{morador.id}}</td>
-                                    <td>{{morador.nome}}</td>
-                                    <td>{{morador.email}}</td>
+                                <tr *ngFor="let aprov of _aprovados;" scope="row">
+                                    <td>{{aprov.id}}</td>
+                                    <td>{{aprov.nome}}</td>
+                                    <td>{{aprov.email}}</td>
+                                    <td>{{aprov.perfil.personalidade.abertura}}</td>
+                                    <td>{{aprov.perfil.personalidade.concordancia}}</td>
+                                    <td>{{aprov.perfil.personalidade.consciencia}}</td>
+                                    <td>{{aprov.perfil.personalidade.extroversao}}</td>
+                                    <td>{{aprov.perfil.personalidade.neuroticismo}}</td>
                                     <td>
-                                        <button class="btn btn-danger" aria-label="Recusar" (click)="recusar(morador)">
+                                        <button class="btn btn-danger" aria-label="Recusar" (click)="recusar(aprov)">
                                             <i class="fa fa-remove"></i> 
                                         </button>
                                     </td>
@@ -42,10 +55,8 @@
                     </div>
                 </div>
             </div>
-            <div class="modal-footer">
-                
-            </div>
-        <div class="modal-content">
+            
+        <div class="modal-content" *ngIf="_pendentes.length > 0">
             <div class="modal-header">
                 <h5 class="modal-title">Pendentes</h5>
             </div>
@@ -63,7 +74,7 @@
                                 </tr>
                             </thead>
 
-                            <tbody *ngIf="_pendentes.length > 0; else noPendentes">
+                            <tbody>
                                 <tr *ngFor="let morador of _pendentes;" scope="row">
                                     <td>{{morador.id}}</td>
                                     <td>{{morador.nome}}</td>
@@ -78,19 +89,14 @@
                                     </td>
                                 </tr>
                             </tbody>
-                            <ng-template #noPendentes>
-                                <tr scope="row">
-                                    <td colspan="4" class="center">Nenhum morador pendente</td>
-                                </tr>
-                            </ng-template>
                         </table>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-            </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
         </div>
     </div>
 </div>

@@ -5,11 +5,11 @@
 
             <div class="carousel-caption d-none d-md-block carousel-info">
                 <h5>Encontre a república que mais combina com a sua personalidade!</h5>
-                <form class="form" action="search" method="GET">
+                <form class="form" action="search" method="GET" (submit)="submit()">
                     <div class="form-group col-md-12">
                         <div class="input-group-prepend">
-                            <input type="text" class="form-control" placeholder="Pesquise as repúblicas pela cidade" name="q" />
-                            <button class="btn btn-light" type="submit">
+                            <input type="text" [(ngModel)]="search" class="form-control" placeholder="Pesquise as repúblicas pela cidade" name="q" />
+                            <button class="btn btn-light" type="submit" >
                                 <i class="fa fa-search"></i>
                             </button>
                         </div>
