@@ -214,7 +214,7 @@ public class RepublicaServiceImpl implements RepublicaService {
      *  i=3 -> extroversao;
      *  i=4 -> neuroticismo
      */
-    int[] getGruposDasPersonalidades (Personalidade personalidade) {
+    private int[] getGruposDasPersonalidades (Personalidade personalidade) {
         int[] indexs = new int[5];
 
         if (personalidade == null) return indexs;

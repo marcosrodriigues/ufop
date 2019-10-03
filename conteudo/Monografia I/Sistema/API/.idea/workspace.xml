@@ -6,19 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5255dbb-e4f9-476c-bf1c-89c0804f8f87" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mr/fmr/controller/RepublicaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mr/fmr/controller/RepublicaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/RepublicaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/RepublicaServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/users.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mr/fmr/controller/RepublicaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mr/fmr/controller/RepublicaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mr/fmr/service/impl/RepublicaServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mr/fmr/service/impl/RepublicaServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mr/fmr/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mr/fmr/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/users.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FMR/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FMR/src/app/component/profile-republica/profile-republica.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/component/profile-republica/profile-republica.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FMR/src/app/page/index/index.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/page/index/index.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FMR/src/app/page/index/index.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/page/index/index.component.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,8 +37,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/RepublicaServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="207" column="68" lean-forward="true" selection-start-line="207" selection-start-column="68" selection-end-line="207" selection-end-column="68" />
+            <state relative-caret-position="114">
+              <caret line="216" column="12" selection-start-line="216" selection-start-column="12" selection-end-line="216" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -325,12 +313,12 @@
       <workItem from="1568660008085" duration="486000" />
       <workItem from="1569960476986" duration="12938000" />
       <workItem from="1570057986786" duration="17062000" />
-      <workItem from="1570130724383" duration="2869000" />
+      <workItem from="1570130724383" duration="3170000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="235260000" />
+    <option name="totallyTimeSpent" value="235561000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -357,12 +345,12 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32901135" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49848485" visible="true" weight="0.42463532" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49848485" weight="0.42463532" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32901135" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32901135" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49772727" weight="0.32090762" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49772727" visible="true" weight="0.32090762" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50151515" side_tool="true" weight="0.42463532" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32901135" />
@@ -886,8 +874,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/RepublicaServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="207" column="68" lean-forward="true" selection-start-line="207" selection-start-column="68" selection-end-line="207" selection-end-column="68" />
+        <state relative-caret-position="114">
+          <caret line="216" column="12" selection-start-line="216" selection-start-column="12" selection-end-line="216" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
