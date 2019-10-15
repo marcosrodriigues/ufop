@@ -14,8 +14,16 @@ export class RepublicaService {
     return this._http.get(this.baseUrl);
   }
 
+  findOne(id) {
+    return this._http.get(this.baseUrl + '/' + id);
+  }
+
+  findByCity(city) {
+    return this._http.get(this.baseUrl + "/city/" + city);
+  }
+
   findByUf(uf) {
-    return this._http.get(this.baseUrl + "/byUf/" + uf);
+    return this._http.get(this.baseUrl + "/uf/" + uf);
   }
 
   findByUfAndCity(uf, city) {

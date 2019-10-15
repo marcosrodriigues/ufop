@@ -32,11 +32,11 @@ export class ProfileEstudanteComponent implements OnInit, OnChanges {
   _republicas: any = [];
 
   dataChart = [
-    { y: 0.1, name: "Abertura para o Novo" },
-    { y: 0.1, name: "Concordância" },
-    { y: 0.1, name: "Consciência" },
-    { y: 0.1, name: "Extroversão" },
-    { y: 0.1, name: "Neuroticismo" },
+    { y: 0.1, label: "Abertura para o Novo" },
+    { y: 0.1, label: "Concordância" },
+    { y: 0.1, label: "Consciência" },
+    { y: 0.1, label: "Extroversão" },
+    { y: 0.1, label: "Neuroticismo" },
   ];
 
   constructor(private _userService : UserService,

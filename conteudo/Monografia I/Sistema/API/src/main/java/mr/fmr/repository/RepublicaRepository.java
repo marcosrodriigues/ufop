@@ -11,4 +11,5 @@ public interface RepublicaRepository extends JpaRepository<Republica, Long> {
 
     List<Republica> findByEndereco_Uf(String uf);
     List<Republica> findByEndereco_UfAndEndereco_Cidade(String uf, String cidade);
+    List<Republica> findByEndereco_Cidade(String cidade);
 }

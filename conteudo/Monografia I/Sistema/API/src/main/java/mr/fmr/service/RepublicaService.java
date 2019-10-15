@@ -14,6 +14,7 @@ public interface RepublicaService {
     List<Republica> findAll();
     Republica findOne(long id);
     void delete(long id);
+    List<Republica> findByCity(String city);
     List<Republica> findByUf(String uf);
     List<Republica> findByUfAndCity(String uf, String city);
     List<Estudante> findMoradores(Republica republica);

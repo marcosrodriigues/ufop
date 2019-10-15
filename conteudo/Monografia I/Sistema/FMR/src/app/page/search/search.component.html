@@ -2,24 +2,66 @@
     <div class="card">
         <div class="card-header"><h4 class="center">Exibindo resultados para <span class="strong">{{ cidade }}</span></h4></div>
         <div class="card-body">
-            <div class="row">
-                <div class="card col-sm-4 m10">
-                    <div class="card-header"><h5 class="center"><a [routerLink]="['/republica', 1]">República 1</a></h5></div>
-                    <div class="card-body">
-                        <div id="chart1" style="height: 370px; width: 100%; margin-left:auto;margin-right:auto;"></div>
-                    </div>
-                </div>
-                <div class="card col-sm-4 m10">
-                    <div class="card-header"><h5 class="center"><a [routerLink]="['/republica', 2]">República 2</a></h5></div>
-                    <div class="card-body">
-                        <div id="chart2" style="height: 370px; width: 100%; margin-left:auto;margin-right:auto;"></div>
-                    </div>
-                </div>
-                <div class="card col-sm-4 m10">
-                    <div class="card-header"><h5 class="center"><a [routerLink]="['/republica', 3]">República 3</a></h5></div>
-                    <div class="card-body">
-                        <div id="chart3" style="height: 370px; width: 100%; margin-left:auto;margin-right:auto;"></div>
-                    </div>
+            <div class="row m10" *ngFor="let rep of reps; let i = index;">
+                <div class="card col-sm-12">
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title class="col-sm-11">
+                                <h5 class="center"><a [routerLink]="['/republica', rep.id]">{{rep.nome}}</a></h5>
+                            </mat-panel-title>
+                            <mat-panel-description class="col-sm-1">{{calculaPorcentagem(rep, me)}}%</mat-panel-description>
+                        </mat-expansion-panel-header>
+
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div id="chart_{{i}}" style="height: 370px; width: 100%; margin-left:auto;margin-right:auto;"></div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <table class="table table-hover">
+                                        <thead class="center">
+                                            <th>#</th>
+                                            <th>O</th>
+                                            <th>A</th>
+                                            <th>C</th>
+                                            <th>E</th>
+                                            <th>N</th>
+                                            <th>T</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>República</td>
+                                                <td>{{rep.personalidade.abertura}}</td>
+                                                <td>{{rep.personalidade.concordancia}}</td>
+                                                <td>{{rep.personalidade.consciencia}}</td>
+                                                <td>{{rep.personalidade.extroversao}}</td>
+                                                <td>{{rep.personalidade.neuroticismo}}</td>
+                                                <td>{{rep.somaPersonalidade}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Minha personalidade</td>
+                                                <td>{{me.abertura}}</td>
+                                                <td>{{me.concordancia}}</td>
+                                                <td>{{me.consciencia}}</td>
+                                                <td>{{me.extroversao}}</td>
+                                                <td>{{me.neuroticismo}}</td>
+                                                <td>{{sumPersonalidade(me)}}</td>
+                                            </tr>
+                                            <tr class="strong">
+                                                <td>Distância</td>
+                                                <td>{{abs(rep.personalidade.abertura - me.abertura)}}</td>
+                                                <td>{{abs(rep.personalidade.concordancia - me.concordancia)}}</td>
+                                                <td>{{abs(rep.personalidade.consciencia - me.consciencia)}}</td>
+                                                <td>{{abs(rep.personalidade.extroversao - me.extroversao)}}</td>
+                                                <td>{{abs(rep.personalidade.neuroticismo - me.neuroticismo)}}</td>
+                                                <td>{{rep.distanciaGeral}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </mat-expansion-panel>
                 </div>
             </div>
         </div>

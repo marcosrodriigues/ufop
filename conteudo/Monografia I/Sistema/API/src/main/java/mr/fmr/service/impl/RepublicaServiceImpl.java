@@ -57,6 +57,11 @@ public class RepublicaServiceImpl implements RepublicaService {
     }
 
     @Override
+    public List<Republica> findByCity(String city) {
+        return repository.findByEndereco_Cidade(city);
+    }
+
+    @Override
     public List<Republica> findByUf(String uf) {
         return repository.findByEndereco_Uf(uf);
     }

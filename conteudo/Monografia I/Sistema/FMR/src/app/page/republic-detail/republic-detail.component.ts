@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import * as CanvasJS from '../../../assets/js/canvasjs.min';
+import { RepublicaService } from 'src/app/service/republica.service';
 
 @Component({
   selector: 'app-republic-detail',
@@ -9,41 +10,54 @@ import * as CanvasJS from '../../../assets/js/canvasjs.min';
 })
 export class RepublicDetailComponent implements OnInit {
 
-  rep = "República Maternidade";
-  fullImagePath = '/content/republica/maternidade.png';
-  cidade = '';
+  rep: any = {}
+  id: any = 0;
 
   data = [
-    { y: 52, name: "Abertura para o novo" },
-    { y: 68, name: "Realização" },
-    { y: 40, name: "Extroversão" },
-    { y: 35, name: "Socialização" },
-    { y: 75, name: "Neuroticismo" },
+    { y: 52, label: "Abertura para o novo" },
+    { y: 68, label: "Realização" },
+    { y: 40, label: "Extroversão" },
+    { y: 35, label: "Socialização" },
+    { y: 75, label: "Neuroticismo" },
   ];
 
-  constructor(private router: ActivatedRoute) { 
+  constructor(private router: ActivatedRoute, private _repService : RepublicaService) { 
     this.router.paramMap.subscribe(params => {
-      this.cidade = params.get("id");
+      this.id = params.get("id");
     })
   }
 
   ngOnInit() {
+      this.initRep();
+  }
+
+  initRep() {
+    this._repService.findOne(this.id).subscribe(data => {
+      this.rep = data;
+      console.log(this.rep);
+
+      this.data[0].y = this.rep.perfil.personalidade.abertura;
+      this.data[1].y = this.rep.perfil.personalidade.concordancia;
+      this.data[2].y = this.rep.perfil.personalidade.consciencia;
+      this.data[3].y = this.rep.perfil.personalidade.extroversao;
+      this.data[4].y = this.rep.perfil.personalidade.neuroticismo;
+
       this.initializeChart('chart');
+    });
   }
 
   initializeChart(id) {
     let chart = new CanvasJS.Chart(id, {
       theme: "light2",
       animationEnabled: true,
-      exportEnabled: true,
       title:{
         text: "Personalidade"
       },
+      axisY : {
+        title: "Pontuação"
+      },
       data: [{
-        type: "pie",
-        showInLegend: true,
-        toolTipContent: "<b>{name}</b>: {y} (#percent%)",
-        indexLabel: "{name} - #percent%",
+        type: "column",
         dataPoints: this.data,
       }]
     });

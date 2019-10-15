@@ -1,17 +1,22 @@
 package mr.fmr.controller;
 
+import mr.fmr.exception.MyBadRequestException;
 import mr.fmr.exception.MyUnauthorizedException;
 import mr.fmr.model.Estudante;
 import mr.fmr.model.MoradorRepublica;
 import mr.fmr.model.Republica;
 import mr.fmr.model.User;
+import mr.fmr.payload.RepublicaDetalhes;
+import mr.fmr.payload.RepublicaPorPersonalidadePayload;
 import mr.fmr.service.MoradorRepublicaService;
+import mr.fmr.service.RecomendacaoService;
 import mr.fmr.service.RepublicaService;
 import mr.fmr.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -23,6 +28,8 @@ public class RepublicaController {
     @Autowired
     private RepublicaService service;
     @Autowired
+    private RecomendacaoService recomendacaoService;
+    @Autowired
     private UserService userService;
     @Autowired
     private MoradorRepublicaService moradorService;
@@ -32,12 +39,46 @@ public class RepublicaController {
         return service.save(republica);
     }
 
+    @GetMapping(value = BASE_URL + "/{id}")
+    public RepublicaDetalhes findOne(@PathVariable("id") Integer id) {
+        Republica rep = service.findOne(id);
+
+        return new RepublicaDetalhes(rep);
+    }
+
+
     @GetMapping(value = BASE_URL)
     public List<Republica> getAll() {
         return service.findAll();
     }
 
-    @GetMapping(value = BASE_URL + "/byUf/{uf}")
+    @GetMapping(value = BASE_URL + "/city/{city}")
+    public List<RepublicaPorPersonalidadePayload> getByCity(Principal principal, @PathVariable("city") String city) {
+        User me = userService.getUserFromPrincipal(principal);
+        if (me.getPerfil().getPersonalidade() == null) {
+            throw new MyBadRequestException("Faça o Teste de Personalidade antes de buscar a república");
+        }
+
+        List<Republica> republicasNaCidade = service.findByCity(city);
+
+        List<RepublicaPorPersonalidadePayload> republicas = new ArrayList<>();
+        RepublicaPorPersonalidadePayload payloadRep;
+        for (Republica rep :republicasNaCidade) {
+            if (rep.getPerfil().getPersonalidade() == null) continue;
+
+            payloadRep = new RepublicaPorPersonalidadePayload(rep);
+            int sumPersonality = recomendacaoService.somaPersonalidade(rep.getPerfil().getPersonalidade());
+            int distanciaGeral = recomendacaoService.calculaDistanciaGeral(me, rep);
+            payloadRep.setDistanciaGeral(distanciaGeral);
+            payloadRep.setSomaPersonalidade(sumPersonality);
+            republicas.add(payloadRep);
+
+        }
+
+        return recomendacaoService.ordenar(republicas);
+    }
+
+    @GetMapping(value = BASE_URL + "/uf/{uf}")
     public List<Republica> getByUf(@PathVariable("uf") String uf) {
         return service.findByUf(uf);
     }
