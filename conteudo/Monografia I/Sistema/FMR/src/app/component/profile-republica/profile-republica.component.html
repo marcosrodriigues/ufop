@@ -26,42 +26,7 @@
                         </div>
                         
                         <div class="col-md-5">
-
-                            <mat-expansion-panel>
-                                <mat-expansion-panel-header>
-                                    <mat-panel-title><span class="strong">Abertura para o novo</span>: {{ personalidade.abertura }} pontos ... 50 total</mat-panel-title>
-                                    <mat-panel-description></mat-panel-description>
-                                </mat-expansion-panel-header>
-                                <p>Apreciação de arte, emoção, aventura, ideias incomuns, curiosidade e variedade de experiência.</p>
-                            </mat-expansion-panel>
-                            <mat-expansion-panel>
-                                <mat-expansion-panel-header>
-                                    <mat-panel-title><span class="strong">Concordância</span>: {{ personalidade.concordancia }} pontos ... 45 total</mat-panel-title>
-                                    <mat-panel-description></mat-panel-description>
-                                </mat-expansion-panel-header>
-                                <p>Tendência para ser mais compassivo e cooperativo do que desconfiado e antagonista em relação aos outros</p>
-                            </mat-expansion-panel>
-                            <mat-expansion-panel>
-                                <mat-expansion-panel-header>
-                                    <mat-panel-title><span class="strong">Consciência</span>: {{ personalidade.consciencia }} pontos ... 45 total </mat-panel-title>
-                                    <mat-panel-description></mat-panel-description>
-                                </mat-expansion-panel-header>
-                                <p>Tendência a mostrar autodisciplina, agir literalmente e realizar objetivos. Rígido em vez de um comportamento espontâneo</p>
-                            </mat-expansion-panel>
-                            <mat-expansion-panel>
-                                <mat-expansion-panel-header>
-                                    <mat-panel-title><span class="strong">Extroversão</span>: {{ personalidade.extroversao }} pontos ... 40 total</mat-panel-title>
-                                    <mat-panel-description></mat-panel-description>
-                                </mat-expansion-panel-header>
-                                <p>Energia, emoções positivas, urgência e uma tendência a estimular o ambiente na companhia de outras pessoas.</p>
-                            </mat-expansion-panel>
-                            <mat-expansion-panel>
-                                <mat-expansion-panel-header>
-                                    <mat-panel-title><span class="strong">Neuroticismo</span>: {{ personalidade.neuroticismo }} pontos ... 40 total</mat-panel-title>
-                                    <mat-panel-description></mat-panel-description>
-                                </mat-expansion-panel-header>
-                                <p>Tendência a ter emoções negativas facilmente, como raiva, ansiedade, depressão e vulnerabilidade</p>
-                            </mat-expansion-panel>
+                            <app-descricao-personalidade [personality]="personalidade"></app-descricao-personalidade>
 
                             <div class="row m25">
                                 <div class="col-sm-12 center">
@@ -69,7 +34,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4"><div id="chart" style="height: 370px; width: 100%; margin-left:auto;margin-right:auto;"></div></div>
+                        <div class="col-md-4">
+                            <app-chart [personality]="personalidade"></app-chart>
+                        </div>
                     </div>
                 </div>
                 <div class="card-footer"></div>

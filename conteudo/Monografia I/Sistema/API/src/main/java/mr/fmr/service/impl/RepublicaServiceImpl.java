@@ -269,6 +269,4 @@ public class RepublicaServiceImpl implements RepublicaService {
 
         return index;
     }
-
-
 }

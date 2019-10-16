@@ -45,4 +45,17 @@ public class RecomendacaoServiceImpl implements RecomendacaoService {
         return republicas;
     }
 
+    @Override
+    public Personalidade convertPersonalityIntoPercentage(Personalidade personalidade) {
+        if (personalidade == null) return null;
+
+        personalidade.setAbertura(personalidade.getAbertura() / 50 * 100);
+        personalidade.setConsciencia(personalidade.getConsciencia() / 45 * 100);
+        personalidade.setConcordancia(personalidade.getConcordancia() / 45 * 100);
+        personalidade.setExtroversao(personalidade.getExtroversao() / 40 * 100);
+        personalidade.setNeuroticismo(personalidade.getNeuroticismo() / 40 * 100);
+
+        return personalidade;
+    }
+
 }

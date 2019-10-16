@@ -2,7 +2,6 @@ package mr.fmr.controller;
 
 import mr.fmr.model.Personalidade;
 import mr.fmr.model.User;
-import mr.fmr.service.PersonalidadeService;
 import mr.fmr.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,8 +16,6 @@ public class PersonalidadeController {
 
     final String BASE_URL = "/personalidade";
 
-    @Autowired
-    private PersonalidadeService service;
     @Autowired
     private UserService userService;
 

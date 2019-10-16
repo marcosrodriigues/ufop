@@ -12,4 +12,5 @@ public interface RecomendacaoService {
     int somaPersonalidade(Personalidade personalidade);
     int calculaDistanciaGeral(User user, Republica republica);
     List<RepublicaPorPersonalidadePayload>  ordenar(List<RepublicaPorPersonalidadePayload> republicas);
+    Personalidade convertPersonalityIntoPercentage(Personalidade personalidade);
 }

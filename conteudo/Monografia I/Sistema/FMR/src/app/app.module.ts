@@ -32,6 +32,8 @@ import { ProfileEstudanteComponent } from './component/profile-estudante/profile
 import { ProfileRepublicaComponent } from './component/profile-republica/profile-republica.component';
 import { ExcluirContaComponent } from './modal/excluir-conta/excluir-conta.component';
 import { MoradoresComponent } from './modal/moradores/moradores.component';
+import { ChartComponent } from './component/chart/chart.component';
+import { DescricaoPersonalidadeComponent } from './component/descricao-personalidade/descricao-personalidade.component';
 
 
 @NgModule({
@@ -54,6 +56,8 @@ import { MoradoresComponent } from './modal/moradores/moradores.component';
     ProfileRepublicaComponent,
     ExcluirContaComponent,
     MoradoresComponent,
+    ChartComponent,
+    DescricaoPersonalidadeComponent,
   ],
   imports: [
     BrowserModule,
