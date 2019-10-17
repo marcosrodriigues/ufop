@@ -14,13 +14,7 @@ export class ProfileEstudanteComponent implements OnInit, OnChanges {
 
   @Input("profile") profile: any = { }
   
-  personalidade: any = {
-    abertura: 0,
-    concordancia: 0,
-    consciencia: 0,
-    extroversao: 0,
-    neuroticismo: 0
-   }
+  personalidade: any = {}
   endereco: any = { }
   newUniversidade: any = { }
   universidades: any = [];
@@ -30,14 +24,6 @@ export class ProfileEstudanteComponent implements OnInit, OnChanges {
   fotoPerfil: File;
   
   _republicas: any = [];
-
-  dataChart = [
-    { y: 0.1, label: "Abertura para o Novo" },
-    { y: 0.1, label: "Concordância" },
-    { y: 0.1, label: "Consciência" },
-    { y: 0.1, label: "Extroversão" },
-    { y: 0.1, label: "Neuroticismo" },
-  ];
 
   constructor(private _userService : UserService,
               private _utilService : UtilService,
@@ -59,7 +45,6 @@ export class ProfileEstudanteComponent implements OnInit, OnChanges {
 
   initMe() {
     this.configureMe();
-    this.initializeChart('chart');
   }
 
   configureMe() {
@@ -69,11 +54,6 @@ export class ProfileEstudanteComponent implements OnInit, OnChanges {
     
     if (this.profile.perfil.personalidade != null) {
       this.personalidade = this.profile.perfil.personalidade;
-      this.dataChart[0].y = this.personalidade.abertura;
-      this.dataChart[1].y = this.personalidade.concordancia;
-      this.dataChart[2].y = this.personalidade.consciencia;
-      this.dataChart[3].y = this.personalidade.extroversao;
-      this.dataChart[4].y = this.personalidade.neuroticismo;
     }
   }
 
@@ -111,25 +91,6 @@ export class ProfileEstudanteComponent implements OnInit, OnChanges {
       this.profile = data;
       this.endereco = this.profile.endereco;
     })
-  }
-
-  initializeChart(id) {
-    let chart = new CanvasJS.Chart(id, {
-      theme: "light2",
-      animationEnabled: true,
-      exportEnabled: false,
-      title:{
-        text: "Personalidade"
-      },
-      data: [{
-        type: "column",
-        showInLegend: false,
-        toolTipContent: "<b>{name}</b>: {y} pontos",
-        indexLabel: "{name}",
-        dataPoints: this.dataChart,
-      }]
-    });
-    chart.render();
   }
 
   changeUniversidade() {

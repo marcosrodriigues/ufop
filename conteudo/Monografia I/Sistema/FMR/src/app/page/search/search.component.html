@@ -15,49 +15,10 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <div id="chart_{{i}}" style="height: 370px; width: 100%; margin-left:auto;margin-right:auto;"></div>
+                                    <app-chart-column-compare [me]="me" [other]="rep.personalidade" [i]="i"></app-chart-column-compare>
                                 </div>
                                 <div class="col-sm-6">
-                                    <table class="table table-hover">
-                                        <thead class="center">
-                                            <th>#</th>
-                                            <th>O</th>
-                                            <th>A</th>
-                                            <th>C</th>
-                                            <th>E</th>
-                                            <th>N</th>
-                                            <th>T</th>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>República</td>
-                                                <td>{{rep.personalidade.abertura}}</td>
-                                                <td>{{rep.personalidade.concordancia}}</td>
-                                                <td>{{rep.personalidade.consciencia}}</td>
-                                                <td>{{rep.personalidade.extroversao}}</td>
-                                                <td>{{rep.personalidade.neuroticismo}}</td>
-                                                <td>{{rep.somaPersonalidade}}</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Minha personalidade</td>
-                                                <td>{{me.abertura}}</td>
-                                                <td>{{me.concordancia}}</td>
-                                                <td>{{me.consciencia}}</td>
-                                                <td>{{me.extroversao}}</td>
-                                                <td>{{me.neuroticismo}}</td>
-                                                <td>{{sumPersonalidade(me)}}</td>
-                                            </tr>
-                                            <tr class="strong">
-                                                <td>Distância</td>
-                                                <td>{{abs(rep.personalidade.abertura - me.abertura)}}</td>
-                                                <td>{{abs(rep.personalidade.concordancia - me.concordancia)}}</td>
-                                                <td>{{abs(rep.personalidade.consciencia - me.consciencia)}}</td>
-                                                <td>{{abs(rep.personalidade.extroversao - me.extroversao)}}</td>
-                                                <td>{{abs(rep.personalidade.neuroticismo - me.neuroticismo)}}</td>
-                                                <td>{{rep.distanciaGeral}}</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                    <app-table-compare [me]="me" [other]="rep.personalidade"></app-table-compare >
                                 </div>
                             </div>
                         </div>

@@ -26,14 +26,6 @@ export class ProfileRepublicaComponent implements OnInit, OnChanges {
    estados: any = [ ]
    fotoPerfil: File;
 
-   dataChart = [
-    { y: 0.1, label: "Abertura" },
-    { y: 0.1, label: "Concordância" },
-    { y: 0.1, label: "Consciência" },
-    { y: 0.1, label: "Extroversão" },
-    { y: 0.1, label: "Neuroticismo" },
-  ];
-
   constructor(private _userService: UserService,
               private _utilService : UtilService,
               private _fileService : FileService,
@@ -46,7 +38,6 @@ export class ProfileRepublicaComponent implements OnInit, OnChanges {
 
   ngOnChanges() {
     this.configureMe();
-    this.initializeChart('chart');
   }
 
   initEstados() {
@@ -56,15 +47,8 @@ export class ProfileRepublicaComponent implements OnInit, OnChanges {
   configureMe() {
     if (this.profile.endereco != null)  this.endereco = this.profile.endereco;
     
-    if (this.profile.perfil != null)
-      if (this.profile.perfil.personalidade != null) {
+    if (this.profile.perfil && this.profile.perfil.personalidade)
         this.personalidade = this.profile.perfil.personalidade;
-        this.dataChart[0].y = this.personalidade.abertura;
-        this.dataChart[1].y = this.personalidade.concordancia;
-        this.dataChart[2].y = this.personalidade.consciencia;
-        this.dataChart[3].y = this.personalidade.extroversao;
-        this.dataChart[4].y = this.personalidade.neuroticismo;
-      }
   }
 
   changeCep() {
@@ -90,24 +74,6 @@ export class ProfileRepublicaComponent implements OnInit, OnChanges {
       this.endereco = this.profile.endereco;
     })
   }
-  
-  initializeChart(id) {
-    let chart = new CanvasJS.Chart(id, {
-      theme: "light2",
-      animationEnabled: true,
-      title:{
-        text: "Personalidade"
-      },
-      axisY : {
-        title: "Pontuação"
-      },
-      data: [{
-        type: "column",
-        dataPoints: this.dataChart,
-      }]
-    });
-    chart.render();
-  }
 
   upload(event) {
     if (event.target.files.length > 0) {
@@ -122,7 +88,6 @@ export class ProfileRepublicaComponent implements OnInit, OnChanges {
     this._repService.calcularPersonalidade(this.profile).subscribe(data => {
       this.profile = data;
       this.configureMe();
-      this.initializeChart('chart');
     })
   }
 }

@@ -34,6 +34,8 @@ import { ExcluirContaComponent } from './modal/excluir-conta/excluir-conta.compo
 import { MoradoresComponent } from './modal/moradores/moradores.component';
 import { ChartComponent } from './component/chart/chart.component';
 import { DescricaoPersonalidadeComponent } from './component/descricao-personalidade/descricao-personalidade.component';
+import { ChartColumnCompareComponent } from './component/chart-column-compare/chart-column-compare.component';
+import { TableCompareComponent } from './component/table-compare/table-compare.component';
 
 
 @NgModule({
@@ -58,6 +60,8 @@ import { DescricaoPersonalidadeComponent } from './component/descricao-personali
     MoradoresComponent,
     ChartComponent,
     DescricaoPersonalidadeComponent,
+    ChartColumnCompareComponent,
+    TableCompareComponent,
   ],
   imports: [
     BrowserModule,
