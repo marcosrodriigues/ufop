@@ -55,6 +55,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers(HttpMethod.POST, "/user").permitAll()
                 .antMatchers("/upload").permitAll()
+                .antMatchers("/ic").permitAll()
                 .anyRequest().permitAll();
     }
 }
