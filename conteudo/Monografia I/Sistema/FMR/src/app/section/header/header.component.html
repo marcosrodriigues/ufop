@@ -3,22 +3,24 @@
         <div class="container-fluid">
             <div class="col-sm-12">
                 <div class="left">
-                    <a class="nav-link title" routerLink=""><span>FMR</span></a>
+                    <a class="nav-link title nav-title" [routerLink]="['']">
+                        <img src="/assets/img/logo_mini.png" height="50px" />
+                    </a>
                 </div>
 
                 <div class="right">
-                    <ul class="navbar-nav my-nav" >
-                        <li class="navbar-item">
-                            <a class="nav-link link" routerLink="sobre">Sobre</a>        
+                    <ul class="navbar-nav my-nav">
+                        <li class="navbar-item" [routerLinkActive]="['active']">
+                            <a class="nav-link link" [routerLink]="['sobre']"><span>Sobre</span></a>        
                         </li>
-                        <li class="navbar-item" *ngIf="isLogged">
+                        <li class="navbar-item" *ngIf="isLogged" [routerLinkActive]="['active']">
                             <a class="nav-link link" routerLink="profile"><span>Perfil</span></a>        
                         </li>
-                        <li class="navbar-item" *ngIf="isLogged">
+                        <li class="navbar-item" *ngIf="isLogged" [routerLinkActive]="['active']">
                             <a class="nav-link link" routerLink="inventario"><span>Inventário</span></a> 
                         </li>
-                        <li class="navbar-item" *ngIf="!isLogged">
-                            <a class="nav-link link" routerLink="login">Login</a> 
+                        <li class="navbar-item" *ngIf="!isLogged" [routerLinkActive]="['active']">
+                            <a class="nav-link link" routerLink="login"><span>Login</span></a> 
                         </li>
                         <li class="navbar-item" *ngIf="isLogged">
                             <a class="nav-link link" href="#" (click)="logout()"><span>Sair</span></a> 

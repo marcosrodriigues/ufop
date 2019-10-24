@@ -45,6 +45,10 @@ export class UserService {
       this._router.navigate(['/login']);
   }
 
+  isLogged() {
+    return this._cookie.check('access_token');
+  }
+
   getToken() {
     return this._cookie.get('access_token');
   }
