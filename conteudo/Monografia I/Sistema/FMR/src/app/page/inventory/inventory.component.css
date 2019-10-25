@@ -3,8 +3,8 @@
 }
 
 .description {
-    text-align: center;
-
+    text-align: justify;
+    margin-bottom: 15px;
 }
 
 .description .destacado {
@@ -16,6 +16,7 @@
     width: 100%;
     display: inline-flex;
     margin-bottom: 15px;
+    text-align: center !important;
 }
 
 .description .legenda .circle {

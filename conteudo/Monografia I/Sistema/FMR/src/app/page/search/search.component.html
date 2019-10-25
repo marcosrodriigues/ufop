@@ -2,29 +2,38 @@
     <div class="card">
         <div class="card-header"><h4 class="center">Exibindo resultados para <span class="strong">{{ cidade }}</span></h4></div>
         <div class="card-body">
-            <div class="row m10" *ngFor="let rep of reps; let i = index;">
-                <div class="card col-sm-12">
-                    <mat-expansion-panel>
-                        <mat-expansion-panel-header>
-                            <mat-panel-title class="col-sm-11">
-                                <h5 class="center"><a [routerLink]="['/republica', rep.id]">{{rep.nome}}</a></h5>
-                            </mat-panel-title>
-                            <mat-panel-description class="col-sm-1">{{calculaPorcentagem(rep, me)}}%</mat-panel-description>
-                        </mat-expansion-panel-header>
+            <div *ngIf="reps.length > 0; else noRepublic">
+                <div class="row m10" *ngFor="let rep of reps; let i = index;">
+                    <div class="card col-sm-12">
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title class="col-sm-11">
+                                    <h5 class="center"><a [routerLink]="['/republica', rep.id]">{{rep.nome}}</a></h5>
+                                </mat-panel-title>
+                                <mat-panel-description class="col-sm-1">{{calculaPorcentagem(rep, me)}}%</mat-panel-description>
+                            </mat-expansion-panel-header>
 
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <app-chart-column-compare [me]="me" [other]="rep.personalidade" [i]="i"></app-chart-column-compare>
-                                </div>
-                                <div class="col-sm-6">
-                                    <app-table-compare [me]="me" [other]="rep.personalidade"></app-table-compare >
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <app-chart-column-compare [me]="me" [other]="rep.personalidade" [i]="i"></app-chart-column-compare>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <app-table-compare [me]="me" [other]="rep.personalidade"></app-table-compare >
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </mat-expansion-panel>
+                        </mat-expansion-panel>
+                    </div>
                 </div>
             </div>
+            <ng-template #noRepublic>
+                <div class="row">
+                    <div class="col-sm-12 center">
+                        <h5>Ainda não temos repúblicas cadastradas na cidade <strong>{{cidade}}</strong></h5>
+                    </div>
+                </div>
+            </ng-template>
         </div>
     </div>
 </div>
