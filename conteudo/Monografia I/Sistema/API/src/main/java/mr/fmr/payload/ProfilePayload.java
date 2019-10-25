@@ -1,5 +1,6 @@
 package mr.fmr.payload;
 
+import mr.fmr.CaraterRepublica;
 import mr.fmr.model.*;
 
 import java.io.Serializable;
@@ -23,6 +24,9 @@ public class ProfilePayload implements Serializable {
     private String apelido;
     private Universidade universidade;
     private Republica republica;
+
+    private CaraterRepublica carater;
+    private String descricao;
 
     private List<Estudante> moradores = new ArrayList<>();
 
@@ -58,6 +62,9 @@ public class ProfilePayload implements Serializable {
         this.endereco = republica.getEndereco();
 
         this.nome = republica.getNome();
+
+        this.carater = republica.getCarater();
+        this.descricao = republica.getDescricao();
 
         List<Estudante> moradores = new ArrayList<>();
         for(MoradorRepublica morador : republica.getMoradores())

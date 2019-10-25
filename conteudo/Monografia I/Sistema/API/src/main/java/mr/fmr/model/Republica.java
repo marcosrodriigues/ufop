@@ -1,6 +1,7 @@
 package mr.fmr.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import mr.fmr.CaraterRepublica;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -21,6 +22,10 @@ public class Republica extends User implements Serializable {
 
     private String nome;
 
+    @Enumerated(EnumType.STRING)
+    private CaraterRepublica carater;
+    private String descricao;
+
     @OneToMany(mappedBy = "republica", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<MoradorRepublica> moradores = new ArrayList<>();
 
@@ -39,6 +44,22 @@ public class Republica extends User implements Serializable {
 
     public void setMoradores(List<MoradorRepublica> moradores) {
         this.moradores = moradores;
+    }
+
+    public CaraterRepublica getCarater() {
+        return carater;
+    }
+
+    public void setCarater(CaraterRepublica carater) {
+        this.carater = carater;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     @Override
