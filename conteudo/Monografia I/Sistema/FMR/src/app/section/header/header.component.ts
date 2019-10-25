@@ -18,6 +18,11 @@ export class HeaderComponent implements OnInit {
     this.isLogged = this._userService.isLogged();
   }
 
+  ngOnChanges() {
+    this.isLogged = this._userService.isLogged();
+    
+  }
+
   logout() {
     this._userService.logout();
   }
