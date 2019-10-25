@@ -20,7 +20,7 @@ public class ProfilePayload implements Serializable {
     private Endereco endereco;
 
     private String nome;
-    private Date birthday;
+    private String apelido;
     private Universidade universidade;
     private Republica republica;
 
@@ -41,7 +41,7 @@ public class ProfilePayload implements Serializable {
         this.endereco = estudante.getEndereco();
 
         this.nome = estudante.getNome();
-        this.birthday = estudante.getBirthday();
+        this.apelido = estudante.getApelido();
         this.universidade = estudante.getUniversidade();
         this.republica = estudante.getMoradorRepublica().getRepublica();
     }
@@ -147,12 +147,12 @@ public class ProfilePayload implements Serializable {
         this.nome = nome;
     }
 
-    public Date getBirthday() {
-        return birthday;
+    public String getApelido() {
+        return apelido;
     }
 
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
+    public void setApelido(String apelido) {
+        this.apelido = apelido;
     }
 
     public Universidade getUniversidade() {

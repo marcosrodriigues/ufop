@@ -6,20 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5255dbb-e4f9-476c-bf1c-89c0804f8f87" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mr/fmr/model/Estudante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mr/fmr/model/Estudante.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FMR/src/app/component/profile-estudante/profile-estudante.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/component/profile-estudante/profile-estudante.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FMR/src/app/component/profile-estudante/profile-estudante.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/component/profile-estudante/profile-estudante.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FMR/src/app/component/profile-republica/profile-republica.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/component/profile-republica/profile-republica.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FMR/src/app/component/profile-republica/profile-republica.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/component/profile-republica/profile-republica.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FMR/src/app/page/inventory/inventory.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/page/inventory/inventory.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FMR/src/app/page/inventory/inventory.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/page/inventory/inventory.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FMR/src/app/page/inventory/inventory.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/page/inventory/inventory.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FMR/src/app/page/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/page/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FMR/src/app/page/sobre/sobre.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/page/sobre/sobre.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FMR/src/app/section/footer/footer.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/section/footer/footer.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FMR/src/app/section/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/section/footer/footer.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FMR/src/app/service/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/service/user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mr/fmr/payload/ProfilePayload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mr/fmr/payload/ProfilePayload.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -77,27 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/payload/ProfilePayload.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/model/Estudante.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-405">
-              <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1435#1436#0" expanded="true" />
-                <element signature="e#1465#1466#0" expanded="true" />
-                <element signature="e#1511#1512#0" expanded="true" />
-                <element signature="e#1549#1550#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="75">
+              <caret line="153" column="34" selection-start-line="153" selection-start-column="34" selection-end-line="153" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -194,7 +165,6 @@
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/repository/MoradorRepublicaRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/service/EstudanteService.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/controller/EstudanteController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/mr/fmr/payload/ProfilePayload.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/model/MoradorRepublica.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/service/MoradorRepublicaService.java" />
@@ -229,6 +199,7 @@
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/service/RecomendacaoService.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/model/Estudante.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mr/fmr/payload/ProfilePayload.java" />
       </list>
     </option>
   </component>
@@ -408,12 +379,12 @@
       <workItem from="1571231349198" duration="1118000" />
       <workItem from="1571271706135" duration="417000" />
       <workItem from="1571945241616" duration="2819000" />
-      <workItem from="1571958553364" duration="1447000" />
+      <workItem from="1571958553364" duration="1634000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="278121000" />
+    <option name="totallyTimeSpent" value="278308000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -965,17 +936,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/payload/ProfilePayload.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/model/Estudante.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-405">
-          <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        <state relative-caret-position="180">
+          <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1435#1436#0" expanded="true" />
@@ -983,6 +947,13 @@
             <element signature="e#1511#1512#0" expanded="true" />
             <element signature="e#1549#1550#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/payload/ProfilePayload.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="153" column="34" selection-start-line="153" selection-start-column="34" selection-end-line="153" selection-end-column="34" />
         </state>
       </provider>
     </entry>
