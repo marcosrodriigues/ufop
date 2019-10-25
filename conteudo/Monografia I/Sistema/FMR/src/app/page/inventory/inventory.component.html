@@ -4,9 +4,24 @@
             <div class="card">
                 <div class="card-header center"><h4 class="strong">Inventário</h4></div>
                 <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-12 description">
+                            <p>Abaixo encontram-se 44 características que podem ou não te descrever. Por exemplo, você acha que é uma pessoa que <span class="destacado">gosta de estar com os outros</span>? Escolha o número que corresponde ao grau em que acredita que a frase te caracteriza. Não existem respostas certas ou erradas, responda com sinceridade, de acordo com o seu modo habitual de ser.</p>
+
+                            <div class="row">
+                                <div class="legenda">
+                                    <p><span class="circle">1</span> <br />Discordo totalmente</p>
+                                    <p><span class="circle">2</span> <br />Discordo parcialmente</p>
+                                    <p><span class="circle">3</span> <br />Nem concordo nem discordo</p>
+                                    <p><span class="circle">4</span> <br />Concordo parcialmente</p>
+                                    <p><span class="circle">5</span> <br />Concordo totalmente</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="form-group question row" *ngFor="let q of questions;">
                         <div class="col-sm-8"><span class="strong">{{q.id}} -</span> {{q.pergunta}}</div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-4 answer">
                             <div class="custom-control custom-radio custom-control-inline">
                                 <input type="radio" id="Q{{q.id}}_1" name="Q{{q.id}}" (change)="select(1, q.id)" class="custom-control-input">
                                 <label class="custom-control-label" for="Q{{q.id}}_1">1</label>

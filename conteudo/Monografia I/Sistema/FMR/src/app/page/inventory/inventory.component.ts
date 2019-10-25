@@ -35,7 +35,6 @@ export class InventoryComponent implements OnInit {
     for (let ans of this.answers) {
       for (let q of this.questions) {
         if (q.id == ans.pergunta.id) {
-          console.log(q.id + ' - ' + ans.resposta);
           $("#Q" + q.id + "_" + ans.resposta).attr("checked", true);
         }
       }

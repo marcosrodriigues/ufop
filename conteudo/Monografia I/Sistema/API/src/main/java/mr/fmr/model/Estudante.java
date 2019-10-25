@@ -1,9 +1,11 @@
 package mr.fmr.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import java.util.Date;
 
 @Entity
@@ -18,6 +20,7 @@ public class Estudante extends User {
     }
 
     private String nome;
+    private String apelido;
 
     @JsonFormat(pattern = "yyyy-MM-dd")
     private Date birthday;
@@ -58,5 +61,13 @@ public class Estudante extends User {
 
     public void setMoradorRepublica(MoradorRepublica moradorRepublica) {
         this.moradorRepublica = moradorRepublica;
+    }
+
+    public String getApelido() {
+        return apelido;
+    }
+
+    public void setApelido(String apelido) {
+        this.apelido = apelido;
     }
 }

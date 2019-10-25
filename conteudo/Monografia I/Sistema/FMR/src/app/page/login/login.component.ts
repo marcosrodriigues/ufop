@@ -27,7 +27,6 @@ export class LoginComponent implements OnInit {
   }
 
   signIn() {
-    const param = JSON.stringify(this.login);
     this.userService.login(this.login).subscribe(data => {
       this.userService.saveToken(data);
       window.location.href = "/";

@@ -1,3 +1,38 @@
 .question {
     border-bottom: 1px solid #c3c3c3;
 }
+
+.description {
+    text-align: center;
+
+}
+
+.description .destacado {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.description .legenda {
+    width: 100%;
+    display: inline-flex;
+    margin-bottom: 15px;
+}
+
+.description .legenda .circle {
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #000000;
+    text-align: center;
+}
+
+.legenda p {
+    width: 20%;
+    font-weight: bolder;
+}
+
+.answer {
+    text-align: right;
+}

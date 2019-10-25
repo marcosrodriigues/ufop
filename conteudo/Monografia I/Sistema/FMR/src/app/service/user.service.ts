@@ -36,8 +36,8 @@ export class UserService {
   }
 
   saveToken(token) {
-    var expiredDate = new Date().getTime() + (token.expires_in);
-    this._cookie.set('access_token', token.access_token, expiredDate);
+    var expiredDate = new Date().getTime(); + (token.expires_in);
+    this._cookie.set('access_token', token.access_token, (token.expires_in / 24 / 60 / 60) );
   }
 
   checkCredentials() {
@@ -59,7 +59,7 @@ export class UserService {
 
   logout() {
     this._cookie.delete('access_token');
-    window.location.href = "login";
+    window.location.href = "/login";
   }
 
   me() {

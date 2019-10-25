@@ -1,11 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/mr/fmr/model/Estudante.java" line="24" mnemonic="2" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/mr/fmr/model/Estudante.java" line="27" mnemonic="2" />
     <bookmark url="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/RepublicaServiceImpl.java" line="227" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5255dbb-e4f9-476c-bf1c-89c0804f8f87" name="Default Changelist" comment="" />
+    <list default="true" id="c5255dbb-e4f9-476c-bf1c-89c0804f8f87" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mr/fmr/model/Estudante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mr/fmr/model/Estudante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FMR/src/app/component/profile-estudante/profile-estudante.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/component/profile-estudante/profile-estudante.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FMR/src/app/component/profile-estudante/profile-estudante.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/component/profile-estudante/profile-estudante.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FMR/src/app/component/profile-republica/profile-republica.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/component/profile-republica/profile-republica.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FMR/src/app/component/profile-republica/profile-republica.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/component/profile-republica/profile-republica.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FMR/src/app/page/inventory/inventory.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/page/inventory/inventory.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FMR/src/app/page/inventory/inventory.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/page/inventory/inventory.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FMR/src/app/page/inventory/inventory.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/page/inventory/inventory.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FMR/src/app/page/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/page/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FMR/src/app/page/sobre/sobre.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/page/sobre/sobre.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FMR/src/app/section/footer/footer.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/section/footer/footer.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FMR/src/app/section/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/section/footer/footer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FMR/src/app/service/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/service/user.service.ts" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,11 +59,45 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/UserServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+            <state relative-caret-position="105">
+              <caret line="46" column="57" selection-start-line="46" selection-start-column="57" selection-end-line="46" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/payload/ProfilePayload.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/model/Estudante.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-405">
+              <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1435#1436#0" expanded="true" />
+                <element signature="e#1465#1466#0" expanded="true" />
+                <element signature="e#1511#1512#0" expanded="true" />
+                <element signature="e#1549#1550#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -129,7 +178,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/mr/fmr/model/Perfil.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/model/Personalidade.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/model/Inventario.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/InventarioPerguntaRespostaServiceImpl.java" />
@@ -148,7 +196,6 @@
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/controller/EstudanteController.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/payload/ProfilePayload.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/model/MoradorRepublica.java" />
-        <option value="$PROJECT_DIR$/src/main/java/mr/fmr/model/Estudante.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/service/MoradorRepublicaService.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/MoradorRepublicaServiceImpl.java" />
@@ -180,6 +227,8 @@
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/RepublicaServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/RecomendacaoServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/service/RecomendacaoService.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/mr/fmr/model/Estudante.java" />
       </list>
     </option>
   </component>
@@ -201,6 +250,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -208,11 +258,54 @@
               <item name="api" type="b2602c69:ProjectViewProjectNode" />
               <item name="API" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="fmr" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="fmr" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="fmr" type="462c0819:PsiDirectoryNode" />
+              <item name="payload" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -223,7 +316,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1570570149624" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571957727231" />
     <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/spring-boot-oauth2/spring-boot-oauth2" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -314,11 +407,13 @@
       <workItem from="1571165539847" duration="11362000" />
       <workItem from="1571231349198" duration="1118000" />
       <workItem from="1571271706135" duration="417000" />
+      <workItem from="1571945241616" duration="2819000" />
+      <workItem from="1571958553364" duration="1447000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="271973000" />
+    <option name="totallyTimeSpent" value="278121000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -331,8 +426,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1366" height="741" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49760765" visible="true" weight="0.30530304" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49760765" visible="true" weight="0.3159091" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -344,7 +440,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32901135" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49848485" weight="0.42463532" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49848485" visible="true" weight="0.42463532" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32901135" />
@@ -526,16 +622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/model/Estudante.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -574,13 +660,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -725,13 +804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/payload/ProfilePayload.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-375">
@@ -837,6 +909,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/RepublicaServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3405">
@@ -881,10 +960,107 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+        <state relative-caret-position="105">
+          <caret line="46" column="57" selection-start-line="46" selection-start-column="57" selection-end-line="46" selection-end-column="57" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/payload/ProfilePayload.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/model/Estudante.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-405">
+          <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1435#1436#0" expanded="true" />
+            <element signature="e#1465#1466#0" expanded="true" />
+            <element signature="e#1511#1512#0" expanded="true" />
+            <element signature="e#1549#1550#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.5574713" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.5574713" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.5574713" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>api</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.5574713" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.5574713" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

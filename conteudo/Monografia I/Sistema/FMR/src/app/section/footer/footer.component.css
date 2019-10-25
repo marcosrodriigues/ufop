@@ -1,7 +1,23 @@
 .footer {
     color: white;
+    padding-top: 20px;
+}
+
+.footer p {
+    line-height: 0.5em;
+}
+
+a {
+    color: white;
 }
 
 .bg-green {
     background-color: green;
 }
+
+.title {
+    font-weight: bolder;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+

@@ -9,12 +9,12 @@
                             <div class="picture-container">
                                 <div class="picture">
                                     <div *ngIf="profile.fotoUrl != null; else defaultPhoto;">
-                                        <img src="{{ profile.fotoUrl }}" class="img-fluid" />
+                                        <img src="{{ profile.fotoUrl }}" class="img-fluid img-profile" />
                                     </div>
                                     <ng-template #defaultPhoto>
-                                        <img src="assets/img/default-user.png" class="img-fluid" />
+                                        <img src="assets/img/default-user.png" class="img-fluid img-profile" />
                                     </ng-template>
-                                    <input type="file" id="wizard-picture" (change)="upload($event)" />
+                                    <input type="file" id="wizard-picture" (change)="upload($event)" title=" " />
                                 </div>
                             </div>
 
