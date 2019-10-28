@@ -26,7 +26,7 @@ public class Republica extends User implements Serializable {
     private CaraterRepublica carater;
     private String descricao;
 
-    @OneToMany(mappedBy = "republica", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "republica", fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
     private List<MoradorRepublica> moradores = new ArrayList<>();
 
     public String getNome() {
