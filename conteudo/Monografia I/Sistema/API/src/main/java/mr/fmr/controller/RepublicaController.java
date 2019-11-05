@@ -1,5 +1,6 @@
 package mr.fmr.controller;
 
+import mr.fmr.CaraterRepublica;
 import mr.fmr.exception.MyBadRequestException;
 import mr.fmr.exception.MyUnauthorizedException;
 import mr.fmr.model.Estudante;
@@ -162,4 +163,37 @@ public class RepublicaController {
 
         return service.createPersonality(me);
     }
+
+    @GetMapping(value = BASE_URL + "/search/{cidade}/{carater}")
+    public List<RepublicaPorPersonalidadePayload> findBySearch(Principal principal, @PathVariable("cidade") String cidade, @PathVariable("carater") String carater) {
+        User me = new User();
+        if (principal != null) me = userService.getUserFromPrincipal(principal);
+
+        List<Republica> republicas = service.findByCity(cidade);
+        List<RepublicaPorPersonalidadePayload> retorno = new ArrayList<>();
+        RepublicaPorPersonalidadePayload payload;
+        int sumPersonality = 0, distanciaGeral = 0;
+        for (Republica r : republicas) {
+            if ("TODOS".equalsIgnoreCase(carater) || (r.getCarater() != null && r.getCarater().name().equalsIgnoreCase(carater))) {
+                payload = new RepublicaPorPersonalidadePayload(r);
+
+                if (r.getPerfil() == null || me.getPerfil() == null) {
+                    sumPersonality = 0;
+                    distanciaGeral = 0;
+                } else {
+                    sumPersonality = recomendacaoService.somaPersonalidade(r.getPerfil().getPersonalidade());
+                    distanciaGeral = recomendacaoService.calculaDistanciaGeral(me, r);
+
+                }
+
+                payload.setDistanciaGeral(distanciaGeral);
+                payload.setSomaPersonalidade(sumPersonality);
+
+                retorno.add(payload);
+            }
+        }
+
+        return recomendacaoService.ordenar(retorno);
+    }
 }
+

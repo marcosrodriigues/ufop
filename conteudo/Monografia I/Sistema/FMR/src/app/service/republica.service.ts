@@ -49,4 +49,8 @@ export class RepublicaService {
   calcularPersonalidade(republica : any) {
     return this._http.post(this.baseUrl + "/personalidade", republica);
   }
+
+  findBySearch(q) {
+    return this._http.get(this.baseUrl + "/search/" + q.cidade + "/" + q.carater);
+  }
 }

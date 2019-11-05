@@ -1,5 +1,6 @@
 package mr.fmr.payload;
 
+import mr.fmr.CaraterRepublica;
 import mr.fmr.model.Personalidade;
 import mr.fmr.model.Republica;
 
@@ -8,13 +9,21 @@ public class RepublicaPorPersonalidadePayload {
     private Long id;
     private String nome;
     private Personalidade personalidade;
+    private CaraterRepublica carater;
+    private String fotoUrl;
+    private String bairro;
     private int distanciaGeral;
     private int somaPersonalidade;
 
+
     public RepublicaPorPersonalidadePayload(Republica rep) {
         this.id = rep.getId();
-        nome = rep.getNome();
-        personalidade = rep.getPerfil().getPersonalidade();
+        this.carater = rep.getCarater();
+        this.nome = rep.getNome();
+        this.fotoUrl = rep.getFotoUrl();
+
+        if (rep.getPerfil() != null) this.personalidade = rep.getPerfil().getPersonalidade();
+        if (rep.getEndereco() != null) this.bairro = rep.getEndereco().getBairro();
     }
 
     public Long getId() {
@@ -55,5 +64,29 @@ public class RepublicaPorPersonalidadePayload {
 
     public void setSomaPersonalidade(int somaPersonalidade) {
         this.somaPersonalidade = somaPersonalidade;
+    }
+
+    public CaraterRepublica getCarater() {
+        return carater;
+    }
+
+    public void setCarater(CaraterRepublica carater) {
+        this.carater = carater;
+    }
+
+    public String getFotoUrl() {
+        return fotoUrl;
+    }
+
+    public void setFotoUrl(String fotoUrl) {
+        this.fotoUrl = fotoUrl;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
     }
 }

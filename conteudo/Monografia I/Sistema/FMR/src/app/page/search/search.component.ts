@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import * as CanvasJS from '../../../assets/js/canvasjs.min';
 import { RepublicaService } from 'src/app/service/republica.service';
 import { UserService } from 'src/app/service/user.service';
 
@@ -11,6 +10,7 @@ import { UserService } from 'src/app/service/user.service';
 })
 export class SearchComponent implements OnInit {
 
+  q: any = {};
   cidade = '';
   reps: any = [];
   me : any = {};
@@ -19,7 +19,9 @@ export class SearchComponent implements OnInit {
               private _repService : RepublicaService,
               private _userService : UserService) { 
     this.router.queryParams.subscribe(params => {
-      this.cidade = params['q'];
+      this.q.cidade = params['cidade'];
+      this.q.carater = params['carater'];
+      this.cidade = this.q.cidade;
     })
   }
 
@@ -35,7 +37,7 @@ export class SearchComponent implements OnInit {
   }
 
   loadReps() {
-    this._repService.findByCity(this.cidade).subscribe(data => {
+    this._repService.findByCity(this.q.cidade).subscribe(data => {
       this.reps = data;
     }, err => {
       alert(err.error.message);
@@ -51,5 +53,14 @@ export class SearchComponent implements OnInit {
       return Math.round((1 - this.sumPersonalidade(me) / rep.distanciaGeral) * 100);
 
     return Math.round((1 - rep.distanciaGeral / this.sumPersonalidade(me)) * 100);
+  }
+
+  search($event) {
+    $event.preventDefault();
+    this._repService.findBySearch(this.q).subscribe(data => {
+      this.reps = data;
+    }, err => {
+      alert(err.error.message);
+    });
   }
 }
