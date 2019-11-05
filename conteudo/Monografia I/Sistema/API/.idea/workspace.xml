@@ -4,22 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/mr/fmr/model/Estudante.java" line="27" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5255dbb-e4f9-476c-bf1c-89c0804f8f87" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mr/fmr/controller/RepublicaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mr/fmr/controller/RepublicaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mr/fmr/payload/RepublicaPorPersonalidadePayload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mr/fmr/payload/RepublicaPorPersonalidadePayload.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mr/fmr/controller/RepublicaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mr/fmr/controller/RepublicaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mr/fmr/controller/UploadController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mr/fmr/controller/UploadController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mr/fmr/payload/RepublicaPorPersonalidadePayload.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mr/fmr/payload/RepublicaPorPersonalidadePayload.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FMR/src/app/page/index/index.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/page/index/index.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FMR/src/app/page/index/index.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/page/index/index.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FMR/src/app/page/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/page/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FMR/src/app/page/search/search.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/page/search/search.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FMR/src/app/page/search/search.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/page/search/search.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FMR/src/app/page/search/search.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/page/search/search.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FMR/src/app/service/republica.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/service/republica.service.ts" afterDir="false" />
-    </list>
+    <list default="true" id="c5255dbb-e4f9-476c-bf1c-89c0804f8f87" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +30,20 @@
     <favorites_list name="api" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/controller/RepublicaController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="235">
+              <caret line="168" selection-start-line="168" selection-end-line="168" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -287,11 +285,12 @@
       <workItem from="1572493652543" duration="12000" />
       <workItem from="1572913251031" duration="47000" />
       <workItem from="1572968101723" duration="9000" />
+      <workItem from="1572971342939" duration="615000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="338541000" />
+    <option name="totallyTimeSpent" value="339156000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -304,8 +303,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1366" height="741" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49760765" visible="true" weight="0.23484848" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49760765" visible="true" weight="0.23863636" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -317,7 +317,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32901135" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49848485" weight="0.34359807" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49848485" visible="true" weight="0.34359807" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32901135" />
@@ -344,18 +344,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/mr/fmr/controller/RepublicaController.java</url>
-          <line>168</line>
-          <properties />
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -841,16 +829,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/controller/RepublicaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2565">
-          <caret line="195" selection-start-line="195" selection-end-line="195" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="372">
@@ -871,6 +849,16 @@
             <element signature="e#2020#2021#0" expanded="true" />
             <element signature="e#2064#2065#0" expanded="true" />
             <element signature="e#2100#2101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/controller/RepublicaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="168" selection-start-line="168" selection-end-line="168" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

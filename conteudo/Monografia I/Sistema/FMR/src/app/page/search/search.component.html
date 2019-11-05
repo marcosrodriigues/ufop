@@ -13,21 +13,30 @@
             <hr />
             <div class="row">  
                 <div class="col-sm-4">
-                    <div class="container center">
-                        <form class="form form-search col-sm-12" (submit)="search($event)">
-                            <h5 class="title">Busca</h5>
-                            <input type="text" placeholder="Cidade" name="cidade" [(ngModel)]="q.cidade" class="form-control field" />
-                            <select class="form-control field" [(ngModel)]="q.carater" name="carater">
-                                <option value="TODOS">TODOS</option>
-                                <option value="MASCULINA">Masculina</option>
-                                <option value="FEMININA">Feminina</option>
-                                <option value="MISTA">Mista</option>
-                            </select>
-                            <button class="btn btn-primary field" type="submit" >
-                                Buscar <i class="fa fa-search"></i>
-                            </button>
-                        </form>
+                    <div class="col-sm-12 mb50">
+                        <div class="container center">
+                            <form class="form form-search col-sm-12" (submit)="search($event)">
+                                <h5 class="title">Busca</h5>
+                                <input type="text" placeholder="Cidade" name="cidade" [(ngModel)]="q.cidade" class="form-control field" />
+                                <select class="form-control field" [(ngModel)]="q.carater" name="carater">
+                                    <option value="TODOS">TODOS</option>
+                                    <option value="MASCULINA">Masculina</option>
+                                    <option value="FEMININA">Feminina</option>
+                                    <option value="MISTA">Mista</option>
+                                </select>
+                                <button class="btn btn-primary field" type="submit" >
+                                    Buscar <i class="fa fa-search"></i>
+                                </button>
+                            </form>
+                        </div>
                     </div>
+                    <div class="col-sm-12" *ngIf="me != undefined && me != null">
+                        <div class="container center">
+                            <h5 class="title">Sua personalidade</h5>
+                            <app-descricao-personalidade [personality]="me" [short]="true"></app-descricao-personalidade>
+                        </div>
+                    </div>
+                    
                 </div>
 
                 <div class="col-sm-8">
