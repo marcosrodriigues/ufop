@@ -30,7 +30,7 @@
                             </form>
                         </div>
                     </div>
-                    <div class="col-sm-12" *ngIf="me != undefined && me != null">
+                    <div class="col-sm-12" *ngIf="me != null">
                         <div class="container center">
                             <h5 class="title">Sua personalidade</h5>
                             <app-descricao-personalidade [personality]="me" [short]="true"></app-descricao-personalidade>
@@ -50,7 +50,7 @@
                                 <ng-template #defaultPhoto>
                                     <img src="assets/img/default-user.png" class="img-fluid m10" />
                                 </ng-template>
-                                <p><strong>Compatibilidade: </strong> {{calculaPorcentagem(rep, me)}}%</p>
+                                <p *ngIf="me != null && rep.personalidade != null"><strong>Compatibilidade: </strong> {{calculaPorcentagem(rep, me)}}%</p>
                                 <p><strong>Bairro: </strong> {{rep.bairro}}</p>
                             </div>
                         </div>

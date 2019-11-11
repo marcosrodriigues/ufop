@@ -13,7 +13,7 @@ export class SearchComponent implements OnInit {
   q: any = {};
   cidade = '';
   reps: any = [];
-  me : any = {};
+  me : any = null;
 
   constructor(private router: ActivatedRoute, 
               private _repService : RepublicaService,
@@ -37,10 +37,10 @@ export class SearchComponent implements OnInit {
   }
 
   loadReps() {
-    this._repService.findByCity(this.q.cidade).subscribe(data => {
+    this._repService.findBySearch(this.q).subscribe(data => {
       this.reps = data;
     }, err => {
-      alert(err.error.message);
+      //alert(err.error.message);
     });
   }
 
