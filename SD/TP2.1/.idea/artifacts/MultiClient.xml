@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MultiClient">
+    <output-path>$PROJECT_DIR$/out/artifacts/MultiClient</output-path>
+    <root id="archive" name="MultiClient.jar">
+      <element id="module-output" name="TP2.1" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/src/sd/tp22/broadcast/multi/client/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>

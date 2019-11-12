@@ -17,11 +17,11 @@ import java.util.stream.IntStream;
 @RequestMapping
 public class InteligenciaComputacionalController {
 
-    private final int MAX_ANSWER = 15;
-    private final Long MAX_ANSWER_TO_SAVE = 2500000L;
-    //private final String JSON_PATH = "/home/marcos/19.2/Inteligência Computacional/TP/personality_#.data";
+    private final int MAX_ANSWER = 10;
+    private final Long MAX_ANSWER_TO_SAVE = 5000000L;
+    private final String JSON_PATH = "/home/marcos/19.2/Inteligência Computacional/TP/personality_#.data";
     //private final String JSON_PATH = "/media/marcos/MARCOS/Personality/personality_#.data";
-    private final String JSON_PATH = "/media/marcos/Xico/Personality/personality_#.data";
+    //private final String JSON_PATH = "/media/marcos/Xico/Personality/personality_#.data";
 
     private int count = 0;
     private Long registred = 0L;
@@ -51,6 +51,7 @@ public class InteligenciaComputacionalController {
             payload.perguntasRespostas = generateNextAnswers(lastPayload.perguntasRespostas);
 
             if (payload.perguntasRespostas == null) {
+                count++;
                 save(payloads);
                 break;
             }
@@ -258,43 +259,43 @@ public class InteligenciaComputacionalController {
     }
 
     private List<Integer> getListExtroversao() {
-        return Arrays.asList(1, 11, 16, 26, 36);
+        return Arrays.asList(6);
     }
 
     private List<Integer> getListReverseExtroversao() {
-        return Arrays.asList(6, 21, 31);
+        return Arrays.asList(1);
     }
 
     private List<Integer> getListConcordancia() {
-        return Arrays.asList(7, 17, 22, 32, 42);
+        return Arrays.asList(2);
     }
 
     private List<Integer> getListReverseConcordancia() {
-        return Arrays.asList(2, 12, 27, 37);
+        return Arrays.asList(7);
     }
 
     private List<Integer> getListConsciencia() {
-        return Arrays.asList(3, 13, 28, 33, 38);
+        return Arrays.asList(8);
     }
 
     private List<Integer> getListReverseConsciencia() {
-        return Arrays.asList(8, 18, 23, 43);
+        return Arrays.asList(3);
     }
 
     private List<Integer> getListNeuroticismo() {
-        return Arrays.asList(4, 14, 19, 29, 39);
+        return Arrays.asList(9);
     }
 
     private List<Integer> getListReverseNeuroticismo() {
-        return Arrays.asList(9, 24, 34);
+        return Arrays.asList(4);
     }
 
     private List<Integer> getListAbertura() {
-        return Arrays.asList(5, 10, 15, 20, 25, 30, 40, 44);
+        return Arrays.asList(10);
     }
 
     private List<Integer> getListReverseAbertura() {
-        return Arrays.asList(35, 41);
+        return Arrays.asList(5);
     }
 
     private int reverse_scored(int score) {

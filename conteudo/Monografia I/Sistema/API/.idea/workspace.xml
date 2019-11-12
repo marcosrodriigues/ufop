@@ -6,12 +6,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5255dbb-e4f9-476c-bf1c-89c0804f8f87" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/mr/fmr/controller/InteligenciaComputacionalController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mr/fmr/config/AuthorizationServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mr/fmr/config/AuthorizationServerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mr/fmr/config/ResourceServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mr/fmr/config/ResourceServerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mr/fmr/config/AuthorizationServerConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mr/fmr/config/AuthorizationServerConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mr/fmr/config/ResourceServerConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mr/fmr/config/ResourceServerConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mr/fmr/controller/InteligenciaComputacionalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mr/fmr/controller/InteligenciaComputacionalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mr/fmr/controller/InteligenciaComputacionalController$Payload.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mr/fmr/controller/InteligenciaComputacionalController$Payload.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mr/fmr/controller/InteligenciaComputacionalController$PerguntaEResposta.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mr/fmr/controller/InteligenciaComputacionalController$PerguntaEResposta.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mr/fmr/controller/InteligenciaComputacionalController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mr/fmr/controller/InteligenciaComputacionalController.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,8 +44,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/controller/InteligenciaComputacionalController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1620">
-              <caret line="108" column="39" lean-forward="true" selection-start-line="108" selection-start-column="39" selection-end-line="108" selection-end-column="39" />
+            <state relative-caret-position="195">
+              <caret line="79" column="31" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -153,6 +152,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -227,7 +227,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -333,11 +332,13 @@
       <workItem from="1571356327392" duration="188000" />
       <workItem from="1571357135469" duration="16048000" />
       <workItem from="1571413626423" duration="20721000" />
+      <workItem from="1573489325596" duration="2107000" />
+      <workItem from="1573514939157" duration="223000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="325169000" />
+    <option name="totallyTimeSpent" value="327499000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -350,8 +351,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1366" height="741" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49760765" visible="true" weight="0.34242424" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49760765" visible="true" weight="0.3530303" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -367,7 +369,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32901135" />
-      <window_info active="true" anchor="bottom" id="Spring" order="7" visible="true" weight="0.32901135" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.32901135" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49772727" weight="0.32090762" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50151515" side_tool="true" weight="0.42463532" />
@@ -895,8 +897,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/controller/InteligenciaComputacionalController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1620">
-          <caret line="108" column="39" lean-forward="true" selection-start-line="108" selection-start-column="39" selection-end-line="108" selection-end-column="39" />
+        <state relative-caret-position="195">
+          <caret line="79" column="31" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
