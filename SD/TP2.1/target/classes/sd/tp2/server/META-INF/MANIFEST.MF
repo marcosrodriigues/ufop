@@ -1,3 +1,0 @@
-Manifest-Version: 1.0
-Main-Class: sd.tp2.server.main.Main
-
