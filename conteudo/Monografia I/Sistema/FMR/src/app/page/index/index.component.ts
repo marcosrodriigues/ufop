@@ -15,6 +15,6 @@ export class IndexComponent implements OnInit {
   }
 
   submit() {
-    window.location.href = '/search?q=' + this.search;
+    window.location.href = 'search?cidade=' + this.search + '&carater=TODOS';
   }
 }

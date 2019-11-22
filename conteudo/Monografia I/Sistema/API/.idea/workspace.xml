@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/mr/fmr/model/Estudante.java" line="24" mnemonic="2" />
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/RepublicaServiceImpl.java" line="227" mnemonic="9" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/mr/fmr/model/Estudante.java" line="27" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="c5255dbb-e4f9-476c-bf1c-89c0804f8f87" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mr/fmr/controller/InteligenciaComputacionalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mr/fmr/controller/InteligenciaComputacionalController.java" afterDir="false" />
@@ -12,6 +12,9 @@
       <change beforePath="$PROJECT_DIR$/target/classes/mr/fmr/controller/InteligenciaComputacionalController$PerguntaEResposta.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mr/fmr/controller/InteligenciaComputacionalController$PerguntaEResposta.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mr/fmr/controller/InteligenciaComputacionalController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mr/fmr/controller/InteligenciaComputacionalController.class" afterDir="false" />
     </list>
+=======
+    <list default="true" id="c5255dbb-e4f9-476c-bf1c-89c0804f8f87" name="Default Changelist" comment="" />
+>>>>>>> origin/master
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,12 +43,21 @@
     <favorites_list name="api" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/controller/InteligenciaComputacionalController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
               <caret line="79" column="31" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="31" />
+=======
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/controller/RepublicaController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="235">
+              <caret line="168" selection-start-line="168" selection-end-line="168" />
+>>>>>>> origin/master
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -60,6 +72,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -71,6 +84,7 @@
       <find>Moda</find>
       <find>personalidadePelaModa</find>
       <find>findMorado</find>
+      <find>create</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -79,6 +93,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
+=======
+        <option value="$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/InventarioPerguntaRespostaServiceImpl.java" />
+>>>>>>> origin/master
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/controller/InventarioController.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/repository/UniversidadeReposiroty.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/service/UniversidadeService.java" />
@@ -92,9 +110,7 @@
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/repository/MoradorRepublicaRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/service/EstudanteService.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/controller/EstudanteController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/mr/fmr/payload/ProfilePayload.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/model/MoradorRepublica.java" />
-        <option value="$PROJECT_DIR$/src/main/java/mr/fmr/model/Estudante.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/service/MoradorRepublicaService.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/MoradorRepublicaServiceImpl.java" />
@@ -105,7 +121,11 @@
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/exception/MyFileNotFoundException.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/service/StorageService.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/ApiApplication.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/controller/UploadController.java" />
+=======
+        <option value="$PROJECT_DIR$/src/main/java/mr/fmr/model/User.java" />
+>>>>>>> origin/master
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/StorageServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/EnderecoServiceImpl.java" />
@@ -113,23 +133,32 @@
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/exception/MyBadRequestException.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/EstudanteServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/users.json" />
-        <option value="$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/service/RepublicaService.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/repository/RepublicaRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/mr/fmr/payload/RepublicaPorPersonalidadePayload.java" />
-        <option value="$PROJECT_DIR$/src/main/java/mr/fmr/model/Republica.java" />
-        <option value="$PROJECT_DIR$/src/main/java/mr/fmr/controller/RepublicaController.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/payload/RepublicaDetalhes.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/controller/PersonalidadeController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/RepublicaServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/RecomendacaoServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/service/RecomendacaoService.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/model/VerificationToken.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/model/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/config/AuthorizationServerConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/config/ResourceServerConfig.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/mr/fmr/controller/InteligenciaComputacionalController.java" />
+=======
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/mr/fmr/model/Estudante.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mr/fmr/CaraterRepublica.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mr/fmr/payload/ProfilePayload.java" />
+        <option value="$PROJECT_DIR$/src/test/java/mr/fmr/api/ApiApplicationTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mr/fmr/model/Republica.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/RepublicaServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mr/fmr/controller/UploadController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mr/fmr/payload/RepublicaPorPersonalidadePayload.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mr/fmr/controller/RepublicaController.java" />
+>>>>>>> origin/master
       </list>
     </option>
   </component>
@@ -151,8 +180,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
       <pane id="PackagesPane" />
       <pane id="Scope" />
+=======
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+>>>>>>> origin/master
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -178,6 +212,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
+<<<<<<< HEAD
             <path>
               <item name="api" type="b2602c69:ProjectViewProjectNode" />
               <item name="API" type="462c0819:PsiDirectoryNode" />
@@ -223,6 +258,8 @@
               <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
+=======
+>>>>>>> origin/master
           </expand>
           <select />
         </subPane>
@@ -236,11 +273,18 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+<<<<<<< HEAD
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571413475668" />
+=======
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572014591773" />
+>>>>>>> origin/master
     <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/spring-boot-oauth2/spring-boot-oauth2" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.5574713" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
@@ -248,11 +292,11 @@
       <recent name="mr.fmr" />
       <recent name="mr.fmr.api" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="mr.fmr.model" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="mr.fmr.model" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -324,6 +368,7 @@
       <workItem from="1571165539847" duration="11362000" />
       <workItem from="1571231349198" duration="1118000" />
       <workItem from="1571271706135" duration="417000" />
+<<<<<<< HEAD
       <workItem from="1571273861757" duration="10460000" />
       <workItem from="1571332758404" duration="4320000" />
       <workItem from="1571340249619" duration="483000" />
@@ -334,11 +379,29 @@
       <workItem from="1571413626423" duration="20721000" />
       <workItem from="1573489325596" duration="2107000" />
       <workItem from="1573514939157" duration="223000" />
+=======
+      <workItem from="1571945241616" duration="2819000" />
+      <workItem from="1571958553364" duration="32633000" />
+      <workItem from="1572015450667" duration="979000" />
+      <workItem from="1572265351207" duration="12253000" />
+      <workItem from="1572313812271" duration="3338000" />
+      <workItem from="1572376203634" duration="2386000" />
+      <workItem from="1572388320686" duration="10128000" />
+      <workItem from="1572487767112" duration="82000" />
+      <workItem from="1572493652543" duration="12000" />
+      <workItem from="1572913251031" duration="47000" />
+      <workItem from="1572968101723" duration="9000" />
+      <workItem from="1572971342939" duration="615000" />
+>>>>>>> origin/master
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="327499000" />
+=======
+    <option name="totallyTimeSpent" value="339156000" />
+>>>>>>> origin/master
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -353,7 +416,11 @@
     <frame x="0" y="-1" width="1366" height="741" extended-state="6" />
     <editor active="true" />
     <layout>
+<<<<<<< HEAD
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49760765" visible="true" weight="0.3530303" />
+=======
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49760765" visible="true" weight="0.23863636" />
+>>>>>>> origin/master
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -365,7 +432,11 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32901135" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49848485" weight="0.37763372" />
+=======
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49848485" visible="true" weight="0.34359807" />
+>>>>>>> origin/master
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32901135" />
@@ -399,6 +470,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/controller/UploadController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
@@ -426,6 +498,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> origin/master
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
@@ -437,16 +511,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/controller/UtilController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -507,26 +571,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/model/Estudante.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="30" column="36" lean-forward="true" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -555,13 +599,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -596,6 +633,16 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/PersonalidadeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> origin/master
     <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/RepublicaService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -666,10 +713,25 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/payload/ProfilePayload.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-300">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-375">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="e#1787#1788#0" expanded="true" />
+            <element signature="e#1816#1817#0" expanded="true" />
+            <element signature="e#2088#2089#0" expanded="true" />
+            <element signature="e#2118#2119#0" expanded="true" />
+            <element signature="e#2164#2165#0" expanded="true" />
+            <element signature="e#2202#2203#0" expanded="true" />
+          </folding>
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
@@ -711,33 +773,138 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/payload/RepublicaPorPersonalidadePayload.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/model/Estudante.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+        <state relative-caret-position="180">
+          <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#962#963#0" expanded="true" />
-            <element signature="e#999#1000#0" expanded="true" />
-            <element signature="e#1056#1057#0" expanded="true" />
-            <element signature="e#1108#1109#0" expanded="true" />
-            <element signature="e#1149#1150#0" expanded="true" />
-            <element signature="e#1189#1190#0" expanded="true" />
-            <element signature="e#1252#1253#0" expanded="true" />
-            <element signature="e#1310#1311#0" expanded="true" />
+            <element signature="e#1435#1436#0" expanded="true" />
+            <element signature="e#1465#1466#0" expanded="true" />
+            <element signature="e#1511#1512#0" expanded="true" />
+            <element signature="e#1549#1550#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="55" column="12" lean-forward="true" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/RecomendacaoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="54" column="76" selection-start-line="54" selection-start-column="76" selection-end-line="54" selection-end-column="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/RecomendacaoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="14" column="80" selection-start-line="14" selection-start-column="80" selection-end-line="14" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/CaraterRepublica.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/payload/ProfilePayload.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1013">
+          <caret line="44" column="48" lean-forward="true" selection-start-line="44" selection-start-column="48" selection-end-line="44" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/PersonalidadeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1665">
+          <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4051#4052#0" expanded="true" />
+            <element signature="e#4106#4107#0" expanded="true" />
+            <element signature="e#4163#4164#0" expanded="true" />
+            <element signature="e#4210#4211#0" expanded="true" />
+            <element signature="e#4261#4262#0" expanded="true" />
+            <element signature="e#4316#4317#0" expanded="true" />
+            <element signature="e#4374#4375#0" expanded="true" />
+            <element signature="e#4425#4426#0" expanded="true" />
+            <element signature="e#4475#4476#0" expanded="true" />
+            <element signature="e#4530#4531#0" expanded="true" />
+            <element signature="e#4587#4588#0" expanded="true" />
+            <element signature="e#4638#4639#0" expanded="true" />
+            <element signature="e#4689#4690#0" expanded="true" />
+            <element signature="e#4744#4745#0" expanded="true" />
+            <element signature="e#4802#4803#0" expanded="true" />
+            <element signature="e#4849#4850#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/mr/fmr/api/ApiApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/model/Republica.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1175#1176#0" expanded="true" />
+            <element signature="e#1205#1206#0" expanded="true" />
+            <element signature="e#1261#1262#0" expanded="true" />
+            <element signature="e#1299#1300#0" expanded="true" />
+            <element signature="e#1335#1336#0" expanded="true" />
+            <element signature="e#1367#1368#0" expanded="true" />
+            <element signature="e#1417#1418#0" expanded="true" />
+            <element signature="e#1459#1460#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/RepublicaServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2865">
+          <caret line="293" lean-forward="true" selection-start-line="293" selection-end-line="293" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#obtainIndexSemPersonalidadeNormalizada#0;class#RepublicaServiceImpl#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/controller/InventarioController.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="160">
           <caret line="37" column="63" lean-forward="true" selection-start-line="37" selection-start-column="63" selection-end-line="37" selection-end-column="63" />
+=======
+        <state relative-caret-position="420">
+          <caret line="40" column="44" lean-forward="true" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/RecomendacaoServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="690">
           <caret line="54" column="76" selection-start-line="54" selection-start-column="76" selection-end-line="54" selection-end-column="76" />
           <folding>
@@ -753,19 +920,50 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="165">
+          <caret line="37" column="63" lean-forward="true" selection-start-line="37" selection-start-column="63" selection-end-line="37" selection-end-column="63" />
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/controller/RepublicaController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/controller/PerguntaController.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/controller/PersonalidadeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="240">
           <caret line="68" column="46" selection-start-line="68" selection-start-column="46" selection-end-line="68" selection-end-column="46" />
+=======
+        <state relative-caret-position="120">
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/controller/UniversidadeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/controller/UploadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+>>>>>>> origin/master
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/model/Republica.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -823,17 +1021,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1730">
           <caret line="271" selection-start-line="271" selection-end-line="271" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="30" column="36" lean-forward="true" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+>>>>>>> origin/master
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1610#1611#0" expanded="true" />
-            <element signature="e#1671#1672#0" expanded="true" />
-            <element signature="method#getApprovedMoradores#0;class#RepublicaServiceImpl#0" />
-            <element signature="method#personalidadePelaMedia#0;class#RepublicaServiceImpl#0" />
-            <element signature="method#getIndexDoMaior#0;class#RepublicaServiceImpl#0" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/config/ResourceServerConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -877,19 +1077,48 @@
             <element signature="e#4744#4745#0" expanded="true" />
             <element signature="e#4802#4803#0" expanded="true" />
             <element signature="e#4849#4850#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/controller/UtilController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="20" column="64" lean-forward="true" selection-start-line="20" selection-start-column="64" selection-end-line="20" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/pojo/FileStorageProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+          <folding>
+            <element signature="e#243#244#0" expanded="true" />
+            <element signature="e#275#276#0" expanded="true" />
+            <element signature="e#325#326#0" expanded="true" />
+            <element signature="e#367#368#0" expanded="true" />
+>>>>>>> origin/master
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/controller/EstudanteController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="303">
           <caret line="40" column="44" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
+=======
+    <entry file="jrt:///usr/lib/jvm/java-11-openjdk-amd64!/java.base/java/util/function/Predicate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="jrt:///usr/lib/jvm/java-11-openjdk-amd64!/java.base/java/util/function/Consumer.class">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="859">
           <caret line="81" selection-start-line="81" selection-end-line="81" />
         </state>
@@ -902,8 +1131,129 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="120">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+>>>>>>> origin/master
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.9.RELEASE/spring-web-5.1.9.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="206" column="32" selection-start-line="206" selection-start-column="32" selection-end-line="206" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="94" column="37" selection-start-line="94" selection-start-column="37" selection-end-line="94" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/payload/RepublicaPorPersonalidadePayload.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="81" column="31" selection-start-line="81" selection-start-column="31" selection-end-line="81" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1991#1992#0" expanded="true" />
+            <element signature="e#2020#2021#0" expanded="true" />
+            <element signature="e#2064#2065#0" expanded="true" />
+            <element signature="e#2100#2101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/controller/RepublicaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="168" selection-start-line="168" selection-end-line="168" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.5574713" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.5574713" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.5574713" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>api</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.5574713" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.5574713" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

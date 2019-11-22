@@ -1,6 +1,6 @@
 <mat-expansion-panel>
     <mat-expansion-panel-header>
-        <mat-panel-title><span class="strong">Abertura para o novo</span></mat-panel-title>
+        <mat-panel-title><span class="strong">Abertura <span *ngIf="!short"> para o novo</span></span></mat-panel-title>
         <mat-panel-description class="right">{{ percent.abertura }}</mat-panel-description>
     </mat-expansion-panel-header>
     <p>Apreciação de arte, emoção, aventura, ideias incomuns, curiosidade e variedade de experiência.</p>

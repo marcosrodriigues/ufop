@@ -9,27 +9,29 @@
                             <div class="card">
                                 <div class="card-header"><h5>Login</h5></div>
                                 <div class="card-body">
-                                    <div class="form-row align-items-center">
-                                        <div class="input-group mb-2">
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text"><label for="username">@</label></div>
+                                    <form class="form">
+                                        <div class="form-row align-items-center">
+                                            <div class="input-group mb-2">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text"><label for="username">@</label></div>
+                                                </div>
+                                                <input type="text" class="form-control" [(ngModel)]="login.username" id="username" name="username" placeholder="usuário ou email">
                                             </div>
-                                            <input type="text" class="form-control" [(ngModel)]="login.username" id="username" placeholder="usuário ou email">
-                                        </div>
-                                        <div class="input-group mb-2">
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text"><label for="password"><i class="fa fa-key"></i></label></div>
+                                            <div class="input-group mb-2">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text"><label for="password"><i class="fa fa-key"></i></label></div>
+                                                </div>
+                                                <input type="password" class="form-control" [(ngModel)]="login.password" id="password" name="password" placeholder="senha">
                                             </div>
-                                            <input type="password" class="form-control" [(ngModel)]="login.password" id="password" placeholder="senha">
+                                            <div class="custom-control custom-checkbox mr-sm-2">
+                                                <input type="checkbox" class="custom-control-input" id="remember">
+                                                <label class="custom-control-label" for="remember">Lembrar acesso</label>
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <button class="btn btn-primary" (click)="signIn()">Acessar</button>
+                                            </div>
                                         </div>
-                                        <div class="custom-control custom-checkbox mr-sm-2">
-                                            <input type="checkbox" class="custom-control-input" id="remember">
-                                            <label class="custom-control-label" for="remember">Lembrar acesso</label>
-                                        </div>
-                                        <div class="col-sm-12">
-                                            <button class="btn btn-primary" (click)="signIn()">Acessar</button>
-                                        </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -37,34 +39,36 @@
                             <div class="card">
                                 <div class="card-header"><h5>Cadastro</h5></div>
                                 <div class="card-body">
-                                    <div class="form">
-                                        <div class="input-group mb-2 left">
-                                            <label for="tipo" class="col-sm-4"> Eu sou um(a):</label>
-                                            <select class="custom-select col-sm-8" [(ngModel)]="user.tipo" id="tipo">
-                                                <option disabled>Escolha</option>
-                                                <option value="ESTUDANTE">Estudante</option>
-                                                <option value="REPUBLICA">República</option>
-                                            </select>
+                                    <form class="form" (submit)="signUp()">
+                                        <div>
+                                            <div class="input-group mb-2 left">
+                                                <label for="tipo" class="col-sm-4"> Eu sou um(a):</label>
+                                                <select class="custom-select col-sm-8" [(ngModel)]="user.tipo" name="tipo" id="tipo">
+                                                    <option disabled>Escolha</option>
+                                                    <option value="ESTUDANTE">Estudante</option>
+                                                    <option value="REPUBLICA">República</option>
+                                                </select>
+                                            </div>
+                                            <div class="input-group mb-2 left">
+                                                <label for="email" class="col-sm-4">Email:</label>
+                                                <input type="email" class="form-control col-sm-8" [(ngModel)]="user.email" name="email" id="email" />
+                                            </div>
+                                            <div class="input-group mb-2 left">
+                                                <label for="senha" class="col-sm-4">Senha:</label>
+                                                <input type="password" class="form-control col-sm-8" [(ngModel)]="user.password" name="senha" id="senha" />
+                                            </div>
+                                            <div class="custom-control custom-checkbox mr-sm-2 left">
+                                                <input type="checkbox" required class="custom-control-input col-sm-4" [(ngModel)]="user.termos" name="termos" id="termos">
+                                                <label class="custom-control-label col-sm-8" for="termos">Li e concordo com os <a class="" href="#" data-target="#modalTermoDeUso" data-toggle="modal">termos de uso</a>.</label>
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <button type="submit" class="btn btn-primary" (click)="signUp()">Cadastrar</button>
+                                            </div>
+                                            <!--<div class="col-sm-12 m10">
+                                                <button type="submit" class="btn btn-primary" (click)="signUpFacebook()">Facebook</button>
+                                            </div>-->
                                         </div>
-                                        <div class="input-group mb-2 left">
-                                            <label for="email" class="col-sm-4">Email:</label>
-                                            <input type="email" class="form-control col-sm-8" [(ngModel)]="user.email" name="email" id="email" />
-                                        </div>
-                                        <div class="input-group mb-2 left">
-                                            <label for="senha" class="col-sm-4">Senha:</label>
-                                            <input type="password" class="form-control col-sm-8" [(ngModel)]="user.password" name="senha" id="senha" />
-                                        </div>
-                                        <div class="custom-control custom-checkbox mr-sm-2 left">
-                                            <input type="checkbox" required class="custom-control-input col-sm-4" [(ngModel)]="user.termos" id="termos">
-                                            <label class="custom-control-label col-sm-8" for="termos">Li e concordo com os <a class="" href="#" data-target="#modalTermoDeUso" data-toggle="modal">termos de uso</a>.</label>
-                                        </div>
-                                        <div class="col-sm-12">
-                                            <button type="submit" class="btn btn-primary" (click)="signUp()">Cadastrar</button>
-                                        </div>
-                                        <!--<div class="col-sm-12 m10">
-                                            <button type="submit" class="btn btn-primary" (click)="signUpFacebook()">Facebook</button>
-                                        </div>-->
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>

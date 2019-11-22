@@ -13,9 +13,7 @@
                         <table class="table table-striped">
                             <thead class="center">
                                 <tr>
-                                    <th rowspan="2" scope="row">#</th>
-                                    <th rowspan="2" scope="row">Nome</th>
-                                    <th rowspan="2" scope="row">Email</th>
+                                    <th rowspan="2" scope="row">Apelido</th>
                                     <th colspan="5" scope="row">Personalidade</th>
                                     <th rowspan="2" scope="row">Opções</th>
                                 </tr>
@@ -30,9 +28,10 @@
 
                             <tbody *ngIf="_aprovados.length > 0; else noAprovados">
                                 <tr *ngFor="let aprov of _aprovados;" scope="row">
-                                    <td>{{aprov.id}}</td>
-                                    <td>{{aprov.nome}}</td>
-                                    <td>{{aprov.email}}</td>
+                                    <td *ngIf="aprov.apelido != '' && aprov.apelido != undefined ; else noName">{{aprov.apelido}}</td>
+                                    <ng-template #noName>
+                                        <td>Não informado</td>
+                                    </ng-template>
                                     <td>{{aprov.perfil.personalidade.abertura}}</td>
                                     <td>{{aprov.perfil.personalidade.concordancia}}</td>
                                     <td>{{aprov.perfil.personalidade.consciencia}}</td>

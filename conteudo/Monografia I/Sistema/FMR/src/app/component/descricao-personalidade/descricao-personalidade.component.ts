@@ -9,6 +9,7 @@ import { PercentPipe } from '@angular/common';
 export class DescricaoPersonalidadeComponent implements OnInit {
 
   @Input("personality") personalidade: any = {};
+  @Input("short") short : boolean = false;
 
   percent : any = {};
 

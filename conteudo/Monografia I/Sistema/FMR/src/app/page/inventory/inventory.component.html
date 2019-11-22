@@ -4,9 +4,24 @@
             <div class="card">
                 <div class="card-header center"><h4 class="strong">Inventário</h4></div>
                 <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-12 description">
+                            <p><strong>Instruções:</strong> As declarações a seguir dizem respeito à sua percepção sobre si mesmo. Sua tarefa é indicar a força do seu acordo com cada afirmação, utilizando uma escala na qual 1 indica discordo completamente, 5 indica concordo completamente e 2, 3, e 4 representam julgamentos intermediáros. Nas caixas após cada instrução, clique em um número de 1 a 5 da seguinte escala: </p>
+                            <div class="row">
+                                <div class="legenda">
+                                    <p><span class="circle">1</span> <br />Discordo totalmente</p>
+                                    <p><span class="circle">2</span> <br />Discordo parcialmente</p>
+                                    <p><span class="circle">3</span> <br />Nem concordo nem discordo</p>
+                                    <p><span class="circle">4</span> <br />Concordo parcialmente</p>
+                                    <p><span class="circle">5</span> <br />Concordo totalmente</p>
+                                </div>
+                            </div>
+                            <p>Não há respostas "certas" ou "erradas", portanto, selecione o número que melhor reflete você em cada afirmação. Tome seu tempo e considere cada declaração cuidadosamente. Depois de concluir todas as perguntas, clique em "Atualizar" na parte inferior.</p>
+                        </div>
+                    </div>
                     <div class="form-group question row" *ngFor="let q of questions;">
                         <div class="col-sm-8"><span class="strong">{{q.id}} -</span> {{q.pergunta}}</div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-4 answer">
                             <div class="custom-control custom-radio custom-control-inline">
                                 <input type="radio" id="Q{{q.id}}_1" name="Q{{q.id}}" (change)="select(1, q.id)" class="custom-control-input">
                                 <label class="custom-control-label" for="Q{{q.id}}_1">1</label>

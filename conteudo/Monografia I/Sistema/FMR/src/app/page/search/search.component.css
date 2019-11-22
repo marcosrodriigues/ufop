@@ -1,0 +1,41 @@
+.center {
+    text-align: center;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+.form-search .field {
+    margin-bottom: 25px;
+}
+
+.container {
+    border-right: 1px solid #c3c3c3;
+}
+
+.form-search .title {
+    font-weight: bold;;
+    margin-bottom: 50px;
+}
+
+.img-fluid {
+    max-width: 235px !important;
+    max-height: 235px !important;
+}
+
+.card {
+
+    margin-bottom: 10px !important;
+    border: 0px;
+}
+
+.right {
+    text-align: right;
+}
+
+.mb50 {
+    margin-bottom: 50px;
+}

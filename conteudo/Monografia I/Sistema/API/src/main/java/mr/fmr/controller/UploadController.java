@@ -2,8 +2,6 @@ package mr.fmr.controller;
 
 import mr.fmr.model.User;
 import mr.fmr.payload.UploadFile;
-import mr.fmr.service.EstudanteService;
-import mr.fmr.service.RepublicaService;
 import mr.fmr.service.StorageService;
 import mr.fmr.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -10,16 +10,20 @@ export class HeaderComponent implements OnInit {
 
   isLogged = false;
 
+  menu : any = [];
+
   constructor(private _userService : UserService) { }
 
   ngOnInit() {
-    if (this._userService.getToken() != '') {
-      this.isLogged = true;
-    }
+    this.isLogged = this._userService.isLogged();
+  }
+
+  ngOnChanges() {
+    this.isLogged = this._userService.isLogged();
+    
   }
 
   logout() {
     this._userService.logout();
   }
-
 }

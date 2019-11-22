@@ -36,6 +36,7 @@ import { ChartComponent } from './component/chart/chart.component';
 import { DescricaoPersonalidadeComponent } from './component/descricao-personalidade/descricao-personalidade.component';
 import { ChartColumnCompareComponent } from './component/chart-column-compare/chart-column-compare.component';
 import { TableCompareComponent } from './component/table-compare/table-compare.component';
+import { ChartDifferenceComponent } from './component/chart-difference/chart-difference.component';
 
 
 @NgModule({
@@ -62,6 +63,7 @@ import { TableCompareComponent } from './component/table-compare/table-compare.c
     DescricaoPersonalidadeComponent,
     ChartColumnCompareComponent,
     TableCompareComponent,
+    ChartDifferenceComponent,
   ],
   imports: [
     BrowserModule,
