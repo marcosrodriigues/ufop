@@ -11,6 +11,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 import java.util.stream.IntStream;
 
 @RestController
@@ -18,8 +19,9 @@ import java.util.stream.IntStream;
 public class InteligenciaComputacionalController {
 
     private final int MAX_ANSWER = 10;
-    private final Long MAX_ANSWER_TO_SAVE = 5000000L;
-    private final String JSON_PATH = "/home/marcos/19.2/Inteligência Computacional/TP/personality_#.data";
+    //private final Long MAX_ANSWER_TO_SAVE = 1000000L;
+    private Long MAX_ANSWER_TO_SAVE = 1000000L;
+    private final String JSON_PATH = "/home/marcos/19.2/Inteligência Computacional/TP/personality_random_1000000.data";
     //private final String JSON_PATH = "/media/marcos/MARCOS/Personality/personality_#.data";
     //private final String JSON_PATH = "/media/marcos/Xico/Personality/personality_#.data";
 
@@ -30,6 +32,18 @@ public class InteligenciaComputacionalController {
 
     @GetMapping(value = "/ic")
     public String getPayloads() {
+        run();
+        return "Arquivos gerados";
+    }
+
+    @GetMapping(value = "/ic/{id}")
+    public String getPayloads(Long count) {
+        this.MAX_ANSWER_TO_SAVE = count;
+        run();
+        return "Arquivos gerados";
+    }
+
+    private void run() {
         List<Payload> payloads = new ArrayList<>();
         Payload initial = new Payload();
         PerguntaEResposta[] initialPergunta = new PerguntaEResposta[MAX_ANSWER];
@@ -48,7 +62,8 @@ public class InteligenciaComputacionalController {
         while(true) {
             payload = new Payload();
 
-            payload.perguntasRespostas = generateNextAnswers(lastPayload.perguntasRespostas);
+            //payload.perguntasRespostas = generateNextAnswers(lastPayload.perguntasRespostas);
+            payload.perguntasRespostas = generateRandomAnswer();
 
             if (payload.perguntasRespostas == null) {
                 count++;
@@ -64,11 +79,10 @@ public class InteligenciaComputacionalController {
                 count++;
                 save(payloads);
                 payloads.clear();
+                break;
             }
             lastPayload = payload;
         }
-
-        return "Arquivos gerados";
     }
 
     private void save(List<Payload> payloads) {
@@ -100,6 +114,19 @@ public class InteligenciaComputacionalController {
         }
 
         perg[changeIndex].resposta++;
+
+        return perg;
+    }
+
+    PerguntaEResposta[] generateRandomAnswer() {
+        PerguntaEResposta[] perg = new PerguntaEResposta[MAX_ANSWER];
+        Random rand = new Random();
+
+        for (int i = 0; i < perg.length; i++) {
+            perg[i] = new PerguntaEResposta();
+            perg[i].pergunta = (i + 1);
+            perg[i].resposta = (rand.nextInt(5)) + 1;
+        }
 
         return perg;
     }
