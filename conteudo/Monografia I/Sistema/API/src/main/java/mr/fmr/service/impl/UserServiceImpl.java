@@ -37,11 +37,16 @@ public class UserServiceImpl implements UserDetailsService, UserService {
         if (user == null) {
             throw new UsernameNotFoundException("Invalid username or password.");
         }
+
         return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), getAuthority(user));
     }
 
     private List<SimpleGrantedAuthority> getAuthority(User user) {
         return Arrays.asList(new SimpleGrantedAuthority(user.getTipo()));
+    }
+
+    public User findByEmail(String email) {
+        return repository.findByEmail(email);
     }
 
     @Override
@@ -74,9 +79,15 @@ public class UserServiceImpl implements UserDetailsService, UserService {
 
         if (user.getUsername() == null || user.getUsername().isEmpty()) {
             String username = user.getEmail().split("@")[0];
-            User userAux = repository.findByUsername(username);
-            if (userAux == null)
-                user.setUsername(username);
+            String usernameAux = username;
+            int count = 1;
+
+            while (repository.findByUsername(username) != null) {
+                username = usernameAux + "_" + count;
+                count++;
+            }
+
+            user.setUsername(username);
         }
 
         user.setPassword(passwordEncoder.encode(user.getPassword()));

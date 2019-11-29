@@ -25,6 +25,9 @@ export class ProfileEstudanteComponent implements OnInit, OnChanges {
   
   _republicas: any = [];
 
+  errorCEP = '';
+  successUpdate = '';
+
   constructor(private _userService : UserService,
               private _utilService : UtilService,
               private _universidadeService : UniversidadeService,
@@ -68,6 +71,7 @@ export class ProfileEstudanteComponent implements OnInit, OnChanges {
   }
 
   changeCep() {
+    this.errorCEP = '';
     this._utilService.getAddressByCep(this.endereco.cep).subscribe((data : any) => {
       if (data != null) {
         this.endereco.logradouro = data.logradouro;
@@ -77,7 +81,7 @@ export class ProfileEstudanteComponent implements OnInit, OnChanges {
         this.endereco.cidade = data.localidade;
       }
     }, err => {
-      alert("CEP inválido!");
+      this.errorCEP = 'CEP inválido';
     })
   }
 
@@ -87,7 +91,7 @@ export class ProfileEstudanteComponent implements OnInit, OnChanges {
     }
     
     this._userService.update(this.profile).subscribe(data => {
-      alert("Usuário atualizado");
+      this.successUpdate = 'Seus dados foram atualizado!';
       this.profile = data;
       this.endereco = this.profile.endereco;
     })

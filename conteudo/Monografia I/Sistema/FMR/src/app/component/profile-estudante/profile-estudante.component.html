@@ -95,6 +95,9 @@
                                 <div class="col-sm-4">
                                     <input type="text" id="cep" class="form-control" (change)="changeCep()" placeholder="XXXXX-XXX" [(ngModel)]="endereco.cep" />
                                 </div>
+                                <div *ngIf="errorCEP != ''" class="alert alert-warning">
+                                    <span>{{errorCEP}}</span>
+                                </div>
                             </div>
                             <div class="form-group row">
                                 <label for="logradouro" class="col-sm-2 col-form-label">Logradouro: </label>
@@ -174,6 +177,10 @@
 
                 <div class="card-footer center">
                     <button class="btn btn-primary" (click)="save()">Atualizar</button>
+
+                    <div *ngIf="successUpdate != ''" class="alert alert-success m10">
+                        <strong>{{successUpdate}}</strong>
+                    </div>
                 </div>
             </div>
         </div>

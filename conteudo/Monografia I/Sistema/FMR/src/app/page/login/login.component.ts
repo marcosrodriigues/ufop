@@ -45,16 +45,29 @@ export class LoginComponent implements OnInit {
 
   signUp() {
     this.errorSignUp = '';
+    if (this.user.tipo == '') {
+      this.errorSignUp += "Tipo deve ser preenchido!";
+    }
+    if (this.user.email == '') {
+      this.errorSignUp += "Email deve ser preenchido!";
+    }
+    if (this.user.password == '') {
+      this.errorSignUp += "Password deve ser preenchido!\n";
+    }
     if (!this.user.termos) {
-      this.errorSignUp = 'Leia os termos de uso!'
+      this.errorSignUp += 'Leia os termos de uso!\n';
+    }
+
+    if (this.errorSignUp != '') {
       return;
     }
+
     this.waitSignUp = true;
     this.userService.create(this.user).subscribe(data => {
       this.okSignUp = 'Usuário criado com sucesso. Você já pode fazer login!';
       this.waitSignUp = false;
     }, err => {
-      this.errorSignUp = err.message;
+      this.errorSignUp = err.error.message;
     })
   }
 }

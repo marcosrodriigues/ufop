@@ -31,6 +31,12 @@ public class UserController {
         if(user.getPerfil() == null)
             user.setPerfil(new Perfil());
 
+        User aux = userService.findByEmail(user.getEmail());
+
+        if (aux != null) {
+            throw new RuntimeException("Email já cadastrado!");
+        }
+
         return userService.save(user);
     }
 
