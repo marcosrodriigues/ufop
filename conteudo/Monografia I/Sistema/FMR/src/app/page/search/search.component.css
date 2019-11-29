@@ -39,3 +39,35 @@
 .mb50 {
     margin-bottom: 50px;
 }
+
+.profile-foto {
+    border-radius: 50%;
+    overflow: hidden;
+    text-align: center;;
+}
+
+.profile-foto > .link {
+    display: none;
+}
+
+.profile-foto:hover {
+    opacity: 0.8;
+}
+
+.profile-foto:hover > .link {
+    display: inline;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    opacity: 0.8;
+    text-align: center;
+}
+
+.black {
+    color: #000000;
+}
+
+.strong {
+    font-weight: bold;
+}

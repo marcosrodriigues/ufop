@@ -43,13 +43,14 @@
                     <div class="container center">
                         <div class="row" *ngIf="reps.length > 0; else noRepublic">
                             <div class="col-sm-4 card" *ngFor="let rep of reps; let i = index;">
-                                <h5 class="center"><a [routerLink]="['/republica', rep.id]">{{rep.nome}}</a></h5>
-                                <div *ngIf="rep.fotoUrl != null && rep.fotoUrl != undefined; else defaultPhoto;">
+                            <a class="black" [routerLink]="['/republica', rep.id]">
+                                <div class="profile-foto">
                                     <img src="{{ rep.fotoUrl }}" class="img-fluid m10" />
+                                    <div class="link">
+                                        <h5 class="center strong">{{rep.nome}}</h5>
+                                    </div>
                                 </div>
-                                <ng-template #defaultPhoto>
-                                    <img src="assets/img/default-user.png" class="img-fluid m10" />
-                                </ng-template>
+                            </a>
                                 <p *ngIf="me != null && rep.personalidade != null"><strong>Compatibilidade: </strong> {{calculaPorcentagem(rep, me)}}%</p>
                                 <p><strong>Bairro: </strong> {{rep.bairro}}</p>
                             </div>

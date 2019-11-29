@@ -39,6 +39,7 @@ export class SearchComponent implements OnInit {
   loadReps() {
     this._repService.findBySearch(this.q).subscribe(data => {
       this.reps = data;
+      this.setDefaultValueReps();
     }, err => {
       //alert(err.error.message);
     });
@@ -59,8 +60,16 @@ export class SearchComponent implements OnInit {
     $event.preventDefault();
     this._repService.findBySearch(this.q).subscribe(data => {
       this.reps = data;
+      this.setDefaultValueReps();
     }, err => {
       alert(err.error.message);
     });
   }
+
+  setDefaultValueReps() {
+    this.reps.forEach(e => {
+      if (e.fotoUrl == null || e.fotoUrl == undefined) e.fotoUrl = 'assets/img/default-user.png'
+    });
+  }
+  
 }
