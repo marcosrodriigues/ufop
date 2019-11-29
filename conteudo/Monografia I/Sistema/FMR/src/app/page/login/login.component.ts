@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { UserService } from 'src/app/service/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -21,7 +22,14 @@ export class LoginComponent implements OnInit {
     termos: false
   }
 
-  constructor(private userService: UserService) { }
+  errorSignIn = '';
+  errorSignUp = '';
+  okSignUp = '';
+  waitSignIn = false;
+  waitSignUp = false;
+
+  constructor(private userService: UserService,
+              private _router : Router ) { }
 
   ngOnInit() {
   }
@@ -29,19 +37,24 @@ export class LoginComponent implements OnInit {
   signIn() {
     this.userService.login(this.login).subscribe(data => {
       this.userService.saveToken(data);
-      window.location.href = "/";
+      window.location.href = '/';
     }, err => {
-      alert('Usuário e/ou senha incorretos!');
+      this.errorSignIn = 'Usuário e/ou senha incorretos!';
     })
   }
 
   signUp() {
+    this.errorSignUp = '';
     if (!this.user.termos) {
-      alert('Leia os termos :)');
+      this.errorSignUp = 'Leia os termos de uso!'
       return;
     }
+    this.waitSignUp = true;
     this.userService.create(this.user).subscribe(data => {
-      alert('Usuário criado!\nVocê já pode fazer login!');
+      this.okSignUp = 'Usuário criado com sucesso. Você já pode fazer login!';
+      this.waitSignUp = false;
+    }, err => {
+      this.errorSignUp = err.message;
     })
   }
 }

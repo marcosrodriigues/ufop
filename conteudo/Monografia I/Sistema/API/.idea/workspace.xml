@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fc219239-2079-4995-a683-d8752583a4dd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mr/fmr/payload/RepublicaDetalhes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mr/fmr/payload/RepublicaDetalhes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mr/fmr/payload/RepublicaDetalhes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mr/fmr/payload/RepublicaDetalhes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FMR/src/app/component/chart/chart.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/component/chart/chart.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FMR/src/app/page/republic-detail/republic-detail.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/page/republic-detail/republic-detail.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FMR/src/app/page/republic-detail/republic-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/page/republic-detail/republic-detail.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FMR/src/app/page/republic-detail/republic-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FMR/src/app/page/republic-detail/republic-detail.component.ts" afterDir="false" />
-    </list>
+    <list default="true" id="fc219239-2079-4995-a683-d8752583a4dd" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,11 +23,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/payload/RepublicaDetalhes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-163">
-              <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+            <state relative-caret-position="167">
+              <caret line="82" column="5" lean-forward="true" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
               <folding>
                 <element signature="e#1988#1989#0" expanded="true" />
                 <element signature="e#2018#2019#0" expanded="true" />
@@ -47,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="98" column="13" selection-start-line="98" selection-start-column="13" selection-end-line="98" selection-end-column="13" />
+            <state relative-caret-position="185">
+              <caret line="99" column="5" lean-forward="true" selection-start-line="99" selection-start-column="5" selection-end-line="99" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -172,12 +163,12 @@
       <workItem from="1574792697321" duration="696000" />
       <workItem from="1574868005567" duration="185000" />
       <workItem from="1574989635575" duration="3069000" />
-      <workItem from="1575043369174" duration="5979000" />
+      <workItem from="1575043369174" duration="7393000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14008000" />
+    <option name="totallyTimeSpent" value="15422000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1366" height="741" extended-state="6" />
@@ -265,23 +256,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="98" column="13" selection-start-line="98" selection-start-column="13" selection-end-line="98" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/payload/RepublicaDetalhes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-163">
-          <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+        <state relative-caret-position="167">
+          <caret line="82" column="5" lean-forward="true" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
           <folding>
             <element signature="e#1988#1989#0" expanded="true" />
             <element signature="e#2018#2019#0" expanded="true" />
             <element signature="e#2187#2188#0" expanded="true" />
             <element signature="e#2224#2225#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mr/fmr/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="99" column="5" lean-forward="true" selection-start-line="99" selection-start-column="5" selection-end-line="99" selection-end-column="5" />
         </state>
       </provider>
     </entry>

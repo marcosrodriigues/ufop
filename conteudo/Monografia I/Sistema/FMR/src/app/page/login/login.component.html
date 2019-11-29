@@ -23,12 +23,13 @@
                                                 </div>
                                                 <input type="password" class="form-control" [(ngModel)]="login.password" id="password" name="password" placeholder="senha">
                                             </div>
-                                            <div class="custom-control custom-checkbox mr-sm-2">
-                                                <input type="checkbox" class="custom-control-input" id="remember">
-                                                <label class="custom-control-label" for="remember">Lembrar acesso</label>
-                                            </div>
                                             <div class="col-sm-12">
                                                 <button class="btn btn-primary" (click)="signIn()">Acessar</button>
+                                            </div>
+                                            <div class="col-sm-12" *ngIf="errorSignIn != ''">
+                                                <div class="alert alert-danger alert-dismissible m10">
+                                                    <strong>{{errorSignIn}}</strong>
+                                                </div>
                                             </div>
                                         </div>
                                     </form>
@@ -64,9 +65,17 @@
                                             <div class="col-sm-12">
                                                 <button type="submit" class="btn btn-primary" (click)="signUp()">Cadastrar</button>
                                             </div>
-                                            <!--<div class="col-sm-12 m10">
-                                                <button type="submit" class="btn btn-primary" (click)="signUpFacebook()">Facebook</button>
-                                            </div>-->
+                                            <div class="col-sm-12" *ngIf="errorSignUp != ''">
+                                                <div class="alert alert-danger alert-dismissible m10">
+                                                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                                    <strong>{{errorSignUp}}</strong>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12" *ngIf="okSignUp != ''">
+                                                <div class="alert alert-success alert-dismissible m10">
+                                                    <strong>{{okSignUp}}</strong>
+                                                </div>
+                                            </div>
                                         </div>
                                     </form>
                                 </div>
