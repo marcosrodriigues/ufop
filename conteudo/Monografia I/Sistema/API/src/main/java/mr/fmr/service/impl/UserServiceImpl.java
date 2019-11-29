@@ -92,6 +92,9 @@ public class UserServiceImpl implements UserDetailsService, UserService {
 
     @Override
     public User getUserFromPrincipal(Principal principal) {
+        if (principal == null) {
+            return new User();
+        }
         User user = repository.findByUsername(principal.getName());
         return user;
     }

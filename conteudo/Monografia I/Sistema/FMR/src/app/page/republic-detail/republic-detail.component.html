@@ -4,38 +4,88 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-sm-3">
-                    <div *ngIf="rep.image != null; else defaultPhoto;">
-                        <img src="{{ rep.image }}" class="img-fluid" />
+                    <div class="picture-container">
+                        <div class="picture">
+                            <img src="{{ rep.image }}" class="img-fluid img-profile" />
+                        </div>
                     </div>
-                    <ng-template #defaultPhoto>
-                        <img src="assets/img/default-user.png" class="img-fluid" />
-                    </ng-template>
                 </div>
                 <div class="col-sm-5">
-                    <div class="form-group row">
-                        <div class="col-sm-4 strong right">E-mail:</div>
-                        <div class="col-sm-8">{{ rep.email }}</div>
-                    </div>
-                    <!--<div class="form-group row">
-                        <div class="col-sm-4 strong right">Telefone:</div>
-                        <div class="col-sm-8">(31) 3552-2369</div>
-                    </div>-->
-                    <div class="form-group row">
-                        <div class="col-sm-4 strong right">Cidade/UF:</div>
-                        <div class="col-sm-8">{{rep.cidade}} / {{rep.uf}}</div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm-4 strong right">Moradores:</div>
-                        <div class="col-sm-8">{{rep.sizeMoradores}}</div>
-                    </div>
-                    <!--<div class="form-group row">
-                        <div class="col-sm-4 strong right">Universidade:</div>
-                        <div class="col-sm-8">UFOP</div>
-                    </div>-->
+                    <app-descricao-personalidade 
+                        [personality]="rep.perfil.personalidade"></app-descricao-personalidade>
                 </div>
                 <div class="col-sm-4">
                     <app-chart [personality]="rep.perfil.personalidade"></app-chart>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header"><h5 class="strong">Informações</h5></div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-6 info">
+                    <div class="row">
+                        <span class="col-sm-4 strong">Nome: </span>
+                        <span class="col-sm-8">{{rep.nome}}</span>
+                    </div>
+                    <div class="row">
+                        <span class="col-sm-4 strong">Email: </span>
+                        <span class="col-sm-8">{{rep.email}}</span>
+                    </div>
+                    <div class="row">
+                        <span class="col-sm-4 strong">Caráter: </span>
+                        <span class="col-sm-8">{{rep.carater}}</span>
+                    </div>
+                    <div class="row">
+                        <span class="col-sm-4 strong">Nº moradores: </span>
+                        <span class="col-sm-8">{{rep.sizeMoradores}}</span>
+                    </div>
+                    <div class="row">
+                        <span class="col-sm-4 strong">Cidade/UF: </span>
+                        <span class="col-sm-8">{{rep.cidade}}/{{rep.uf}}</span>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 info">
+                    <div class="row">
+                        <span class="col-sm-4 strong">Descrição: </span>
+                        <span class="col-sm-8">{{rep.descricao}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header"><h5 class="strong">Gráficos</h5></div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-12 inherit" *ngIf="me.perfil != undefined && rep.perfil != undefined; else noPersonality">
+                    <div class="col-sm-6 border center">
+                        <app-chart-difference class="col-sm-11"
+                            [me]="me.perfil.personalidade"
+                            [other]="rep.perfil.personalidade">
+                        </app-chart-difference>
+                        <div class="mt-25">
+                            <span>O gráfico apresenta a diferença da sua personalidade em relação a personalidade da república.</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 border center">
+                        <app-chart-column-compare
+                            [me]="me.perfil.personalidade"
+                            [other]="rep.perfil.personalidade">
+                        </app-chart-column-compare>
+                        <div class="mt-25">
+                            <span>O gráfico apresenta um comparativo entre a sua personalidade e a personalidade da república..</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <ng-template #noPersonality>
+                    <div class="col-sm-12 center border">
+                        <h5>Você ou a república ainda não completaram o cadastro.</h5>
+                    </div>
+                </ng-template>
             </div>
         </div>
     </div>

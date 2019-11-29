@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import * as CanvasJS from '../../../assets/js/canvasjs.min';
 import { RepublicaService } from 'src/app/service/republica.service';
+import { UserService } from 'src/app/service/user.service';
 
 @Component({
   selector: 'app-republic-detail',
@@ -10,58 +10,33 @@ import { RepublicaService } from 'src/app/service/republica.service';
 })
 export class RepublicDetailComponent implements OnInit {
 
-  rep: any = {}
+  rep: any = {  }
+  me: any = { }
   id: any = 0;
 
-  data = [
-    { y: 52, label: "Abertura para o novo" },
-    { y: 68, label: "Realização" },
-    { y: 40, label: "Extroversão" },
-    { y: 35, label: "Socialização" },
-    { y: 75, label: "Neuroticismo" },
-  ];
-
-  constructor(private router: ActivatedRoute, private _repService : RepublicaService) { 
+  constructor(private router: ActivatedRoute, private _repService : RepublicaService,
+    private _userService: UserService) { 
     this.router.paramMap.subscribe(params => {
       this.id = params.get("id");
     })
   }
 
   ngOnInit() {
+      this._userService.me().subscribe(data => {
+        this.me = data;
+      }, err => {
+        this.me = {};
+      });
+
       this.initRep();
   }
 
   initRep() {
     this._repService.findOne(this.id).subscribe(data => {
       this.rep = data;
-      console.log(this.rep);
-
-      this.data[0].y = this.rep.perfil.personalidade.abertura;
-      this.data[1].y = this.rep.perfil.personalidade.concordancia;
-      this.data[2].y = this.rep.perfil.personalidade.consciencia;
-      this.data[3].y = this.rep.perfil.personalidade.extroversao;
-      this.data[4].y = this.rep.perfil.personalidade.neuroticismo;
-
-      this.initializeChart('chart');
+      if (this.rep.image == null || this.rep.image == '') {
+        this.rep.image = 'assets/img/default-user.png';
+      }
     });
   }
-
-  initializeChart(id) {
-    let chart = new CanvasJS.Chart(id, {
-      theme: "light2",
-      animationEnabled: true,
-      title:{
-        text: "Personalidade"
-      },
-      axisY : {
-        title: "Pontuação"
-      },
-      data: [{
-        type: "column",
-        dataPoints: this.data,
-      }]
-    });
-    chart.render();
-  }
-
 }

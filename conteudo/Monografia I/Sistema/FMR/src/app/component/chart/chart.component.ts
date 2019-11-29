@@ -8,7 +8,7 @@ import * as CanvasJS from '../../../assets/js/canvasjs.min';
 })
 export class ChartComponent implements OnInit {
 
-  @Input("personality") personality: any = [];
+  @Input("personality") personality: any = {};
 
   dataChart = [
     { y: 0.1, label: "Abertura" },

@@ -13,6 +13,8 @@ public class RepublicaDetalhes {
     private Perfil perfil;
     private String image;
     private String email;
+    private String carater;
+    private String descricao;
 
     public RepublicaDetalhes(Republica republica) {
         this.id = republica.getId();
@@ -23,6 +25,9 @@ public class RepublicaDetalhes {
         this.perfil = republica.getPerfil();
         this.image = republica.getFotoUrl();
         this.email = republica.getEmail();
+        this.carater = republica.getCarater() != null ? republica.getCarater().name() : "Não informado";
+        this.descricao = !String.valueOf(republica.getDescricao()).isEmpty() ? republica.getDescricao() : "Não informado";
+
     }
 
     public Long getId() {
@@ -87,5 +92,13 @@ public class RepublicaDetalhes {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getCarater() {
+        return carater;
+    }
+
+    public String getDescricao() {
+        return this.descricao;
     }
 }
