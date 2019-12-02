@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { UrlService } from './default/url.service';
 
 
 @Injectable({
@@ -37,13 +38,12 @@ export class UtilService {
     {sigla: "TO", nome: "Tocantins"}
   ]
 
-  constructor(private _http : HttpClient) { }
+  constructor(private _http : HttpClient, private _url : UrlService) { }
 
-  private baseUtil = "http://localhost:8080/util";
+  private baseUtil =  this._url.baseUrl() + "/util";
 
   getAddressByCep(cep) {
     cep = cep.replace("-", "");
-    
     return this._http.get(`https://viacep.com.br/ws/${cep}/json/`);
   }
 

@@ -11,14 +11,16 @@ import { InventoryComponent } from './page/inventory/inventory.component';
 
 
 const routes: Routes = [
-  { path: '', component: IndexComponent },
-  { path: 'sobre', component: SobreComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'search', component: SearchComponent },
-  { path: 'republica/:id', component: RepublicDetailComponent},
-  { path: 'profile', component: ProfileComponent},
-  { path: 'profile/republica', component: MyRepublicComponent },
-  { path: 'inventario', component: InventoryComponent }
+  { path: '', component: IndexComponent, pathMatch: 'full' },
+  { path: 'sobre', component: SobreComponent, pathMatch: 'full' },
+  { path: 'login', component: LoginComponent, pathMatch: 'full' },
+  { path: 'search/:cidade/:carater', component: SearchComponent, pathMatch: 'full' },
+  { path: 'republica/:id', component: RepublicDetailComponent, pathMatch: 'full'},
+  { path: 'profile', component: ProfileComponent, pathMatch: 'full'},
+  { path: 'profile/republica', component: MyRepublicComponent, pathMatch: 'full' },
+  { path: 'inventario', component: InventoryComponent, pathMatch: 'full' },
+  { path: '**', redirectTo:'', pathMatch:'full' }
+
 ];
 
 @NgModule({

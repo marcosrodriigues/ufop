@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
+import { UrlService } from './default/url.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EstudanteService {
 
-  constructor(private _http: HttpClient) { }
+  constructor(private _http: HttpClient, private _url : UrlService) { }
 
-  private baseUrl : string = "http://localhost:8080/estudante";
+  private baseUrl : string = this._url.baseUrl() + "/estudante";
 
   //vinculo do usuário ativo com a república {{id}}
   solicitarVinculo(id_republica: any) {

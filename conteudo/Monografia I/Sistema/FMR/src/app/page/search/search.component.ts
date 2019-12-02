@@ -18,10 +18,12 @@ export class SearchComponent implements OnInit {
   constructor(private router: ActivatedRoute, 
               private _repService : RepublicaService,
               private _userService : UserService) { 
-    this.router.queryParams.subscribe(params => {
+    this.router.params.subscribe(params => {
       this.q.cidade = params['cidade'];
       this.q.carater = params['carater'];
       this.cidade = this.q.cidade;
+
+      console.log(params);
     })
   }
 

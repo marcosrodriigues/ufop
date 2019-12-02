@@ -3,15 +3,15 @@ import { HttpRequest, HttpHandler, HttpEvent, HttpInterceptor, HttpResponse } fr
 import { Observable } from 'rxjs';
 import { UserService } from './service/user.service';
 import { tap } from "rxjs/operators";
+import { UrlService } from './service/default/url.service';
 
 @Injectable()
 export class MyHttpInterceptor implements HttpInterceptor {
-    constructor(private _user: UserService) {}
+    constructor(private _user: UserService, private _url : UrlService) {}
 
     intercept(request: HttpRequest<any>, next: HttpHandler) : Observable<HttpEvent<any>> {
-        if (request.url.indexOf('localhost') < 0) return next.handle(request);
+        if (request.url.indexOf(this._url.baseUrl()) < 0) return next.handle(request);
 
-        //console.log("Token: " + this._user.getToken());
         if (this._user.getToken() != '') {
             const updateRequest = request.clone({
                 headers: request.headers.set('Authorization', `Bearer ${this._user.getToken()}`)

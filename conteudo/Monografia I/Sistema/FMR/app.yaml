@@ -1,0 +1,25 @@
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+env_variables:
+  API_KEY: AIzaSyD4R_5i8vge1vF4QbjFNCOuNGVXWl_l_2A
+
+handlers:
+
+  - url: /
+    static_files: dist/index.html
+    upload: dist/index.html
+    
+  - url: /
+    static_dir: dist
+
+skip_files:
+  - e2e/
+  - node_modules/
+  - src/
+  - ^(.*/)?\..*$
+  - ^(.*/)?.*\.json$
+  - ^(.*/)?.*\.md$
+  - ^(.*/)?.*\.yaml$
+  - ^LICENSE

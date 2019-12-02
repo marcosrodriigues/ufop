@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
+import { UrlService } from './default/url.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,11 +11,12 @@ export class UserService {
 
   constructor(private _router : Router,
               private _http : HttpClient,
-              private _cookie : CookieService ) { }
+              private _cookie : CookieService,
+              private _url : UrlService ) { }
 
-  private baseUrl : string =  "http://localhost:8080/user";
-  private baseEstudante : string =  "http://localhost:8080/estudante";
-  private baseRepublica : string =  "http://localhost:8080/republica";
+  private baseUrl : string =  this._url.baseUrl() +"/user";
+  private baseEstudante : string =  this._url.baseUrl() + "/estudante";
+  private baseRepublica : string =  this._url.baseUrl() + "/republica";
 
   login(loginData) {
     let params = new HttpParams()
@@ -28,7 +30,7 @@ export class UserService {
       'Content-type': 'application/x-www-form-urlencoded'
     }
 
-    return this._http.post('http://localhost:8080/' + 'oauth/token', params, {headers});
+    return this._http.post(this._url.baseUrl() + '/oauth/token', params, {headers});
   }
 
   delete() {
@@ -42,7 +44,7 @@ export class UserService {
 
   checkCredentials() {
     if (!this._cookie.check('access_token'))
-      this._router.navigate(['/login']);
+      this._router.navigate(['login']);
   }
 
   isLogged() {

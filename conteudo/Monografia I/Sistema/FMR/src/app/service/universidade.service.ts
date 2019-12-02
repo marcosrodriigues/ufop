@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { UrlService } from './default/url.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UniversidadeService {
 
-  private baseUrl: string = "http://localhost:8080/universidade";
+  private baseUrl: string = this._url.baseUrl() + "/universidade";
 
-  constructor(private _http : HttpClient) { }
+  constructor(private _http : HttpClient, private _url : UrlService) { }
 
   getAll() {
     return this._http.get(this.baseUrl);

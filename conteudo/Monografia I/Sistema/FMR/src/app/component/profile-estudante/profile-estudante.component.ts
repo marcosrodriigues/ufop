@@ -2,7 +2,6 @@ import { Component, OnInit, OnChanges, Input } from '@angular/core';
 import { UniversidadeService } from 'src/app/service/universidade.service';
 import { UtilService } from 'src/app/service/util.service';
 import { UserService } from 'src/app/service/user.service';
-import * as CanvasJS from '../../../assets/js/canvasjs.min';
 import { FileService } from 'src/app/service/file.service';
 
 @Component({
@@ -115,7 +114,7 @@ export class ProfileEstudanteComponent implements OnInit, OnChanges {
     if (event.target.files.length > 0) {
       this.fotoPerfil = event.target.files[0];
       this._fileService.upload(this.fotoPerfil).subscribe((data:any) => {
-        this.profile.fotoUrl = data.fileUri;
+        this.profile.fotoUrl = data.filename;
       })
     }
   }

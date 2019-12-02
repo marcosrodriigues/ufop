@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams, HttpRequest } from '@angular/common/http';
+import { UrlService } from './default/url.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FileService {
 
-  private baseUrl: string = "http://localhost:8080/upload";
+  private baseUrl: string = this._url.baseUrl() + "/upload";
   
-  constructor(private _http : HttpClient) { }
+  constructor(private _http : HttpClient, private _url : UrlService) { }
 
   upload(file : File) {
     const uploadData = new FormData();
@@ -20,6 +21,7 @@ export class FileService {
   }
 
   get(file: string) {
-    return this._http.get(this.baseUrl + "/" + file);
+    return this._http.get(file);
+    //return this._http.get(this.baseUrl + "/" + file);
   }
 }

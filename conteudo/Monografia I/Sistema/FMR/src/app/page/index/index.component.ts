@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-index',
@@ -9,12 +10,13 @@ export class IndexComponent implements OnInit {
 
   search = "";
 
-  constructor() { }
+  constructor(private _router: Router) { }
 
   ngOnInit() {
   }
 
   submit() {
-    window.location.href = 'search?cidade=' + this.search + '&carater=TODOS';
+    this._router.navigate(['search', this.search, 'TODOS']);
+    //window.location.href = 'search?cidade=' + this.search + '&carater=TODOS';
   }
 }
