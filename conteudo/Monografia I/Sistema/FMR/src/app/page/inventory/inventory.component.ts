@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { InventarioService } from 'src/app/service/inventario.service';
 import { QuestionarioService } from 'src/app/service/questionario.service';
 import  * as $ from 'jquery';
+import { UserService } from 'src/app/service/user.service';
 
 @Component({
   selector: 'app-inventory',
@@ -11,16 +12,22 @@ import  * as $ from 'jquery';
 export class InventoryComponent implements OnInit {
 
   constructor(private _inventory : InventarioService,
-              private _questionario: QuestionarioService) { }
+              private _questionario: QuestionarioService,
+              private _user : UserService) { }
 
   questions : any = [];
   answers: any = [];
+  user: any = {};
 
   ngAfterContentInit() {
     
   }
 
   ngOnInit() {
+    this._user.me().subscribe(data => {
+      this.user = data;
+    })
+
     this._questionario.getAll().subscribe(data => {
       this.questions = data;
     });

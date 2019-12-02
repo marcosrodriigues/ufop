@@ -19,36 +19,46 @@
                             <p>Não há respostas "certas" ou "erradas", portanto, selecione o número que melhor reflete você em cada afirmação. Tome seu tempo e considere cada declaração cuidadosamente. Depois de concluir todas as perguntas, clique em "Atualizar" na parte inferior.</p>
                         </div>
                     </div>
-                    <div class="form-group question row" *ngFor="let q of questions;">
-                        <div class="col-sm-8"><span class="strong">{{q.id}} -</span> {{q.pergunta}}</div>
-                        <div class="col-sm-4 answer">
-                            <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" id="Q{{q.id}}_1" name="Q{{q.id}}" (change)="select(1, q.id)" class="custom-control-input">
-                                <label class="custom-control-label" for="Q{{q.id}}_1">1</label>
+                    <div *ngIf="user.tipo == 'ESTUDANTE'; else noEstudante">
+                        <div class="form-group question row" *ngFor="let q of questions;">
+                            <div class="col-sm-8"><span class="strong">{{q.id}} -</span> {{q.pergunta}}</div>
+                            <div class="col-sm-4 answer">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="Q{{q.id}}_1" name="Q{{q.id}}" (change)="select(1, q.id)" class="custom-control-input">
+                                    <label class="custom-control-label" for="Q{{q.id}}_1">1</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="Q{{q.id}}_2" name="Q{{q.id}}" (change)="select(2, q.id)" class="custom-control-input">
+                                    <label class="custom-control-label" for="Q{{q.id}}_2">2</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="Q{{q.id}}_3" name="Q{{q.id}}" (change)="select(3, q.id)" class="custom-control-input">
+                                    <label class="custom-control-label" for="Q{{q.id}}_3">3</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="Q{{q.id}}_4" name="Q{{q.id}}" (change)="select(4, q.id)" class="custom-control-input">
+                                    <label class="custom-control-label" for="Q{{q.id}}_4">4</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="Q{{q.id}}_5" name="Q{{q.id}}" (change)="select(5, q.id)" class="custom-control-input">
+                                    <label class="custom-control-label" for="Q{{q.id}}_5">5</label>
+                                </div>
                             </div>
-                            <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" id="Q{{q.id}}_2" name="Q{{q.id}}" (change)="select(2, q.id)" class="custom-control-input">
-                                <label class="custom-control-label" for="Q{{q.id}}_2">2</label>
-                            </div>
-                            <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" id="Q{{q.id}}_3" name="Q{{q.id}}" (change)="select(3, q.id)" class="custom-control-input">
-                                <label class="custom-control-label" for="Q{{q.id}}_3">3</label>
-                            </div>
-                            <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" id="Q{{q.id}}_4" name="Q{{q.id}}" (change)="select(4, q.id)" class="custom-control-input">
-                                <label class="custom-control-label" for="Q{{q.id}}_4">4</label>
-                            </div>
-                            <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" id="Q{{q.id}}_5" name="Q{{q.id}}" (change)="select(5, q.id)" class="custom-control-input">
-                                <label class="custom-control-label" for="Q{{q.id}}_5">5</label>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-12 center">
+                                <button class="btn btn-primary" (click)="send()">Atualizar</button>
                             </div>
                         </div>
                     </div>
-                    <div class="form-group row">
-                        <div class="col-sm-12 center">
-                            <button class="btn btn-primary" (click)="send()">Atualizar</button>
+                    <ng-template #noEstudante>
+                        <div class="form-group row">
+                            <div class="col-sm-12 center strong"> 
+                                <p>Inventário disponível apenas para o perfil ESTUDANTE</p>
+                                <p>A personalidade da república é calculada com base na personalidade dos seus moradores</p>
+                            </div>
                         </div>
-                    </div>
+                    </ng-template>
                 </div>
                 <div class="card-footer center"><a href="https://pages.uoregon.edu/sanjay/bigfive.html" class="nav-link link" target="_new"> Informações sobre o Big Five</a></div>
             </div>

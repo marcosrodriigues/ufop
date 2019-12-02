@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/service/user.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  isLogged = false;
+
+  constructor(private _userService : UserService) { }
 
   ngOnInit() {
+    this.isLogged = this._userService.isLogged();
+  }
+
+  ngOnChanges() {
+    this.isLogged = this._userService.isLogged();
+  }
+
+  logout() {
+    this._userService.logout();
   }
 
 }

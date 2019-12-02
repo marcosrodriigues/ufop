@@ -5,7 +5,10 @@
                 <div class="col-md-4">
                     <p class="title">Find My Republic</p>    
                     <p class="strong"><a [routerLink]="['sobre']">Sobre</a></p>
-                    <p class="strong"><a [routerLink]="['contato']">Contato</a></p>
+                    <p class="strong" *ngIf="isLogged"><a routerLink="profile">Perfil</a></p>
+                    <p class="strong" *ngIf="isLogged"><a routerLink="inventario">Inventário</a></p>
+                    <p class="strong" *ngIf="!isLogged"><a routerLink="login">Login</a></p>
+                    <p class="strong" *ngIf="isLogged"><a href="#" (click)="logout()">Sair</a></p>
                 </div>
                 <div class="col-md-4">
                     <p class="title">Contato</p>

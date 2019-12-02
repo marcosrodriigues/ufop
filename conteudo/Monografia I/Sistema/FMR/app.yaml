@@ -6,13 +6,13 @@ env_variables:
   API_KEY: AIzaSyD4R_5i8vge1vF4QbjFNCOuNGVXWl_l_2A
 
 handlers:
-
-  - url: /
+  - url: /(.*\.(gif|png|jpg|css|js)(|\.map))$
+    static_files: dist/\1
+    upload: dist/(.*)(|\.map)
+    
+  - url: /(.*)
     static_files: dist/index.html
     upload: dist/index.html
-    
-  - url: /
-    static_dir: dist
 
 skip_files:
   - e2e/
