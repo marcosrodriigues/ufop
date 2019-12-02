@@ -32,6 +32,12 @@
                                 <div class="col-sm-12 center">
                                     <button class="btn btn-primary" (click)="calcularPersonalidade()">Calcular personalidade</button>
                                 </div>
+                                <div class="col-sm-12 center" *ngIf="errorPersonalidade != ''">
+                                    <div class="alert alert-danger alert-dismissible m10">
+                                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                        <strong>{{errorPersonalidade}}</strong>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-4">

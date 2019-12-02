@@ -84,10 +84,13 @@ export class ProfileRepublicaComponent implements OnInit, OnChanges {
     }
   }
 
+  errorPersonalidade = '';
   calcularPersonalidade() {
     this._repService.calcularPersonalidade(this.profile).subscribe(data => {
       this.profile = data;
       this.configureMe();
+    }, err => {
+      this.errorPersonalidade = "Ocorreu um erro. Verifique se você tem pelo menos 01 morador vinculado ao seu perfil para poder calcular sua personalidade."
     })
   }
 }
