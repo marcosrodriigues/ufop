@@ -25,7 +25,10 @@ export class ProfileEstudanteComponent implements OnInit, OnChanges {
   _republicas: any = [];
 
   errorCEP = '';
-  successUpdate = '';
+
+  callbackUpdateMessage = '';
+  callbackUpdateClass = '';
+  sending = false;
 
   constructor(private _userService : UserService,
               private _utilService : UtilService,
@@ -89,10 +92,18 @@ export class ProfileEstudanteComponent implements OnInit, OnChanges {
       this.profile.endereco = this.endereco;
     }
     
+    this.sending = true;
     this._userService.update(this.profile).subscribe(data => {
-      this.successUpdate = 'Seus dados foram atualizados!';
+      this.sending = false;
+      this.callbackUpdateMessage = 'Seus dados foram atualizados!';
+      this.callbackUpdateClass = 'success';
       this.profile = data;
       this.endereco = this.profile.endereco;
+    }, err => {
+      this.sending = false;
+      this.callbackUpdateMessage = 'Ocorreu um erro. Verifique seus dados e tente novamente';
+      console.log('Detalhes do erro: ' + err);
+      this.callbackUpdateClass = 'danger';
     })
   }
 
