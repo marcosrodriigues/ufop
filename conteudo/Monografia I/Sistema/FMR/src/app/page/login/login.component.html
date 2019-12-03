@@ -24,17 +24,18 @@
                                                 <input type="password" class="form-control" [(ngModel)]="login.password" id="password" name="password" placeholder="senha">
                                             </div>
                                             <div class="col-sm-12">
-                                                <button *ngIf="signInAvailable" type="submit" class="btn btn-primary">Acessar</button>
-                                                <div *ngIf="!signInAvailable" class="spinner-border text-primary" role="status">
+                                                <button *ngIf="!loginSendingSignIn" type="submit" class="btn btn-primary">Acessar</button>
+                                                <div *ngIf="loginSendingSignIn" class="spinner-border text-primary" role="status">
                                                     <span class="sr-only">Carregando...</span>
                                                 </div>
                                             </div>
                                             <div class="col-sm-12">
                                                 <a class="nav-link link" href="#" data-target="#modalEsqueciMinhaSenha" data-toggle="modal"> esqueci minha senha</a>
                                             </div>
-                                            <div class="col-sm-12" *ngIf="errorSignIn != ''">
-                                                <div class="alert alert-danger alert-dismissible m10">
-                                                    <strong>{{errorSignIn}}</strong>
+                                            <div class="col-sm-12" *ngIf="loginCallbackMessageSignIn != ''">
+                                                <div class="alert alert-{{loginCallbackClassSignIn}} alert-dismissible m10">
+                                                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                                    <strong>{{loginCallbackClassSignIn}}</strong>
                                                 </div>
                                             </div>
                                         </div>
@@ -69,20 +70,15 @@
                                                 <label class="custom-control-label col-sm-8" for="termos">Li e concordo com os <a class="" href="#" data-target="#modalTermoDeUso" data-toggle="modal">termos de uso</a>.</label>
                                             </div>
                                             <div class="col-sm-12">
-                                                <button *ngIf="signUpAvailable" type="submit" class="btn btn-primary">Cadastrar</button>
-                                                <div *ngIf="!signUpAvailable" class="spinner-border text-primary" role="status">
+                                                <button *ngIf="!loginSendingSignUp" type="submit" class="btn btn-primary">Cadastrar</button>
+                                                <div *ngIf="loginSendingSignUp" class="spinner-border text-primary" role="status">
                                                     <span class="sr-only">Carregando...</span>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-12" *ngIf="errorSignUp != ''">
-                                                <div class="alert alert-danger alert-dismissible m10">
+                                            <div class="col-sm-12" *ngIf="loginCallbackMessageSignUp != ''">
+                                                <div class="alert alert-{{loginCallbackClassSignUp}} alert-dismissible m10">
                                                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                                                    <strong>{{errorSignUp}}</strong>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-12" *ngIf="okSignUp != ''">
-                                                <div class="alert alert-success alert-dismissible m10">
-                                                    <strong>{{okSignUp}}</strong>
+                                                    <strong>{{loginCallbackMessageSignUp}}</strong>
                                                 </div>
                                             </div>
                                         </div>

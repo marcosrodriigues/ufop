@@ -27,7 +27,7 @@
                             </thead>
 
                             <tbody *ngIf="_aprovados.length > 0; else noAprovados">
-                                <tr *ngFor="let aprov of _aprovados; let i = index;" scope="row">
+                                <tr *ngFor="let aprov of _aprovados;" scope="row">
                                     <td *ngIf="aprov.apelido != '' && aprov.apelido != undefined ; else noName">{{aprov.apelido}}</td>
                                     <ng-template #noName>
                                         <td>Não informado</td>

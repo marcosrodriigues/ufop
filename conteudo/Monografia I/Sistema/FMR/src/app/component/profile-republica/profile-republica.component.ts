@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { UserService } from 'src/app/service/user.service';
 import { UtilService } from 'src/app/service/util.service';
-import * as CanvasJS from '../../../assets/js/canvasjs.min';
 import { FileService } from 'src/app/service/file.service';
 import { RepublicaService } from 'src/app/service/republica.service';
 
@@ -25,6 +24,17 @@ export class ProfileRepublicaComponent implements OnInit, OnChanges {
    endereco: any = { }
    estados: any = [ ]
    fotoPerfil: File;
+
+   repSendingPersonalidade = false;
+   repMsgPersonalidade = '';
+   repClassPersonalidade = '';
+
+   repSendingForm = false;
+   repMsgForm = '';
+   repClassForm = '';
+
+   repSendingCep = false;
+   repMsgCEP = '';
 
   constructor(private _userService: UserService,
               private _utilService : UtilService,
@@ -51,7 +61,9 @@ export class ProfileRepublicaComponent implements OnInit, OnChanges {
         this.personalidade = this.profile.perfil.personalidade;
   }
 
+  
   changeCep() {
+    this.repSendingCep = true;
     this._utilService.getAddressByCep(this.endereco.cep).subscribe((data : any) => {
       if (data != null) {
         this.endereco.logradouro = data.logradouro;
@@ -60,18 +72,28 @@ export class ProfileRepublicaComponent implements OnInit, OnChanges {
         this.endereco.uf = data.uf;
         this.endereco.cidade = data.localidade;
       }
+      this.repSendingCep = false;
     }, err => {
-      alert("CEP inválido!");
+      this.repSendingCep = false;
+      this.repMsgCEP = "CEP inválido!";
     })
   }
 
   save() {
+    this.repSendingForm = true;
     if (this.endereco != undefined) this.profile.endereco = this.endereco;
     
     this._userService.update(this.profile).subscribe(data => {
-      alert("Usuário atualizado");
       this.profile = data;
       this.endereco = this.profile.endereco;
+
+      this.repMsgForm = 'Suas informações foram salvas!';
+      this.repClassForm = 'success'
+      this.repSendingForm = false;
+    }, err => {
+      this.repMsgForm = 'Ocorreu um erro ao processar suas informações. Verifique seus dados e tente novamente!';
+      this.repClassForm = 'danger'
+      this.repSendingForm = false;
     })
   }
 
@@ -84,13 +106,19 @@ export class ProfileRepublicaComponent implements OnInit, OnChanges {
     }
   }
 
-  errorPersonalidade = '';
+  
   calcularPersonalidade() {
+    this.repSendingPersonalidade = true;
     this._repService.calcularPersonalidade(this.profile).subscribe(data => {
       this.profile = data;
       this.configureMe();
+      this.repSendingPersonalidade = false;
+      this.repMsgPersonalidade = 'Personalidade atualizada!';
+      this.repClassPersonalidade = 'success';
     }, err => {
-      this.errorPersonalidade = "Ocorreu um erro. Verifique se você tem pelo menos 01 morador vinculado ao seu perfil para poder calcular sua personalidade."
+      this.repSendingPersonalidade = false;
+      this.repMsgPersonalidade = 'Ocorreu um erro. Verifique se você tem pelo menos 01 morador vinculado ao seu perfil para poder calcular sua personalidade!';
+      this.repClassPersonalidade = 'danger';
     })
   }
 }

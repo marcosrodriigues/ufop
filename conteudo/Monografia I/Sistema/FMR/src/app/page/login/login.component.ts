@@ -22,12 +22,15 @@ export class LoginComponent implements OnInit {
     termos: false
   }
 
-  errorSignIn = '';
-  errorSignUp = '';
-  okSignUp = '';
 
-  signUpAvailable = true;
-  signInAvailable = true;
+  loginSendingSignIn = false;
+  loginCallbackMessageSignIn = '';
+  loginCallbackClassSignIn = '';
+
+  loginSendingSignUp = false;
+  loginCallbackMessageSignUp = '';
+  loginCallbackClassSignUp = '';
+  
 
   constructor(private userService: UserService,
               private _router : Router ) { }
@@ -36,43 +39,46 @@ export class LoginComponent implements OnInit {
   }
 
   signIn() {
-    this.signInAvailable = false;
+    this.loginSendingSignIn = true;
     this.userService.login(this.login).subscribe(data => {
       this.userService.saveToken(data);
-      this.signInAvailable = true;
+      this.loginSendingSignIn = false;
       window.location.href = '/';
     }, err => {
-      this.errorSignIn = 'Usuário e/ou senha incorretos!';
-      this.signInAvailable = true;
+      this.loginCallbackMessageSignIn = 'Usuário e/ou senha incorretos!';
+      this.loginCallbackClassSignIn = 'Usuário e/ou senha incorretos!';
+      this.loginSendingSignIn = true;
     })
   }
 
   signUp() {
-    this.errorSignUp = '';
+    this.loginCallbackMessageSignUp = '';
     if (this.user.tipo == '') {
-      this.errorSignUp += "Tipo deve ser preenchido!";
+      this.loginCallbackMessageSignUp += "Tipo deve ser preenchido!";
     }
     if (this.user.email == '') {
-      this.errorSignUp += "Email deve ser preenchido!";
+      this.loginCallbackMessageSignUp += "Email deve ser preenchido!";
     }
     if (this.user.password == '') {
-      this.errorSignUp += "Password deve ser preenchido!\n";
+      this.loginCallbackMessageSignUp += "Password deve ser preenchido!\n";
     }
     if (!this.user.termos) {
-      this.errorSignUp += 'Leia os termos de uso!\n';
+      this.loginCallbackMessageSignUp += 'Leia os termos de uso!\n';
     }
 
-    if (this.errorSignUp != '') {
+    if (this.loginCallbackMessageSignUp != '') {
       return;
     }
 
-    this.signUpAvailable = false;
+    this.loginSendingSignUp = false;
     this.userService.create(this.user).subscribe(data => {
-      this.okSignUp = 'Usuário criado com sucesso. Você já pode fazer login!';
-      this.signUpAvailable = true;
+      this.loginCallbackMessageSignUp = 'Usuário criado com sucesso. Você já pode fazer login!';
+      this.loginCallbackClassSignUp = 'success';
+      this.loginSendingSignUp = true;
     }, err => {
-      this.errorSignUp = err.error.message;
-      this.signUpAvailable = true;
+      this.loginCallbackMessageSignUp = err.error.message;
+      this.loginCallbackClassSignUp = 'danger';
+      this.loginSendingSignUp = true;
     })
   }
 }

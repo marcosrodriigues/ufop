@@ -14,8 +14,8 @@ export class EstudanteService {
   //vinculo do usuário ativo com a república {{id}}
   solicitarVinculo(id_republica: any) {
     let params = new HttpParams()
-      .set("id_republica", id_republica.id);
-    return this._http.post(this.baseUrl + "/vincular", params );
+      .set("id_republica", id_republica);
+    return this._http.post(this.baseUrl + "/vincular", params);
   }
 
   save(estudante: any) {

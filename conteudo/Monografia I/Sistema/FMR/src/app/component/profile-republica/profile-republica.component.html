@@ -30,12 +30,13 @@
 
                             <div class="row m25">
                                 <div class="col-sm-12 center">
-                                    <button class="btn btn-primary" (click)="calcularPersonalidade()">Calcular personalidade</button>
-                                </div>
-                                <div class="col-sm-12 center" *ngIf="errorPersonalidade != ''">
-                                    <div class="alert alert-danger alert-dismissible m10">
+                                    <button *ngIf="!repSendingPersonalidade" class="btn btn-primary" (click)="calcularPersonalidade()">Calcular personalidade</button>
+                                    <div *ngIf="repSendingPersonalidade" class="spinner-border text-primary" role="status">
+                                        <span class="sr-only">Carregando...</span>
+                                    </div>
+                                    <div class="alert alert-{{repClassPersonalidade}} alert-dismissible m10" *ngIf="repMsgPersonalidade != ''">
                                         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                                        <strong>{{errorPersonalidade}}</strong>
+                                        <strong>{{repMsgPersonalidade}}</strong>
                                     </div>
                                 </div>
                             </div>
@@ -95,6 +96,13 @@
                                 <div class="col-sm-4">
                                     <input type="text" id="cep" class="form-control" (change)="changeCep()" placeholder="XXXXX-XXX" [(ngModel)]="endereco.cep" />
                                 </div>
+                                <div *ngIf="repSendingCep" class="spinner-border text-primary" role="status">
+                                    <span class="sr-only">Carregando...</span>
+                                </div>
+                                <div class="alert alert-warning alert-dismissible" *ngIf="repMsgCEP != ''">
+                                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                    <span>{{repMsgCEP}}</span>
+                                </div>
                             </div>
                             <div class="form-group row">
                                 <label for="logradouro" class="col-sm-2 col-form-label">Logradouro: </label>
@@ -128,7 +136,6 @@
                                     <select class="custom-select" id="uf" [(ngModel)]="endereco.uf">
                                         <option disabled>Escolha</option>
                                         <option *ngFor="let est of estados;" value="{{est.sigla}}">{{est.sigla}} - {{est.nome}}</option>
-                                        
                                     </select>
                                 </div>
                             </div>
@@ -167,13 +174,19 @@
                                     <button class="btn btn-danger" data-target="#modalExcluirConta" data-toggle="modal"> Excluir conta</button>
                                 </div>
                             </div>
-                            
                         </div>
                     </div>
                 </div>
 
                 <div class="card-footer center">
-                    <button class="btn btn-primary" (click)="save()">Atualizar</button>
+                    <button class="btn btn-primary" *ngIf="!repSendingForm" (click)="save()">Atualizar</button>
+                    <div *ngIf="repSendingForm" class="spinner-border text-primary" role="status">
+                        <span class="sr-only">Carregando...</span>
+                    </div>
+                    <div *ngIf="repMsgForm != ''" class="alert alert-{{repClassForm}} alert-dismissible m10">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <strong>{{repMsgForm}}</strong>
+                    </div>
                 </div>
             </div>
         </div>
