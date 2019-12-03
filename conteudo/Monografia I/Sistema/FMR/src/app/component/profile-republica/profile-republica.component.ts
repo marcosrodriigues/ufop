@@ -79,7 +79,7 @@ export class ProfileRepublicaComponent implements OnInit, OnChanges {
     if (event.target.files.length > 0) {
       let foto = event.target.files[0];
       this._fileService.upload(foto).subscribe((data:any) => {
-        this.profile.fotoUrl = data.fileUri;
+        this.profile.fotoUrl = data.filename;
       })
     }
   }
