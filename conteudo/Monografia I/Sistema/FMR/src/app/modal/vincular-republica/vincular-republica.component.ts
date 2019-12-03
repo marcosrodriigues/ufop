@@ -19,27 +19,30 @@ export class VincularRepublicaComponent implements OnInit, OnChanges {
   filterCidade: string = "";
 
   _republicas: any = [];
-  republica: number;
+  republica: number = 0;
 
   constructor(private _utilService: UtilService,
               private _republicaService: RepublicaService,
               private _estudanteService: EstudanteService) { }
 
+  msgVinculo = "";
+  classMsg = "danger";
   ngOnChanges() {
-    this.initFields();
+    this.initEstados();
   }
 
   private initFields() {
-    if (this.profile.endereco != undefined && this.profile.endereco.uf != null) {
-      this.filterEstado = this.profile.endereco.uf;
-      this.changeEstado();
+    if(this.profile.endereco != undefined) {
+      if (this.profile.endereco.uf != null) {
+        this.filterEstado = this.profile.endereco.uf;
+        this.changeEstado();
+      }
+
+      if (this.profile.endereco.uf != null) {
+        this.filterCidade = this.profile.endereco.cidade;
+        this.changeCidade();
+      }
     }
-      
-    if (this.profile.endereco != undefined && this.profile.endereco.cidade != null) {
-      this.filterCidade = this.profile.endereco.cidade;
-      this.changeCidade();
-    }
-      
   }
 
   ngOnInit() {
@@ -57,6 +60,10 @@ export class VincularRepublicaComponent implements OnInit, OnChanges {
             stateShow.push(uf);
           } 
         });
+
+        this._estados = stateShow;
+
+        this.initFields();
     })
   }
 
@@ -67,15 +74,34 @@ export class VincularRepublicaComponent implements OnInit, OnChanges {
   }
 
   changeCidade() {
+    this.filterCidade;
     this._republicaService.findByUfAndCity(this.filterEstado, this.filterCidade).subscribe(data => {
         this._republicas = data;
     });
   }
 
+  loading = false;
   solicitarVinculo() {
-      this._estudanteService.solicitarVinculo(this.republica).subscribe(data => {
-        alert('Sua requisição foi solicitada para a república');
-        window.location.href = window.location.pathname;
-      })
+    this.loading = true;
+    this._estudanteService.solicitarVinculo(this.republica).subscribe(data => {
+      this.msgVinculo = "Sua solicitação foi enviada para a república.";
+      this.classMsg = "success";
+      this.loading = false;
+      window.location.href = window.location.pathname;
+    }, err => {
+      this.msgVinculo = "Ocorreu um erro. Tente novamente e caso o problema persista, entre em contato com o administrador do sistema.";
+      this.classMsg = "danger";
+      this.loading = false;
+    })
+  }
+
+  compareFn(c1: any, c2:any): boolean {     
+    return c1 && c2 ? c1.id === c2.id : c1 === c2; 
+  }
+
+  compareFnTxt(c1: any, c2:any): boolean {  
+    let equal = c1.toLowerCase() === c2.toLowerCase();
+    if (equal) this.filterCidade = c1;
+    return equal; 
   }
 }

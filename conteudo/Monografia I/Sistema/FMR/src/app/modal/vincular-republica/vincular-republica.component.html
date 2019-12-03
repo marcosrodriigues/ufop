@@ -9,36 +9,44 @@
       </div>
       <div class="modal-body">
         <div class="form-group row">
-            <label for="repUf" class="col-sm-4 custom-control-label strong">UF: </label>
+            <label for="repUf" class="col-sm-4 custom-control-label strong">UF*: </label>
             <div class="col-sm-8">
-                <select class="form-control" id="repUf" [(ngModel)]="filterEstado" (change)="changeEstado()">   
-                    <option select disabled>SELECIONE</option>
-                    <option *ngFor="let uf of _estados;" value="{{uf.sigla}}">{{uf.sigla}} - {{uf.nome}}</option>
+                <select class="form-control" id="repUf" [(ngModel)]="filterEstado" 
+                  name="filterEstado" [compareWith]="compareFnTxt" (change)="changeEstado()">   
+                    <option select="select">SELECIONE</option>
+                    <option *ngFor="let uf of _estados;" value="{{uf.sigla}}">{{uf.nome}}</option>
                 </select>
             </div>
         </div>
         <div class="form-group row">
-            <label for="repCidade" class="col-sm-4 custom-control-label strong">Cidade: </label>
+            <label for="repCidade" class="col-sm-4 custom-control-label strong">Cidade*: </label>
             <div class="col-sm-8">
-                <select class="form-control" id="repCidade" [(ngModel)]="filterCidade" (change)="changeCidade()">   
-                    <option select disabled>SELECIONE</option>
+                <select class="form-control" id="filterCidade" name="filterCidade" 
+                  [(ngModel)]="filterCidade" [compareWith]="compareFnTxt" (change)="changeCidade()">
+                    <option selected>SELECIONE O ESTADO</option>
                     <option *ngFor="let city of _cidades;" value="{{city}}">{{city}}</option>
                 </select>
             </div>
         </div>
         <div class="form-group row">
-            <label for="rep" class="col-sm-4 custom-control-label strong">República: </label>
+            <label for="rep" class="col-sm-4 custom-control-label strong">República*: </label>
             <div class="col-sm-8">
-                <select class="form-control" id="rep" [(ngModel)]="republica">
-                    <option disabled selected>SELECIONE</option>
-                    <option *ngFor="let rep of _republicas;" value="{{rep.id}}">{{rep.id}} - {{rep.nome}}</option>
+                <select class="form-control" id="rep" [(ngModel)]="republica" [compareWith]="compareFn">
+                    <option selected>SELECIONE A CIDADE</option>
+                    <option *ngFor="let rep of _republicas;" [(ngValue)]="rep">{{rep.id}} - {{rep.nome}}</option>
                 </select>
             </div>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="solicitarVinculo()">Solicitar</button>
+          <div class="alert alert-{{classMsg}} alert-dismissible" *ngIf="msgVinculo!=''">
+            <p>{{msgVinculo}}</p>
+          </div>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          <button type="button" *ngIf="!loading" class="btn btn-primary" (click)="solicitarVinculo()">Solicitar</button>
+          <div *ngIf="loading" class="spinner-border text-primary" role="status">
+              <span class="sr-only">Carregando...</span>
+          </div>
       </div>
     </div>
   </div>
