@@ -27,12 +27,12 @@
                             </thead>
 
                             <tbody *ngIf="_aprovados.length > 0; else noAprovados">
-                                <tr *ngFor="let aprov of _aprovados;" scope="row">
+                                <tr *ngFor="let aprov of _aprovados; let i = index;" scope="row">
                                     <td *ngIf="aprov.apelido != '' && aprov.apelido != undefined ; else noName">{{aprov.apelido}}</td>
                                     <ng-template #noName>
                                         <td>Não informado</td>
                                     </ng-template>
-                                    <td colspan="5" class="center" *ngIf="aprov.perfil.personalidade == null; else hasPersonality">Morador não fez o Teste de Personalidade<td>
+                                    <td colspan="5" class="center" *ngIf="aprov.perfil.personalidade == null; else hasPersonality">Morador não fez o Teste de Personalidade</td>
                                     <ng-template #hasPersonality>
                                         <td>{{aprov.perfil.personalidade.abertura}}</td>
                                         <td>{{aprov.perfil.personalidade.concordancia}}</td>
@@ -40,17 +40,22 @@
                                         <td>{{aprov.perfil.personalidade.extroversao}}</td>
                                         <td>{{aprov.perfil.personalidade.neuroticismo}}</td>
                                     </ng-template>
-                                    <td colspan="2">
-                                        <button class="btn btn-danger" aria-label="Recusar" (click)="recusar(aprov)">
+                                    <td *ngIf="!sendingMorador">
+                                        <button class="btn btn-danger" aria-label="Desaprovar" (click)="recusar(aprov.id)">
                                             <i class="fa fa-remove"></i> 
                                         </button>
+                                    </td>
+                                    <td *ngIf="sendingMorador">
+                                        <div class="spinner-border text-primary" role="status">
+                                            <span class="sr-only">Carregando...</span>
+                                        </div>
                                     </td>
                                 </tr>
                             </tbody>
                     
                             <ng-template #noAprovados>
                                 <tr scope="row">
-                                    <td colspan="4" class="center">Nenhum morador</td>
+                                    <td colspan="7" class="center">Nenhum morador</td>
                                 </tr>
                             </ng-template>
                         </table>
@@ -71,6 +76,7 @@
                                 <tr>
                                     <th scope="col">#</th>
                                     <th scope="col">Nome</th>
+                                    <th scope="col">Apelido</th>
                                     <th scope="col">Email</th>
                                     <th scope="col">Opções</th>
                                 </tr>
@@ -80,14 +86,20 @@
                                 <tr *ngFor="let morador of _pendentes;" scope="row">
                                     <td>{{morador.id}}</td>
                                     <td>{{morador.nome}}</td>
+                                    <td>{{morador.apelido}}</td>
                                     <td>{{morador.email}}</td>
-                                    <td>
+                                    <td *ngIf="!sendingPendente">
                                         <button class="btn btn-success mr-10" aria-label="Aprovar" (click)="aprovar(morador)">
                                             <i class="fa fa-check"></i> 
                                         </button>
-                                        <button class="btn btn-danger" aria-label="Recusar" (click)="recusar(morador)">
+                                        <button class="btn btn-danger" aria-label="Recusar" (click)="remover(morador)">
                                             <i class="fa fa-remove"></i> 
                                         </button>
+                                    </td>
+                                    <td *ngIf="sendingPendente">
+                                        <div class="spinner-border text-primary" role="status">
+                                            <span class="sr-only">Carregando...</span>
+                                        </div>
                                     </td>
                                 </tr>
                             </tbody>

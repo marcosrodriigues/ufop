@@ -44,7 +44,11 @@ export class RepublicaService {
   }
   
   recusar(morador: any) {
-    return this._http.post(this.baseUrl + "/recusar", morador);
+    return this._http.post(this.baseUrl + "/recusar/" + morador, {});
+  }
+
+  remover(morador: any) {
+    return this._http.post(this.baseUrl+"/remover/" + morador.id, {});
   }
 
   calcularPersonalidade(republica : any) {
