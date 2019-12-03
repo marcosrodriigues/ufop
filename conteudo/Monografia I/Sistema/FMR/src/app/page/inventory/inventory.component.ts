@@ -30,11 +30,11 @@ export class InventoryComponent implements OnInit {
 
     this._questionario.getAll().subscribe(data => {
       this.questions = data;
-    });
 
-    this._inventory.getInventario().subscribe(data => {
-      this.answers = data;
-      this.initAnswer();      
+      this._inventory.getInventario().subscribe(data => {
+        this.answers = data;
+        this.initAnswer();      
+      });
     });
   }
 

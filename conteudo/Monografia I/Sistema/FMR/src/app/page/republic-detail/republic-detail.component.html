@@ -56,37 +56,35 @@
             </div>
         </div>
     </div>
+
     <div class="card">
         <div class="card-header"><h5 class="strong">Gráficos</h5></div>
         <div class="card-body">
-            <div class="row">
-                <div class="col-sm-12 inherit" *ngIf="me.perfil != undefined && rep.perfil != undefined; else noPersonality">
-                    <div class="col-sm-6 border center">
-                        <app-chart-difference class="col-sm-11"
-                            [me]="me.perfil.personalidade"
-                            [other]="rep.perfil.personalidade">
-                        </app-chart-difference>
-                        <div class="mt-25">
-                            <span>O gráfico apresenta a diferença da sua personalidade em relação a personalidade da república.</span>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 border center">
-                        <app-chart-column-compare
-                            [me]="me.perfil.personalidade"
-                            [other]="rep.perfil.personalidade">
-                        </app-chart-column-compare>
-                        <div class="mt-25">
-                            <span>O gráfico apresenta um comparativo entre a sua personalidade e a personalidade da república..</span>
-                        </div>
+            <div class="row" *ngIf="me.perfil != undefined && rep.perfil != undefined; else noPersonality">
+                <div class="col-sm-6 center">
+                    <app-chart-difference
+                        [me]="me.perfil.personalidade"
+                        [other]="rep.perfil.personalidade">
+                    </app-chart-difference>
+                    <div class="mt-25">
+                        <span>O gráfico apresenta a diferença da sua personalidade em relação a personalidade da república.</span>
                     </div>
                 </div>
-                
-                <ng-template #noPersonality>
-                    <div class="col-sm-12 center border">
-                        <h5>Você ou a república ainda não completaram o cadastro.</h5>
+                <div class="col-sm-6 center">
+                    <app-chart-column-compare
+                        [me]="me.perfil.personalidade"
+                        [other]="rep.perfil.personalidade">
+                    </app-chart-column-compare>
+                    <div class="mt-25">
+                        <span>O gráfico apresenta um comparativo entre a sua personalidade e a personalidade da república..</span>
                     </div>
-                </ng-template>
+                </div>
             </div>
+            <ng-template #noPersonality>
+                <div class="col-sm-12 center border">
+                    <h5>Você ou a república ainda não completaram o cadastro.</h5>
+                </div>
+            </ng-template>
         </div>
     </div>
 </div>
