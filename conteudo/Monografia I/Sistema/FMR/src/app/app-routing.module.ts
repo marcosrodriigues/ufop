@@ -8,6 +8,7 @@ import { RepublicDetailComponent } from './page/republic-detail/republic-detail.
 import { ProfileComponent } from './page/profile/profile.component';
 import { MyRepublicComponent } from './page/my-republic/my-republic.component';
 import { InventoryComponent } from './page/inventory/inventory.component';
+import { ComoUsarComponent } from './page/como-usar/como-usar.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent, pathMatch: 'full'},
   { path: 'profile/republica', component: MyRepublicComponent, pathMatch: 'full' },
   { path: 'inventario', component: InventoryComponent, pathMatch: 'full' },
+  { path : 'como-usar', component: ComoUsarComponent, pathMatch: 'full' },
   { path: '**', redirectTo:'', pathMatch:'full' }
 
 ];
