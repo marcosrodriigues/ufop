@@ -1,15 +1,19 @@
 <section class="header bg bg-primary">
     <nav class="navbar navbar-expand-sm ">
         <div class="container-fluid">
-            <div class="col-sm-12">
-                <div class="left">
-                    <a class="nav-link title nav-title" [routerLink]="['']">
-                        <img src="/assets/img/logo_mini.png" height="50px" />
-                    </a>
-                </div>
+            <div class="left">
+                <a class="nav-link title nav-title" [routerLink]="['']">
+                    <img src="/assets/img/logo_mini.png" height="50px" />
+                </a>
+            </div>
 
-                <div class="right">
-                    <ul class="navbar-nav my-nav">
+            <div class="right">
+                <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navBarCollapse" aria-controls="navBarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navBarCollapse">
+                    <ul class="navbar-nav mr-auto">
                         <li class="navbar-item" [routerLinkActive]="['active']">
                             <a class="nav-link link" [routerLink]="['sobre']"><span>Sobre</span></a>        
                         </li>

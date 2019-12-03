@@ -9,8 +9,8 @@
             </div>
             <div class="modal-body">
                 <div class="row">
-                    <div class="col-sm-12">
-                        <table class="table table-striped">
+                    <div class="col-sm-12 table-responsive">
+                        <table class="table table-striped table-bordered">
                             <thead class="center">
                                 <tr>
                                     <th rowspan="2" scope="row">Apelido</th>
@@ -40,7 +40,7 @@
                                         <td>{{aprov.perfil.personalidade.extroversao}}</td>
                                         <td>{{aprov.perfil.personalidade.neuroticismo}}</td>
                                     </ng-template>
-                                    <td>
+                                    <td colspan="2">
                                         <button class="btn btn-danger" aria-label="Recusar" (click)="recusar(aprov)">
                                             <i class="fa fa-remove"></i> 
                                         </button>
@@ -65,8 +65,8 @@
 
             <div class="modal-body">
                 <div class="row">
-                    <div class="col-sm-12">
-                        <table class="table table-striped">
+                    <div class="col-sm-12 table-responsive">
+                        <table class="table table-striped table-bordered">
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>

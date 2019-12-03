@@ -1,4 +1,4 @@
-<div *ngIf="profile.tipo == 'ESTUDANTE'; then isEstudante"></div>
-<div *ngIf="profile.tipo == 'REPUBLICA'; then isRepublica"></div>
-<ng-template #isEstudante><app-profile-estudante [profile]="profile"></app-profile-estudante></ng-template>
-<ng-template #isRepublica><app-profile-republica [profile]="profile"></app-profile-republica></ng-template>
+<app-profile-estudante [profile]="profile" *ngIf="profile.tipo == 'ESTUDANTE'">
+</app-profile-estudante>
+<app-profile-republica [profile]="profile" *ngIf="profile.tipo == 'REPUBLICA'">
+</app-profile-republica>
