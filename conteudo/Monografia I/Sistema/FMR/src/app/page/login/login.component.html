@@ -26,6 +26,9 @@
                                             <div class="col-sm-12">
                                                 <button class="btn btn-primary" (click)="signIn()">Acessar</button>
                                             </div>
+                                            <div class="col-sm-12">
+                                                <a class="nav-link link" href="#" data-target="#modalEsqueciMinhaSenha" data-toggle="modal"> esqueci minha senha</a>
+                                            </div>
                                             <div class="col-sm-12" *ngIf="errorSignIn != ''">
                                                 <div class="alert alert-danger alert-dismissible m10">
                                                     <strong>{{errorSignIn}}</strong>
@@ -89,3 +92,4 @@
 </div>
 
 <app-termo-de-uso></app-termo-de-uso>
+<app-esqueci-minha-senha></app-esqueci-minha-senha>
