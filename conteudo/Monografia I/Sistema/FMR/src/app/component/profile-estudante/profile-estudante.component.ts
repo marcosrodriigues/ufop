@@ -90,7 +90,7 @@ export class ProfileEstudanteComponent implements OnInit, OnChanges {
     }
     
     this._userService.update(this.profile).subscribe(data => {
-      this.successUpdate = 'Seus dados foram atualizado!';
+      this.successUpdate = 'Seus dados foram atualizados!';
       this.profile = data;
       this.endereco = this.profile.endereco;
     })

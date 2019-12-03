@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { PercentPipe } from '@angular/common';
+import { PersonalidadeService } from 'src/app/service/personalidade.service';
 
 @Component({
   selector: 'app-descricao-personalidade',
@@ -13,7 +14,7 @@ export class DescricaoPersonalidadeComponent implements OnInit {
 
   percent : any = {};
 
-  constructor() { }
+  constructor(private _personalidade : PersonalidadeService) { }
 
   ngOnChanges() {
     this.setPercentage();
@@ -24,16 +25,6 @@ export class DescricaoPersonalidadeComponent implements OnInit {
   }
 
   setPercentage() {
-    this.percent.abertura = this.round(this.personalidade.abertura / 50 * 100, 2) + "%";
-    this.percent.concordancia = this.round(this.personalidade.concordancia / 45 * 100, 2) + "%";
-    this.percent.consciencia = this.round(this.personalidade.consciencia / 45 * 100, 2) + "%";
-    this.percent.extroversao = this.round(this.personalidade.extroversao / 40 * 100, 2) + "%";
-    this.percent.neuroticismo = this.round(this.personalidade.neuroticismo / 40 * 100, 2) + "%";
+    this.percent = this._personalidade.setPercentage(this.personalidade);
   }
-
-  private round(value, exp) {
-    return value.toFixed(exp);
-  }
-
-
 }

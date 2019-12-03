@@ -32,11 +32,14 @@
                                     <ng-template #noName>
                                         <td>Não informado</td>
                                     </ng-template>
-                                    <td>{{aprov.perfil.personalidade.abertura}}</td>
-                                    <td>{{aprov.perfil.personalidade.concordancia}}</td>
-                                    <td>{{aprov.perfil.personalidade.consciencia}}</td>
-                                    <td>{{aprov.perfil.personalidade.extroversao}}</td>
-                                    <td>{{aprov.perfil.personalidade.neuroticismo}}</td>
+                                    <td colspan="5" class="center" *ngIf="aprov.perfil.personalidade == null; else hasPersonality">Morador não fez o Teste de Personalidade<td>
+                                    <ng-template #hasPersonality>
+                                        <td>{{aprov.perfil.personalidade.abertura}}</td>
+                                        <td>{{aprov.perfil.personalidade.concordancia}}</td>
+                                        <td>{{aprov.perfil.personalidade.consciencia}}</td>
+                                        <td>{{aprov.perfil.personalidade.extroversao}}</td>
+                                        <td>{{aprov.perfil.personalidade.neuroticismo}}</td>
+                                    </ng-template>
                                     <td>
                                         <button class="btn btn-danger" aria-label="Recusar" (click)="recusar(aprov)">
                                             <i class="fa fa-remove"></i> 

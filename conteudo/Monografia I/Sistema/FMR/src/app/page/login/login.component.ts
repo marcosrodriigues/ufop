@@ -25,8 +25,9 @@ export class LoginComponent implements OnInit {
   errorSignIn = '';
   errorSignUp = '';
   okSignUp = '';
-  waitSignIn = false;
-  waitSignUp = false;
+
+  signUpAvailable = true;
+  signInAvailable = true;
 
   constructor(private userService: UserService,
               private _router : Router ) { }
@@ -35,11 +36,14 @@ export class LoginComponent implements OnInit {
   }
 
   signIn() {
+    this.signInAvailable = false;
     this.userService.login(this.login).subscribe(data => {
       this.userService.saveToken(data);
+      this.signInAvailable = true;
       window.location.href = '/';
     }, err => {
       this.errorSignIn = 'Usuário e/ou senha incorretos!';
+      this.signInAvailable = true;
     })
   }
 
@@ -62,12 +66,13 @@ export class LoginComponent implements OnInit {
       return;
     }
 
-    this.waitSignUp = true;
+    this.signUpAvailable = false;
     this.userService.create(this.user).subscribe(data => {
       this.okSignUp = 'Usuário criado com sucesso. Você já pode fazer login!';
-      this.waitSignUp = false;
+      this.signUpAvailable = true;
     }, err => {
       this.errorSignUp = err.error.message;
+      this.signUpAvailable = true;
     })
   }
 }

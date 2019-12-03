@@ -9,7 +9,7 @@
                             <div class="card">
                                 <div class="card-header"><h5>Login</h5></div>
                                 <div class="card-body">
-                                    <form class="form">
+                                    <form class="form" (ngSubmit)="signIn()">
                                         <div class="form-row align-items-center">
                                             <div class="input-group mb-2">
                                                 <div class="input-group-prepend">
@@ -24,7 +24,10 @@
                                                 <input type="password" class="form-control" [(ngModel)]="login.password" id="password" name="password" placeholder="senha">
                                             </div>
                                             <div class="col-sm-12">
-                                                <button class="btn btn-primary" (click)="signIn()">Acessar</button>
+                                                <button *ngIf="signInAvailable" type="submit" class="btn btn-primary">Acessar</button>
+                                                <div *ngIf="!signInAvailable" class="spinner-border text-primary" role="status">
+                                                    <span class="sr-only">Carregando...</span>
+                                                </div>
                                             </div>
                                             <div class="col-sm-12">
                                                 <a class="nav-link link" href="#" data-target="#modalEsqueciMinhaSenha" data-toggle="modal"> esqueci minha senha</a>
@@ -66,7 +69,10 @@
                                                 <label class="custom-control-label col-sm-8" for="termos">Li e concordo com os <a class="" href="#" data-target="#modalTermoDeUso" data-toggle="modal">termos de uso</a>.</label>
                                             </div>
                                             <div class="col-sm-12">
-                                                <button type="submit" class="btn btn-primary">Cadastrar</button>
+                                                <button *ngIf="signUpAvailable" type="submit" class="btn btn-primary">Cadastrar</button>
+                                                <div *ngIf="!signUpAvailable" class="spinner-border text-primary" role="status">
+                                                    <span class="sr-only">Carregando...</span>
+                                                </div>
                                             </div>
                                             <div class="col-sm-12" *ngIf="errorSignUp != ''">
                                                 <div class="alert alert-danger alert-dismissible m10">
