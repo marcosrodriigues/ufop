@@ -101,7 +101,7 @@ export class ProfileEstudanteComponent implements OnInit, OnChanges {
       this.endereco = this.profile.endereco;
     }, err => {
       this.sending = false;
-      this.callbackUpdateMessage = 'Ocorreu um erro. Verifique seus dados e tente novamente';
+      this.callbackUpdateMessage = 'Ocorreu um erro. Verifique seus dados e tente novamente. Detalhes do erro foram escritos no console do navegador.';
       console.log('Detalhes do erro: ' + err);
       this.callbackUpdateClass = 'danger';
     })

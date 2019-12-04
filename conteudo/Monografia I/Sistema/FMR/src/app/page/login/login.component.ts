@@ -25,11 +25,11 @@ export class LoginComponent implements OnInit {
 
   loginSendingSignIn = false;
   loginCallbackMessageSignIn = '';
-  loginCallbackClassSignIn = '';
+  loginCallbackClassSignIn = 'danger';
 
   loginSendingSignUp = false;
   loginCallbackMessageSignUp = '';
-  loginCallbackClassSignUp = '';
+  loginCallbackClassSignUp = 'danger';
   
 
   constructor(private userService: UserService,
@@ -46,8 +46,8 @@ export class LoginComponent implements OnInit {
       window.location.href = '/';
     }, err => {
       this.loginCallbackMessageSignIn = 'Usuário e/ou senha incorretos!';
-      this.loginCallbackClassSignIn = 'Usuário e/ou senha incorretos!';
-      this.loginSendingSignIn = true;
+      this.loginCallbackClassSignIn = 'danger';
+      this.loginSendingSignIn = false;
     })
   }
 
@@ -70,15 +70,15 @@ export class LoginComponent implements OnInit {
       return;
     }
 
-    this.loginSendingSignUp = false;
+    this.loginSendingSignUp = true;
     this.userService.create(this.user).subscribe(data => {
       this.loginCallbackMessageSignUp = 'Usuário criado com sucesso. Você já pode fazer login!';
       this.loginCallbackClassSignUp = 'success';
-      this.loginSendingSignUp = true;
+      this.loginSendingSignUp = false;
     }, err => {
       this.loginCallbackMessageSignUp = err.error.message;
       this.loginCallbackClassSignUp = 'danger';
-      this.loginSendingSignUp = true;
+      this.loginSendingSignUp = false;
     })
   }
 }

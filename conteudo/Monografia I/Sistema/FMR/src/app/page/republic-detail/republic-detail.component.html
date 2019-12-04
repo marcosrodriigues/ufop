@@ -60,7 +60,7 @@
     <div class="card">
         <div class="card-header"><h5 class="strong">Gráficos</h5></div>
         <div class="card-body">
-            <div class="row" *ngIf="me.perfil != undefined && rep.perfil != undefined; else noPersonality">
+            <div class="row" *ngIf="me.perfil.personalidade != undefined && rep.perfil.personalidade != undefined; else noPersonality">
                 <div class="col-sm-6 center">
                     <app-chart-difference
                         [me]="me.perfil.personalidade"

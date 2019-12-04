@@ -41,6 +41,9 @@
                         
                         <div class="col-md-5">
                             <app-descricao-personalidade [personality]="personalidade"></app-descricao-personalidade>
+                            <div class="m25 center strong" *ngIf="personalidade.id == undefined">
+                                <p>Faça o seu <a [routerLink]="['/inventario']">Teste de Personalidade</a> para obter seus dados.</p>
+                            </div>
                         </div>
                         <div class="col-md-4">
                             <app-chart [personality]="personalidade"></app-chart>
