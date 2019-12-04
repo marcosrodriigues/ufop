@@ -1,4 +1,4 @@
-<div class="container m10">
+<div class="container m10" *ngIf="rep.perfil != null">
     <div class="card">
         <div class="card-header"><h4 class="center">Detalhes da República <span class="strong">{{ rep.nome }}</span> </h4></div>
         <div class="card-body">
@@ -10,13 +10,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-5">
-                    <app-descricao-personalidade 
-                        [personality]="rep.perfil.personalidade"></app-descricao-personalidade>
+                <div class="col-sm-9" *ngIf="rep.perfil.personalidade != null; else noPerfil">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <app-descricao-personalidade [personality]="rep.perfil.personalidade"></app-descricao-personalidade>
+                        </div>
+                        <div class="col-sm-6">
+                            <app-chart [personality]="rep.perfil.personalidade"></app-chart>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-4">
-                    <app-chart [personality]="rep.perfil.personalidade"></app-chart>
-                </div>
+                <ng-template #noPerfil>
+                    <div class="col-sm-9 center">
+                        <p>A república não completou seu cadastro, então algumas informações podem ficar ocultas</p>
+                    </div>
+                </ng-template>
             </div>
         </div>
     </div>
@@ -60,7 +68,7 @@
     <div class="card">
         <div class="card-header"><h5 class="strong">Gráficos</h5></div>
         <div class="card-body">
-            <div class="row" *ngIf="me.perfil.personalidade != undefined && rep.perfil.personalidade != undefined; else noPersonality">
+            <div class="row" *ngIf="me.perfil != null && rep.perfil.personalidade != null && me.perfil.personalidade != null; else compareGraphNoPersonality">
                 <div class="col-sm-6 center">
                     <app-chart-difference
                         [me]="me.perfil.personalidade"
@@ -80,9 +88,11 @@
                     </div>
                 </div>
             </div>
-            <ng-template #noPersonality>
-                <div class="col-sm-12 center border">
-                    <h5>Você ou a república ainda não completaram o cadastro.</h5>
+            <ng-template #compareGraphNoPersonality>
+                <div class="row">
+                    <div class="col-sm-12 center border">
+                        <h5>Você ou a república ainda não completaram o cadastro.</h5>
+                    </div>
                 </div>
             </ng-template>
         </div>

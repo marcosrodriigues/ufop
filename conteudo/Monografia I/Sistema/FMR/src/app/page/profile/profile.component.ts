@@ -21,7 +21,6 @@ export class ProfileComponent implements OnInit {
   initMe() {
     this._userService.me().subscribe(data => {
       this.profile = data;
-      console.log(this.profile);
     }, err => {
     });
   }

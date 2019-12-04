@@ -16,6 +16,8 @@ export class PersonalidadeService {
   }
 
   setPercentage(person) {
+    if (person == undefined || person == null) return person;
+
     let percent : any = {};
 
     percent.abertura = this.round(person.abertura / 50 * 100, 2) + "%";

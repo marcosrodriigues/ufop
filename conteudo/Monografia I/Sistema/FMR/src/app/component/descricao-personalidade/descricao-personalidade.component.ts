@@ -25,6 +25,7 @@ export class DescricaoPersonalidadeComponent implements OnInit {
   }
 
   setPercentage() {
-    this.percent = this._personalidade.setPercentage(this.personalidade);
+    if (this.personalidade != null)
+      this.percent = this._personalidade.setPercentage(this.personalidade);
   }
 }

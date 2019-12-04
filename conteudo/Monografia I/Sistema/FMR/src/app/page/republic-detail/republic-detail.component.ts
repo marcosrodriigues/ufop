@@ -10,7 +10,7 @@ import { UserService } from 'src/app/service/user.service';
 })
 export class RepublicDetailComponent implements OnInit {
 
-  rep: any = {  }
+  rep: any = { perfil: null }
   me: any = { }
   id: any = 0;
 
@@ -24,6 +24,7 @@ export class RepublicDetailComponent implements OnInit {
   ngOnInit() {
       this._userService.me().subscribe(data => {
         this.me = data;
+        if (this.me == null) this.me = {};
       }, err => {
         this.me = {};
       });
