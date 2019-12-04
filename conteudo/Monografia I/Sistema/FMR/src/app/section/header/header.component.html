@@ -20,6 +20,9 @@
                         <li class="navbar-item" [routerLinkActive]="['active']">
                             <a class="nav-link link" [routerLink]="['como-usar']"><span>Como usar</span></a>        
                         </li>
+                        <li class="navbar-item">
+                            <a class="nav-link link" href="#" data-target="#modalContato" data-toggle="modal"><span>Contato</span></a>
+                        </li>
                         <li class="navbar-item" *ngIf="isLogged" [routerLinkActive]="['active']">
                             <a class="nav-link link" routerLink="profile"><span>Perfil</span></a>        
                         </li>
@@ -39,5 +42,4 @@
     </nav>
 </section>
 
-
-
+<app-contato></app-contato>
