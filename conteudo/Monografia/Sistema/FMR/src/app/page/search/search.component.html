@@ -1,0 +1,91 @@
+<div class="container m25">
+    <div class="card">
+        <div class="card-header"><h4 class="center">Exibindo resultados para <span class="strong">{{ cidade }}</span></h4></div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-12 justify">
+                    <p>Abaixo se encontram as repúblicas cadastradas na cidade que você procurou. Você pode utilizar os filtros abaixo caso tenha interesse em procurar repúblicas em outras cidades ou caso queira filtrar as repúblicas por caráter (Masculina, Feminina, Mista ou Outros).</p>
+                    <p>A busca pela repúblicas que mais combina com você depende da realização de um Teste de Personalidade. Portanto, sugerimos que você <a [routerLink]="['/login']">crie sua conta</a> e faça o Teste de Personalidade na aba Inventário que irá aparecer.</p>
+                    <p>As buscas estão ordenadas de acordo com a compatibilidade da personalidade. A documentação completa sobre como o cálculo é feito pode ser encontrada nas Referências, localizado no rodapé do site.</p>
+                    <p>Caso você não tenha feito o teste de personalidade, será considerado somente o caráter e a cidade das repúblicas, sendo ordenados de modo aleatório a cada solicitação.</p>
+                </div>
+            </div>
+            <hr />
+            <div class="row">  
+                <div class="col-sm-4">
+                    <div class="col-sm-12 mb50">
+                        <div class="container center">
+                            <form class="form form-search col-sm-12" (submit)="search($event)">
+                                <h5 class="title">Busca</h5>
+                                <input type="text" placeholder="Cidade" name="cidade" [(ngModel)]="q.cidade" class="form-control field" />
+                                <select class="form-control field" [(ngModel)]="q.carater" name="carater">
+                                    <option value="TODOS">TODOS</option>
+                                    <option value="MASCULINA">Masculina</option>
+                                    <option value="FEMININA">Feminina</option>
+                                    <option value="MISTA">Mista</option>
+                                </select>
+                                <button class="btn btn-primary field" type="submit" >
+                                    Buscar <i class="fa fa-search"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="container center">
+                            <strong>Repúblicas consideradas</strong>
+                            <ul class="list-comparison">
+                                <li>Maternidade</li>
+                                <li>Alfa 27</li>
+                                <li>Sussego</li>
+                                <li>MG</li>
+                                <li>Utopia</li>
+                                <li>Vende-se</li>
+                                <li>Flor de Liz</li>
+                                <li>Desapego</li>
+                                <li>Intocáveis</li>
+                                <li>Paraiso</li>
+                                <li>Navio Pirata</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12" *ngIf="me != null">
+                        <div class="container center">
+                            <h5 class="title">Sua personalidade</h5>
+                            <app-descricao-personalidade [personality]="me" [short]="true"></app-descricao-personalidade>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="col-sm-8">
+                    <div class="container center">
+                        <div class="row" *ngIf="reps.length > 0; else noRepublic">
+                            <div class="col-sm-4 card" *ngFor="let rep of reps; let i = index;">
+                            <a class="black" [routerLink]="['/republica', rep.id]">
+                                <div class="profile-foto">
+                                    <img src="{{ rep.fotoUrl }}" class="img-fluid m10" />
+                                    <div class="link">
+                                        <h5 class="center strong">{{rep.nome}}</h5>
+                                    </div>
+                                </div>
+                            </a>
+                                <p *ngIf="me != null && rep.personalidade != null"><strong>Compatibilidade: </strong> {{calculaPorcentagem(rep, me)}}%</p>
+                                <p><strong>Bairro: </strong> {{rep.bairro}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <ng-template #noRepublic>
+                <div class="row">
+                    <div class="col-sm-12 center">
+                        <h5>Ainda não temos repúblicas cadastradas na cidade <strong>{{cidade}}</strong></h5>
+                    </div>
+                </div>
+            </ng-template>
+        </div>
+    </div>
+</div>
+

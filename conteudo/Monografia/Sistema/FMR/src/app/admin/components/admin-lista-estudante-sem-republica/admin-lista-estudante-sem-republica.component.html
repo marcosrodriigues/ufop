@@ -1,0 +1,19 @@
+<div *ngFor="let estudante of estudantes;">
+    <div class="border" *ngIf="estudante.personalidade != null && (estudante.nome != null || estudante.apelido != null)">
+        <p>
+        {{estudante.nome}} {{estudante.apelido}}
+         - {{estudante.personalidadeNormalizada.abertura}} 
+         - {{estudante.personalidadeNormalizada.concordancia}}
+         - {{estudante.personalidadeNormalizada.consciencia}}
+         - {{estudante.personalidadeNormalizada.extroversao}}
+         - {{estudante.personalidadeNormalizada.neuroticismo}}
+
+         <button class="btn btn-secondary" (click)="recomenda(estudante)">
+            <i class="fa fa-user"></i>
+         </button>
+         </p>
+         <p *ngFor="let r of recomendacao;">
+            <span *ngIf="r.nome != null || r.apelido != null">{{r.nome}} {{r.email}} - {{calculaPorcentagem(r, estudante)}}%</span>
+         </p>
+    </div>
+<div>        

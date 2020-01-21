@@ -1,0 +1,89 @@
+<mat-expansion-panel *ngIf="rep.nome != '' && rep.nome != null">
+    <mat-expansion-panel-header>
+        <mat-panel-title><span class="strong">{{rep.nome}} ({{rep.moradores.length}}, {{rep.pendentes.length}})</span></mat-panel-title>
+        <mat-panel-description class="right strong" *ngIf="rep.personalidadeNormalizada != undefined">
+            <div class="border">
+                {{rep.personalidadeNormalizada.abertura}}% -
+                {{rep.personalidadeNormalizada.concordancia}}% -
+                {{rep.personalidadeNormalizada.consciencia}}% -
+                {{rep.personalidadeNormalizada.extroversao}}% -
+                {{rep.personalidadeNormalizada.neuroticismo}}% 
+
+                <button class="btn btn-primary btn-sm" (click)="updatePersonalidade(rep)">
+                    <i class="fa fa-refresh"></i>
+                </button>
+            </div>
+        </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div class="row">
+        <h4>Aprovados:</h4>
+        <table class="table table-hover">
+            <thead class="center">
+                <th>Apelido</th>
+                <th>Nome</th>
+                <th>O</th>
+                <th>A</th>
+                <th>C</th>
+                <th>E</th>
+                <th>N</th>
+                <th>Opções</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let morador of rep.moradores">
+                    <td>{{morador.apelido}}</td>
+                    <td>{{morador.nome}}</td>
+                    <td>{{morador.perfil.personalidade.abertura}}</td>
+                    <td>{{morador.perfil.personalidade.concordancia}}</td>
+                    <td>{{morador.perfil.personalidade.consciencia}}</td>
+                    <td>{{morador.perfil.personalidade.extroversao}}</td>
+                    <td>{{morador.perfil.personalidade.neuroticismo}}</td>
+                    <td>
+                        <button class="btn btn-danger" (click)="remove(morador)">
+                            <i class="fa fa-remove"></i>
+                        </button>
+                        <button class="btn btn-secondary"  (click)="recomenda(morador)" data-target="#modalAdminRecomendar" data-toggle="modal">
+                            <i class="fa fa-user"></i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row">
+        <h4>Pendentes:</h4>
+        <table class="table table-hover">
+            <thead class="center">
+                <th>Apelido</th>
+                <th>Nome</th>
+                <th>O</th>
+                <th>A</th>
+                <th>C</th>
+                <th>E</th>
+                <th>N</th>
+                <th>Opções</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let morador of rep.pendentes">
+                    <td>{{morador.apelido}}</td>
+                    <td>{{morador.nome}}</td>
+                    <td>{{morador.perfil.personalidade.abertura}}</td>
+                    <td>{{morador.perfil.personalidade.concordancia}}</td>
+                    <td>{{morador.perfil.personalidade.consciencia}}</td>
+                    <td>{{morador.perfil.personalidade.extroversao}}</td>
+                    <td>{{morador.perfil.personalidade.neuroticismo}}</td>
+                    <td>
+                        <button class="btn btn-success" (click)="aprovar(morador)">
+                            <i class="fa fa-check"></i>
+                        </button>
+                        <button class="btn btn-secondary"  (click)="recomenda(morador)" data-target="#modalAdminRecomendar" data-toggle="modal">
+                            <i class="fa fa-user"></i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</mat-expansion-panel>
+
+<app-recomendar [estudante]="estudante"></app-recomendar>

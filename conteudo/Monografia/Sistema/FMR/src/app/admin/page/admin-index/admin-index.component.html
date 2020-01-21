@@ -1,0 +1,43 @@
+<div class="container m10 border">
+    <div class="row">
+        <div class="col-sm-12">
+            <app-admin-info-cadastro></app-admin-info-cadastro>
+        </div>
+    </div>
+
+    <div class="row m10">
+        <div class="col-sm-12 inherit">
+            <div class="row">
+                <div class="col-sm-3">
+                    <button class="btn btn-primary" (click)="toggleRepublica()">
+                        Exibir repúblicas
+                    </button>
+                </div>
+
+                <div class="col-sm-3">
+                    <button class="btn btn-primary" (click)="toggleEstudante()">
+                        Exibir Estudantes
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <div class="row m25">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-12 center strong">
+                    <h2>Listagem de Cadastros</h2>
+                </div>
+
+                <div class="col-sm-12" *ngIf="showRepublicas">
+                    <app-admin-lista-republica></app-admin-lista-republica>
+                </div>
+
+                <div class="col-sm-12" *ngIf="showEstudantes">
+                    <app-admin-lista-estudante-sem-republica></app-admin-lista-estudante-sem-republica>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+mudar cadastro/login de lugar
+carregando no upload da foto
+arrumar mensagem de erro rep nao encontrada (busca somente do querystring)
+colocar whatsapp pras repúblicas (tirar email)
+ver login
+arrumar trabalhor
+Arrumar "na" no Como Usar, tá escrito "Ná" no vincular a uma republica
+Colocar "moiradores" e "péndentes" no detalhe da rep

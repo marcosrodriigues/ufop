@@ -1,0 +1,31 @@
+<div class="modal fade" id="modalAdminRecomendar" tabindex="-1" aria-labelledby="modalAdminRecomendar" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title strong center">Recomendar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="intro">
+            <div class="card">
+                <div class="card-header">
+                    <p>Recomendação aplicada ao usuário <strong>{{ estudante.nome }} - {{ estudante.apelido }}</strong></p>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-12 strong inherit m25" *ngFor="let rep of recomendacao;">
+                          <div *ngIf="rep.nome != null && rep.nome != undefined">
+                            <div class="col-sm-10">{{rep.nome}}</div>
+                            <div class="col-sm-2">{{calculaPorcentagem(rep, estudante)}}%</div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
